@@ -1,0 +1,40 @@
+.ToggleButton {
+    width: 100%;
+    padding: 5px;
+    font-size: 13px;
+    background: #fff;
+    outline: none;
+    height: 32px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background .1s linear, border-color .1s ease-out;
+
+    &:hover {
+        border-color: rgba(0,0,0,.3);
+    }
+
+    &:active {
+        background-color: #f3f1ed;
+    }
+
+    &_set {
+        background: #ffeba0;
+        border-color: rgba(153, 122, 0, .5);
+
+        &:hover {
+            border-color: rgba(129, 103, 0, .6);
+        }
+
+        &:active {
+            background-color: #fee481;
+        }
+    }
+
+    &-Text {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,19 @@
+$gap: 10px;
+
+.ArrayLayout {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    &-Item {
+        display: inline-block;
+        box-sizing: border-box;
+
+        &:not(:last-child) {
+            padding-right: $gap / 2;
+        }
+
+        &:not(:first-child) {
+            padding-left: $gap / 2;
+        }
+    }
+}

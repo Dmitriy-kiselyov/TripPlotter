@@ -1,0 +1,22 @@
+.RootLayout {
+    display: flex;
+    height: 100%;
+    min-width: 600px;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+    &-Left {
+        overflow: hidden;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    &-Right {
+        overflow: hidden;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 400px;
+
+        padding: 10px;
+    }
+}
