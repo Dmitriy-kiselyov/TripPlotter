@@ -15,6 +15,14 @@ export interface IMapProps {
 
 const mapSrc = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=86eaa852-1e95-493e-98e0-096aa08cc214';
 
+const minCoords = [43.00, 30.25];
+const maxCoords = [47.60, 38.75];
+const startCoords = [average(minCoords[0], maxCoords[0]), average(minCoords[1], maxCoords[1])];
+
+function average(a: number, b: number) {
+    return (a + b) / 2;
+}
+
 export class Map extends React.PureComponent<IMapProps> {
     private map?: any;
 
@@ -35,11 +43,12 @@ export class Map extends React.PureComponent<IMapProps> {
         const _this = this;
 
         window.ymaps.ready(function () {
-            const location = [44.948237, 34.100318];
-
             _this.map = new window.ymaps.Map('map', {
-                center: location,
-                zoom: 8
+                center: startCoords,
+                zoom: 8,
+                controls: ['zoomControl', 'fullscreenControl']
+            }, {
+                restrictMapArea: [minCoords, maxCoords]
             });
         });
     };
