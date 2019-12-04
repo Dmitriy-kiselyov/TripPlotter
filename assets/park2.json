@@ -31,6 +31,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.858473,
+        44.75362
+      ]
     }
   },
   {
@@ -78,6 +85,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.232675,
+        44.510934
       ]
     }
   }

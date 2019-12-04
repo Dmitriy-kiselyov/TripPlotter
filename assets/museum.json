@@ -19,7 +19,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.011358,
+        44.72607
+      ]
+    }
   },
   {
     "id": "1320265609",
@@ -53,7 +60,14 @@
         "class": "park",
         "name": "Парк культуры и отдыха"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.143599,
+        44.467645
+      ]
+    }
   },
   {
     "id": "1369074677",
@@ -119,6 +133,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.054935,
+        44.419752
+      ]
     }
   },
   {
@@ -159,6 +180,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.142467,
+        44.491319
+      ]
     }
   },
   {
@@ -185,7 +213,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.521682,
+        45.381098
+      ]
+    }
   },
   {
     "id": "131358705809",
@@ -216,6 +251,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.719203,
+        44.873232
+      ]
     }
   },
   {
@@ -240,6 +282,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
       ]
     }
   },
@@ -285,6 +334,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.053561,
+        45.306594
+      ]
     }
   },
   {
@@ -296,7 +352,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.141577,
+        45.293914
+      ]
+    }
   },
   {
     "id": "20721408752",
@@ -361,6 +424,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.382241,
+        45.032126
+      ]
     }
   },
   {
@@ -372,7 +442,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.152689,
+        45.014944
+      ]
+    }
   },
   {
     "id": "103261293009",
@@ -408,6 +485,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.240455,
+        44.511211
+      ]
     }
   },
   {
@@ -441,6 +525,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.858473,
+        44.75362
       ]
     }
   },
@@ -482,6 +573,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.471735,
+        45.34713
+      ]
     }
   },
   {
@@ -513,6 +611,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.118491,
+        44.494856
+      ]
     }
   },
   {
@@ -530,7 +635,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.160334,
+        44.498951
+      ]
+    }
   },
   {
     "id": "1012857218",
@@ -595,6 +707,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.09137,
+        44.957161
+      ]
     }
   },
   {
@@ -606,7 +725,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.056417,
+        44.420241
+      ]
+    }
   },
   {
     "id": "1161697965",
@@ -654,6 +780,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.380812,
+        45.032056
       ]
     }
   },
@@ -720,6 +853,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.095709,
+        44.948282
+      ]
     }
   },
   {
@@ -731,7 +871,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.881587,
+        44.748256
+      ]
+    }
   },
   {
     "id": "183201450848",
@@ -742,7 +889,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
+      ]
+    }
   },
   {
     "id": "122586186213",
@@ -764,7 +918,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.408476,
+        44.661083
+      ]
+    }
   },
   {
     "id": "24192701722",
@@ -775,7 +936,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.387792,
+        45.02524
+      ]
+    }
   },
   {
     "id": "23275029034",
@@ -801,6 +969,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.95714,
+        44.843995
+      ]
     }
   },
   {
@@ -812,7 +987,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.301522,
+        45.565225
+      ]
+    }
   },
   {
     "id": "181729320407",
@@ -823,7 +1005,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.696651,
+        46.115057
+      ]
+    }
   },
   {
     "id": "153941935806",
@@ -862,6 +1051,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.054935,
+        44.419752
+      ]
     }
   },
   {
@@ -886,6 +1082,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.103183,
+        44.949354
       ]
     }
   },
@@ -944,6 +1147,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.095332,
+        44.948697
+      ]
     }
   },
   {
@@ -998,6 +1208,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.199653,
+        44.514405
+      ]
     }
   },
   {
@@ -1034,6 +1251,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.373033,
+        45.192515
       ]
     }
   },
@@ -1079,6 +1303,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.881901,
+        44.749177
+      ]
     }
   },
   {
@@ -1090,7 +1321,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.284338,
+        44.544691
+      ]
+    }
   },
   {
     "id": "224036897626",
@@ -1133,6 +1371,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.59334,
+        45.058421
+      ]
     }
   },
   {
@@ -1155,7 +1400,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.240079,
+        44.869632
+      ]
+    }
   },
   {
     "id": "158011522560",
@@ -1166,7 +1418,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.184229,
+        45.527625
+      ]
+    }
   },
   {
     "id": "148322240165",
@@ -1192,6 +1451,13 @@
           "Thursday": true,
           "Saturday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.345275,
+        45.190235
       ]
     }
   },
@@ -1227,6 +1493,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.820475,
+        45.075552
       ]
     }
   },
@@ -1264,6 +1537,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.781164,
+        44.658935
+      ]
     }
   },
   {
@@ -1275,7 +1555,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.926938,
+        45.341669
+      ]
+    }
   },
   {
     "id": "182453962625",
@@ -1286,7 +1573,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.284338,
+        44.544691
+      ]
+    }
   },
   {
     "id": "15049730927",
@@ -1302,7 +1596,14 @@
         "class": "landmark",
         "name": "Достопримечательность"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.404972,
+        44.657108
+      ]
+    }
   },
   {
     "id": "166016454594",
@@ -1344,6 +1645,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.85894,
+        45.718231
       ]
     }
   },
@@ -1394,6 +1702,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.38304,
+        45.031407
+      ]
     }
   },
   {
@@ -1405,7 +1720,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.957203,
+        44.843451
+      ]
+    }
   },
   {
     "id": "1238039607",
@@ -1437,6 +1759,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.281822,
+        44.541864
+      ]
     }
   },
   {
@@ -1448,7 +1777,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.103579,
+        44.964795
+      ]
+    }
   },
   {
     "id": "1726765368",
@@ -1459,7 +1795,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.049473,
+        44.421413
+      ]
+    }
   },
   {
     "id": "1168695074",
@@ -1508,6 +1851,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.103453,
+        44.94848
+      ]
     }
   },
   {
@@ -1525,7 +1875,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.085706,
+        45.267145
+      ]
+    }
   },
   {
     "id": "1325322731",
@@ -1569,6 +1926,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.116712,
+        44.93981
+      ]
     }
   },
   {
@@ -1580,7 +1944,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.093886,
+        44.96514
+      ]
+    }
   },
   {
     "id": "208259026577",
@@ -1609,6 +1980,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.156876,
+        44.493345
+      ]
     }
   },
   {
@@ -1620,7 +1998,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.308574,
+        44.554172
+      ]
+    }
   },
   {
     "id": "1714681947",
@@ -1676,6 +2061,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.36979,
+        45.186976
+      ]
     }
   },
   {
@@ -1720,6 +2112,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        32.699629,
+        45.510252
+      ]
     }
   },
   {
@@ -1744,6 +2143,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.565829,
+        45.141366
       ]
     }
   },
@@ -1779,6 +2185,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.081687,
+        44.96359
       ]
     }
   },
@@ -1846,6 +2259,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.090441,
+        45.028081
+      ]
     }
   },
   {
@@ -1890,6 +2310,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.278993,
+        44.854852
+      ]
     }
   },
   {
@@ -1927,6 +2354,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.161816,
+        44.492039
+      ]
     }
   },
   {
@@ -1938,7 +2372,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.773385,
+        45.295094
+      ]
+    }
   },
   {
     "id": "200361474153",
@@ -1978,6 +2419,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.38225,
+        45.041031
+      ]
     }
   },
   {
@@ -1989,7 +2437,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.372604,
+        45.190729
+      ]
+    }
   },
   {
     "id": "1083647685",
@@ -2020,6 +2475,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.315815,
+        44.590888
       ]
     }
   },
@@ -2060,6 +2522,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.929229,
+        45.340858
+      ]
     }
   },
   {
@@ -2071,7 +2540,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.027572,
+        45.007502
+      ]
+    }
   },
   {
     "id": "75800470951",
@@ -2106,6 +2582,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.294444,
+        45.501599
       ]
     }
   },
@@ -2150,6 +2633,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.051629,
+        45.008317
+      ]
     }
   },
   {
@@ -2174,6 +2664,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.201769,
+        44.911921
       ]
     }
   },
@@ -2204,6 +2701,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.382438,
+        45.04268
+      ]
     }
   },
   {
@@ -2215,7 +2719,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.955415,
+        44.842505
+      ]
+    }
   },
   {
     "id": "92040119537",
@@ -2252,6 +2763,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.36555,
+        45.190838
+      ]
     }
   },
   {
@@ -2287,6 +2805,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.38012,
+        45.198511
+      ]
     }
   },
   {
@@ -2298,7 +2823,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.373787,
+        45.198378
+      ]
+    }
   },
   {
     "id": "58288736738",
@@ -2309,7 +2841,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.180299,
+        45.122303
+      ]
+    }
   },
   {
     "id": "100600409968",
@@ -2320,7 +2859,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
+      ]
+    }
   },
   {
     "id": "37077807062",
@@ -2361,6 +2907,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.152555,
+        44.490117
+      ]
     }
   },
   {
@@ -2397,6 +2950,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.273657,
+        44.544601
+      ]
     }
   },
   {
@@ -2432,6 +2992,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.093068,
+        45.199718
+      ]
     }
   },
   {
@@ -2443,7 +3010,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.176612,
+        44.904587
+      ]
+    }
   },
   {
     "id": "111159612835",
@@ -2483,6 +3057,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.600675,
+        45.127975
+      ]
     }
   },
   {
@@ -2517,6 +3098,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.881901,
+        44.749177
       ]
     }
   },
@@ -2555,6 +3143,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.86725,
+        44.413462
+      ]
     }
   },
   {
@@ -2591,6 +3186,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.382043,
+        45.0364
+      ]
     }
   },
   {
@@ -2602,7 +3204,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
+      ]
+    }
   },
   {
     "id": "34933419253",
@@ -2641,6 +3250,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.382133,
+        45.037432
       ]
     }
   },
@@ -2683,6 +3299,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.089704,
+        45.027546
+      ]
     }
   },
   {
@@ -2718,6 +3341,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.066092,
+        44.97987
+      ]
     }
   },
   {
@@ -2729,7 +3359,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.885917,
+        44.745637
+      ]
+    }
   },
   {
     "id": "82374657243",
@@ -2740,7 +3377,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.054935,
+        44.419752
+      ]
+    }
   },
   {
     "id": "108200067957",
@@ -2804,6 +3448,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.686581,
+        46.111177
+      ]
     }
   },
   {
@@ -2858,6 +3509,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.05471,
+        44.424014
+      ]
     }
   },
   {
@@ -2888,6 +3546,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.883285,
+        44.748665
       ]
     }
   },
@@ -2924,6 +3589,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.38225,
+        45.041031
       ]
     }
   },
@@ -2973,6 +3645,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.412105,
+        45.230303
+      ]
     }
   },
   {
@@ -3008,6 +3687,13 @@
           "Friday": true,
           "Saturday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.405269,
+        44.658262
       ]
     }
   },
@@ -3053,6 +3739,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.38057,
+        45.199515
+      ]
     }
   },
   {
@@ -3089,6 +3782,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.311754,
+        44.85011
+      ]
     }
   },
   {
@@ -3113,6 +3813,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.380345,
+        45.197508
       ]
     }
   },
@@ -3144,6 +3851,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.379914,
+        45.029884
       ]
     }
   },
@@ -3188,6 +3902,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.274708,
+        44.540746
       ]
     }
   },
@@ -3250,6 +3971,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.082697,
+        45.025629
+      ]
     }
   },
   {
@@ -3285,6 +4013,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.411386,
+        44.670244
       ]
     }
   },
@@ -3328,6 +4063,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.380345,
+        45.197508
+      ]
     }
   },
   {
@@ -3339,7 +4081,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.112373,
+        44.953175
+      ]
+    }
   },
   {
     "id": "1699743377",
@@ -3385,6 +4134,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.964811,
+        44.841981
       ]
     }
   },
@@ -3451,6 +4207,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.102438,
+        44.944454
+      ]
     }
   },
   {
@@ -3466,7 +4229,14 @@
         "class": "landmark",
         "name": "Достопримечательность"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
+      ]
+    }
   },
   {
     "id": "129764004408",
@@ -3505,6 +4275,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.4148,
+        44.67393
       ]
     }
   },
@@ -3579,6 +4356,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.252102,
+        44.96007
+      ]
     }
   },
   {
@@ -3614,6 +4398,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.415599,
+        44.673584
       ]
     }
   },
@@ -3660,6 +4451,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.471735,
+        45.34713
+      ]
     }
   },
   {
@@ -3694,6 +4492,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.607277,
+        44.968877
       ]
     }
   },
@@ -3739,6 +4544,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.53177,
+        45.363686
+      ]
     }
   },
   {
@@ -3769,6 +4581,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.470882,
+        45.323459
+      ]
     }
   },
   {
@@ -3780,7 +4599,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
+      ]
+    }
   },
   {
     "id": "33575341101",
@@ -3802,7 +4628,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.382133,
+        45.037432
+      ]
+    }
   },
   {
     "id": "1743279661",
@@ -3830,6 +4663,13 @@
           "Friday": true,
           "Saturday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.377578,
+        45.041171
       ]
     }
   },
@@ -3876,6 +4716,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.161107,
+        44.490181
+      ]
     }
   },
   {
@@ -3915,6 +4762,13 @@
           "Friday": true,
           "Saturday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.379914,
+        45.029884
       ]
     }
   },
@@ -3958,6 +4812,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.376473,
+        45.198556
+      ]
     }
   },
   {
@@ -3993,6 +4854,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.052887,
+        45.201484
+      ]
     }
   },
   {
@@ -4023,6 +4891,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.413372,
+        44.669231
       ]
     }
   },
@@ -4065,6 +4940,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.470594,
+        45.347529
+      ]
     }
   },
   {
@@ -4076,7 +4958,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.39969,
+        45.036458
+      ]
+    }
   },
   {
     "id": "225454004701",
@@ -4087,7 +4976,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.368707,
+        44.593359
+      ]
+    }
   },
   {
     "id": "238592695536",
@@ -4128,6 +5024,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.048754,
+        44.968194
+      ]
     }
   },
   {
@@ -4143,7 +5046,14 @@
         "class": "landmark",
         "name": "Достопримечательность"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
+      ]
+    }
   },
   {
     "id": "1766892235",
@@ -4179,6 +5089,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.894082,
+        44.746431
+      ]
     }
   },
   {
@@ -4190,7 +5107,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.414863,
+        45.266631
+      ]
+    }
   },
   {
     "id": "3251501961",
@@ -4202,7 +5126,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.343995,
+        44.57557
+      ]
+    }
   },
   {
     "id": "1793959120",
@@ -4214,7 +5145,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.279774,
+        44.542776
+      ]
+    }
   },
   {
     "id": "118625956433",
@@ -4225,7 +5163,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.104603,
+        44.941277
+      ]
+    }
   },
   {
     "id": "1074239132",
@@ -4270,6 +5215,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.096482,
+        44.949411
+      ]
     }
   },
   {
@@ -4288,7 +5240,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.906641,
+        44.748281
+      ]
+    }
   },
   {
     "id": "24019986409",
@@ -4323,6 +5282,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.400211,
+        44.737301
       ]
     }
   },
@@ -4364,6 +5330,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.402134,
+        44.661654
+      ]
     }
   },
   {
@@ -4390,7 +5363,14 @@
         "class": "further education",
         "name": "Курсы и мастер-классы"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.372619,
+        45.193081
+      ]
+    }
   },
   {
     "id": "1689810311",
@@ -4401,7 +5381,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.164278,
+        44.499652
+      ]
+    }
   },
   {
     "id": "200764991711",
@@ -4466,6 +5453,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.385088,
+        45.025055
+      ]
     }
   },
   {
@@ -4501,6 +5495,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.359818,
+        45.185318
       ]
     }
   },
@@ -4538,6 +5539,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.134633,
+        44.936479
+      ]
     }
   },
   {
@@ -4572,6 +5580,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.469247,
+        45.363445
       ]
     }
   },
@@ -4616,6 +5631,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        32.699629,
+        45.510252
       ]
     }
   },
@@ -4667,6 +5689,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.053462,
+        44.421233
+      ]
     }
   },
   {
@@ -4696,6 +5725,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.382438,
+        45.04268
+      ]
     }
   },
   {
@@ -4715,6 +5751,13 @@
           "TwentyFourHours": true,
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.371209,
+        45.185026
       ]
     }
   },
@@ -4752,6 +5795,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.158762,
+        44.485892
       ]
     }
   },
@@ -4801,6 +5851,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.397786,
+        44.680122
+      ]
     }
   },
   {
@@ -4832,6 +5889,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.368415,
+        45.191175
       ]
     }
   },
@@ -4882,6 +5946,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        36.47399,
+        45.351317
+      ]
     }
   },
   {
@@ -4926,6 +5997,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.12176,
+        44.480213
+      ]
     }
   },
   {
@@ -4965,6 +6043,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.382438,
+        45.04268
+      ]
     }
   },
   {
@@ -4976,7 +6061,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.00754,
+        44.407731
+      ]
+    }
   },
   {
     "id": "212854480535",
@@ -4987,7 +6079,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.142467,
+        44.491319
+      ]
+    }
   },
   {
     "id": "168470394267",
@@ -5021,6 +6120,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.977208,
+        45.013198
       ]
     }
   },
@@ -5062,6 +6168,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.291596,
+        44.551404
+      ]
     }
   },
   {
@@ -5080,7 +6193,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.391372,
+        45.711976
+      ]
+    }
   },
   {
     "id": "1220356998",
@@ -5116,6 +6236,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.410277,
+        44.559972
+      ]
     }
   },
   {
@@ -5127,7 +6254,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.235186,
+        45.721195
+      ]
+    }
   },
   {
     "id": "127652558183",
@@ -5138,7 +6272,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.733675,
+        45.449743
+      ]
+    }
   },
   {
     "id": "165903856255",
@@ -5177,6 +6318,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.359872,
+        45.188838
       ]
     }
   },
@@ -5230,6 +6378,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.493218,
+        44.609411
+      ]
     }
   },
   {
@@ -5269,6 +6424,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.794998,
+        45.960153
+      ]
     }
   },
   {
@@ -5299,6 +6461,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.886537,
+        44.749402
       ]
     }
   },
@@ -5335,6 +6504,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.393492,
+        45.713612
+      ]
     }
   },
   {
@@ -5346,7 +6522,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.786123,
+        44.389846
+      ]
+    }
   },
   {
     "id": "218804904031",
@@ -5376,6 +6559,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.419395,
+        44.567608
+      ]
     }
   },
   {
@@ -5387,7 +6577,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.513071,
+        44.60119
+      ]
+    }
   },
   {
     "id": "172117170812",
@@ -5398,7 +6595,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.552911,
+        44.593263
+      ]
+    }
   },
   {
     "id": "45564090115",
@@ -5433,6 +6637,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.797693,
+        45.956488
+      ]
     }
   },
   {
@@ -5444,7 +6655,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.773385,
+        45.295094
+      ]
+    }
   },
   {
     "id": "217120832756",
@@ -5479,6 +6697,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.254972,
+        45.007183
+      ]
     }
   },
   {
@@ -5490,7 +6715,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.381495,
+        45.199458
+      ]
+    }
   },
   {
     "id": "56840038433",
@@ -5518,6 +6750,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.906641,
+        44.748281
       ]
     }
   },
@@ -5567,6 +6806,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.525764,
+        44.613344
+      ]
     }
   },
   {
@@ -5578,7 +6824,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.981799,
+        44.847918
+      ]
+    }
   },
   {
     "id": "174637403908",
@@ -5609,6 +6862,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.527112,
+        44.60608
       ]
     }
   },
@@ -5663,6 +6923,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.518757,
+        44.578755
+      ]
     }
   },
   {
@@ -5703,6 +6970,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.596902,
+        44.50241
+      ]
     }
   },
   {
@@ -5742,6 +7016,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.522422,
+        44.591357
+      ]
     }
   },
   {
@@ -5759,7 +7040,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.385088,
+        45.025055
+      ]
+    }
   },
   {
     "id": "94147336462",
@@ -5799,6 +7087,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.512739,
+        44.627408
+      ]
     }
   },
   {
@@ -5832,6 +7127,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.51988,
+        44.609423
       ]
     }
   },
@@ -5868,6 +7170,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.668309,
+        44.548416
+      ]
     }
   },
   {
@@ -5886,7 +7195,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        32.703024,
+        45.503064
+      ]
+    }
   },
   {
     "id": "21999164001",
@@ -5897,7 +7213,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.518556,
+        44.615286
+      ]
+    }
   },
   {
     "id": "1277361374",
@@ -5942,6 +7265,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.523905,
+        44.594746
+      ]
     }
   },
   {
@@ -5953,7 +7283,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.204453,
+        45.017384
+      ]
+    }
   },
   {
     "id": "227348771433",
@@ -5983,6 +7320,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.600046,
+        44.500269
       ]
     }
   },
@@ -6033,6 +7377,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.523393,
+        44.595439
+      ]
     }
   },
   {
@@ -6077,6 +7428,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.525827,
+        44.627895
+      ]
     }
   },
   {
@@ -6088,7 +7446,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.601564,
+        44.617412
+      ]
+    }
   },
   {
     "id": "1025852460",
@@ -6124,6 +7489,13 @@
           "Friday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.520518,
+        44.589322
+      ]
     }
   },
   {
@@ -6157,6 +7529,13 @@
           "TwentyFourHours": true,
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.740776,
+        44.565238
       ]
     }
   },
@@ -6201,6 +7580,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.597629,
+        44.498237
       ]
     }
   },
@@ -6249,6 +7635,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.518443,
+        44.61575
+      ]
     }
   },
   {
@@ -6286,6 +7679,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.54365,
+        44.591273
+      ]
     }
   },
   {
@@ -6315,6 +7715,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.419395,
+        44.567608
+      ]
     }
   },
   {
@@ -6327,7 +7734,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.585116,
+        44.555116
+      ]
+    }
   },
   {
     "id": "41542679015",
@@ -6356,6 +7770,13 @@
           "Saturday": true,
           "Sunday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.585116,
+        44.555116
       ]
     }
   },
@@ -6390,6 +7811,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        35.954746,
+        45.362977
+      ]
     }
   },
   {
@@ -6423,6 +7851,13 @@
           "Saturday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.513637,
+        44.600407
+      ]
     }
   },
   {
@@ -6434,7 +7869,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.976157,
+        44.850526
+      ]
+    }
   },
   {
     "id": "217642246188",
@@ -6458,6 +7900,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.538197,
+        44.630185
+      ]
     }
   },
   {
@@ -6475,7 +7924,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.372287,
+        45.191309
+      ]
+    }
   },
   {
     "id": "103828812682",
@@ -6486,7 +7942,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.5023,
+        44.602916
+      ]
+    }
   },
   {
     "id": "1152303293",
@@ -6527,6 +7990,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.547978,
+        44.604545
+      ]
     }
   },
   {
@@ -6551,6 +8021,13 @@
           ],
           "Saturday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.527651,
+        44.606003
       ]
     }
   },
@@ -6592,6 +8069,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.522144,
+        44.616963
+      ]
     }
   },
   {
@@ -6627,6 +8111,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.548177,
+        44.593988
+      ]
     }
   },
   {
@@ -6638,7 +8129,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.051413,
+        44.422218
+      ]
+    }
   },
   {
     "id": "225887548473",
@@ -6679,6 +8177,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.572773,
+        44.570446
+      ]
     }
   },
   {
@@ -6697,7 +8202,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.483516,
+        44.588275
+      ]
+    }
   },
   {
     "id": "205086606253",
@@ -6708,7 +8220,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        34.148791,
+        44.489519
+      ]
+    }
   },
   {
     "id": "78034472388",
@@ -6719,7 +8238,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.556019,
+        44.600805
+      ]
+    }
   },
   {
     "id": "152601762969",
@@ -6750,6 +8276,13 @@
           "Everyday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.547755,
+        44.595073
+      ]
     }
   },
   {
@@ -6761,7 +8294,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.547674,
+        44.595336
+      ]
+    }
   },
   {
     "id": "165323094105",
@@ -6807,6 +8347,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.523518,
+        44.597872
+      ]
     }
   },
   {
@@ -6844,6 +8391,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.626986,
+        44.554063
+      ]
     }
   },
   {
@@ -6855,7 +8409,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.464167,
+        44.565212
+      ]
+    }
   },
   {
     "id": "98371781619",
@@ -6870,7 +8431,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.82714,
+        44.506409
+      ]
+    }
   },
   {
     "id": "93938929880",
@@ -6903,6 +8471,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.848807,
+        44.501716
+      ]
     }
   },
   {
@@ -6934,6 +8509,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.521398,
+        44.614833
       ]
     }
   },
@@ -6969,6 +8551,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.528495,
+        44.572661
       ]
     }
   },
@@ -7006,6 +8595,13 @@
           "Sunday": true
         }
       ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.527112,
+        44.60608
+      ]
     }
   },
   {
@@ -7017,7 +8613,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.515029,
+        44.600875
+      ]
+    }
   },
   {
     "id": "215394544776",
@@ -7028,7 +8631,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.485475,
+        44.592576
+      ]
+    }
   },
   {
     "id": "146688199946",
@@ -7043,7 +8653,14 @@
         "class": "museum",
         "name": "Музей"
       }
-    ]
+    ],
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.815848,
+        44.447783
+      ]
+    }
   },
   {
     "id": "53258018628",
@@ -7074,6 +8691,13 @@
           ],
           "Everyday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.494323,
+        44.608859
       ]
     }
   },
@@ -7122,6 +8746,13 @@
           "Thursday": true,
           "Friday": true
         }
+      ]
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        33.492221,
+        44.593558
       ]
     }
   }
