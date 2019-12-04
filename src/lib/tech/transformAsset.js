@@ -7,4 +7,4 @@ function transformAsset(assetName) {
     saveAsset(assetName, transformed);
 }
 
-// transformAsset('landmark');
+// transformAsset('zoo');

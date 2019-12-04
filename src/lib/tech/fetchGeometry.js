@@ -2,7 +2,15 @@ const request = require('request');
 
 const { saveAsset, getAsset } = require('./utils');
 
-// fetchGeometry('museum');
+// fetchGeometry('zoo');
+// showLength('zoo');
+
+function showLength(assetName) {
+    const asset = getAsset(assetName);
+    const size = asset.length;
+
+    console.log('SIZE is', size);
+}
 
 function getUrl(address) {
     return `https://search-maps.yandex.ru/v1?apikey=be39a139-2985-44f6-8752-b8df9c786aa3&text=${encodeURIComponent(address)}&results=1&lang=ru_RU`;

@@ -1,7 +1,8 @@
 const fs = require('fs');
+const path = require('path');
 
 function getPath(assetName) {
-    return `../../../assets/${assetName}.json`;
+    return path.resolve(__dirname, `../../../assets/${assetName}.json`);
 }
 
 function getAsset(assetName) {

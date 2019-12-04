@@ -41,8 +41,8 @@ export class Root extends React.PureComponent<{}, IState> {
                             id: 'park'
                         },
                         {
-                            text: 'Парки2',
-                            id: 'park2'
+                            text: 'Зоопарки',
+                            id: 'zoo'
                         }
                     ]}
                     onAssetChanged={this.handleAssetChanged}
