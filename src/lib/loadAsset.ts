@@ -1,20 +1,20 @@
-import { ICompany } from '../types/index';
+import { IOrganization } from '../types/organization';
 
-const assets: Record<string, ICompany[]> = {};
+const assets: Record<string, IOrganization[]> = {};
 
-export function loadAsset(id: string, cb: (asset: ICompany[]) => void) {
+export function loadAsset(id: string, cb: (asset: IOrganization[]) => void) {
     if (assets[id]) {
         cb(assets[id]);
     }
 
-    load(id, (asset: ICompany[]) => {
+    load(id, (asset: IOrganization[]) => {
         assets[id] = asset;
 
         cb(asset);
     });
 }
 
-function load(id: string, cb: (asset: ICompany[]) => void) {
+function load(id: string, cb: (asset: IOrganization[]) => void) {
     const path = `assets/${id}.json`;
 
     const xhr = new XMLHttpRequest();

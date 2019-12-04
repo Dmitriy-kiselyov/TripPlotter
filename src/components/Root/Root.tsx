@@ -5,10 +5,11 @@ import { Title } from '../Title/Title';
 import { Hint } from '../Hint/Hint';
 import { RootLayout } from '../RootLayout/RootLayout';
 import { ToggleAssetsGroup } from '../ToggleAssetsGroup/ToggleAssetsGroup';
-import { ICompany } from '../../types/index';
+import { IOrganization } from '../../types/organization';
+import { getMapCoords } from '../../lib/getMapCoords';
 
 interface IState {
-    asset: object | null;
+    asset: IOrganization[] | null;
 }
 
 export class Root extends React.PureComponent<{}, IState> {
@@ -17,17 +18,20 @@ export class Root extends React.PureComponent<{}, IState> {
     };
 
     render() {
-        const left = <Map />;
+        const { asset } = this.state;
+
+        const left = (
+            <Map
+                coords={asset ? getMapCoords(asset) : undefined}
+            />
+        );
+
         const right = (
             <>
                 <Title text="Выберите дату"/>
                 <Hint text="Мы подготовили для вас варианты:" />
                 <ToggleAssetsGroup
                     items={[
-                        {
-                            text: 'Достопримечательности',
-                            id: 'landmark'
-                        },
                         {
                             text: 'Музеи',
                             id: 'museum'
@@ -51,9 +55,7 @@ export class Root extends React.PureComponent<{}, IState> {
         );
     }
 
-    private handleAssetChanged = (asset: ICompany[]) => {
-        console.log('ASSET', asset);
-
+    private handleAssetChanged = (asset: IOrganization[] | null) => {
         this.setState({
             asset
         });

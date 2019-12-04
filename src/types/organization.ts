@@ -1,4 +1,4 @@
-export interface ICompany {
+export interface IOrganization {
     id: string;
     name: string;
     address: string;
@@ -6,6 +6,7 @@ export interface ICompany {
     Categories: ICategory[];
     Hours?: IHours;
     Phones?: IPhone[];
+    geometry: IGeometry;
 }
 
 export interface ICategory {
@@ -42,4 +43,9 @@ export interface IHourInterval {
 export interface IPhone {
     type: string;
     formatted: string;
+}
+
+export interface IGeometry {
+    type: 'Point';
+    coordinates: [number, number]
 }
