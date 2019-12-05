@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { getObjectManagerProps } from './helpers/getObjectManagerProps';
+
 import { loadScript } from '../../lib/loadScript';
-import { IMapCoords } from './types';
+import { IOrganization } from '../../types/organization';
 
 import './Map.scss';
 
@@ -10,7 +12,7 @@ declare global {
 }
 
 export interface IMapProps {
-    coords?: IMapCoords[];
+    organizations?: IOrganization[];
 }
 
 const mapSrc = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=86eaa852-1e95-493e-98e0-096aa08cc214';
@@ -25,13 +27,14 @@ function average(a: number, b: number) {
 
 export class Map extends React.PureComponent<IMapProps> {
     private map?: any;
+    private objectManager?: any;
 
     componentDidUpdate(prevProps: Readonly<IMapProps>) {
-        if (!this.props.coords && prevProps.coords) {
-            this.hideCoords();
+        if (!this.props.organizations && prevProps.organizations) {
+            this.hideOrganizations();
         }
-        if (this.props.coords && prevProps.coords !== this.props.coords) {
-            this.showCoords();
+        if (this.props.organizations && prevProps.organizations !== this.props.organizations) {
+            this.showOrganizations();
         }
     }
 
@@ -50,32 +53,38 @@ export class Map extends React.PureComponent<IMapProps> {
             }, {
                 restrictMapArea: [minCoords, maxCoords]
             });
+
+            _this.objectManager = new window.ymaps.ObjectManager({
+                clusterize: true,
+                gridSize: 48,
+            });
+
+            _this.objectManager.objects.options.set({
+                preset: 'islands#circleDotIcon',
+                iconColor: 'darkslateblue'
+            });
+            _this.objectManager.clusters.options.set({
+                preset: 'islands#invertedVioletClusterIcons'
+            });
+
+            _this.map.geoObjects.add(_this.objectManager);
         });
     };
 
-    private hideCoords() {
-        this.map.geoObjects.removeAll();
+    private hideOrganizations() {
+        this.objectManager.removeAll();
     }
 
-    private showCoords() {
+    private showOrganizations() {
         if (!this.map) {
             return;
         }
 
-        this.map.geoObjects.removeAll();
+        this.hideOrganizations();
 
-        const marks = new window.ymaps.GeoObjectCollection();
+        const marks = getObjectManagerProps(this.props.organizations);
 
-        for (let i = 0; i < this.props.coords.length; i++) {
-            const point = this.props.coords[i];
-
-            marks.add(new window.ymaps.Placemark(
-                point.coords,
-                { balloonContentBody: point.text }
-            ));
-        }
-
-        this.map.geoObjects.add(marks);
+        this.objectManager.add(marks);
     }
 
     render() {

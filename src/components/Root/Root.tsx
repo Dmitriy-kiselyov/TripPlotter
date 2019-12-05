@@ -6,23 +6,22 @@ import { Hint } from '../Hint/Hint';
 import { RootLayout } from '../RootLayout/RootLayout';
 import { ToggleAssetsGroup } from '../ToggleAssetsGroup/ToggleAssetsGroup';
 import { IOrganization } from '../../types/organization';
-import { getMapCoords } from '../../lib/getMapCoords';
 
 interface IState {
-    asset: IOrganization[] | null;
+    organizations: IOrganization[] | null;
 }
 
 export class Root extends React.PureComponent<{}, IState> {
     state: IState = {
-        asset: null
+        organizations: null
     };
 
     render() {
-        const { asset } = this.state;
+        const { organizations } = this.state;
 
         const left = (
             <Map
-                coords={asset ? getMapCoords(asset) : undefined}
+                organizations={organizations ? organizations : undefined}
             />
         );
 
@@ -57,7 +56,7 @@ export class Root extends React.PureComponent<{}, IState> {
 
     private handleAssetChanged = (asset: IOrganization[] | null) => {
         this.setState({
-            asset
+            organizations: asset
         });
     }
 }
