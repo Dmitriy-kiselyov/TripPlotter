@@ -1,0 +1,439 @@
+[
+  {
+    "CompanyMetaData": {
+      "id": "169706458461",
+      "name": "Стадион Авангард",
+      "address": "Россия, Республика Крым, Евпатория, квартал Курортный",
+      "Categories": [
+        {
+          "class": "landmark",
+          "name": "Достопримечательность"
+        },
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "220343446267",
+      "name": "Колесо обозрения",
+      "address": "Россия, Республика Крым, Симферополь, парк имени Юрия Гагарина",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        },
+        {
+          "name": "Аттракцион"
+        },
+        {
+          "class": "entertainments",
+          "name": "Развлекательный центр"
+        }
+      ],
+      "Hours": {
+        "text": "ср круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Wednesday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "146216200587",
+      "name": "Детский Парк Аттракционов Дримвуд",
+      "address": "Россия, Республика Крым, городской округ Ялта, село Оползневое",
+      "url": "https://dreamwoodpark.com/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "8 (800) 550-56-94"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        },
+        {
+          "class": "childrens playground",
+          "name": "Детские игровые залы и площадки"
+        },
+        {
+          "name": "Организация и проведение детских праздников"
+        }
+      ],
+      "Hours": {
+        "text": "ср-вс 10:00–18:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "10:00:00",
+                "to": "18:00:00"
+              }
+            ],
+            "Wednesday": true,
+            "Thursday": true,
+            "Friday": true,
+            "Saturday": true,
+            "Sunday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "4537696838",
+      "name": "Парк аттракционов",
+      "address": "Россия, Республика Крым, посёлок городского типа Черноморское, Центральная аллея",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "214847764112",
+      "name": "Колесо обозрения",
+      "address": "Россия, Республика Крым, Евпатория, набережная Валентины Терешковой",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 10:00–21:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "10:00:00",
+                "to": "21:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "208773013533",
+      "name": "Парк аттракционов",
+      "address": "Россия, Республика Крым, Судак, Кипарисовая аллея, 15",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        },
+        {
+          "class": "park",
+          "name": "Парк культуры и отдыха"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 9:00–21:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "09:00:00",
+                "to": "21:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "3424344212",
+      "name": "Детские аттракционы",
+      "address": "Россия, Республика Крым, Керчь",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 9:00–21:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "09:00:00",
+                "to": "21:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "91880042944",
+      "name": "Колесо Обозрения",
+      "address": "Россия, Республика Крым, посёлок городского типа Черноморское",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "50660461926",
+      "name": "Колесо обозрения",
+      "address": "Россия, Республика Крым, Ялта",
+      "Categories": [
+        {
+          "class": "park",
+          "name": "Парк культуры и отдыха"
+        },
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "18558483147",
+      "name": "Банзай",
+      "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Гурзуф, набережная Пушкина",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "95363083301",
+      "name": "Веревочный парк",
+      "address": "Россия, Республика Крым, Евпатория, парк имени Ленина",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 857-52-07"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 081-00-87"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        },
+        {
+          "class": "rope park",
+          "name": "Верёвочный парк"
+        },
+        {
+          "class": "sportcenter",
+          "name": "Спортивно-развлекательный центр"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 10:00–20:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "10:00:00",
+                "to": "20:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "173961233726",
+      "name": "Сказка",
+      "address": "Россия, Республика Крым, Феодосия, набережная Десантников",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 836-66-78"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 10:00–23:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "10:00:00",
+                "to": "23:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "186611949355",
+      "name": "Колесо обозрения",
+      "address": "Россия, Республика Крым, Евпатория, улица Горького",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "230049945471",
+      "name": "Аттракцион зиплайн Адренорлин",
+      "address": "Россия, Республика Крым, Ялта, набережная имени В.И. Ленина",
+      "url": "http://adrenorlin.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 071-17-07"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 10:00–0:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "10:00:00",
+                "to": "00:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "1708038943",
+      "name": "Парк Фрунзе",
+      "address": "Россия, Республика Крым, Евпатория, улица Горького, 9И",
+      "Categories": [
+        {
+          "class": "park",
+          "name": "Парк культуры и отдыха"
+        },
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        },
+        {
+          "name": "Сквер"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "1893946475",
+      "name": "Затерянный мир",
+      "address": "Россия, Республика Крым, Евпатория, улица Маяковского, 2",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 727-57-64"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ],
+      "Hours": {
+        "text": "сб,вс 10:00–18:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "10:00:00",
+                "to": "18:00:00"
+              }
+            ],
+            "Saturday": true,
+            "Sunday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "153940807724",
+      "name": "Парк аттракционов",
+      "address": "Россия, Республика Крым, Евпатория, набережная Горького, 6",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "173905700479",
+      "name": "Колесо обозрения в Тайгане",
+      "address": "Россия, Республика Крым, Белогорск",
+      "Categories": [
+        {
+          "class": "attraction",
+          "name": "Парк аттракционов"
+        }
+      ]
+    }
+  }
+]

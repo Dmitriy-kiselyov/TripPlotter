@@ -1,0 +1,322 @@
+[
+  {
+    "CompanyMetaData": {
+      "id": "182738007262",
+      "name": "Эко Рест",
+      "address": "Россия, Республика Крым, Симферопольский район, Перовское сельское поселение, село Каштановое, улица Богданова, 2А",
+      "url": "https://ecorest-crimea.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 922-65-43"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 940-79-99"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 8:30–20:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "08:30:00",
+                "to": "20:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "26227160408",
+      "name": "Конно-спортивный клуб Savostin horse beach club",
+      "address": "Россия, Республика Крым, Черноморский район, Окунёвское сельское поселение",
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "127996518221",
+      "name": "Конный клуб",
+      "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Голубой Залив",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 860-10-62"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        },
+        {
+          "name": "Туристический инфоцентр"
+        },
+        {
+          "class": "sanatorium",
+          "name": "Турбаза"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "186969330242",
+      "name": "Конный клуб",
+      "address": "Россия, Республика Крым, Черноморский район, село Кировское",
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "68885704382",
+      "name": "Конный клуб",
+      "address": "Россия, Республика Крым, Симферопольский район, Добровское сельское поселение, село Андрусово, улица Парниковая, 23",
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "206328811860",
+      "name": "Конно-спортивный клуб Триумф",
+      "address": "Россия, Республика Крым, Сакский район, село Колоски",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+380 (66) 709-30-95"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "234019528273",
+      "name": "Конный клуб",
+      "address": "Россия, Республика Крым, Бахчисарайский район, село Высокое",
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "244068367955",
+      "name": "Красный конь",
+      "address": "Россия, Республика Крым, городской округ Ялта, Алупка, Севастопольское шоссе, 84",
+      "url": "http://koni-alupka.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 840-91-18"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 841-56-54"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        },
+        {
+          "class": "sanatorium",
+          "name": "Турбаза"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 8:00–22:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "08:00:00",
+                "to": "22:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "137950535604",
+      "name": "Чк Гранатовый Браслет Конные прогулки в Евпатории",
+      "address": "Россия, Республика Крым, Сакский район, потребительский кооператив Чайка",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 094-87-33"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 003-82-94"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        },
+        {
+          "class": "sport school",
+          "name": "Спортивная школа"
+        },
+        {
+          "class": "sports base",
+          "name": "Спортивная база"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 7:00–22:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "07:00:00",
+                "to": "22:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "167381725857",
+      "name": "Конный клуб",
+      "address": "Россия, Республика Крым, городской округ Судак, урочище Высокое",
+      "url": "http://www.mangupa.net/4679.htm",
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "214688857178",
+      "name": "Частная конюшня Глория",
+      "address": "Россия, Республика Крым, Бахчисарайский район, село Холмовка, Севастопольская улица, 8",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (989) 760-77-70"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ],
+      "Hours": {
+        "text": "вт-вс 8:00–19:00, перерыв 13:00–14:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "08:00:00",
+                "to": "13:00:00"
+              },
+              {
+                "from": "14:00:00",
+                "to": "19:00:00"
+              }
+            ],
+            "Tuesday": true,
+            "Wednesday": true,
+            "Thursday": true,
+            "Friday": true,
+            "Saturday": true,
+            "Sunday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "1099179897",
+      "name": "Конно-спортивный клуб",
+      "address": "Россия, Республика Крым, Симферополь, Севастопольская улица, 37",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 787-93-91"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "equestrian",
+          "name": "Конный клуб"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 9:00–18:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "09:00:00",
+                "to": "18:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,560 @@
+[
+  {
+    "CompanyMetaData": {
+      "id": "1347127609",
+      "name": "Сауна",
+      "address": "Россия, Республика Крым, Судак, Консульская улица, 2А",
+      "url": "http://sudak-gnezdo.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 789-76-26"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 272-90-07"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Сауна"
+        },
+        {
+          "class": "baths",
+          "name": "Баня"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "140917941868",
+      "name": "Сауна в Никите",
+      "address": "Россия, Республика Крым, городской округ Ялта",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 736-20-72"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Баня"
+        },
+        {
+          "class": "hotels",
+          "name": "Гостиница"
+        },
+        {
+          "class": "baths",
+          "name": "Сауна"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 8:00–0:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "08:00:00",
+                "to": "00:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "1431089931",
+      "name": "Усадьба Баксан",
+      "address": "Россия, Республика Крым, Белогорский район, село Овражки, Речная улица, 23А",
+      "url": "http://усадьба-баксан.рф/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 802-62-65"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 126-40-28"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "hotels",
+          "name": "Гостиница"
+        },
+        {
+          "class": "baths",
+          "name": "Баня"
+        },
+        {
+          "class": "sanatorium",
+          "name": "Турбаза"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "184219474318",
+      "name": "Сауна № 1",
+      "address": "Россия, Республика Крым, Симферополь, Апрельская улица, 1",
+      "url": "http://saunaone.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 037-96-30"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Сауна"
+        },
+        {
+          "class": "baths",
+          "name": "Баня"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "63100725449",
+      "name": "Гостевой дом Leo",
+      "address": "Россия, Республика Крым, Феодосия, улица Листовничей, 46",
+      "url": "https://leo-v-feodosii.crimea-82.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 119-44-10"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 849-70-97"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "hotels",
+          "name": "Гостиница"
+        },
+        {
+          "class": "sanatorium",
+          "name": "Дом отдыха"
+        },
+        {
+          "class": "baths",
+          "name": "Сауна"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "1143732676",
+      "name": "Римские бани",
+      "address": "Россия, Республика Крым, Симферополь, Петропавловская улица, 3",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 754-58-88"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Сауна"
+        },
+        {
+          "class": "baths",
+          "name": "Баня"
+        },
+        {
+          "class": "spa",
+          "name": "Спа-салон"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "53453979025",
+      "name": "Сауна Шайка-Лейка",
+      "address": "Россия, Республика Крым, Симферополь, Севастопольская улица, 80В/2",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 751-30-78"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Сауна"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "188764175920",
+      "name": "Баня на дровах",
+      "address": "Россия, Республика Крым, Симферополь, улица Маршала Жукова, 22",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 752-65-05"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 575-62-34"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Баня"
+        },
+        {
+          "class": "cafe",
+          "name": "Кафе"
+        },
+        {
+          "class": "baths",
+          "name": "Сауна"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "90440496833",
+      "name": "Сауна",
+      "address": "Россия, Республика Крым, Керчь, улица Островского, 97",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 824-78-20"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Сауна"
+        },
+        {
+          "class": "baths",
+          "name": "Баня"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "189186239892",
+      "name": "Георгиевские бани",
+      "address": "Россия, Республика Крым, Симферопольский район, село Акрополис, улица Македонского, 6",
+      "url": "http://hatabanya.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 738-27-85"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Баня"
+        },
+        {
+          "class": "hotels",
+          "name": "Гостиница"
+        },
+        {
+          "class": "baths",
+          "name": "Сауна"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 8:00–1:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "08:00:00",
+                "to": "01:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "210541171294",
+      "name": "Городская Баня",
+      "address": "Россия, Республика Крым, Ялта, улица Ломоносова, 15",
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Баня"
+        },
+        {
+          "class": "spa",
+          "name": "Спа-салон"
+        }
+      ],
+      "Hours": {
+        "text": "ср-пт 14:00–19:00; сб,вс 9:00–19:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "14:00:00",
+                "to": "19:00:00"
+              }
+            ],
+            "Wednesday": true,
+            "Thursday": true,
+            "Friday": true
+          },
+          {
+            "Intervals": [
+              {
+                "from": "09:00:00",
+                "to": "19:00:00"
+              }
+            ],
+            "Saturday": true,
+            "Sunday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "45316618948",
+      "name": "Баня в Гостином Дворе",
+      "address": "Россия, Республика Крым, Керчь, Большая улица, 12",
+      "url": "http://www.bolshaya12.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (918) 062-06-76"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 004-92-99"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Баня"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "40849416107",
+      "name": "База отдыха Крым",
+      "address": "Россия, Республика Крым, Симферопольский район, поселок городского типа Николаевка",
+      "url": "http://bo-crimea.ru/",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 073-73-43"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (905) 020-61-26"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "sanatorium",
+          "name": "Дом отдыха"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "65034554294",
+      "name": "Сауна",
+      "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Гаспра",
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Сауна"
+        }
+      ]
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "227337296071",
+      "name": "Сауна на дровах",
+      "address": "Россия, Республика Крым, Керчь, улица Козлова, 22",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 218-94-25"
+        },
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 702-06-22"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Сауна"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, круглосуточно",
+        "Availabilities": [
+          {
+            "TwentyFourHours": true,
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "CompanyMetaData": {
+      "id": "1735863271",
+      "name": "Русская Баня",
+      "address": "Крым, Симферопольский р-н, Донское с., ул. Фонтанная, 54б",
+      "Phones": [
+        {
+          "type": "phone",
+          "formatted": "+7 (978) 889-17-33"
+        }
+      ],
+      "Categories": [
+        {
+          "class": "baths",
+          "name": "Баня"
+        }
+      ],
+      "Hours": {
+        "text": "ежедневно, 16:00–0:00",
+        "Availabilities": [
+          {
+            "Intervals": [
+              {
+                "from": "16:00:00",
+                "to": "00:00:00"
+              }
+            ],
+            "Everyday": true
+          }
+        ]
+      }
+    }
+  }
+]
