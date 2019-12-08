@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ArrayLayout } from '../ArrayLayout/ArrayLayout';
+import { GridLayout } from '../GridLayout/GridLayout';
 import { ToggleButton } from '../ToggleButton/ToggleButton';
 
 export interface IToggleGroupItem {
@@ -37,9 +37,9 @@ export class ToggleGroup extends React.PureComponent<IToggleGroupProps, IState> 
         ));
 
         return (
-            <ArrayLayout>
+            <GridLayout columns={2}>
                 {children}
-            </ArrayLayout>
+            </GridLayout>
         );
     }
 
