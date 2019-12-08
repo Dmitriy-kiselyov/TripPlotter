@@ -6,6 +6,7 @@ import { Hint } from '../Hint/Hint';
 import { RootLayout } from '../RootLayout/RootLayout';
 import { ToggleAssetsGroup } from '../ToggleAssetsGroup/ToggleAssetsGroup';
 import { IOrganization } from '../../types/organization';
+import { assetsNameMap } from '../../lib/assetsNameMap';
 
 interface IState {
     organizations: IOrganization[] | null;
@@ -30,20 +31,7 @@ export class Root extends React.PureComponent<{}, IState> {
                 <Title text="Выберите дату"/>
                 <Hint text="Мы подготовили для вас варианты:" />
                 <ToggleAssetsGroup
-                    items={[
-                        {
-                            text: 'Музеи',
-                            id: 'museum'
-                        },
-                        {
-                            text: 'Парки',
-                            id: 'park'
-                        },
-                        {
-                            text: 'Зоопарки',
-                            id: 'zoo'
-                        }
-                    ]}
+                    items={assetsNameMap}
                     onAssetChanged={this.handleAssetChanged}
                 />
             </>

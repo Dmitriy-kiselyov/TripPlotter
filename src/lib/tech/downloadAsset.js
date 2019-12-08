@@ -17,7 +17,11 @@ module.exports = {
             .then(res => {
                 const result = [];
                 for (const item of res) {
-                    result.push({'CompanyMetaData': item['properties']['CompanyMetaData']});
+                    let obj = item.properties.CompanyMetaData;
+                    item.geometry.coordinates = item.geometry.coordinates.reverse();
+                    obj.geometry = item.geometry;
+                    result.push(obj);
+
                 }
                 return this._writeToFile(requestText, result);
             })

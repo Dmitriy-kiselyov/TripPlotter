@@ -13,6 +13,7 @@ declare global {
 
 export interface IMapProps {
     organizations?: IOrganization[];
+    lockArea?: boolean;
 }
 
 const mapSrc = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=86eaa852-1e95-493e-98e0-096aa08cc214';
@@ -51,7 +52,7 @@ export class Map extends React.PureComponent<IMapProps> {
                 zoom: 8,
                 controls: ['zoomControl', 'fullscreenControl']
             }, {
-                restrictMapArea: [minCoords, maxCoords]
+                restrictMapArea: _this.props.lockArea ? [minCoords, maxCoords] : undefined
             });
 
             _this.objectManager = new window.ymaps.ObjectManager({
