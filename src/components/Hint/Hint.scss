@@ -1,7 +1,9 @@
+@import "../Constants.scss";
+
 .Hint {
     font-size: 15px;
     line-height: 19px;
     font-style: italic;
-    color: darkslateblue;
+    color: $primary-dark;
     text-align: center;
 }

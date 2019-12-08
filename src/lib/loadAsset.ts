@@ -15,7 +15,7 @@ export function loadAsset(id: string, cb: (asset: IOrganization[]) => void) {
 }
 
 function load(id: string, cb: (asset: IOrganization[]) => void) {
-    const path = `assets/${id}.json`;
+    const path = `assets/organizations/${id}.json`;
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';

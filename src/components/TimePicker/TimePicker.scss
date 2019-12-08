@@ -1,0 +1,39 @@
+@import "../../../assets/clock-picker/clockpicker.css";
+@import "../../../assets/clock-picker/standalone.css";
+@import "../Constants.scss";
+
+.popover {
+    font-family: $font-family;
+
+    .text-primary {
+        color: $primary-dark;
+    }
+
+    // Работает криво
+    .arrow {
+        display: none;
+    }
+
+    .clockpicker-dial {
+        font-size: 14px;
+    }
+
+    .clockpicker-tick.active,
+    .clockpicker-tick:hover {
+        background-color: $primary-opacity-25;
+    }
+
+    .clockpicker-canvas-bearing,
+    .clockpicker-canvas-fg {
+        fill: $primary-dark;
+    }
+    .clockpicker-canvas-bg {
+        fill: $primary-opacity-50;
+    }
+    .clockpicker-canvas-bg-trans {
+        fill: $primary-opacity-50;
+    }
+    .clockpicker-canvas line {
+        stroke: $primary-dark;
+    }
+}

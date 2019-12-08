@@ -1,3 +1,5 @@
+@import "../Constants.scss";
+
 .ToggleButton {
     width: 100%;
     padding: 5px;
@@ -5,30 +7,26 @@
     background: #fff;
     outline: none;
     height: 32px;
-    border: 1px solid rgba(0,0,0,.2);
+    border: 1px solid $border;
     border-radius: 4px;
     cursor: pointer;
 
-    transition: background .1s linear, border-color .1s ease-out;
+    transition: background .1s linear, border-color .1s ease-out, color .1s linear;
 
     &:hover {
-        border-color: rgba(0,0,0,.3);
+        border-color: $border-hover;
     }
 
     &:active {
-        background-color: #f3f1ed;
+        background-color: $primary-dark-opacity-25;
     }
 
     &_set {
-        background: #ffeba0;
-        border-color: rgba(153, 122, 0, .5);
-
-        &:hover {
-            border-color: rgba(129, 103, 0, .6);
-        }
+        background: $primary-dark;
+        color: white;
 
         &:active {
-            background-color: #fee481;
+            background-color: $primary-dark-opacity-75;
         }
     }
 

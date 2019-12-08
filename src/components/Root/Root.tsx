@@ -7,6 +7,9 @@ import { RootLayout } from '../RootLayout/RootLayout';
 import { ToggleAssetsGroup } from '../ToggleAssetsGroup/ToggleAssetsGroup';
 import { IOrganization } from '../../types/organization';
 import { assetsNameMap } from '../../lib/assetsNameMap';
+import { ArrayLayout } from '../ArrayLayout/ArrayLayout';
+import { DatePicker } from '../DatePicker/DatePicker';
+import { TimePicker } from '../TimePicker/TimePicker';
 
 interface IState {
     organizations: IOrganization[] | null;
@@ -29,6 +32,17 @@ export class Root extends React.PureComponent<{}, IState> {
         const right = (
             <>
                 <Title text="Выберите дату"/>
+                <ArrayLayout>
+                    <DatePicker/>
+                    <ArrayLayout>
+                        <TimePicker
+                            placeholder="Начало"
+                        />
+                        <TimePicker
+                            placeholder="Конец"
+                        />
+                    </ArrayLayout>
+                </ArrayLayout>
                 <Hint text="Мы подготовили для вас варианты:" />
                 <ToggleAssetsGroup
                     items={assetsNameMap}

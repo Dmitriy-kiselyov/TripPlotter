@@ -1,0 +1,29 @@
+@import "../Constants.scss";
+
+.Input {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 13px;
+    padding: 5px;
+    height: 32px;
+    border: 1px solid $border;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color .1s ease-out;
+
+    &_readonly {
+        cursor: pointer;
+    }
+
+    &_center {
+        text-align: center;
+    }
+
+    &:hover {
+        border-color: $border-hover;
+    }
+
+    &:focus {
+        border-color: $primary-dark;
+    }
+}
