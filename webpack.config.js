@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require('copy-webpack-plugin');
+var webpack = require("webpack");
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -46,5 +47,9 @@ module.exports = {
         new CopyPlugin([
             { from: 'assets/*.json', to: '' }
         ]),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
     ]
 };

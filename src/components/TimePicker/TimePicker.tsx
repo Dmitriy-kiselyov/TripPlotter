@@ -1,6 +1,9 @@
 import React from 'react';
 
-import '../../lib/importClockPicker';
+import './../../../assets/clock-picker/clockpicker.js';
+// @ts-ignore
+import jquery from '../../../node_modules/jquery';
+
 import { Input } from '../Input/Input';
 
 import './TimePicker.scss';
@@ -29,7 +32,7 @@ export class TimePicker extends React.PureComponent<ITimePickerProps> {
     }
 
     componentDidMount(): void {
-        window.$('#' + this.id).clockpicker({
+        jquery('#' + this.id).clockpicker({
             placement: 'bottom',
             align: 'right',
             autoclose: true

@@ -1,0 +1,33 @@
+@import "../../../node_modules/air-datepicker/dist/css/datepicker.css";
+@import "../Constants.scss";
+
+.datepicker {
+    &--day-name {
+        color: $primary-dark;
+        font-weight: bold;
+    }
+
+    &--cell {
+        transition: background-color .1s linear;
+
+        &:active {
+            background-color: $border;
+        }
+
+        &.-current- {
+            color: $primary;
+        }
+
+        &.-selected- {
+            background-color: $primary;
+
+            &.-current- {
+                background-color: $primary;
+            }
+
+            &.-focus- {
+                background-color: $primary-dark-opacity-75;
+            }
+        }
+    }
+}

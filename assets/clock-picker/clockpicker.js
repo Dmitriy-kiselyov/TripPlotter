@@ -4,8 +4,8 @@
  * Licensed under MIT (https://github.com/weareoutman/clockpicker/blob/gh-pages/LICENSE)
  */
 
-window.__clockPricker = function() {
-	var $ = window.jQuery,
+;(function(jQuery){
+	var $ = jQuery,
 		$win = $(window),
 		$doc = $(document),
 		$body;
@@ -67,22 +67,22 @@ window.__clockPricker = function() {
 	// Popover template
 	var tpl = [
 		'<div class="popover clockpicker-popover">',
-			'<div class="arrow"></div>',
-			'<div class="popover-title">',
-				'<span class="clockpicker-span-hours text-primary"></span>',
-				' : ',
-				'<span class="clockpicker-span-minutes"></span>',
-				'<span class="clockpicker-span-am-pm"></span>',
-			'</div>',
-			'<div class="popover-content">',
-				'<div class="clockpicker-plate">',
-					'<div class="clockpicker-canvas"></div>',
-					'<div class="clockpicker-dial clockpicker-hours"></div>',
-					'<div class="clockpicker-dial clockpicker-minutes clockpicker-dial-out"></div>',
-				'</div>',
-				'<span class="clockpicker-am-pm-block">',
-				'</span>',
-			'</div>',
+		'<div class="arrow"></div>',
+		'<div class="popover-title">',
+		'<span class="clockpicker-span-hours text-primary"></span>',
+		' : ',
+		'<span class="clockpicker-span-minutes"></span>',
+		'<span class="clockpicker-span-am-pm"></span>',
+		'</div>',
+		'<div class="popover-content">',
+		'<div class="clockpicker-plate">',
+		'<div class="clockpicker-canvas"></div>',
+		'<div class="clockpicker-dial clockpicker-hours"></div>',
+		'<div class="clockpicker-dial clockpicker-minutes clockpicker-dial-out"></div>',
+		'</div>',
+		'<span class="clockpicker-am-pm-block">',
+		'</span>',
+		'</div>',
 		'</div>'
 	].join('');
 
@@ -479,8 +479,8 @@ window.__clockPricker = function() {
 		$doc.on('click.clockpicker.' + this.id + ' focusin.clockpicker.' + this.id, function(e){
 			var target = $(e.target);
 			if (target.closest(self.popover).length === 0 &&
-					target.closest(self.addon).length === 0 &&
-					target.closest(self.input).length === 0) {
+				target.closest(self.addon).length === 0 &&
+				target.closest(self.input).length === 0) {
 				self.hide();
 			}
 		});
@@ -577,9 +577,9 @@ window.__clockPricker = function() {
 			radius = inner ? innerRadius : outerRadius,
 			value;
 
-			if (options.twelvehour) {
-				radius = outerRadius;
-			}
+		if (options.twelvehour) {
+			radius = outerRadius;
+		}
 
 		// Radian should in range [0, 2PI]
 		if (radian < 0) {
@@ -726,4 +726,4 @@ window.__clockPricker = function() {
 			}
 		});
 	};
-};
+}(jQuery));
