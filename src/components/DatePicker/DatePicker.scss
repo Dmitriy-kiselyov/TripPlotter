@@ -2,9 +2,17 @@
 @import "../Constants.scss";
 
 .datepicker {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-color: $border;
+
+    &.datepicker {
+        transition: none;
+    }
+
     &--day-name {
         color: $primary-dark;
         font-weight: bold;
+        cursor: default;
     }
 
     &--cell {
@@ -30,4 +38,16 @@
             }
         }
     }
+
+    &--nav-action,
+    &--nav-title{
+        transition: background-color .1s linear;
+    }
+}
+
+.-bottom-left- .datepicker--pointer {
+    bottom: calc(100% - 7px);
+    left: 35px;
+    width: 15px;
+    height: 15px;
 }

@@ -1,17 +1,17 @@
-@import "../../../assets/clock-picker/clockpicker.css";
 @import "../../../assets/clock-picker/standalone.css";
+@import "../../../assets/clock-picker/clockpicker.css";
 @import "../Constants.scss";
 
 .popover {
     font-family: $font-family;
+    border-radius: 4px;
 
     .text-primary {
         color: $primary-dark;
     }
 
-    // Работает криво
-    .arrow {
-        display: none;
+    &.bottom.clockpicker-align-right .arrow {
+        right: 35px;
     }
 
     .clockpicker-dial {
