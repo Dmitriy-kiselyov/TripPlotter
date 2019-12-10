@@ -26,6 +26,7 @@ export class Root extends React.PureComponent<{}, IState> {
         const left = (
             <Map
                 organizations={organizations ? organizations : undefined}
+                lockArea
             />
         );
 
