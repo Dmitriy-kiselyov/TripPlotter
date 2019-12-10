@@ -10,21 +10,25 @@ import { assetsNameMap } from '../../lib/assetsNameMap';
 import { ArrayLayout } from '../ArrayLayout/ArrayLayout';
 import { DatePicker } from '../DatePicker/DatePicker';
 import { TimePicker } from '../TimePicker/TimePicker';
+import { IAssetName } from '../../types/assets';
 
 interface IState {
+    category: IAssetName | null;
     organizations: IOrganization[] | null;
 }
 
 export class Root extends React.PureComponent<{}, IState> {
     state: IState = {
+        category: null,
         organizations: null
     };
 
     render() {
-        const { organizations } = this.state;
+        const { organizations, category } = this.state;
 
         const left = (
             <Map
+                category={category ? category : undefined}
                 organizations={organizations ? organizations : undefined}
                 lockArea
             />
@@ -57,8 +61,9 @@ export class Root extends React.PureComponent<{}, IState> {
         );
     }
 
-    private handleAssetChanged = (asset: IOrganization[] | null) => {
+    private handleAssetChanged = (assetName: IAssetName, asset: IOrganization[] | null) => {
         this.setState({
+            category: assetName,
             organizations: asset
         });
     }

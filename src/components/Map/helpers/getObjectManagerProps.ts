@@ -1,15 +1,21 @@
-import { IObjectManager } from '../types';
+import { IObjectManager, IBalloonFactory } from '../types';
 import { IOrganization } from '../../../types/organization';
+import { getBalloonLayout } from './getBalloonLayout';
+import { IAssetName } from '../../../types/assets';
 
-export function getObjectManagerProps(organizations: IOrganization[]): IObjectManager {
+export function getObjectManagerProps(category: IAssetName, organizations: IOrganization[], balloonFactory: IBalloonFactory): IObjectManager {
     const features = organizations.map(org => {
         return {
             type: 'Feature' as 'Feature',
-            id: Number(org.id),
+            id: org.id,
+            category,
             geometry: org.geometry,
             properties: {
-                balloonContentBody: org.name
-            }
+                hintContent: org.name
+            },
+            options: {
+                balloonContentLayout: getBalloonLayout(balloonFactory)
+            },
         }
     });
 

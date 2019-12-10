@@ -3,10 +3,11 @@ import React from 'react';
 import { IToggleGroupItem, ToggleGroup } from '../ToggleGroup/ToggleGroup';
 import { loadAsset } from '../../lib/loadAsset'
 import { IOrganization } from '../../types/organization';
+import { IAssetName } from '../../types/assets';
 
 export interface IToggleAssetsGroupProps {
     items: IToggleGroupItem[];
-    onAssetChanged: (asset: IOrganization[] | null) => void;
+    onAssetChanged: (assetName: IAssetName, asset: IOrganization[] | null) => void;
 }
 
 export class ToggleAssetsGroup extends React.PureComponent<IToggleAssetsGroupProps> {
@@ -21,15 +22,15 @@ export class ToggleAssetsGroup extends React.PureComponent<IToggleAssetsGroupPro
         )
     }
 
-    private handleSet = (id: string) => {
-        loadAsset(id, this.props.onAssetChanged);
+    private handleSet = (id: IAssetName) => {
+        loadAsset(id, asset => this.props.onAssetChanged(id, asset));
     };
 
-    private handleUnset = () => {
-        this.props.onAssetChanged(null);
+    private handleUnset = (id: IAssetName) => {
+        this.props.onAssetChanged(id, null);
     };
 
-    private handleChange = (from: string, to: string) => {
-        loadAsset(to, this.props.onAssetChanged);
+    private handleChange = (from: IAssetName, to: IAssetName) => {
+        loadAsset(to, asset => this.props.onAssetChanged(to, asset));
     }
 }

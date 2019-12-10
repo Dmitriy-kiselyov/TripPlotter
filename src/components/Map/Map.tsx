@@ -1,9 +1,12 @@
 import React from 'react';
 
 import { getObjectManagerProps } from './helpers/getObjectManagerProps';
+import { IBalloonFactoryProps } from './types';
 
 import { loadScript } from '../../lib/loadScript';
 import { IOrganization } from '../../types/organization';
+import { IAssetName } from '../../types/assets';
+import { Balloon } from '../Balloon/Balloon';
 
 import './Map.scss';
 
@@ -12,6 +15,7 @@ declare global {
 }
 
 export interface IMapProps {
+    category?: IAssetName;
     organizations?: IOrganization[];
     lockArea?: boolean;
 }
@@ -62,7 +66,8 @@ export class Map extends React.PureComponent<IMapProps> {
 
             _this.objectManager.objects.options.set({
                 preset: 'islands#circleDotIcon',
-                iconColor: 'darkslateblue'
+                iconColor: 'darkslateblue',
+                hideIconOnBalloonOpen: false
             });
             _this.objectManager.clusters.options.set({
                 preset: 'islands#invertedVioletClusterIcons'
@@ -83,9 +88,20 @@ export class Map extends React.PureComponent<IMapProps> {
 
         this.hideOrganizations();
 
-        const marks = getObjectManagerProps(this.props.organizations);
+        const marks = getObjectManagerProps(this.props.category, this.props.organizations, this.balloonFactory);
 
         this.objectManager.add(marks);
+    }
+
+    private balloonFactory(balloon: IBalloonFactoryProps): React.ReactElement {
+        const { id, category } = balloon;
+
+        return (
+            <Balloon
+                id={id}
+                category={category}
+            />
+        )
     }
 
     render() {

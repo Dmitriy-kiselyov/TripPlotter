@@ -1,0 +1,18 @@
+@import '../Constants.scss';
+
+.Balloon {
+    &-Title {
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 700;
+        color: $primary-dark;
+
+        margin-bottom: 5px;
+    }
+
+    &-Categories {
+        font-size: 13px;
+        line-height: 15px;
+        color: #999;
+    }
+}
