@@ -33,6 +33,13 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ],
+            },
+            {
+                test: /\.svg(\?.*)?$/,
+                use: [
+                    'url-loader',
+                    'svg-transform-loader'
+                ]
             }
         ]
     },

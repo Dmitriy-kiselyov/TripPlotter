@@ -1,0 +1,11 @@
+@import "../Constants.scss";
+
+.Link {
+    font-size: $font-size-m;
+    line-height: $line-height-m;
+    text-decoration: none;
+
+    &:hover {
+        color: red;
+    }
+}

@@ -2,7 +2,7 @@
 
 .Balloon {
     &-Title {
-        font-size: 17px;
+        font-size: $font-size-l;
         line-height: 20px;
         font-weight: 700;
         color: $primary-dark;
@@ -11,8 +11,19 @@
     }
 
     &-Categories {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: $font-size-m;
+        line-height: $line-height-m;
         color: #999;
+    }
+
+    &-Contact {
+        display: flex;
+        margin: 10px 0;
+        font-size: $font-size-m;
+        line-height: $line-height-m;
+
+        .Icon {
+            margin-right: 10px;
+        }
     }
 }

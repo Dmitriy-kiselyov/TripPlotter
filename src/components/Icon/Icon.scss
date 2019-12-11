@@ -1,0 +1,26 @@
+@import "../Constants.scss";
+
+.Icon {
+    display: inline-block;
+    flex-shrink: 0;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &_type_call {
+        background-image: url(./assets/call.svg);
+    }
+
+    &_type_clock {
+        background-image: url(./assets/clock.svg);
+    }
+
+    &_type_map {
+        background-image: url(./assets/map.svg);
+    }
+
+    &_type_site {
+        background-image: url(./assets/site.svg);
+    }
+}

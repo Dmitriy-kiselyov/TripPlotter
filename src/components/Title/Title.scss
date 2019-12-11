@@ -1,5 +1,7 @@
+@import "../Constants.scss";
+
 .Title {
-    font-size: 17px;
+    font-size: $font-size-l;
     padding: 5px;
     text-align: center;
 }
