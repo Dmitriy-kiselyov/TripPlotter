@@ -1,6 +1,8 @@
 @import '../Constants.scss';
 
 .Balloon {
+    margin: 1px;
+
     &-Title {
         font-size: $font-size-l;
         line-height: 20px;
@@ -11,19 +13,29 @@
     }
 
     &-Categories {
-        font-size: $font-size-m;
-        line-height: $line-height-m;
         color: #999;
     }
 
     &-Contact {
         display: flex;
         margin: 10px 0;
-        font-size: $font-size-m;
-        line-height: $line-height-m;
 
         .Icon {
             margin-right: 10px;
+        }
+    }
+
+    .Hint {
+        margin: 8px 0;
+    }
+
+    &-TimeWrap {
+        display: flex;
+        margin-bottom: 8px;
+
+        .TimePicker {
+            width: 100px;
+            margin-right: 8px;
         }
     }
 }

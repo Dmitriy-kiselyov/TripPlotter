@@ -5,16 +5,19 @@ import { findOrganization } from '../../lib/findOrganization';
 import { Divider } from '../Divider/Divider';
 import { Icon, IIconType } from '../Icon/Icon';
 import { Link } from '../Link/Link';
+import { ToggleButton } from '../ToggleButton/ToggleButton';
+import { Hint } from '../Hint/Hint';
+import { TimePicker } from '../TimePicker/TimePicker';
+import { Text } from '../Text/Text';
 
 import './Balloon.scss';
-import { Input } from '../Input/Input';
 
 export interface IBalloonProps extends IBalloonFactoryProps {
 }
 
 interface IContact {
     type: IIconType;
-    content: React.ReactNode;
+    content: React.ReactElement;
 }
 
 export class Balloon extends React.PureComponent<IBalloonProps> {
@@ -38,9 +41,9 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
                 <div className="Balloon-Title">
                     {name}
                 </div>
-                <div className="Balloon-Categories">
+                <Text className="Balloon-Categories">
                     {this.getCategories(Categories)}
-                </div>
+                </Text>
                 <Divider/>
                 {
                     this.getContacts().map(contact => (
@@ -50,6 +53,20 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
                         </div>
                     ))
                 }
+                <Divider/>
+                <Hint text="Хотите добавить в поездку?"/>
+                <div className="Balloon-TimeWrap">
+                    <TimePicker
+                        placeholder="Время"
+                    />
+                    <Text>Сколько времени вы хотите провести в этом месте?</Text>
+                </div>
+                <ToggleButton
+                    id="add"
+                    text="Добавить"
+                    set={false}
+                    onClick={() => {}}
+                />
             </div>
         );
     }
@@ -65,13 +82,13 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
         if (Hours) {
             contacts.push({
                 type: 'clock',
-                content: Hours.text
+                content: <Text>{Hours.text}</Text>
             });
         }
 
         contacts.push({
             type: 'map',
-            content: address
+            content: <Text>{address}</Text>
         });
 
         if (Phones) {
@@ -91,12 +108,12 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
         return contacts;
     }
 
-    private renderPhoneContacts(phones: IPhone[]): React.ReactNode {
+    private renderPhoneContacts(phones: IPhone[]): React.ReactElement {
         return (
             <div>
                 {
                     phones.map(phone => (
-                        <div key={phone.formatted}>{phone.formatted}</div>
+                        <Text key={phone.formatted}>{phone.formatted}</Text>
                     ))
                 }
             </div>

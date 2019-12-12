@@ -43,6 +43,7 @@ export class TimePicker extends React.PureComponent<ITimePickerProps> {
         return (
             <Input
                 id={this.id}
+                className="TimePicker"
                 placeholder={this.props.placeholder}
                 readonly
                 textCenter
