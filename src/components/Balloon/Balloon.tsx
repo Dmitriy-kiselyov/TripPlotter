@@ -96,12 +96,10 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
             <div>
                 {
                     phones.map(phone => (
-                        <div>{phone.formatted}</div>
+                        <div key={phone.formatted}>{phone.formatted}</div>
                     ))
                 }
             </div>
         );
     }
 }
-
-const autor = '<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>';
