@@ -62,6 +62,7 @@ export class Root extends React.PureComponent<{}, IState> {
                         {
                             category: 'attraction',
                             organization: {
+                                id: 1,
                                 name: 'Парк развлечений',
                             },
                             time: '12:00',
@@ -69,6 +70,7 @@ export class Root extends React.PureComponent<{}, IState> {
                         {
                             category: 'museum',
                             organization: {
+                                id: 2,
                                 name: 'Музей всего на свете и того и того и сего и всего и чего',
                             },
                             time: '3:30',

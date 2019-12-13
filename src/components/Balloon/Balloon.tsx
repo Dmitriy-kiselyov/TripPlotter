@@ -20,8 +20,17 @@ interface IContact {
     content: React.ReactElement;
 }
 
-export class Balloon extends React.PureComponent<IBalloonProps> {
+interface IState {
+    time: string;
+    timeValidation?: boolean;
+}
+
+export class Balloon extends React.PureComponent<IBalloonProps, IState> {
     private readonly organization: IOrganization | null;
+
+    state: IState = {
+        time: '',
+    };
 
     constructor(props: IBalloonProps) {
         super(props);
@@ -57,8 +66,12 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
                 <Hint text="Хотите добавить в поездку?"/>
                 <div className="Balloon-TimeWrap">
                     <TimePicker
+                        value={this.state.time}
                         place="left"
                         placeholder="Время"
+                        onShow={this.handleTimeShow}
+                        onChange={this.handleTimeChange}
+                        validationError={this.state.timeValidation}
                     />
                     <Text>Сколько времени вы хотите провести в этом месте?</Text>
                 </div>
@@ -66,11 +79,25 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
                     id="add"
                     text="Добавить"
                     set={false}
-                    onClick={() => {}}
+                    onClick={this.handleAdd}
                 />
             </div>
         );
     }
+
+    private handleTimeChange = (time: string) => {
+        this.setState({ time });
+    };
+
+    private handleTimeShow = () => {
+        this.setState({ timeValidation: false });
+    };
+
+    private handleAdd = () => {
+        if (this.state.time === '') {
+            this.setState({ timeValidation: true });
+        }
+    };
 
     private getCategories(categories: ICategory[]): string {
         return categories.map(category => category.name).join(', ');

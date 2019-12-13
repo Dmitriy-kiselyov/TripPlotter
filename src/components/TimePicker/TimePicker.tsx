@@ -18,6 +18,9 @@ export interface ITimePickerProps {
     placeholder?: string;
     value?: string;
     place: 'bottom' | 'left' | 'top';
+    onChange?: (time: string) => void;
+    validationError?: boolean;
+    onShow?: () => void;
 }
 
 function generateId() {
@@ -34,10 +37,24 @@ export class TimePicker extends React.PureComponent<ITimePickerProps> {
     }
 
     componentDidMount(): void {
+        const _this = this;
+
         jquery('#' + this.id).clockpicker({
             placement: this.props.place,
             align: 'right',
-            autoclose: true
+            autoclose: true,
+            beforeShow: function() {
+                if (_this.props.onShow) {
+                    _this.props.onShow();
+                }
+            },
+            afterDone: function () {
+                // использовать Input нельзя, jquery не меняет value инпута
+                if (_this.props.onChange) {
+                    // @ts-ignore
+                    _this.props.onChange(document.querySelector('#' + _this.id).value);
+                }
+            }
         });
     }
 
@@ -48,6 +65,7 @@ export class TimePicker extends React.PureComponent<ITimePickerProps> {
                 value={this.props.value}
                 className="TimePicker"
                 placeholder={this.props.placeholder}
+                validationError={this.props.validationError}
                 readonly
                 textCenter
             />

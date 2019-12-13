@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
 import { cn } from '../../lib/cn';
 
@@ -11,12 +11,21 @@ export interface IInputProps {
     readonly?: boolean;
     textCenter?: boolean;
     value?: string;
+    onChange?: (value: string) => void;
+    validationError?: boolean;
 }
 
 export const Input: React.FC<IInputProps> = props => {
     const mods = {
         readonly: props.readonly,
-        center: props.textCenter
+        center: props.textCenter,
+        error: props.validationError,
+    };
+
+    const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+        if (props.onChange) {
+            props.onChange(event.target.value);
+        }
     };
 
     return (
@@ -25,6 +34,7 @@ export const Input: React.FC<IInputProps> = props => {
             type="text"
             value={props.value || ''}
             readOnly={props.readonly}
+            onChange={onChange}
             id={props.id}
             placeholder={props.placeholder}
         />

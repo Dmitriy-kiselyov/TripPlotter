@@ -82,7 +82,7 @@ export class TripList extends React.PureComponent<ITripListProps> {
 
     private renderItem(category: IAssetName, organization: IOrganization, time: string) {
         return (
-            <div className="TripList-Item">
+            <div className="TripList-Item" key={organization.id}>
                 <Icon type="cross" size={12} onClick={() => {}}/>
                 <Text oneLine>{organization.name}</Text>
                 <Text className="TripList-Category" color="grey">{getAssetName(category)}</Text>

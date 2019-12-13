@@ -26,4 +26,8 @@
     &:focus {
         border-color: $primary-dark;
     }
+
+    &_error {
+        border-color: red;
+    }
 }
