@@ -10,6 +10,7 @@ export interface IInputProps {
     placeholder?: string;
     readonly?: boolean;
     textCenter?: boolean;
+    value?: string;
 }
 
 export const Input: React.FC<IInputProps> = props => {
@@ -20,8 +21,9 @@ export const Input: React.FC<IInputProps> = props => {
 
     return (
         <input
-            className={cn('Input', mods) + (props.className ? ' ' + props.className : '')}
+            className={cn('Input', mods, props.className)}
             type="text"
+            value={props.value || ''}
             readOnly={props.readonly}
             id={props.id}
             placeholder={props.placeholder}

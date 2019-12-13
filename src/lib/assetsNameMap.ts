@@ -70,3 +70,13 @@ export const assetsNameMap: IAssetsNameMap = [
         text: 'Водопады'
     }
 ];
+
+export function getAssetName(id: string): string | null {
+    for (const map of assetsNameMap) {
+        if (map.id === id) {
+            return map.text;
+        }
+    }
+
+    return null;
+}

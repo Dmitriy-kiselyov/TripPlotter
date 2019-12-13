@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { cn } from '../../lib/cn';
+import { Text } from '../Text/Text';
 
 import './ToggleButton.scss';
 
@@ -18,7 +19,13 @@ export class ToggleButton extends React.PureComponent<IToggleButtonProps> {
                 className={cn('ToggleButton', { set: this.props.set })}
                 onClick={this.handleClick}
             >
-                <span className="ToggleButton-Text">{this.props.text}</span>
+                <Text
+                    newLine
+                    oneLine
+                    color={this.props.set ? 'white' : 'black'}
+                >
+                    {this.props.text}
+                </Text>
             </button>
         );
     }

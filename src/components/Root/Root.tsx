@@ -11,6 +11,7 @@ import { ArrayLayout } from '../ArrayLayout/ArrayLayout';
 import { DatePicker } from '../DatePicker/DatePicker';
 import { TimePicker } from '../TimePicker/TimePicker';
 import { IAssetName } from '../../types/assets';
+import { TripList } from '../TripList/TripList';
 
 interface IState {
     category: IAssetName | null;
@@ -41,9 +42,11 @@ export class Root extends React.PureComponent<{}, IState> {
                     <DatePicker/>
                     <ArrayLayout>
                         <TimePicker
+                            place="bottom"
                             placeholder="Начало"
                         />
                         <TimePicker
+                            place="bottom"
                             placeholder="Конец"
                         />
                     </ArrayLayout>
@@ -52,6 +55,25 @@ export class Root extends React.PureComponent<{}, IState> {
                 <ToggleAssetsGroup
                     items={assetsNameMap}
                     onAssetChanged={this.handleAssetChanged}
+                />
+                // @ts-ignore
+                <TripList
+                    items={[
+                        {
+                            category: 'attraction',
+                            organization: {
+                                name: 'Парк развлечений',
+                            },
+                            time: '12:00',
+                        },
+                        {
+                            category: 'museum',
+                            organization: {
+                                name: 'Музей всего на свете и того и того и сего и всего и чего',
+                            },
+                            time: '3:30',
+                        }
+                    ]}
                 />
             </>
         );

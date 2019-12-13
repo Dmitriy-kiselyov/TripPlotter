@@ -3,4 +3,34 @@
 .Text {
     font-size: $font-size-m;
     line-height: $line-height-m;
+
+    transition: color .1s linear;
+
+    &_color {
+        &_black {
+            color: #000;
+        }
+
+        &_grey {
+            color: #999;
+        }
+
+        &_white {
+            color: #fff;
+        }
+    }
+
+    &_newLine {
+        display: block;
+    }
+
+    &_center {
+        text-align: center;
+    }
+
+    &_oneLine {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 }

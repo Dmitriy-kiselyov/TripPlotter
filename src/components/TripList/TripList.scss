@@ -1,0 +1,33 @@
+@import "../Constants.scss";
+
+.TripList {
+    &-Stats {
+        margin-bottom: $margin;
+    }
+
+    &-Item {
+        display: flex;
+        align-items: center;
+
+        > .Icon {
+            margin-right: $margin;
+        }
+
+        > .Text {
+            margin-right: $margin;
+        }
+
+        & + & {
+            margin-top: $margin;
+        }
+    }
+
+    &-Category {
+        flex-grow: 1;
+    }
+
+    .TimePicker {
+        width: 50px;
+        height: 24px;
+    }
+}

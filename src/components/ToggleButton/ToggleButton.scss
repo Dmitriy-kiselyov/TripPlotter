@@ -11,7 +11,7 @@
     border-radius: 4px;
     cursor: pointer;
 
-    transition: background .1s linear, border-color .1s ease-out, color .1s linear;
+    transition: background .1s linear, border-color .1s ease-out;
 
     &:hover {
         border-color: $border-hover;
@@ -28,12 +28,5 @@
         &:active {
             background-color: $primary-dark-opacity-75;
         }
-    }
-
-    &-Text {
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
     }
 }

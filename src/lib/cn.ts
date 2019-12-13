@@ -1,4 +1,4 @@
-export function cn(className: string, mods: Record<string, string | boolean>): string {
+export function cn(className: string, mods: Record<string, string | boolean>, additionalClassName?: string): string {
     const classes = [className];
 
     Object.keys(mods).forEach(key => {
@@ -12,6 +12,10 @@ export function cn(className: string, mods: Record<string, string | boolean>): s
             classes.push(className + '_' + key + '_' + value);
         }
     });
+
+    if (additionalClassName) {
+        classes.push(additionalClassName);
+    }
 
     return classes.join(' ');
 }

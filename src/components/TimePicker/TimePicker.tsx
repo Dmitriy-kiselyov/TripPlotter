@@ -15,7 +15,9 @@ declare global {
 }
 
 export interface ITimePickerProps {
-    placeholder: string;
+    placeholder?: string;
+    value?: string;
+    place: 'bottom' | 'left';
 }
 
 function generateId() {
@@ -33,7 +35,7 @@ export class TimePicker extends React.PureComponent<ITimePickerProps> {
 
     componentDidMount(): void {
         jquery('#' + this.id).clockpicker({
-            placement: 'bottom',
+            placement: this.props.place,
             align: 'right',
             autoclose: true
         });
@@ -43,6 +45,7 @@ export class TimePicker extends React.PureComponent<ITimePickerProps> {
         return (
             <Input
                 id={this.id}
+                value={this.props.value}
                 className="TimePicker"
                 placeholder={this.props.placeholder}
                 readonly

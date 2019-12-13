@@ -1,7 +1,10 @@
 $font-family: Helvetica, Arial, sans-serif;
 $font-size-m: 13px;
 $line-height-m: 16px;
-$font-size-l: 17px;
+$font-size-l: 15px;
+$line-height-l: 19px;
+$font-size-xl: 17px;
+$line-height-xl: 21px;
 
 $primary: #B51EFF;
 $primary-opacity-25: rgba(181, 30, 255, .25);
@@ -15,3 +18,5 @@ $primary-dark-opacity-75: rgba(72, 61, 139, .75);
 
 $border: rgba(0, 0, 0, .2);
 $border-hover: rgba(0, 0, 0, .4);
+
+$margin: 8px;

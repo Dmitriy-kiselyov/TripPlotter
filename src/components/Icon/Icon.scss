@@ -23,4 +23,23 @@
     &_type_site {
         background-image: url(./assets/site.svg);
     }
+
+    &_type_cross {
+        background-image: url(./assets/cross.svg);
+    }
+
+    &_clickable {
+        cursor: pointer;
+        transition: all .1s;
+
+        &:hover {
+            &.Icon_type_cross {
+                background-image: url(./assets/cross.svg?fill=red);
+            }
+        }
+
+        &:active {
+            transform: scale(.9);
+        }
+    }
 }
