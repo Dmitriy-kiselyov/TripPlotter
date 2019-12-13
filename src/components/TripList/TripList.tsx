@@ -47,7 +47,7 @@ export class TripList extends React.PureComponent<ITripListProps> {
                 <Icon type="cross" size={12} onClick={() => {}}/>
                 <Text oneLine>{organization.name}</Text>
                 <Text className="TripList-Category" color="grey">{getAssetName(category)}</Text>
-                <TimePicker value={time} place="left"/>
+                <TimePicker value={time} place="top"/>
             </div>
         );
     }

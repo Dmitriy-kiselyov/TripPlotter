@@ -57,7 +57,7 @@ export class Balloon extends React.PureComponent<IBalloonProps> {
                 <Hint text="Хотите добавить в поездку?"/>
                 <div className="Balloon-TimeWrap">
                     <TimePicker
-                        place="bottom"
+                        place="left"
                         placeholder="Время"
                     />
                     <Text>Сколько времени вы хотите провести в этом месте?</Text>

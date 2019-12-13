@@ -17,7 +17,7 @@ declare global {
 export interface ITimePickerProps {
     placeholder?: string;
     value?: string;
-    place: 'bottom' | 'left';
+    place: 'bottom' | 'left' | 'top';
 }
 
 function generateId() {
