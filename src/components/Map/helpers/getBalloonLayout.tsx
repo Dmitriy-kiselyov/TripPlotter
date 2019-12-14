@@ -1,5 +1,9 @@
+import React from 'react';
+// @ts-ignore
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
+import { store } from '../../../store/store';
 import { IObjectManagerFeature, IBalloonFactory } from '../types';
 
 const layout = '<div id="balloon"></div>';
@@ -35,7 +39,9 @@ function createBalloonLayout(balloonFactory: IBalloonFactory) {
                 const { id, category } = this.getData().object as IObjectManagerFeature;
 
                 ReactDOM.render(
-                    balloonFactory({ id, category }),
+                    <Provider store={store}>
+                        {balloonFactory({ id, category })}
+                    </Provider>,
                     this._container
                 );
             }

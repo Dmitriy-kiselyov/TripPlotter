@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect, DispatchProp } from 'react-redux';
+
 import { IBalloonFactoryProps } from '../Map/types';
 import { ICategory, IOrganization, IPhone } from '../../types/organization';
 import { findOrganization } from '../../lib/findOrganization';
@@ -10,9 +12,18 @@ import { Hint } from '../Hint/Hint';
 import { TimePicker } from '../TimePicker/TimePicker';
 import { Text } from '../Text/Text';
 
+import { IStore } from '../../types/store';
+import { addToList } from '../../store/addToList';
+import { removeFromList } from '../../store/removeFromList';
+import { changeTime } from '../../store/changeTime';
+import { getTripItem } from '../../store/getTripItem';
+
 import './Balloon.scss';
 
-export interface IBalloonProps extends IBalloonFactoryProps {
+export interface IBalloonProps extends IBalloonFactoryProps, DispatchProp {
+    inList: boolean;
+    time?: string;
+    organization: IOrganization | null;
 }
 
 interface IContact {
@@ -25,25 +36,19 @@ interface IState {
     timeValidation?: boolean;
 }
 
-export class Balloon extends React.PureComponent<IBalloonProps, IState> {
-    private readonly organization: IOrganization | null;
-
+class BalloonPresenter extends React.PureComponent<IBalloonProps, IState> {
     state: IState = {
-        time: '',
+        time: this.props.time || ''
     };
 
-    constructor(props: IBalloonProps) {
-        super(props);
-
-        this.organization = findOrganization(props.category, props.id);
-    }
-
     render() {
-        if (this.organization === null) {
+        if (this.props.organization === null) {
             return null;
         }
 
-        const { name, Categories } = this.organization;
+        const { name, Categories } = this.props.organization;
+        const { inList } = this.props;
+        const { time } = this.state;
 
         return (
             <div className="Balloon">
@@ -66,7 +71,7 @@ export class Balloon extends React.PureComponent<IBalloonProps, IState> {
                 <Hint text="Хотите добавить в поездку?"/>
                 <div className="Balloon-TimeWrap">
                     <TimePicker
-                        value={this.state.time}
+                        value={time}
                         place="left"
                         placeholder="Время"
                         onShow={this.handleTimeShow}
@@ -77,16 +82,30 @@ export class Balloon extends React.PureComponent<IBalloonProps, IState> {
                 </div>
                 <ToggleButton
                     id="add"
-                    text="Добавить"
-                    set={false}
-                    onClick={this.handleAdd}
+                    text={inList ? 'Удалить' : 'Добавить'}
+                    set={inList}
+                    onClick={inList ? this.handleRemove : this.handleAdd}
                 />
             </div>
         );
     }
 
+    static getDerivedStateFromProps(props: IBalloonProps): Partial<IState> {
+        if (props.time !== undefined) {
+            return {
+                time: props.time
+            }
+        }
+
+        return {};
+    }
+
     private handleTimeChange = (time: string) => {
-        this.setState({ time });
+        this.setState({
+            time
+        });
+
+        this.props.dispatch(changeTime(this.props.id, time));
     };
 
     private handleTimeShow = () => {
@@ -96,7 +115,13 @@ export class Balloon extends React.PureComponent<IBalloonProps, IState> {
     private handleAdd = () => {
         if (this.state.time === '') {
             this.setState({ timeValidation: true });
+        } else {
+            this.props.dispatch(addToList(this.props.category, this.props.organization, this.state.time));
         }
+    };
+
+    private handleRemove = () => {
+        this.props.dispatch(removeFromList(this.props.id));
     };
 
     private getCategories(categories: ICategory[]): string {
@@ -104,7 +129,7 @@ export class Balloon extends React.PureComponent<IBalloonProps, IState> {
     }
 
     private getContacts(): IContact[] {
-        const { Hours, address, Phones, url } = this.organization;
+        const { Hours, address, Phones, url } = this.props.organization;
         const contacts: IContact[] = [];
 
         if (Hours) {
@@ -148,3 +173,15 @@ export class Balloon extends React.PureComponent<IBalloonProps, IState> {
         );
     }
 }
+
+export const Balloon = connect(
+    (state: IStore, props: IBalloonFactoryProps): Partial<IBalloonProps> => {
+        const tripItem = getTripItem(props.id);
+
+        return {
+            inList: Boolean(tripItem),
+            time: tripItem ? tripItem.time : undefined,
+            organization: tripItem ? tripItem.organization : findOrganization(props.category, props.id)
+        };
+    }
+)(BalloonPresenter);

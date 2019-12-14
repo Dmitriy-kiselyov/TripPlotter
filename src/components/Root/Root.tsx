@@ -56,27 +56,7 @@ export class Root extends React.PureComponent<{}, IState> {
                     items={assetsNameMap}
                     onAssetChanged={this.handleAssetChanged}
                 />
-                // @ts-ignore
-                <TripList
-                    items={[
-                        {
-                            category: 'attraction',
-                            organization: {
-                                id: 1,
-                                name: 'Парк развлечений',
-                            },
-                            time: '12:00',
-                        },
-                        {
-                            category: 'museum',
-                            organization: {
-                                id: 2,
-                                name: 'Музей всего на свете и того и того и сего и всего и чего',
-                            },
-                            time: '3:30',
-                        }
-                    ]}
-                />
+                <TripList/>
             </>
         );
 

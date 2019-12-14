@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect, DispatchProp } from 'react-redux';
 
 import { IOrganization } from '../../types/organization';
 import { IAssetName } from '../../types/assets';
@@ -9,10 +10,13 @@ import { TimePicker } from '../TimePicker/TimePicker';
 import { getAssetName } from '../../lib/assetsNameMap';
 import { parseTime, timeSection } from '../../lib/time';
 import { multiLang } from '../../lib/multiLang';
+import { changeTime } from '../../store/changeTime';
+import { removeFromList } from '../../store/removeFromList';
+import { IStore } from '../../types/store';
 
 import './TripList.scss';
 
-export interface ITripListProps {
+export interface ITripListProps extends DispatchProp {
     items: ITripListItemProps[];
 }
 
@@ -41,7 +45,7 @@ const minutesDictionary = {
     many: 'минут',
 };
 
-export class TripList extends React.PureComponent<ITripListProps> {
+class TripListPresenter extends React.PureComponent<ITripListProps> {
     render() {
         return (
             <div className="TripList">
@@ -83,11 +87,21 @@ export class TripList extends React.PureComponent<ITripListProps> {
     private renderItem(category: IAssetName, organization: IOrganization, time: string) {
         return (
             <div className="TripList-Item" key={organization.id}>
-                <Icon type="cross" size={12} onClick={() => {}}/>
+                <Icon
+                    type="cross"
+                    size={12}
+                    onClick={() => this.props.dispatch(removeFromList(organization.id))}
+                />
                 <Text oneLine>{organization.name}</Text>
                 <Text className="TripList-Category" color="grey">{getAssetName(category)}</Text>
-                <TimePicker value={time} place="top"/>
+                <TimePicker
+                    value={time}
+                    place="top"
+                    onChange={time => this.props.dispatch(changeTime(organization.id, time))}
+                />
             </div>
         );
     }
 }
+
+export const TripList = connect((state: IStore) => ({ items: state.tripList }))(TripListPresenter);
