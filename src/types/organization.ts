@@ -16,10 +16,10 @@ export interface ICategory {
 
 export interface IHours {
     text: string;
-    Availabilities: IAvaliableHours[];
+    Availabilities: IAvailableHours[];
 }
 
-export interface IAvaliableHours {
+export interface IAvailableHours {
     Intervals?: IHourInterval[];
     TwentyFourHours?: boolean;
 

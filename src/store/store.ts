@@ -2,7 +2,16 @@
 import { createStore } from 'redux';
 
 import { IStore } from '../types/store';
-import { ACTION_TYPES, IActionAddToList, IActionChangeTime, IActionRemoveFromList, IActions } from '../types/actions';
+import {
+    ACTION_TYPES,
+    IActionAddToList,
+    IActionChangeTime,
+    IActionRemoveFromList,
+    IActions,
+    IActionSetDate,
+    IActionSetEndTime,
+    IActionSetStartTime
+} from '../types/actions';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {
@@ -12,6 +21,12 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceRemoveFromList(state, action);
         case ACTION_TYPES.CHANGE_TIME:
             return reduceChangeTime(state, action);
+        case ACTION_TYPES.SET_START_TIME:
+            return reduceSetStartTime(state, action);
+        case ACTION_TYPES.SET_END_TIME:
+            return reduceSetEndTime(state, action);
+        case ACTION_TYPES.SET_DATE:
+            return reduceSetDate(state, action);
         default:
             return state;
     }
@@ -51,7 +66,31 @@ function reduceChangeTime(state: IStore, action: IActionChangeTime): IStore {
     }
 }
 
+function reduceSetStartTime(state: IStore, action: IActionSetStartTime) {
+    return {
+        ...state,
+        startTime: action.time
+    };
+}
+
+function reduceSetEndTime(state: IStore, action: IActionSetEndTime) {
+    return {
+        ...state,
+        endTime: action.time
+    };
+}
+
+function reduceSetDate(state: IStore, action: IActionSetDate) {
+    return {
+        ...state,
+        date: action.date
+    }
+}
+
 const initialStore: IStore = {
+    startTime: '',
+    endTime: '',
+    date: null,
     tripList: []
 };
 

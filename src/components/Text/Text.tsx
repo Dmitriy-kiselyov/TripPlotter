@@ -7,7 +7,7 @@ import './Text.scss';
 export interface ITextProps {
     className?: string;
     children: string;
-    color?: 'black' | 'grey' | 'white';
+    color?: 'black' | 'grey' | 'white' | 'red';
     newLine?: boolean;
     center?: boolean;
     oneLine?: boolean;

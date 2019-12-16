@@ -16,8 +16,12 @@ import { IStore } from '../../types/store';
 
 import './TripList.scss';
 
-export interface ITripListProps extends DispatchProp {
+interface IConnectProps {
     items: ITripListItemProps[];
+}
+
+export interface ITripListProps extends DispatchProp, IConnectProps {
+    validationError?: boolean;
 }
 
 export interface ITripListItemProps {
@@ -52,7 +56,13 @@ class TripListPresenter extends React.PureComponent<ITripListProps> {
                 <Title text="Список мест"/>
                 {
                     this.props.items.length === 0 ?
-                        <Text color="grey" newLine center>Вы не выбрали места</Text> :
+                        <Text
+                            color={ this.props.validationError ? 'red' : 'grey'}
+                            newLine
+                            center
+                        >
+                            Вы не выбрали места
+                        </Text> :
                         <>
                             {this.renderStats()}
                             {this.props.items.map(item => this.renderItem(item.category, item.organization, item.time))}
@@ -93,7 +103,7 @@ class TripListPresenter extends React.PureComponent<ITripListProps> {
                     onClick={() => this.props.dispatch(removeFromList(organization.id))}
                 />
                 <Text oneLine>{organization.name}</Text>
-                <Text className="TripList-Category" color="grey">{getAssetName(category)}</Text>
+                <Text oneLine className="TripList-Category" color="grey">{getAssetName(category)}</Text>
                 <TimePicker
                     value={time}
                     place="top"
