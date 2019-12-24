@@ -20,6 +20,7 @@ import { setEndTime } from '../../store/setEndTime';
 import { setDate } from '../../store/setDate';
 import { parseTime } from '../../lib/time';
 import { getAlgorithmParams } from '../../lib/getAlgorithmParams';
+import tripAlgorithm from '../../lib/tripAlgorithm';
 
 import './Root.scss';
 
@@ -179,8 +180,10 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
             return;
         }
 
-        // Всё в порядке
-        console.log(getAlgorithmParams());
+        // @ts-ignore
+        tripAlgorithm(getAlgorithmParams(), (data: any) => {
+            console.log('DATA', data);
+        });
     };
 
     static getDerivedStateFromProps(props: IRootProps): Partial<IState> {
