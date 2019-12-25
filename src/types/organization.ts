@@ -10,7 +10,7 @@ export interface IOrganization {
 }
 
 export interface ICategory {
-    class: string;
+    class?: string;
     name: string;
 }
 
