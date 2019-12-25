@@ -19,13 +19,14 @@ export interface IAlgorithmAvailableParam {
 
 export interface IAlgorithmOutput {
     tripList: IAlgorithmTripOutput[];
-    extra?: IAlgorithmExtraOutput;
+    extra?: IAlgorithmExtraOutput[];
 }
 
 export interface IAlgorithmTripOutput {
     id: string;
     from: number;
     to: number;
+    wait?: number;
     coordinates: [number, number];
 }
 
