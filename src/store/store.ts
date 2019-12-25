@@ -7,9 +7,11 @@ import {
     IActionAddToList,
     IActionChangeTime,
     IActionRemoveFromList,
+    IActionRemoveRoute,
     IActions,
     IActionSetDate,
     IActionSetEndTime,
+    IActionSetRoute,
     IActionSetStartTime
 } from '../types/actions';
 import { testStore } from './testInitialStore';
@@ -28,6 +30,10 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceSetEndTime(state, action);
         case ACTION_TYPES.SET_DATE:
             return reduceSetDate(state, action);
+        case ACTION_TYPES.SET_ROUTE:
+            return reduceSetRoute(state, action);
+        case ACTION_TYPES.REMOVE_ROUTE:
+            return reduceRemoveRoute(state);
         default:
             return state;
     }
@@ -86,6 +92,19 @@ function reduceSetDate(state: IStore, action: IActionSetDate) {
         ...state,
         date: action.date
     }
+}
+
+function reduceSetRoute(state: IStore, action: IActionSetRoute) {
+    return {
+        ...state,
+        tripRoute: action.route
+    }
+}
+
+function reduceRemoveRoute(state: IStore) {
+    const { tripRoute, ...newState } = state;
+
+    return newState;
 }
 
 const initialStore: IStore = {

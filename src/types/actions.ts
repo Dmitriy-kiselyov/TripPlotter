@@ -1,5 +1,6 @@
 import { IOrganization } from './organization';
 import { IAssetName } from './assets';
+import { IAlgorithmOutput } from './algorithm';
 
 export enum ACTION_TYPES {
     ADD_TO_LIST = 'ADD_TO_LIST',
@@ -7,7 +8,9 @@ export enum ACTION_TYPES {
     REMOVE_FROM_LIST = 'REMOVE_FROM_LIST',
     SET_START_TIME = 'SET_START_TIME',
     SET_END_TIME = 'SET_END_TIME',
-    SET_DATE = 'SET_DATE'
+    SET_DATE = 'SET_DATE',
+    SET_ROUTE = 'SET_ROUTE',
+    REMOVE_ROUTE = 'REMOVE_ROUTE'
 }
 
 export interface IActionAddToList {
@@ -43,5 +46,14 @@ export interface IActionSetDate {
     date: Date;
 }
 
+export interface IActionSetRoute {
+    type: ACTION_TYPES.SET_ROUTE;
+    route: IAlgorithmOutput;
+}
+
+export interface IActionRemoveRoute {
+    type: ACTION_TYPES.REMOVE_ROUTE;
+}
+
 export type IActions = IActionAddToList | IActionChangeTime | IActionRemoveFromList |
-    IActionSetStartTime | IActionSetEndTime | IActionSetDate;
+    IActionSetStartTime | IActionSetEndTime | IActionSetDate | IActionSetRoute | IActionRemoveRoute;

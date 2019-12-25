@@ -23,6 +23,8 @@ import { getAlgorithmParams } from '../../lib/getAlgorithmParams';
 import tripAlgorithm from '../../lib/tripAlgorithm';
 
 import './Root.scss';
+import { setRoute } from '../../store/setRoute';
+import { IAlgorithmOutput } from '../../types/algorithm';
 
 interface IConnectRootProps {
     startTime: string;
@@ -180,9 +182,10 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
             return;
         }
 
-        // @ts-ignore
-        tripAlgorithm(getAlgorithmParams(), (data: any) => {
-            console.log('DATA', data);
+        tripAlgorithm(getAlgorithmParams(), (route: IAlgorithmOutput) => {
+            console.log('ROUTE', route);
+
+            this.props.dispatch(setRoute(route));
         });
     };
 
