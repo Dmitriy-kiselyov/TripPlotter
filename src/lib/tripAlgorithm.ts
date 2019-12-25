@@ -1,100 +1,80 @@
-// @ts-nocheck
+import { IAlgorithmParams, IAlgorithmOrganizationParam, IAlgorithmAvailableParam, IAlgorithmOutput, IAlgorithmTripOutput, IAlgorithmExtraOutput } from '../types/algorithm';
 
-class AlgOutput {
-    constructor(trip, extra){
-        this.trip = trip;
-        this.extra = extra;
-    }
+interface IOrgTravelTime {
+    //для связи времени посещения с организацией
+    travelTime: number;
+    organization: IAlgorithmOrganizationParam;
+    backwardTime: number;
 }
 
-class Availabilities {
-    constructor(from, to){
-        this.from = from;
-        this.to = to;
-    }
-}
+export default function getRoute(algorithmParams: IAlgorithmParams, callback: any){
+    let currentTime: number = algorithmParams.from;
+    const ultimateTime: number = algorithmParams.to;
+    let currentPoint: IAlgorithmOrganizationParam = {
+        coordinates: algorithmParams.coordinates,
+        id: "Начальная точка", 
+        timeSpend: 0, 
+        available: [{
+            from: 0, 
+            to: 0
+        }]
+    };  
 
-class Organization {
-    constructor (coordinates, id, timeSpend, available) {
-        this.coordinates = coordinates;
-        this.id = id;
-        this.timeSpend = timeSpend; //в минутах -- сколько времени собираемся провести в этой организации
-        this.available = available;
-    }
-}
+    let visitedOrganizations: Array<IAlgorithmTripOutput> = [];
+    let unvisitedOrganizations: Array<IAlgorithmOrganizationParam> = algorithmParams.organizations;
 
-class OrganizationTrip {
-    constructor (id, from, to, coordinates){
-        this.id = id;       //string
-        this.from = from; //(в минутах) время прибытия в организацию
-        this.to = to;     //(в минутах) время отбытия из организации
-        this.coordinates = coordinates; //[x, y] (double)
-    }
-}
+    let routeIsBuilt: boolean = false;
 
-class OrganizationExtra {
-    constructor (id, coordinates){
-        this.id = id;       //string
-        this.coordinates = coordinates; //[x, y] (double)
-    }
-}
-
-class TestData {
-  constructor(from, to, coordinates, org){
-    this.from = from;
-    this.to = to;
-    this.coordinates = coordinates; //где находится турист (начало и конец пути)
-    this.organizations = org;
-  }
-}
-
-
-export default function getRoute(TestD, callback){
-    let currentTime = TestD.from;
-    const ultimateTime = TestD.to;
-    let currentPoint = new Organization(TestD.coordinates, "Начальная точка", undefined, undefined);
-
-    let visitedOrganizations = [];
-    let unvisitedOrganizations = TestD.organizations;
-
-    //массив времени пути от начальной точки до остальных организаций (т.к. проверяем, успеем ли вернуться домой) -- пока что берется из данных (старт->все организации) -- нужно ли отдельно считать в обратном направлении?
-    let IsStart = true;
-    let routeIsBuilt = false;
-    let backwardTime = [];
-
-    _getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, IsStart, routeIsBuilt, backwardTime, callback);
+    getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, routeIsBuilt, callback);
 }
 
 
 //функция, возвр массив [visit, unvisit] на одном шаге алгоритма
-function _getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, IsStart, routeIsBuilt, backwardTime, callback){
-    _getSortedRoutesTimeArray(currentPoint, unvisitedOrganizations, function(routesTime){
-        if (IsStart) {
-            backwardTime = routesTime;
-            IsStart = false;
-        } 
-        let visitIsPossible = false;    //сможем ли посетить организацию
+function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganizations: Array<IAlgorithmTripOutput>, 
+        unvisitedOrganizations: Array<IAlgorithmOrganizationParam>, currentTime: number, ultimateTime: number, 
+        routeIsBuilt: boolean, callback: any){
+    getSortedRoutesTimeArray(currentPoint, unvisitedOrganizations, function(routesTime: Array<IOrgTravelTime>){
+        let visitIsPossible: boolean = false;    //сможем ли посетить организацию
         //проверить, успеваем ли в ближайшую организацию
-        for (let rt of routesTime){
-            if (visitIsPossible) break;
-            let arrivalTime = currentTime + rt.travelTime;  //время прибытия в организацию = текущее время дня + время чтоб добраться до организации
-            let departureTime = arrivalTime + rt.organization.timeSpend;    //время отбытия из организации = время прибытия + время посещения
+        for (let j in routesTime){
+            if (visitIsPossible) break;    
             /*можем посетить, если:
-            departureTime <= время завершения работы организации
-            && departureTime + route(организация, начальная точка) <= время завершения дневной экскурсии, т.е. успеваем вернуться домой*/
-            let backTime = _findTimeById(rt, backwardTime);  //время для возвращения в начальную точку
+            успеем выйти раньше начала обеда или закрытия
+            успеем домой    
+           */
+            let backTime: number = routesTime[j].backwardTime;  //время для возвращения в начальную точку
+            let arrivalTime: number = currentTime + routesTime[j].travelTime;  //время прибытия в организацию = текущее время дня + время чтоб добраться до организации
              
-            for (let i in rt.organization.available){
-                let fromOrg = rt.organization.available[i].from;
-                let toOrg = rt.organization.available[i].to;
-                if (i > 0) {
-                    //нахождение в организации делится на 2 промежутка по времени (сколько-то до обеда и сколько-то после)
-                    departureTime += (rt.organization.available[1].from - rt.organization.available[0].to);
+            for (let i in routesTime[j].organization.available){   //промежутки времени [открытие, обед], [обед, закрытие]
+                let fromOrg: number = routesTime[j].organization.available[i].from; //организация работает с...
+                let toOrg: number = routesTime[j].organization.available[i].to;    //организация работает до...
+                let departureTime: number; //время отбытия из организации
+
+                let waitingTime: number = 0;
+
+                if (arrivalTime >= fromOrg){    //приехали после открытия / обеда
+                    departureTime = arrivalTime + routesTime[j].organization.timeSpend;  
+                } else if (getMinTimeOthers(routesTime, parseInt(j), currentTime) >= arrivalTime) { //приехали раньше: если не существует организации (из непросмотренных), в которую приедем раньше, добавляем эту в маршрут и ждем открытия
+                    waitingTime = fromOrg - arrivalTime;
+                    departureTime = fromOrg + routesTime[j].organization.timeSpend; 
+                } else {   //приехали раньше
+                    break;   //возможно вернемся сюда позже
                 }
+
                 if (departureTime <= toOrg && departureTime + backTime <= ultimateTime){
-                    visitedOrganizations.push(new OrganizationTrip(rt.organization.id, arrivalTime, departureTime, rt.organization.coordinates));
-                    let idx = unvisitedOrganizations.indexOf(rt.organization);
-                    currentPoint = rt.organization;
+                    let newOrg: IAlgorithmTripOutput = {
+                        id: routesTime[j].organization.id,
+                        from: arrivalTime,
+                        to: departureTime,
+                        coordinates: routesTime[j].organization.coordinates
+                    };
+                    if (waitingTime > 0) {
+                        newOrg.wait = waitingTime
+                    }
+                    visitedOrganizations.push(newOrg);
+                    
+                    let idx: number = unvisitedOrganizations.indexOf(routesTime[j].organization);
+                    currentPoint = routesTime[j].organization;
                     currentTime = departureTime;
                     unvisitedOrganizations.splice(idx, 1);
                     visitIsPossible = true;
@@ -106,39 +86,34 @@ function _getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganization
         if (!visitIsPossible || unvisitedOrganizations.length == 0) routeIsBuilt = true;
 
         if (!routeIsBuilt){
-            _getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, IsStart, routeIsBuilt, backwardTime, callback);
+            getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, routeIsBuilt, callback);
         } else {
-            let extra = [];
+            let extraOut: Array<IAlgorithmExtraOutput> = [];
             for (let unv of unvisitedOrganizations){
-                extra.push(new OrganizationExtra(unv.id, unv.coordinates));
+                extraOut.push({
+                    id: unv.id,
+                    coordinates: unv.coordinates
+                });
             }
-            callback(new AlgOutput(visitedOrganizations, extra));
+            let result: IAlgorithmOutput = {
+                tripList: visitedOrganizations,
+                extra: extraOut
+            }
+            callback(result);
         }   
     });
 }
 
-//для поиска времени пути в начальную точку обратно 
-//известно время для массива организаций, а мы возвращаем для одной
-function _findTimeById(currentOrg, orgsTravelTime){
-    for (let ott of orgsTravelTime){
-        if (currentOrg.organization.id == ott.organization.id) return ott.travelTime;
-    }
-}
-
-class _OrgTravelTime {
-    //вспомогательный класс для связи времени посещения с организацией
-    constructor(time, org){
-        this.travelTime = time;
-        this.organization = org;
-    }
-}
-
-//массив расстояний от StartOrg до каждой из EndOrgs
-function _getSortedRoutesTimeArray(StartOrg, EndOrgs, callback){
-    let travelTime = [];
+//массив расстояний от StartOrg до каждой из EndOrgs + обратно
+function getSortedRoutesTimeArray(StartOrg: IAlgorithmOrganizationParam, EndOrgs: Array<IAlgorithmOrganizationParam>, callback: any){
+    let travelTime: Array<IOrgTravelTime> = [];
     for (let eo of EndOrgs){
-        _getRouteTime(StartOrg.coordinates, eo.coordinates, function(routesTime){
-            travelTime.push(new _OrgTravelTime(routesTime, eo));
+        getRouteTime(StartOrg.coordinates, eo.coordinates, function(routesTimeFor: number, routesTimeBack: number){
+            travelTime.push({
+                travelTime: routesTimeFor,
+                organization: eo,
+                backwardTime: routesTimeBack
+            });
             if (travelTime.length == EndOrgs.length) {
                 travelTime.sort(function(a, b) {return a.travelTime - b.travelTime});
                 callback(travelTime);
@@ -148,17 +123,33 @@ function _getSortedRoutesTimeArray(StartOrg, EndOrgs, callback){
 }
 
 //время пути между двумя точками в минутах 
-function _getRouteTime(StartPoint, EndPoint, callback) {
+function getRouteTime(StartPoint: [number, number], EndPoint: [number, number], callback: any) {
+    // @ts-ignore
     ymaps.ready(init);  
     function init() {
+        // @ts-ignore
         ymaps.route(
-        [StartPoint, EndPoint],
+        [StartPoint, EndPoint, StartPoint], //нужно также проверять, успеем ли обратно
         {routingMode: "auto"})
+        // @ts-ignore  
         .then(function (route) {
-            let routesTime = route.getJamsTime(); //время в секундах с учетом пробок
-            routesTime /= 60;
-            routesTime = parseInt(routesTime);
-            callback(routesTime); 
+            let routesTimeFor: number = route.getPaths().get(0).getJamsTime(); //время в секундах с учетом пробок "туда"
+            let routesTimeBack: number = route.getPaths().get(1).getJamsTime(); //"обратно"
+            routesTimeFor = Math.floor(routesTimeFor / 60);
+            routesTimeBack = Math.floor(routesTimeBack / 60);
+            callback(routesTimeFor, routesTimeBack); 
         });
     }
+}
+
+//минимальное время прибытия в непросмотренные организации
+function getMinTimeOthers(orgs: Array<IOrgTravelTime>, j: number, currentTime: number){
+    j++;
+    let minTime = currentTime + orgs[j].travelTime;
+    for(j + 1; j < orgs.length; j++){
+        if(currentTime + orgs[j].travelTime < minTime){
+            minTime = currentTime + orgs[j].travelTime;
+        }
+    }
+    return minTime;
 }
