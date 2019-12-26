@@ -19,18 +19,22 @@ import { setStartTime } from '../../store/setStartTime';
 import { setEndTime } from '../../store/setEndTime';
 import { setDate } from '../../store/setDate';
 import { parseTime } from '../../lib/time';
-import { getAlgorithmParams } from '../../lib/getAlgorithmParams';
+import { getAlgorithmParams, getStartLocation } from '../../lib/getAlgorithmParams';
 import tripAlgorithm from '../../lib/tripAlgorithm';
-
-import './Root.scss';
 import { setRoute } from '../../store/setRoute';
 import { IAlgorithmOutput } from '../../types/algorithm';
+import { removeRoute } from '../../store/removeRoute';
+import { TripRoute } from '../TripRoute/TripRoute';
+
+import './Root.scss';
+import { fetchOrganizationsToAlgorithmOutput } from '../../lib/fetchOrganizationsToAlgorithmOutput';
 
 interface IConnectRootProps {
     startTime: string;
     endTime: string;
     date: Date | null;
     tripListSize: number;
+    showRoute: boolean;
 }
 
 export type IRootProps = DispatchProp & IConnectRootProps;
@@ -53,6 +57,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
 
     render() {
         const { organizations, category } = this.state;
+        const { showRoute } = this.props;
 
         const left = (
             <Map
@@ -64,13 +69,14 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
 
         const right = (
             <>
-                <Title text="Выберите дату"/>
+                <Title text={showRoute ? 'Выбранная дата' : 'Выберите дату'}/>
                 <ArrayLayout>
                     <DatePicker
                         onShow={this.handleDateShow}
                         onChange={this.handleDateChange}
                         placeholder="Дата путешествия"
                         validationError={this.state.dateValidation}
+                        disabled={showRoute}
                     />
                     <ArrayLayout>
                         <TimePicker
@@ -80,6 +86,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
                             place="bottom"
                             placeholder="Начало"
                             validationError={this.state.startTimeValidation}
+                            disabled={showRoute}
                         />
                         <TimePicker
                             value={this.props.endTime}
@@ -88,28 +95,39 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
                             place="bottom"
                             placeholder="Конец"
                             validationError={this.state.endTimeValidation}
+                            disabled={showRoute}
                         />
                     </ArrayLayout>
                 </ArrayLayout>
-                <Hint text="Мы подготовили для вас варианты:" />
-                <ToggleAssetsGroup
-                    items={assetsNameMap}
-                    onAssetChanged={this.handleAssetChanged}
-                />
-                <TripList
-                    validationError={this.state.tripListValidation}
-                />
+                {
+                    showRoute ? null : this.renderCategories()
+                }
+                {
+                    showRoute ? <TripRoute/> :  <TripList validationError={this.state.tripListValidation}/>
+                }
                 <ToggleButton
                     id="calculate"
-                    text="Рассчитать маршрут"
-                    set={false}
-                    onClick={this.handleCalculateClick}
+                    text={showRoute ? 'Подобрать другой маршрут' : 'Рассчитать маршрут'}
+                    set={showRoute}
+                    onClick={showRoute ? this.handleResetClick : this.handleCalculateClick}
                 />
             </>
         );
 
         return (
             <RootLayout left={left} right={right} />
+        );
+    }
+
+    private renderCategories(): React.ReactElement {
+        return (
+            <>
+                <Hint text="Мы подготовили для вас варианты:" />
+                <ToggleAssetsGroup
+                    items={assetsNameMap}
+                    onAssetChanged={this.handleAssetChanged}
+                />
+            </>
         );
     }
 
@@ -150,6 +168,10 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         });
     };
 
+    private handleResetClick = () => {
+        this.props.dispatch(removeRoute());
+    };
+
     private handleCalculateClick = () => {
         const validation: Partial<IState> = {};
 
@@ -183,9 +205,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         }
 
         tripAlgorithm(getAlgorithmParams(), (route: IAlgorithmOutput) => {
-            console.log('ROUTE', route);
-
-            this.props.dispatch(setRoute(route));
+            this.props.dispatch(setRoute(fetchOrganizationsToAlgorithmOutput(route)));
         });
     };
 
@@ -205,6 +225,7 @@ export const Root = connect(
         startTime: state.startTime,
         endTime: state.endTime,
         date: state.date,
-        tripListSize: state.tripList.length
+        tripListSize: state.tripList.length,
+        showRoute: Boolean(state.tripRoute)
     })
 )(RootPresenter);

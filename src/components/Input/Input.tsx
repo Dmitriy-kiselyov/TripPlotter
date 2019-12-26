@@ -13,6 +13,7 @@ export interface IInputProps {
     value?: string;
     onChange?: (value: string) => void;
     validationError?: boolean;
+    disabled?: boolean;
 }
 
 export const Input: React.FC<IInputProps> = props => {
@@ -20,6 +21,7 @@ export const Input: React.FC<IInputProps> = props => {
         readonly: props.readonly,
         center: props.textCenter,
         error: props.validationError,
+        disabled: props.disabled
     };
 
     const onChange = (event: ChangeEvent<HTMLInputElement>) => {

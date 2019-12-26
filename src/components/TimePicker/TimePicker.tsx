@@ -21,6 +21,7 @@ export interface ITimePickerProps {
     onChange?: (time: string) => void;
     validationError?: boolean;
     onShow?: () => void;
+    disabled?: boolean;
 }
 
 function generateId() {
@@ -68,6 +69,7 @@ export class TimePicker extends React.PureComponent<ITimePickerProps> {
                 validationError={this.props.validationError}
                 readonly
                 textCenter
+                disabled={this.props.disabled}
             />
         );
     }

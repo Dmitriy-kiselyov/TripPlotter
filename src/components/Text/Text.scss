@@ -22,6 +22,10 @@
         &_red {
             color: red;
         }
+
+        &_primary {
+            color: $primary;
+        }
     }
 
     &_newLine {

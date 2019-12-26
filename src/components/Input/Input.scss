@@ -30,4 +30,8 @@
     &_error {
         border-color: red;
     }
+
+    &_disabled {
+        pointer-events: none;
+    }
 }

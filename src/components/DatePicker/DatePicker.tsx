@@ -13,6 +13,7 @@ export interface IDatePickerProps {
     onShow?: () => void;
     onChange: (date: Date | null) => void;
     validationError?: boolean;
+    disabled?: boolean;
 }
 
 export class DatePicker extends React.PureComponent<IDatePickerProps> {
@@ -44,6 +45,7 @@ export class DatePicker extends React.PureComponent<IDatePickerProps> {
                 validationError={this.props.validationError}
                 textCenter
                 readonly
+                disabled={this.props.disabled}
             />
         );
     }

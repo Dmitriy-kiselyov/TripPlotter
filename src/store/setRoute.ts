@@ -1,7 +1,7 @@
 import { ACTION_TYPES, IActionSetRoute } from '../types/actions';
-import { IAlgorithmOutput } from '../types/algorithm';
+import { IStoreTripRoute } from '../types/store';
 
-export function setRoute(route: IAlgorithmOutput): IActionSetRoute {
+export function setRoute(route: IStoreTripRoute): IActionSetRoute {
     return {
         type: ACTION_TYPES.SET_ROUTE,
         route

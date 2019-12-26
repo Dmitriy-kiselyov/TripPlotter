@@ -10,9 +10,14 @@ export function getAlgorithmParams(): IAlgorithmParams {
     return {
         from: parseTime(state.startTime),
         to: parseTime(state.endTime),
-        coordinates: [44.936675, 34.134293], // универ
+        coordinates: getStartLocation(),
         organizations: state.tripList.map((item: IStoreTripItem) => getOrganizationParams(item, state.date))
     }
+}
+
+// TODO: пользователь должен выбрать
+export function getStartLocation(): [number, number] {
+    return [44.936675, 34.134293]; // универ
 }
 
 function getOrganizationParams(item: IStoreTripItem, date: Date): IAlgorithmOrganizationParam {

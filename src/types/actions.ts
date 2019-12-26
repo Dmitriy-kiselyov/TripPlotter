@@ -1,6 +1,6 @@
 import { IOrganization } from './organization';
 import { IAssetName } from './assets';
-import { IAlgorithmOutput } from './algorithm';
+import { IStoreTripRoute } from './store';
 
 export enum ACTION_TYPES {
     ADD_TO_LIST = 'ADD_TO_LIST',
@@ -48,7 +48,7 @@ export interface IActionSetDate {
 
 export interface IActionSetRoute {
     type: ACTION_TYPES.SET_ROUTE;
-    route: IAlgorithmOutput;
+    route: IStoreTripRoute;
 }
 
 export interface IActionRemoveRoute {

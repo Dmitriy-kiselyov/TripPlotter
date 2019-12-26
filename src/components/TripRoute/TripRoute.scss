@@ -1,0 +1,66 @@
+@import "../Constants.scss";
+
+.TripRoute {
+    &-Item {
+        display: flex;
+
+        & + & {
+            margin-top: $margin;
+        }
+
+        &_no-point {
+            padding-left: 24px + $margin;
+        }
+    }
+
+    &-Rows {
+        overflow: hidden;
+    }
+
+    &-Row {
+        display: flex;
+        align-items: center;
+        height: 24px;
+        overflow: hidden;
+    }
+
+    &-Point {
+        display: inline-block;
+        flex-shrink: 0;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        margin-right: $margin;
+
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 0 2px 0 black;
+
+        font-size: $font-size-m;
+        text-align: center;
+        color: white;
+        background: #71B732;
+        cursor: default;
+
+        &_place {
+            &_start {
+                background: #FF3333;
+            }
+
+            &_end {
+                background: #4296EA;
+            }
+        }
+    }
+
+    &-Category {
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        margin-left: $margin;
+    }
+
+    &-ExtraTitle {
+        margin-top: 20px;
+    }
+}
