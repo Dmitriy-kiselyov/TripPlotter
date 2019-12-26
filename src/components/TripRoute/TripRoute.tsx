@@ -30,7 +30,7 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                     route.tripList.map((item, index) => this.renderPoint(item, index + 1))
                 }
                 {this.renderEndPoint()}
-                {route.extra ? this.renderExtra() : null}
+                {route.extra && route.extra.length > 0 ? this.renderExtra() : null}
             </div>
         )
     }
@@ -65,6 +65,9 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
     }
 
     private renderPoint(item: IStoreTripRouteItem, index: number): React.ReactElement {
+        const { wait = 0, to } = item;
+        const from = item.from + wait;
+
         return (
             <div className="TripRoute-Item" key={item.id}>
                 <span className="TripRoute-Point">{this.getLetter(index)}</span>
@@ -76,18 +79,22 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                     {
                         item.wait ? (
                             <div className="TripRoute-Row">
-                                <Text oneLine color="primary">{`Ожидание открытия примерно ${formatTime(item.wait)}`}</Text>
+                                <Text color="primary">{`Ожидание открытия примерно ${formatTime(item.wait)}`}</Text>
                             </div>
                         ) : null
                     }
                     <div className="TripRoute-Row">
-                        <Text oneLine>Посещение с</Text>
+                        <Text>Посещение с</Text>
                         &nbsp;
-                        <Text oneLine color="primary">{formatTime(item.from)}</Text>
+                        <Text color="primary">{formatTime(from)}</Text>
                         &nbsp;
-                        <Text oneLine>до</Text>
+                        <Text>до</Text>
                         &nbsp;
-                        <Text oneLine color="primary">{formatTime(item.to)}</Text>
+                        <Text color="primary">{formatTime(to)}</Text>
+                        &nbsp;
+                        <Text>(</Text>
+                        <Text color="primary">{formatTime(to - from)}</Text>
+                        <Text>)</Text>
                     </div>
                 </div>
             </div>
