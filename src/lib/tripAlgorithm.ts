@@ -1,7 +1,7 @@
 import { IAlgorithmParams, IAlgorithmOrganizationParam, IAlgorithmAvailableParam, IAlgorithmOutput, IAlgorithmTripOutput, IAlgorithmExtraOutput } from '../types/algorithm';
 
 interface IOrgTravelTime {
-    //для связи времени посещения с организацией
+    //для связи времени прибытия с организацией
     travelTime: number;
     organization: IAlgorithmOrganizationParam;
     backwardTime: number;
@@ -10,7 +10,7 @@ interface IOrgTravelTime {
 export default function getRoute(algorithmParams: IAlgorithmParams, callback: any){
     let currentTime: number = algorithmParams.from;
     const ultimateTime: number = algorithmParams.to;
-    let currentPoint: IAlgorithmOrganizationParam = {
+    let globalStart: IAlgorithmOrganizationParam = {
         coordinates: algorithmParams.coordinates,
         id: "Начальная точка", 
         timeSpend: 0, 
@@ -20,20 +20,22 @@ export default function getRoute(algorithmParams: IAlgorithmParams, callback: an
         }]
     };  
 
+    let currentPoint: IAlgorithmOrganizationParam = globalStart;
+
     let visitedOrganizations: Array<IAlgorithmTripOutput> = [];
     let unvisitedOrganizations: Array<IAlgorithmOrganizationParam> = algorithmParams.organizations;
 
     let routeIsBuilt: boolean = false;
 
-    getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, routeIsBuilt, callback);
+    getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, routeIsBuilt, globalStart, callback);
 }
 
 
 //функция, возвр массив [visit, unvisit] на одном шаге алгоритма
 function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganizations: Array<IAlgorithmTripOutput>, 
         unvisitedOrganizations: Array<IAlgorithmOrganizationParam>, currentTime: number, ultimateTime: number, 
-        routeIsBuilt: boolean, callback: any){
-    getSortedRoutesTimeArray(currentPoint, unvisitedOrganizations, function(routesTime: Array<IOrgTravelTime>){
+        routeIsBuilt: boolean, globalStart: IAlgorithmOrganizationParam, callback: any){
+    getSortedRoutesTimeArray(currentPoint, unvisitedOrganizations, globalStart, function(routesTime: Array<IOrgTravelTime>){
         let visitIsPossible: boolean = false;    //сможем ли посетить организацию
         //проверить, успеваем ли в ближайшую организацию
         for (let j in routesTime){
@@ -86,7 +88,7 @@ function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganiza
         if (!visitIsPossible || unvisitedOrganizations.length == 0) routeIsBuilt = true;
 
         if (!routeIsBuilt){
-            getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, routeIsBuilt, callback);
+            getNextRoute(currentPoint, visitedOrganizations, unvisitedOrganizations, currentTime, ultimateTime, routeIsBuilt, globalStart, callback);
         } else {
             let extraOut: Array<IAlgorithmExtraOutput> = [];
             for (let unv of unvisitedOrganizations){
@@ -105,10 +107,10 @@ function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganiza
 }
 
 //массив расстояний от StartOrg до каждой из EndOrgs + обратно
-function getSortedRoutesTimeArray(StartOrg: IAlgorithmOrganizationParam, EndOrgs: Array<IAlgorithmOrganizationParam>, callback: any){
+function getSortedRoutesTimeArray(StartOrg: IAlgorithmOrganizationParam, EndOrgs: Array<IAlgorithmOrganizationParam>, globalStart: IAlgorithmOrganizationParam, callback: any){
     let travelTime: Array<IOrgTravelTime> = [];
     for (let eo of EndOrgs){
-        getRouteTime(StartOrg.coordinates, eo.coordinates, function(routesTimeFor: number, routesTimeBack: number){
+        getRouteTime(StartOrg.coordinates, eo.coordinates, globalStart.coordinates, function(routesTimeFor: number, routesTimeBack: number){
             travelTime.push({
                 travelTime: routesTimeFor,
                 organization: eo,
@@ -123,13 +125,13 @@ function getSortedRoutesTimeArray(StartOrg: IAlgorithmOrganizationParam, EndOrgs
 }
 
 //время пути между двумя точками в минутах 
-function getRouteTime(StartPoint: [number, number], EndPoint: [number, number], callback: any) {
+function getRouteTime(StartPoint: [number, number], EndPoint: [number, number], globalStartPoint: [number, number], callback: any) {
     // @ts-ignore
     ymaps.ready(init);  
     function init() {
         // @ts-ignore
         ymaps.route(
-        [StartPoint, EndPoint, StartPoint], //нужно также проверять, успеем ли обратно
+        [StartPoint, EndPoint, globalStartPoint], //нужно также проверять, успеем ли обратно
         {routingMode: "auto"})
         // @ts-ignore  
         .then(function (route) {
