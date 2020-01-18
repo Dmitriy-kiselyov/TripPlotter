@@ -166,7 +166,7 @@ class BalloonPresenter extends React.PureComponent<IBalloonProps, IState> {
             <div>
                 {
                     phones.map(phone => (
-                        <Text key={phone.formatted}>{phone.formatted}</Text>
+                        <Text key={phone.formatted} newLine>{phone.formatted}</Text>
                     ))
                 }
             </div>
