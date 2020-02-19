@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { IToggleGroupItem, ToggleGroup } from '../ToggleGroup/ToggleGroup';
-import { loadAsset } from '../../lib/loadAsset'
-import { IOrganization } from '../../types/organization';
-import { IAssetName } from '../../types/assets';
+import { loadAsset } from '../../../lib/loadAsset'
+import { IOrganization } from '../../../types/organization';
+import { IAssetName } from '../../../types/assets';
 
 export interface IToggleAssetsGroupProps {
     items: IToggleGroupItem[];

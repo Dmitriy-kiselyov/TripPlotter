@@ -5,7 +5,7 @@ import { getStartLocation } from './getAlgorithmParams';
 
 export function fetchOrganizationsToAlgorithmOutput(route: IAlgorithmOutput): IStoreTripRoute {
     return {
-        tripList: fetchTripList(route.tripList),
+        route: fetchTripList(route.route),
         extra: route.extra ? fetchExtras(route.extra) : undefined,
         location: getStartLocation()
     };

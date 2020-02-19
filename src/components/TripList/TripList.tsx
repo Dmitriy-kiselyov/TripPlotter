@@ -3,10 +3,10 @@ import { connect, DispatchProp } from 'react-redux';
 
 import { IOrganization } from '../../types/organization';
 import { IAssetName } from '../../types/assets';
-import { Title } from '../Title/Title';
-import { Text } from '../Text/Text';
-import { Icon } from '../Icon/Icon';
-import { TimePicker } from '../TimePicker/TimePicker';
+import { Title } from '../construct/Title/Title';
+import { Text } from '../construct/Text/Text';
+import { Icon } from '../construct/Icon/Icon';
+import { TimePicker } from '../construct/TimePicker/TimePicker';
 import { getAssetName } from '../../lib/assetsNameMap';
 import { parseTime, timeSection } from '../../lib/time';
 import { multiLang } from '../../lib/multiLang';

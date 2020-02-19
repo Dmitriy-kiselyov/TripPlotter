@@ -1,8 +1,8 @@
 import React from 'react';
 
 // @ts-ignore
-import jquery from '../../../node_modules/jquery';
-import '../../../node_modules/air-datepicker';
+import jquery from '../../../../node_modules/jquery';
+import '../../../../node_modules/air-datepicker';
 
 import { Input } from '../Input/Input';
 

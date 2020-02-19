@@ -18,7 +18,7 @@ export interface IAlgorithmAvailableParam {
 }
 
 export interface IAlgorithmOutput {
-    tripList: IAlgorithmTripOutput[];
+    route: IAlgorithmTripOutput[];
     extra?: IAlgorithmExtraOutput[];
 }
 

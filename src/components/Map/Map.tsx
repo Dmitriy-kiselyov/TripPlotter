@@ -150,11 +150,11 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
 export const Map = connect(
     (state: IStore): IConnectProps => {
-        if (!state.tripRoute || !state.tripRoute.tripList) {
+        if (!state.tripRoute || !state.tripRoute.route) {
             return {};
         }
 
-        const trip = state.tripRoute.tripList;
+        const trip = state.tripRoute.route;
 
         return {
             trip: {

@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { cn } from '../../lib/cn';
-import { Title } from '../Title/Title';
+import { Title } from '../construct/Title/Title';
 import { IStore, IStoreTripRoute, IStoreTripRouteItem } from '../../types/store';
 import { getAssetName } from '../../lib/assetsNameMap';
 import { formatTime } from '../../lib/time';
-import { Text } from '../Text/Text';
+import { Text } from '../construct/Text/Text';
 
 import './TripRoute.scss';
 
@@ -27,7 +27,7 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                 <Title text="Маршрут"/>
                 {this.renderStartPoint()}
                 {
-                    route.tripList.map((item, index) => this.renderPoint(item, index + 1))
+                    route.route.map((item, index) => this.renderPoint(item, index + 1))
                 }
                 {this.renderEndPoint()}
                 {route.extra && route.extra.length > 0 ? this.renderExtra() : null}
@@ -104,7 +104,7 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
     private renderEndPoint(): React.ReactElement {
         return (
             <div className="TripRoute-Item">
-                <span className={cn('TripRoute-Point', { place: 'end' })}>{this.getLetter(this.props.route.tripList.length + 1)}</span>
+                <span className={cn('TripRoute-Point', { place: 'end' })}>{this.getLetter(this.props.route.route.length + 1)}</span>
                 <div className="TripRoute-Row">
                     <Text oneLine>Конечная точка</Text>
                 </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './../../../assets/clock-picker/clockpicker.js';
+import '../../../../assets/clock-picker/clockpicker.js';
 // @ts-ignore
-import jquery from '../../../node_modules/jquery';
+import jquery from '../../../../node_modules/jquery';
 
 import { Input } from '../Input/Input';
 

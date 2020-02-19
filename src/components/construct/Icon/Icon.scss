@@ -1,4 +1,4 @@
-@import "../Constants.scss";
+@import "../../Constants";
 
 .Icon {
     display: inline-block;
@@ -9,23 +9,23 @@
     background-repeat: no-repeat;
 
     &_type_call {
-        background-image: url(./assets/call.svg);
+        background-image: url(assets/call.svg);
     }
 
     &_type_clock {
-        background-image: url(./assets/clock.svg);
+        background-image: url(assets/clock.svg);
     }
 
     &_type_map {
-        background-image: url(./assets/map.svg);
+        background-image: url(assets/map.svg);
     }
 
     &_type_site {
-        background-image: url(./assets/site.svg);
+        background-image: url(assets/site.svg);
     }
 
     &_type_cross {
-        background-image: url(./assets/cross.svg);
+        background-image: url(assets/cross.svg);
     }
 
     &_clickable {
@@ -34,7 +34,7 @@
 
         &:hover {
             &.Icon_type_cross {
-                background-image: url(./assets/cross.svg?fill=red);
+                background-image: url(assets/cross.svg?fill=red);
             }
         }
 

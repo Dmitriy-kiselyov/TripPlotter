@@ -17,7 +17,7 @@ export interface IStoreTripItem {
 }
 
 export interface IStoreTripRoute extends IAlgorithmOutput {
-    tripList: IStoreTripRouteItem[];
+    route: IStoreTripRouteItem[];
     extra?: IStoreTripRouteExtra[];
     location: [number, number];
 }
