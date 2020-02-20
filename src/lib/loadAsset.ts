@@ -15,6 +15,10 @@ export function loadAsset(id: string, cb: (asset: IOrganization[]) => void) {
     });
 }
 
+export function getAsset(id: string): IOrganization[] | null {
+    return assets[id] ? assets[id] : null;
+}
+
 function load(id: string, cb: (asset: IOrganization[]) => void) {
     const path = `assets/organizations/${id}.json`;
 

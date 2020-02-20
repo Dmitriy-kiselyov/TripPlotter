@@ -7,8 +7,8 @@ import {
     IActionAddToList,
     IActionChangeTime,
     IActionRemoveFromList,
-    IActionRemoveRoute,
     IActions,
+    IActionSetBalloon,
     IActionSetDate,
     IActionSetEndTime,
     IActionSetRoute,
@@ -34,6 +34,8 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceSetRoute(state, action);
         case ACTION_TYPES.REMOVE_ROUTE:
             return reduceRemoveRoute(state);
+        case ACTION_TYPES.SET_BALLOON:
+            return reduceSetBalloon(state, action);
         default:
             return state;
     }
@@ -51,10 +53,15 @@ function reduceAddToList(state: IStore, action: IActionAddToList): IStore {
 }
 
 function reduceRemoveFromList(state: IStore, action: IActionRemoveFromList): IStore {
-    return {
-        ...state,
-        tripList: state.tripList.filter(item => item.organization.id !== action.id)
+    let newState = { ...state };
+
+    if (action.id === state.openedBalloon) {
+        delete newState.openedBalloon;
     }
+
+    newState.tripList = newState.tripList.filter(item => item.organization.id !== action.id);
+
+    return newState;
 }
 
 function reduceChangeTime(state: IStore, action: IActionChangeTime): IStore {
@@ -105,6 +112,19 @@ function reduceRemoveRoute(state: IStore) {
     const { tripRoute, ...newState } = state;
 
     return newState;
+}
+
+function reduceSetBalloon(state: IStore, action: IActionSetBalloon): IStore {
+    if (!action.id) {
+        const { openedBalloon, ...newState } = state;
+
+        return newState;
+    }
+
+    return {
+        ...state,
+        openedBalloon: action.id
+    };
 }
 
 const initialStore: IStore = {

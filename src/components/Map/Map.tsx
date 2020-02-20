@@ -13,6 +13,7 @@ import { IAssetName } from '../../types/assets';
 import { Balloon } from '../Balloon/Balloon';
 import { IAlgorithmTripOutput } from '../../types/algorithm';
 import { IStore, IStoreTripItem } from '../../types/store';
+import { setBalloon } from '../../store/setBalloon';
 
 import './Map.scss';
 
@@ -23,6 +24,7 @@ declare global {
 interface IConnectProps {
     tripRoute?: ITrip;
     tripList: IStoreTripItem[];
+    openedBalloon?: string;
 }
 
 interface ITrip {
@@ -54,6 +56,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     private route?: any;
     private knownIds: Set<string> = new Set();
     private shownIds: Set<string> = new Set();
+    private balloonId: string | null = null;
 
     componentDidUpdate(prevProps: Readonly<IMapPropsWithConnect>) {
         if (
@@ -62,6 +65,14 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         ) {
             this.updateOrganizations();
         }
+
+        if (this.props.openedBalloon && prevProps.openedBalloon !== this.props.openedBalloon) {
+            this.openBalloon();
+        }
+        if (prevProps.openedBalloon && !this.props.openedBalloon) {
+            this.closeBalloon();
+        }
+
         if (this.props.tripRoute && !prevProps.tripRoute) {
             this.hideOrganizations();
             this.showTrip();
@@ -99,6 +110,18 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
                 clusterIconLayout: 'default#pieChart',
                 clusterIconPieChartRadius: 20,
                 clusterIconPieChartCoreRadius: 10
+            });
+
+            // @ts-ignore
+            _this.objectManager.objects.balloon.events.add('open', e => {
+                const id = e.get('target')._objectIdWithOpenBalloon;
+
+                _this.balloonId = id;
+                _this.props.dispatch(setBalloon(id));
+            });
+            _this.objectManager.objects.balloon.events.add('userclose', () => {
+                _this.balloonId = null;
+                _this.props.dispatch(setBalloon(null));
             });
 
             _this.objectManager.setFilter(_this.objectManagerFilter.bind(_this));
@@ -173,6 +196,19 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         return this.shownIds.has(feature.id);
     }
 
+    private openBalloon() {
+        if (this.balloonId !== this.props.openedBalloon) {
+            const _this = this;
+            setTimeout(() => _this.objectManager.objects.balloon.open(_this.props.openedBalloon));
+        }
+    }
+
+    private closeBalloon() {
+        if (this.balloonId !== null) {
+            this.objectManager.objects.balloon.close();
+        }
+    }
+
     private showTrip() {
         const { location, organizations } = this.props.tripRoute;
         const coordinates = [location].concat(organizations.map(org => org.coordinates)).concat([location]);
@@ -209,7 +245,8 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 export const Map = connect(
     (state: IStore): IConnectProps => {
         const connectProps: IConnectProps = {
-            tripList: state.tripList
+            tripList: state.tripList,
+            openedBalloon: state.openedBalloon
         };
 
         if (state.tripRoute && state.tripRoute.route) {

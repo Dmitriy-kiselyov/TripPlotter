@@ -8,6 +8,7 @@ export interface IStore {
     date: Date | null;
     tripList: IStoreTripItem[];
     tripRoute?: IStoreTripRoute;
+    openedBalloon?: string;
 }
 
 export interface IStoreTripItem {

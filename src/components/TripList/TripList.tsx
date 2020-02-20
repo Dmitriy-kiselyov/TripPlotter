@@ -13,11 +13,14 @@ import { multiLang } from '../../lib/multiLang';
 import { changeTime } from '../../store/changeTime';
 import { removeFromList } from '../../store/removeFromList';
 import { IStore } from '../../types/store';
+import { ClickableText } from '../construct/ClickableText/ClickableText';
+import { setBalloon } from '../../store/setBalloon';
 
 import './TripList.scss';
 
 interface IConnectProps {
     items: ITripListItemProps[];
+    openedBalloon?: string;
 }
 
 export interface ITripListProps extends DispatchProp, IConnectProps {
@@ -102,7 +105,12 @@ class TripListPresenter extends React.PureComponent<ITripListProps> {
                     size={12}
                     onClick={() => this.props.dispatch(removeFromList(organization.id))}
                 />
-                <Text oneLine>{organization.name}</Text>
+                <ClickableText
+                    set={organization.id === this.props.openedBalloon}
+                    onClick={() => this.props.dispatch(setBalloon(organization.id))}
+                >
+                    {organization.name}
+                </ClickableText>
                 <Text oneLine className="TripList-Category" color="grey">{getAssetName(category)}</Text>
                 <TimePicker
                     value={time}
@@ -114,4 +122,7 @@ class TripListPresenter extends React.PureComponent<ITripListProps> {
     }
 }
 
-export const TripList = connect((state: IStore) => ({ items: state.tripList }))(TripListPresenter);
+export const TripList = connect((state: IStore) => ({
+    items: state.tripList,
+    openedBalloon: state.openedBalloon,
+}))(TripListPresenter);

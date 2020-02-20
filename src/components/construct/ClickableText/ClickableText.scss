@@ -1,0 +1,16 @@
+.ClickableText {
+    cursor: pointer;
+    transition: all .1s;
+
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    &:hover {
+        color: red;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}

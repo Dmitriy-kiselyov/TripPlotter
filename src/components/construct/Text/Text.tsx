@@ -11,6 +11,7 @@ export interface ITextProps {
     newLine?: boolean;
     center?: boolean;
     oneLine?: boolean;
+    onClick?: () => void;
 }
 
 export const Text: React.FC<ITextProps> = props => {
@@ -22,7 +23,10 @@ export const Text: React.FC<ITextProps> = props => {
     };
 
     return (
-        <span className={cn('Text', mods, props.className)}>
+        <span
+            className={cn('Text', mods, props.className)}
+            onClick={props.onClick}
+        >
             {props.children}
         </span>
     );
