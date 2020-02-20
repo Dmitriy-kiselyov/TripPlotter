@@ -5,6 +5,7 @@ const assets: Record<string, IOrganization[]> = {};
 export function loadAsset(id: string, cb: (asset: IOrganization[]) => void) {
     if (assets[id]) {
         cb(assets[id]);
+        return;
     }
 
     load(id, (asset: IOrganization[]) => {

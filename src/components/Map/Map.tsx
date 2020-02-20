@@ -1,15 +1,17 @@
 import React from 'react';
 import { connect, DispatchProp } from 'react-redux';
 
-import { getObjectManagerProps } from './helpers/getObjectManagerProps';
-import { IBalloonFactoryProps } from './types';
+import {
+    getObjectManagerProps, getOrganizationsFeatures, getTripListFeatures
+} from './helpers/getObjectManagerProps';
+import { IBalloonFactoryProps, IObjectManagerFeature } from './types';
 
 import { loadScript } from '../../lib/loadScript';
 import { IOrganization } from '../../types/organization';
 import { IAssetName } from '../../types/assets';
 import { Balloon } from '../Balloon/Balloon';
 import { IAlgorithmTripOutput } from '../../types/algorithm';
-import { IStore } from '../../types/store';
+import { IStore, IStoreTripItem } from '../../types/store';
 
 import './Map.scss';
 
@@ -18,7 +20,8 @@ declare global {
 }
 
 interface IConnectProps {
-    trip?: ITrip;
+    tripRoute?: ITrip;
+    tripList: IStoreTripItem[];
 }
 
 interface ITrip {
@@ -48,19 +51,21 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     private map?: any;
     private objectManager?: any;
     private route?: any;
+    private knownIds: Set<string> = new Set();
+    private shownIds: Set<string> = new Set();
 
     componentDidUpdate(prevProps: Readonly<IMapPropsWithConnect>) {
-        if (!this.props.organizations && prevProps.organizations) {
-            this.hideOrganizations();
+        if (
+            prevProps.organizations !== this.props.organizations ||
+            prevProps.tripList !== this.props.tripList
+        ) {
+            this.updateOrganizations();
         }
-        if (this.props.organizations && prevProps.organizations !== this.props.organizations) {
-            this.showOrganizations();
-        }
-        if (this.props.trip && !prevProps.trip) {
+        if (this.props.tripRoute && !prevProps.tripRoute) {
             this.hideOrganizations();
             this.showTrip();
         }
-        if (!this.props.trip && prevProps.trip) {
+        if (!this.props.tripRoute && prevProps.tripRoute) {
             this.hideTrip();
         }
     }
@@ -94,29 +99,80 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             _this.objectManager.clusters.options.set({
                 preset: 'islands#invertedVioletClusterIcons'
             });
+            _this.objectManager.setFilter(_this.objectManagerFilter.bind(_this));
 
             _this.map.geoObjects.add(_this.objectManager);
+
+            _this.updateOrganizations();
         });
     };
 
-    private hideOrganizations() {
-        this.objectManager.removeAll();
-    }
-
-    private showOrganizations() {
+    private updateOrganizations() {
         if (!this.map) {
             return;
         }
 
+        this.setShownIds();
+
+        const unknownFeatures = this.getUnknownFeatures();
+
+        this.rememberIds(unknownFeatures);
+
+        this.objectManager.add(getObjectManagerProps(unknownFeatures));
+        this.objectManager.setFilter(this.objectManagerFilter.bind(this)); // force rerender
+
+        this.setOrganizationsPresets(); // after render
+    }
+
+    private getUnknownFeatures(): IObjectManagerFeature[] {
+        const orgs = this.props.organizations ? this.props.organizations.filter(org => !this.knownIds.has(org.id)) : [];
+        const tripItems = this.props.tripList.filter(item => !this.knownIds.has(item.organization.id));
+
+        return getOrganizationsFeatures(this.props.category, orgs, this.balloonFactory)
+            .concat(getTripListFeatures(tripItems, this.balloonFactory));
+    }
+
+    private rememberIds(features: IObjectManagerFeature[]): void {
+        for (const feature of features) {
+            this.knownIds.add(feature.id);
+        }
+    }
+
+    private setShownIds(): void {
         this.hideOrganizations();
 
-        const marks = getObjectManagerProps(this.props.category, this.props.organizations, this.balloonFactory);
+        for (const org of this.props.organizations || []) {
+            this.shownIds.add(org.id);
+        }
 
-        this.objectManager.add(marks);
+        for (const item of this.props.tripList) {
+            this.shownIds.add(item.organization.id);
+        }
+    }
+
+    private hideOrganizations() {
+        this.shownIds.clear();
+    }
+
+    private setOrganizationsPresets(): void {
+        const tripListIds = this.props.tripList.map(item => item.organization.id);
+        const tripPreset = 'islands#starCircleIcon';
+
+        this.objectManager.objects.each((feature: IObjectManagerFeature) => {
+            const expectedPreset = tripListIds.includes(feature.id) ? tripPreset : undefined;
+
+            if (expectedPreset !== feature.options.preset) {
+                this.objectManager.objects.setObjectOptions(feature.id, { preset: expectedPreset });
+            }
+        });
+    }
+
+    private objectManagerFilter(feature: IObjectManagerFeature): boolean {
+        return this.shownIds.has(feature.id);
     }
 
     private showTrip() {
-        const { location, organizations } = this.props.trip;
+        const { location, organizations } = this.props.tripRoute;
         const coordinates = [location].concat(organizations.map(org => org.coordinates)).concat([location]);
 
         this.route = new window.ymaps.multiRouter.MultiRoute({
@@ -150,17 +206,19 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
 export const Map = connect(
     (state: IStore): IConnectProps => {
-        if (!state.tripRoute || !state.tripRoute.route) {
-            return {};
-        }
+        const connectProps: IConnectProps = {
+            tripList: state.tripList
+        };
 
-        const trip = state.tripRoute.route;
+        if (state.tripRoute && state.tripRoute.route) {
+            const trip = state.tripRoute.route;
 
-        return {
-            trip: {
+            connectProps.tripRoute = {
                 organizations: trip.length > 0 ? trip : undefined,
                 location: state.tripRoute.location
-            }
-        };
+            };
+        }
+
+        return connectProps;
     }
 )(MapPresenter);
