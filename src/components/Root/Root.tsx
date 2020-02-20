@@ -5,7 +5,7 @@ import { Map } from '../Map/Map';
 import { Title } from '../construct/Title/Title';
 import { Hint } from '../construct/Hint/Hint';
 import { RootLayout } from '../RootLayout/RootLayout';
-import { ToggleAssetsGroup } from '../construct/ToggleAssetsGroup/ToggleAssetsGroup';
+import { ToggleAssetsGroup } from '../ToggleAssetsGroup/ToggleAssetsGroup';
 import { IOrganization } from '../../types/organization';
 import { assetsNameMap } from '../../lib/assetsNameMap';
 import { ArrayLayout } from '../construct/ArrayLayout/ArrayLayout';
@@ -107,10 +107,11 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
                 }
                 <ToggleButton
                     id="calculate"
-                    text={showRoute ? 'Подобрать другой маршрут' : 'Рассчитать маршрут'}
                     set={showRoute}
                     onClick={showRoute ? this.handleResetClick : this.handleCalculateClick}
-                />
+                >
+                    {showRoute ? 'Подобрать другой маршрут' : 'Рассчитать маршрут'}
+                </ToggleButton>
             </>
         );
 
@@ -123,10 +124,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         return (
             <>
                 <Hint text="Мы подготовили для вас варианты:" />
-                <ToggleAssetsGroup
-                    items={assetsNameMap}
-                    onAssetChanged={this.handleAssetChanged}
-                />
+                <ToggleAssetsGroup onAssetChanged={this.handleAssetChanged} />
             </>
         );
     }

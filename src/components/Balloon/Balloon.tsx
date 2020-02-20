@@ -82,10 +82,11 @@ class BalloonPresenter extends React.PureComponent<IBalloonProps, IState> {
                 </div>
                 <ToggleButton
                     id="add"
-                    text={inList ? 'Удалить' : 'Добавить'}
                     set={inList}
                     onClick={inList ? this.handleRemove : this.handleAdd}
-                />
+                >
+                    {inList ? 'Удалить' : 'Добавить'}
+                </ToggleButton>
             </div>
         );
     }

@@ -1,25 +1,42 @@
 import React from 'react';
 
-import { IToggleGroupItem, ToggleGroup } from '../ToggleGroup/ToggleGroup';
-import { loadAsset } from '../../../lib/loadAsset'
-import { IOrganization } from '../../../types/organization';
-import { IAssetName } from '../../../types/assets';
+import { ToggleAssertGroupText } from './Text/ToggleAssetsGroup-Text';
+
+import { IToggleGroupItem, ToggleGroup } from '../construct/ToggleGroup/ToggleGroup';
+import { loadAsset } from '../../lib/loadAsset'
+import { IOrganization } from '../../types/organization';
+import { IAssetName } from '../../types/assets';
+import { assetsNameMap } from '../../lib/assetsNameMap';
 
 export interface IToggleAssetsGroupProps {
-    items: IToggleGroupItem[];
     onAssetChanged: (assetName: IAssetName, asset: IOrganization[] | null) => void;
 }
 
 export class ToggleAssetsGroup extends React.PureComponent<IToggleAssetsGroupProps> {
+    private items = this.prepareItems();
+
     render() {
         return (
             <ToggleGroup
-                items={this.props.items}
+                items={this.items}
                 onSet={this.handleSet}
                 onUnset={this.handleUnset}
                 onChange={this.handleChange}
             />
         )
+    }
+
+    private prepareItems(): IToggleGroupItem[] {
+        return assetsNameMap.map(({ text, id }) => ({
+            id,
+            text: (set: boolean) => (
+                <ToggleAssertGroupText
+                    id={id}
+                    text={text}
+                    set={set}
+                />
+            )
+        }));
     }
 
     private handleSet = (id: IAssetName) => {

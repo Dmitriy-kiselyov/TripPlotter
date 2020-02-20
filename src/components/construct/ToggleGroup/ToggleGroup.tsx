@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { GridLayout } from '../GridLayout/GridLayout';
-import { ToggleButton } from '../ToggleButton/ToggleButton';
+import { IToggleButtonChild, ToggleButton } from '../ToggleButton/ToggleButton';
 
 export interface IToggleGroupItem {
     id: string;
-    text: string;
+    text: string | IToggleButtonChild;
 }
 
 export interface IToggleGroupProps {
@@ -30,10 +30,11 @@ export class ToggleGroup extends React.PureComponent<IToggleGroupProps, IState> 
             <ToggleButton
                 key={item.id}
                 id={item.id}
-                text={item.text}
                 set={this.state.set === item.id}
                 onClick={this.handleClick}
-            />
+            >
+                {item.text}
+            </ToggleButton>
         ));
 
         return (
