@@ -1,6 +1,7 @@
 import { IObjectManager, IBalloonFactory, IObjectManagerFeature } from '../types';
 import { IOrganization } from '../../../types/organization';
 import { getBalloonLayout } from './getBalloonLayout';
+import { orgColor, orgPreset } from './colors';
 import { IAssetName } from '../../../types/assets';
 import { IStoreTripItem } from '../../../types/store';
 
@@ -23,6 +24,8 @@ function getFeatureFromOrganization(category: IAssetName, org: IOrganization, ba
         },
         options: {
             balloonContentLayout: getBalloonLayout(balloonFactory),
+            preset: orgPreset,
+            iconColor: orgColor
         },
     }
 }

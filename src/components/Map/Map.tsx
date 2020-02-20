@@ -5,6 +5,7 @@ import {
     getObjectManagerProps, getOrganizationsFeatures, getTripListFeatures
 } from './helpers/getObjectManagerProps';
 import { IBalloonFactoryProps, IObjectManagerFeature } from './types';
+import { orgColor, orgPreset, tripColor, tripPreset } from './helpers/colors';
 
 import { loadScript } from '../../lib/loadScript';
 import { IOrganization } from '../../types/organization';
@@ -92,13 +93,14 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             });
 
             _this.objectManager.objects.options.set({
-                preset: 'islands#circleDotIcon',
-                iconColor: 'darkslateblue',
                 hideIconOnBalloonOpen: false
             });
             _this.objectManager.clusters.options.set({
-                preset: 'islands#invertedVioletClusterIcons'
+                clusterIconLayout: 'default#pieChart',
+                clusterIconPieChartRadius: 20,
+                clusterIconPieChartCoreRadius: 10
             });
+
             _this.objectManager.setFilter(_this.objectManagerFilter.bind(_this));
 
             _this.map.geoObjects.add(_this.objectManager);
@@ -156,13 +158,13 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
     private setOrganizationsPresets(): void {
         const tripListIds = this.props.tripList.map(item => item.organization.id);
-        const tripPreset = 'islands#starCircleIcon';
 
         this.objectManager.objects.each((feature: IObjectManagerFeature) => {
-            const expectedPreset = tripListIds.includes(feature.id) ? tripPreset : undefined;
+            const expectedPreset = tripListIds.includes(feature.id) ? tripPreset : orgPreset;
+            const expectedColor = tripListIds.includes(feature.id) ? tripColor : orgColor;
 
-            if (expectedPreset !== feature.options.preset) {
-                this.objectManager.objects.setObjectOptions(feature.id, { preset: expectedPreset });
+            if (expectedPreset !== feature.options.preset || expectedColor !== feature.options.iconColor) {
+                this.objectManager.objects.setObjectOptions(feature.id, { preset: expectedPreset, iconColor: expectedColor });
             }
         });
     }

@@ -24,6 +24,7 @@ export interface IObjectManagerProperties {
 export interface IObjectManagerOptions {
     balloonContentLayout: any;
     preset?: string;
+    iconColor?: string;
 }
 
 export type IBalloonFactory = (props: IBalloonFactoryProps) => React.ReactElement;
