@@ -45,6 +45,7 @@ const mapSrc = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=86eaa852-1e95-
 const minCoords = [43.00, 30.25];
 const maxCoords = [47.60, 38.75];
 const startCoords = [average(minCoords[0], maxCoords[0]), average(minCoords[1], maxCoords[1])];
+const initialZoom = 8;
 
 function average(a: number, b: number) {
     return (a + b) / 2;
@@ -92,44 +93,64 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         window.ymaps.ready(function () {
             _this.map = new window.ymaps.Map('map', {
                 center: startCoords,
-                zoom: 8,
+                zoom: initialZoom,
                 controls: ['zoomControl', 'fullscreenControl']
             }, {
                 restrictMapArea: _this.props.lockArea ? [minCoords, maxCoords] : undefined
             });
 
-            _this.objectManager = new window.ymaps.ObjectManager({
-                clusterize: true,
-                gridSize: 48,
+            _this.setupObjectManager();
+
+            const scaleButton = new window.ymaps.control.Button({
+                data: {
+                    content: "На всю карту",
+                },
+                options: {
+                    maxWidth: 150,
+                    selectOnClick: false
+                }
             });
 
-            _this.objectManager.objects.options.set({
-                hideIconOnBalloonOpen: false
-            });
-            _this.objectManager.clusters.options.set({
-                clusterIconLayout: 'default#pieChart',
-                clusterIconPieChartRadius: 20,
-                clusterIconPieChartCoreRadius: 10
+            scaleButton.events.add('click', () => {
+                _this.map.setZoom(initialZoom);
             });
 
-            // @ts-ignore
-            _this.objectManager.objects.balloon.events.add('open', e => {
-                const id = e.get('target')._objectIdWithOpenBalloon;
-
-                _this.balloonId = id;
-                _this.props.dispatch(setBalloon(id));
-            });
-            _this.objectManager.objects.balloon.events.add('userclose', () => {
-                _this.balloonId = null;
-                _this.props.dispatch(setBalloon(null));
-            });
-
-            _this.objectManager.setFilter(_this.objectManagerFilter.bind(_this));
-
-            _this.map.geoObjects.add(_this.objectManager);
-
-            _this.updateOrganizations();
+            _this.map.controls.add(scaleButton);
         });
+    };
+
+    private setupObjectManager = () => {
+        this.objectManager = new window.ymaps.ObjectManager({
+            clusterize: true,
+            gridSize: 48,
+        });
+
+        this.objectManager.objects.options.set({
+            hideIconOnBalloonOpen: false
+        });
+        this.objectManager.clusters.options.set({
+            clusterIconLayout: 'default#pieChart',
+            clusterIconPieChartRadius: 20,
+            clusterIconPieChartCoreRadius: 10
+        });
+
+        // @ts-ignore
+        this.objectManager.objects.balloon.events.add('open', e => {
+            const id = e.get('target')._objectIdWithOpenBalloon;
+
+            this.balloonId = id;
+            this.props.dispatch(setBalloon(id));
+        });
+        this.objectManager.objects.balloon.events.add('userclose', () => {
+            this.balloonId = null;
+            this.props.dispatch(setBalloon(null));
+        });
+
+        this.objectManager.setFilter(this.objectManagerFilter.bind(this));
+
+        this.map.geoObjects.add(this.objectManager);
+
+        this.updateOrganizations();
     };
 
     private updateOrganizations() {
