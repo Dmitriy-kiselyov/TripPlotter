@@ -4,21 +4,23 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import { store } from '../../../store/store';
-import { IObjectManagerFeature, IBalloonFactory } from '../types';
+import { IObjectManagerCluster, IObjectManagerFeature } from '../types';
+import { Balloon } from '../../Balloon/Balloon';
+import { BalloonCluster } from '../../BalloonCluster/BalloonCluster';
 
 const layout = '<div id="balloon"></div>';
 
 let BalloonLayout: any;
 
-export function getBalloonLayout(balloonFactory: IBalloonFactory): any {
+export function getBalloonLayout(): any {
     if (!BalloonLayout) {
-        createBalloonLayout(balloonFactory);
+        createBalloonLayout();
     }
 
     return BalloonLayout;
 }
 
-function createBalloonLayout(balloonFactory: IBalloonFactory) {
+function createBalloonLayout() {
     BalloonLayout = window.ymaps.templateLayoutFactory.createClass(
         layout,
         {
@@ -36,15 +38,19 @@ function createBalloonLayout(balloonFactory: IBalloonFactory) {
             },
 
             _renderBalloon() {
-                const { id, category } = this.getData().object as IObjectManagerFeature;
-
                 ReactDOM.render(
                     <Provider store={store}>
-                        {balloonFactory({ id, category })}
+                        {balloonFactory(this.getData().object)}
                     </Provider>,
                     this._container
                 );
             }
         }
     );
+}
+
+function balloonFactory(data: IObjectManagerFeature | IObjectManagerCluster): React.ReactElement {
+    return data.type === 'Cluster' ?
+        <BalloonCluster cluster={data} /> :
+        <Balloon id={data.id} category={data.category} />;
 }

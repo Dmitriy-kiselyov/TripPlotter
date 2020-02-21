@@ -28,6 +28,10 @@
         background-image: url(assets/cross.svg);
     }
 
+    &_type_star {
+        background-image: url(assets/star.svg?fill=grey);
+    }
+
     &_clickable {
         cursor: pointer;
         transition: all .1s;

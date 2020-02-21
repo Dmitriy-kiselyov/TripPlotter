@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { IGeometry } from '../../types/organization';
 import { IAssetName } from '../../types/assets';
 
@@ -17,6 +15,12 @@ export interface IObjectManagerFeature {
     options: IObjectManagerOptions;
 }
 
+export interface IObjectManagerCluster {
+    id: string;
+    type: 'Cluster';
+    features: IObjectManagerFeature[];
+}
+
 export interface IObjectManagerProperties {
     hintContent?: string;
 }
@@ -26,8 +30,6 @@ export interface IObjectManagerOptions {
     preset?: string;
     iconColor?: string;
 }
-
-export type IBalloonFactory = (props: IBalloonFactoryProps) => React.ReactElement;
 
 export interface IBalloonFactoryProps {
     id: string;

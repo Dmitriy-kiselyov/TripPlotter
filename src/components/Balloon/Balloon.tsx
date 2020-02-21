@@ -67,7 +67,7 @@ class BalloonPresenter extends React.PureComponent<IBalloonProps, IState> {
                         </div>
                     ))
                 }
-                <Divider/>
+                <Divider className="Balloon-FlexDivider"/>
                 <Hint text="Хотите добавить в поездку?"/>
                 <div className="Balloon-TimeWrap">
                     <TimePicker

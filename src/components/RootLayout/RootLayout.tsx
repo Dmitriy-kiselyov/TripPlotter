@@ -13,7 +13,7 @@ export const RootLayout: React.FC<IRootLayout> = function RootLayout(props) {
             <div className="RootLayout-Left">
                 {props.left}
             </div>
-            <div className="RootLayout-Right">
+            <div className="RootLayout-Right RootLayout-Scrollbar">
                 {props.right}
             </div>
         </div>

@@ -1,19 +1,19 @@
-import { IObjectManager, IBalloonFactory, IObjectManagerFeature } from '../types';
+import { IObjectManager, IObjectManagerFeature } from '../types';
 import { IOrganization } from '../../../types/organization';
 import { getBalloonLayout } from './getBalloonLayout';
 import { orgColor, orgPreset } from './colors';
 import { IAssetName } from '../../../types/assets';
 import { IStoreTripItem } from '../../../types/store';
 
-export function getOrganizationsFeatures(category: IAssetName, organizations: IOrganization[], balloonFactory: IBalloonFactory): IObjectManagerFeature[] {
-    return organizations.map(org => getFeatureFromOrganization(category, org, balloonFactory));
+export function getOrganizationsFeatures(category: IAssetName, organizations: IOrganization[]): IObjectManagerFeature[] {
+    return organizations.map(org => getFeatureFromOrganization(category, org));
 }
 
-export function getTripListFeatures(tripList: IStoreTripItem[], balloonFactory: IBalloonFactory): IObjectManagerFeature[] {
-    return tripList.map(tripItem => getFeatureFromOrganization(tripItem.category, tripItem.organization, balloonFactory));
+export function getTripListFeatures(tripList: IStoreTripItem[]): IObjectManagerFeature[] {
+    return tripList.map(tripItem => getFeatureFromOrganization(tripItem.category, tripItem.organization));
 }
 
-function getFeatureFromOrganization(category: IAssetName, org: IOrganization, balloonFactory: IBalloonFactory): IObjectManagerFeature {
+function getFeatureFromOrganization(category: IAssetName, org: IOrganization): IObjectManagerFeature {
     return {
         type: 'Feature' as 'Feature',
         id: org.id,
@@ -23,7 +23,7 @@ function getFeatureFromOrganization(category: IAssetName, org: IOrganization, ba
             hintContent: org.name
         },
         options: {
-            balloonContentLayout: getBalloonLayout(balloonFactory),
+            balloonContentLayout: getBalloonLayout(),
             preset: orgPreset,
             iconColor: orgColor
         },

@@ -1,0 +1,33 @@
+@import '../Constants.scss';
+
+.BalloonCluster {
+    display: flex;
+    max-height: 500px;
+
+    &-Left {
+        max-width: 200px;
+        border-right: 1px solid $border;
+        overflow-y: auto;
+    }
+
+    &-Right {
+        margin-left: 30px;
+    }
+
+    &-Feature {
+        cursor: pointer;
+        padding: $margin $margin $margin 0;
+    }
+
+    &-StarContainer {
+        height: 20px;
+        text-align: center;
+        margin-bottom: $margin * 2;
+
+        .Icon {
+            border-radius: 50%;
+            border: 5px solid $primary-dark;
+            background-size: 15px;
+        }
+    }
+}

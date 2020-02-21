@@ -1,7 +1,10 @@
 @import '../Constants.scss';
 
 .Balloon {
-    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    height: 99%; // ну бывает
+    max-width: 400px;
 
     &-Title {
         font-size: $font-size-xl;
@@ -19,6 +22,10 @@
         .Icon {
             margin-right: 10px;
         }
+    }
+
+    &-FlexDivider {
+        flex-grow: 1;
     }
 
     .Hint {
