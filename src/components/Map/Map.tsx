@@ -67,7 +67,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         }
 
         if (this.props.openedBalloon && prevProps.openedBalloon !== this.props.openedBalloon) {
-            this.openBalloon();
+            this.openBalloon(prevProps.openedBalloon);
         }
         if (prevProps.openedBalloon && !this.props.openedBalloon) {
             this.closeBalloon();
@@ -232,11 +232,24 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         return this.shownIds.has(feature.id);
     }
 
-    private openBalloon() {
+    private openBalloon(prevBalloon?: string) {
         const objectState = this.objectManager.getObjectState(this.props.openedBalloon);
 
         if (objectState.isClustered) {
-            setTimeout(() => this.objectManager.clusters.balloon.open(objectState.cluster.id));
+            const cluster = objectState.cluster as IObjectManagerCluster;
+            const isInsideCluster = prevBalloon && cluster.features.some(feature => feature.id === prevBalloon);
+
+            if (isInsideCluster) {
+                setTimeout(() => {
+                    // this.objectManager.clusters.balloon.setOptions({
+                    //     maxHeight: 1000 + Math.abs(Math.random() * 100) // раздуплись!
+                    // });
+                });
+            }
+
+            if (!isInsideCluster) {
+                setTimeout(() => this.objectManager.clusters.balloon.open(cluster.id));
+            }
         } else {
             setTimeout(() => this.objectManager.objects.balloon.open(this.props.openedBalloon));
         }

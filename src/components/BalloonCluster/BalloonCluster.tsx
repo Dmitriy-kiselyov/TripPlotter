@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react';
+import React, { Dispatch, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { IObjectManagerCluster, IObjectManagerFeature } from '../Map/types';
@@ -15,6 +15,7 @@ import './BalloonCluster.scss';
 
 interface IBalloonClusterProps {
     cluster: IObjectManagerCluster;
+    onSizeChange: () => void;
 }
 
 export const BalloonCluster: React.FC<IBalloonClusterProps> = props => {
@@ -27,8 +28,23 @@ export const BalloonCluster: React.FC<IBalloonClusterProps> = props => {
     const inListFeatures = getFeatureList(sortedFeatures.inList, openedBalloonId, dispatch);
     const restFeatures = getFeatureList(sortedFeatures.rest, openedBalloonId, dispatch);
 
+    const balloonRef: React.RefObject<HTMLDivElement> = useRef(null);
+    const minHeight = useRef(0);
+    const clusterRef: React.RefObject<HTMLDivElement> = useRef(null);
+
+    useEffect(() => {
+        const balloon = balloonRef.current;
+
+        if (balloon && minHeight.current < balloon.offsetHeight) {
+            minHeight.current = balloon.offsetHeight + 1;
+            clusterRef.current.style.minHeight = minHeight.current + 'px';
+
+            props.onSizeChange();
+        }
+    });
+
     return (
-        <div className="BalloonCluster">
+        <div ref={clusterRef} className="BalloonCluster">
             <div className="BalloonCluster-Left RootLayout-Scrollbar">
                 {
                     inListFeatures.length ?
@@ -40,7 +56,7 @@ export const BalloonCluster: React.FC<IBalloonClusterProps> = props => {
                 {restFeatures}
             </div>
             <div className="BalloonCluster-Right">
-                {openedBalloon ? <Balloon id={openedBalloon.id} category={openedBalloon.category} /> : null}
+                {openedBalloon ? <Balloon forwardRef={balloonRef} id={openedBalloon.id} category={openedBalloon.category} /> : null}
             </div>
         </div>
     )

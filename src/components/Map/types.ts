@@ -18,6 +18,7 @@ export interface IObjectManagerFeature {
 export interface IObjectManagerCluster {
     id: string;
     type: 'Cluster';
+    geometry: IGeometry;
     features: IObjectManagerFeature[];
 }
 

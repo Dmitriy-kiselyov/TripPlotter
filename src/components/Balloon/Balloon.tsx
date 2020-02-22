@@ -20,11 +20,17 @@ import { getTripItem } from '../../store/getTripItem';
 
 import './Balloon.scss';
 
-export interface IBalloonProps extends IBalloonFactoryProps, DispatchProp {
+interface IBalloonProps extends IBalloonFactoryProps {
+    forwardRef?: React.RefObject<HTMLDivElement>;
+}
+
+interface IConnectProps {
     inList: boolean;
     time?: string;
     organization: IOrganization | null;
 }
+
+type IBalloonPropsWithConnect = IBalloonProps & IConnectProps & DispatchProp;
 
 interface IContact {
     type: IIconType;
@@ -36,7 +42,7 @@ interface IState {
     timeValidation?: boolean;
 }
 
-class BalloonPresenter extends React.PureComponent<IBalloonProps, IState> {
+class BalloonPresenter extends React.PureComponent<IBalloonPropsWithConnect, IState> {
     state: IState = {
         time: this.props.time || ''
     };
@@ -47,51 +53,55 @@ class BalloonPresenter extends React.PureComponent<IBalloonProps, IState> {
         }
 
         const { name, Categories } = this.props.organization;
-        const { inList } = this.props;
+        const { inList, forwardRef } = this.props;
         const { time } = this.state;
 
         return (
-            <div className="Balloon">
-                <div className="Balloon-Title">
-                    {name}
+            <div ref={forwardRef} className="Balloon">
+                <div className="Balloon-Container">
+                    <div className="Balloon-Title">
+                        {name}
+                    </div>
+                    <Text color="grey">
+                        {this.getCategories(Categories)}
+                    </Text>
+                    <Divider/>
+                    {
+                        this.getContacts().map(contact => (
+                            <div className="Balloon-Contact" key={contact.type}>
+                                <Icon size={15} type={contact.type}/>
+                                {contact.content}
+                            </div>
+                        ))
+                    }
                 </div>
-                <Text color="grey">
-                    {this.getCategories(Categories)}
-                </Text>
-                <Divider/>
-                {
-                    this.getContacts().map(contact => (
-                        <div className="Balloon-Contact" key={contact.type}>
-                            <Icon size={15} type={contact.type}/>
-                            {contact.content}
-                        </div>
-                    ))
-                }
                 <Divider className="Balloon-FlexDivider"/>
-                <Hint text="Хотите добавить в поездку?"/>
-                <div className="Balloon-TimeWrap">
-                    <TimePicker
-                        value={time}
-                        place="left"
-                        placeholder="Время"
-                        onShow={this.handleTimeShow}
-                        onChange={this.handleTimeChange}
-                        validationError={this.state.timeValidation}
-                    />
-                    <Text>Сколько времени вы хотите провести в этом месте?</Text>
+                <div className="Balloon-Container">
+                    <Hint text="Хотите добавить в поездку?"/>
+                    <div className="Balloon-TimeWrap">
+                        <TimePicker
+                            value={time}
+                            place="left"
+                            placeholder="Время"
+                            onShow={this.handleTimeShow}
+                            onChange={this.handleTimeChange}
+                            validationError={this.state.timeValidation}
+                        />
+                        <Text>Сколько времени вы хотите провести в этом месте?</Text>
+                    </div>
+                    <ToggleButton
+                        id="add"
+                        set={inList}
+                        onClick={inList ? this.handleRemove : this.handleAdd}
+                    >
+                        {inList ? 'Удалить' : 'Добавить'}
+                    </ToggleButton>
                 </div>
-                <ToggleButton
-                    id="add"
-                    set={inList}
-                    onClick={inList ? this.handleRemove : this.handleAdd}
-                >
-                    {inList ? 'Удалить' : 'Добавить'}
-                </ToggleButton>
             </div>
         );
     }
 
-    static getDerivedStateFromProps(props: IBalloonProps): Partial<IState> {
+    static getDerivedStateFromProps(props: IBalloonPropsWithConnect): Partial<IState> {
         if (props.time !== undefined) {
             return {
                 time: props.time
@@ -176,7 +186,7 @@ class BalloonPresenter extends React.PureComponent<IBalloonProps, IState> {
 }
 
 export const Balloon = connect(
-    (state: IStore, props: IBalloonFactoryProps): Partial<IBalloonProps> => {
+    (state: IStore, props: IBalloonProps): IConnectProps => {
         const tripItem = getTripItem(props.id);
 
         return {
