@@ -139,15 +139,25 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             balloonContentLayout: getBalloonLayout()
         });
 
+        let openBalloonTimeoutId: number;
+        // @ts-ignore тупой ts берет тайпинги ноды
+        const reopenBalloon = () => openBalloonTimeoutId = setTimeout(() => this.openBalloon(), 100);
+        const doNotReopenBalloon = () => clearTimeout(openBalloonTimeoutId);
+        const closeBalloon = () => {
+            doNotReopenBalloon();
+
+            this.props.dispatch(setBalloon(null));
+        };
+
         // @ts-ignore
         this.objectManager.objects.events.add('click', e => {
             const id = e.get('objectId');
 
             this.props.dispatch(setBalloon(id));
         });
-        this.objectManager.objects.balloon.events.add('userclose', () => {
-            this.props.dispatch(setBalloon(null));
-        });
+        this.objectManager.objects.balloon.events.add('open', doNotReopenBalloon);
+        this.objectManager.objects.balloon.events.add('close', reopenBalloon);
+        this.objectManager.objects.balloon.events.add('userclose', closeBalloon);
 
         // @ts-ignore
         this.objectManager.clusters.events.add('click', e => {
@@ -157,9 +167,9 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
             this.props.dispatch(setBalloon(feature.id));
         });
-        this.objectManager.clusters.balloon.events.add('userclose', () => {
-            this.props.dispatch(setBalloon(null));
-        });
+        this.objectManager.clusters.balloon.events.add('open', doNotReopenBalloon);
+        this.objectManager.clusters.balloon.events.add('close', reopenBalloon);
+        this.objectManager.clusters.balloon.events.add('userclose', closeBalloon);
 
         this.objectManager.setFilter(this.objectManagerFilter.bind(this));
 
@@ -238,14 +248,6 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         if (objectState.isClustered) {
             const cluster = objectState.cluster as IObjectManagerCluster;
             const isInsideCluster = prevBalloon && cluster.features.some(feature => feature.id === prevBalloon);
-
-            if (isInsideCluster) {
-                setTimeout(() => {
-                    // this.objectManager.clusters.balloon.setOptions({
-                    //     maxHeight: 1000 + Math.abs(Math.random() * 100) // раздуплись!
-                    // });
-                });
-            }
 
             if (!isInsideCluster) {
                 setTimeout(() => this.objectManager.clusters.balloon.open(cluster.id));
