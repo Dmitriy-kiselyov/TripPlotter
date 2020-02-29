@@ -4,9 +4,11 @@ import { cn } from '../../../lib/cn';
 
 import './Text.scss';
 
+type ITextChild = string | React.ReactElement;
+
 export interface ITextProps {
     className?: string;
-    children: string;
+    children: ITextChild | ITextChild[];
     color?: 'black' | 'grey' | 'white' | 'red' | 'primary';
     bold?: boolean;
     newLine?: boolean;

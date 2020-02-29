@@ -99,17 +99,15 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                         ) : null
                     }
                     <div className="TripRoute-Row">
-                        <Text>Посещение с</Text>
-                        &nbsp;
-                        <Text color="primary">{formatTime(from)}</Text>
-                        &nbsp;
-                        <Text>до</Text>
-                        &nbsp;
-                        <Text color="primary">{formatTime(to)}</Text>
-                        &nbsp;
-                        <Text>(</Text>
-                        {this.renderTime(to - from)}
-                        <Text>)</Text>
+                        <Text oneLine newLine>
+                            {'Посещение с '}
+                            <Text color="primary">{formatTime(from)}</Text>
+                            {' до '}
+                            <Text color="primary">{formatTime(to)}</Text>
+                            {' ('}
+                            {this.renderTime(to - from)}
+                            )
+                        </Text>
                     </div>
                 </div>
             </div>
@@ -137,13 +135,13 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
 
         return (
             <div className="TripRoute-RouteInfo">
-                <Text oneLine>В пути</Text>
-                &nbsp;
-                <Text color="primary">{this.formatDistance(curOrg.distance)}</Text>
-                &nbsp;
-                <Text>(</Text>
-                {this.renderTime(toTime - fromTime)}
-                <Text>)</Text>
+                <Text oneLine newLine>
+                    {'В пути '}
+                    <Text color="primary">{this.formatDistance(curOrg.distance)}</Text>
+                    {' ('}
+                    {this.renderTime(toTime - fromTime)}
+                    )
+                </Text>
             </div>
         );
     }
