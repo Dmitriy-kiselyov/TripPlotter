@@ -12,7 +12,7 @@
         }
 
         &_grey {
-            color: #999;
+            color: $light-grey;
         }
 
         &_white {
@@ -26,6 +26,10 @@
         &_primary {
             color: $primary;
         }
+    }
+
+    &_bold {
+        font-weight: bold;
     }
 
     &_newLine {

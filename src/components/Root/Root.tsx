@@ -19,15 +19,15 @@ import { setStartTime } from '../../store/setStartTime';
 import { setEndTime } from '../../store/setEndTime';
 import { setDate } from '../../store/setDate';
 import { parseTime } from '../../lib/time';
-import { getAlgorithmParams, getStartLocation } from '../../lib/getAlgorithmParams';
+import { getAlgorithmParams } from '../../lib/getAlgorithmParams';
 import tripAlgorithm from '../../lib/tripAlgorithm';
 import { setRoute } from '../../store/setRoute';
 import { IAlgorithmOutput } from '../../types/algorithm';
 import { removeRoute } from '../../store/removeRoute';
 import { TripRoute } from '../TripRoute/TripRoute';
+import { fetchOrganizationsToAlgorithmOutput } from '../../lib/fetchOrganizationsToAlgorithmOutput';
 
 import './Root.scss';
-import { fetchOrganizationsToAlgorithmOutput } from '../../lib/fetchOrganizationsToAlgorithmOutput';
 
 interface IConnectRootProps {
     startTime: string;

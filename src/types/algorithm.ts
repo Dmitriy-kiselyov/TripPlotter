@@ -18,16 +18,28 @@ export interface IAlgorithmAvailableParam {
 }
 
 export interface IAlgorithmOutput {
-    route: IAlgorithmTripOutput[];
+    start: IAlgorithmStartItemOutput;
+    route: IAlgorithmTripItemOutput[];
+    finish: IAlgorithmFinishItemOutput;
     extra?: IAlgorithmExtraOutput[];
 }
 
-export interface IAlgorithmTripOutput {
+export interface IAlgorithmTripItemOutput {
     id: string;
     from: number;
     to: number;
     wait?: number;
     coordinates: [number, number];
+    distance: number;
+}
+
+export interface IAlgorithmStartItemOutput {
+    coordinates: [number, number];
+    time: number;
+}
+
+export interface IAlgorithmFinishItemOutput extends IAlgorithmStartItemOutput {
+    distance: number;
 }
 
 export interface IAlgorithmExtraOutput {

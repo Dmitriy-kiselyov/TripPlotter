@@ -1,10 +1,17 @@
-import { IAlgorithmParams, IAlgorithmOrganizationParam, IAlgorithmAvailableParam, IAlgorithmOutput, IAlgorithmTripOutput, IAlgorithmExtraOutput } from '../types/algorithm';
+import {
+    IAlgorithmParams,
+    IAlgorithmOrganizationParam,
+    IAlgorithmOutput,
+    IAlgorithmTripItemOutput,
+    IAlgorithmExtraOutput
+} from '../types/algorithm';
 
 interface IOrgTravelTime {
     //для связи времени прибытия с организацией
     travelTime: number;
     organization: IAlgorithmOrganizationParam;
     backwardTime: number;
+    distance: number;
 }
 
 export default function getRoute(algorithmParams: IAlgorithmParams, callback: any){
@@ -17,12 +24,14 @@ export default function getRoute(algorithmParams: IAlgorithmParams, callback: an
         available: [{
             from: 0,
             to: 0
-        }]
+        }],
+        // @ts-ignore
+        timeStart: algorithmParams.from
     };
 
     let currentPoint: IAlgorithmOrganizationParam = globalStart;
 
-    let visitedOrganizations: Array<IAlgorithmTripOutput> = [];
+    let visitedOrganizations: Array<IAlgorithmTripItemOutput> = [];
     let unvisitedOrganizations: Array<IAlgorithmOrganizationParam> = algorithmParams.organizations;
 
     let routeIsBuilt: boolean = false;
@@ -32,7 +41,7 @@ export default function getRoute(algorithmParams: IAlgorithmParams, callback: an
 
 
 //функция, возвр массив [visit, unvisit] на одном шаге алгоритма
-function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganizations: Array<IAlgorithmTripOutput>,
+function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganizations: Array<IAlgorithmTripItemOutput>,
         unvisitedOrganizations: Array<IAlgorithmOrganizationParam>, currentTime: number, ultimateTime: number,
         routeIsBuilt: boolean, globalStart: IAlgorithmOrganizationParam, callback: any){
     getSortedRoutesTimeArray(currentPoint, unvisitedOrganizations, globalStart, function(routesTime: Array<IOrgTravelTime>){
@@ -64,11 +73,12 @@ function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganiza
                 }
 
                 if (departureTime <= toOrg && departureTime + backTime <= ultimateTime){
-                    let newOrg: IAlgorithmTripOutput = {
+                    let newOrg: IAlgorithmTripItemOutput = {
                         id: routesTime[j].organization.id,
                         from: arrivalTime,
                         to: departureTime,
-                        coordinates: routesTime[j].organization.coordinates
+                        coordinates: routesTime[j].organization.coordinates,
+                        distance: routesTime[j].distance
                     };
                     if (waitingTime > 0) {
                         newOrg.wait = waitingTime
@@ -97,11 +107,27 @@ function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganiza
                     coordinates: unv.coordinates
                 });
             }
-            let result: IAlgorithmOutput = {
-                route: visitedOrganizations,
-                extra: extraOut
-            };
-            callback(result);
+
+            const lastOrg = visitedOrganizations[visitedOrganizations.length - 1];
+
+            getRouteTime(lastOrg.coordinates, globalStart.coordinates, globalStart.coordinates, (time: number, _: unknown, distance: number) => {
+                const result: IAlgorithmOutput = {
+                    start: {
+                        coordinates: globalStart.coordinates,
+                        // @ts-ignore
+                        time: globalStart.timeStart
+                    },
+                    route: visitedOrganizations,
+                    finish: {
+                        coordinates: globalStart.coordinates,
+                        time: lastOrg.to + time,
+                        distance
+                    },
+                    extra: extraOut
+                };
+
+                callback(result);
+            });
         }
     });
 }
@@ -110,11 +136,12 @@ function getNextRoute(currentPoint: IAlgorithmOrganizationParam, visitedOrganiza
 function getSortedRoutesTimeArray(StartOrg: IAlgorithmOrganizationParam, EndOrgs: Array<IAlgorithmOrganizationParam>, globalStart: IAlgorithmOrganizationParam, callback: any){
     let travelTime: Array<IOrgTravelTime> = [];
     for (let eo of EndOrgs){
-        getRouteTime(StartOrg.coordinates, eo.coordinates, globalStart.coordinates, function(routesTimeFor: number, routesTimeBack: number){
+        getRouteTime(StartOrg.coordinates, eo.coordinates, globalStart.coordinates, function(routesTimeFor: number, routesTimeBack: number, distance: number){
             travelTime.push({
                 travelTime: routesTimeFor,
                 organization: eo,
-                backwardTime: routesTimeBack
+                backwardTime: routesTimeBack,
+                distance
             });
             if (travelTime.length == EndOrgs.length) {
                 travelTime.sort(function(a, b) {return a.travelTime - b.travelTime});
@@ -127,21 +154,18 @@ function getSortedRoutesTimeArray(StartOrg: IAlgorithmOrganizationParam, EndOrgs
 //время пути между двумя точками в минутах
 function getRouteTime(StartPoint: [number, number], EndPoint: [number, number], globalStartPoint: [number, number], callback: any) {
     // @ts-ignore
-    ymaps.ready(init);
-    function init() {
-        // @ts-ignore
-        ymaps.route(
+    ymaps.route(
         [StartPoint, EndPoint, globalStartPoint], //нужно также проверять, успеем ли обратно
         {routingMode: "auto"})
         // @ts-ignore
         .then(function (route) {
             let routesTimeFor: number = route.getPaths().get(0).getJamsTime(); //время в секундах с учетом пробок "туда"
             let routesTimeBack: number = route.getPaths().get(1).getJamsTime(); //"обратно"
+            const distance = route.getPaths().get(0).getLength() as number;
             routesTimeFor = Math.floor(routesTimeFor / 60);
             routesTimeBack = Math.floor(routesTimeBack / 60);
-            callback(routesTimeFor, routesTimeBack);
+            callback(routesTimeFor, routesTimeBack, distance);
         });
-    }
 }
 
 //минимальное время прибытия в непросмотренные организации

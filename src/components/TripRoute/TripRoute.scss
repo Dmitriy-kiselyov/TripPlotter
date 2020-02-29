@@ -39,7 +39,8 @@
         border: 2px solid white;
         box-shadow: 0 0 2px 0 black;
 
-        font-size: $font-size-m;
+        font-size: 12px;
+        font-weight: bold;
         text-align: center;
         color: white;
         background: #71B732;
@@ -54,6 +55,13 @@
                 background: #4296EA;
             }
         }
+    }
+
+    &-RouteInfo {
+        margin: $margin $margin $margin 10px;
+        border-left: 4px dotted #A051CC;
+        padding: $margin;
+        text-align: center;
     }
 
     &-Category {

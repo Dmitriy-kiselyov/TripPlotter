@@ -10,7 +10,7 @@ import { orgColor, orgPreset, tripColor, tripPreset } from './helpers/colors';
 import { loadScript } from '../../lib/loadScript';
 import { IOrganization } from '../../types/organization';
 import { IAssetName } from '../../types/assets';
-import { IAlgorithmTripOutput } from '../../types/algorithm';
+import { IAlgorithmTripItemOutput } from '../../types/algorithm';
 import { IStore, IStoreTripItem } from '../../types/store';
 import { setBalloon } from '../../store/setBalloon';
 import { getBalloonLayout } from './helpers/getBalloonLayout';
@@ -28,7 +28,7 @@ interface IConnectProps {
 }
 
 interface ITrip {
-    organizations: IAlgorithmTripOutput[];
+    organizations: IAlgorithmTripItemOutput[];
     location: [number, number];
 }
 
@@ -296,7 +296,7 @@ export const Map = connect(
 
             connectProps.tripRoute = {
                 organizations: trip.length > 0 ? trip : undefined,
-                location: state.tripRoute.location
+                location: state.tripRoute.start.coordinates
             };
         }
 

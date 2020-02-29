@@ -8,6 +8,7 @@ export interface ITextProps {
     className?: string;
     children: string;
     color?: 'black' | 'grey' | 'white' | 'red' | 'primary';
+    bold?: boolean;
     newLine?: boolean;
     center?: boolean;
     oneLine?: boolean;
@@ -20,6 +21,7 @@ export const Text: React.FC<ITextProps> = props => {
         newLine: props.newLine || false,
         center: props.center || false,
         oneLine: props.oneLine || false,
+        bold: props.bold || false,
     };
 
     return (

@@ -1,6 +1,12 @@
 import { IOrganization } from './organization';
 import { IAssetName } from './assets';
-import { IAlgorithmExtraOutput, IAlgorithmOutput, IAlgorithmTripOutput } from './algorithm';
+import {
+    IAlgorithmExtraOutput,
+    IAlgorithmOutput,
+    IAlgorithmTripItemOutput,
+    IAlgorithmStartItemOutput,
+    IAlgorithmFinishItemOutput
+} from './algorithm';
 
 export interface IStore {
     startTime: string;
@@ -18,10 +24,13 @@ export interface IStoreTripItem {
 }
 
 export interface IStoreTripRoute extends IAlgorithmOutput {
+    start: IAlgorithmStartItemOutput;
     route: IStoreTripRouteItem[];
+    finish: IAlgorithmFinishItemOutput;
     extra?: IStoreTripRouteExtra[];
-    location: [number, number];
 }
 
-export type IStoreTripRouteItem = IAlgorithmTripOutput & IStoreTripItem;
+export type IStoreTripRouteStart = IAlgorithmStartItemOutput;
+export type IStoreTripRouteFinish = IAlgorithmFinishItemOutput;
+export type IStoreTripRouteItem = IAlgorithmTripItemOutput & IStoreTripItem;
 export type IStoreTripRouteExtra = IAlgorithmExtraOutput & IStoreTripItem;

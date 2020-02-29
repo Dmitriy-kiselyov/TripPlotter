@@ -1,17 +1,17 @@
-import { IAlgorithmExtraOutput, IAlgorithmOutput, IAlgorithmTripOutput } from '../types/algorithm';
-import { IStoreTripItem, IStoreTripRoute } from '../types/store';
+import { IAlgorithmExtraOutput, IAlgorithmOutput, IAlgorithmTripItemOutput } from '../types/algorithm';
+import { IStoreTripRoute } from '../types/store';
 import { store } from '../store/store';
-import { getStartLocation } from './getAlgorithmParams';
 
 export function fetchOrganizationsToAlgorithmOutput(route: IAlgorithmOutput): IStoreTripRoute {
     return {
+        start: route.start,
         route: fetchTripList(route.route),
+        finish: route.finish,
         extra: route.extra ? fetchExtras(route.extra) : undefined,
-        location: getStartLocation()
     };
 }
 
-function fetchTripList(routeItems: IAlgorithmTripOutput[]) {
+function fetchTripList(routeItems: IAlgorithmTripItemOutput[]) {
     const { tripList } = store.getState();
 
     return routeItems.map(item => {
