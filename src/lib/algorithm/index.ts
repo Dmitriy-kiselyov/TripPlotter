@@ -4,7 +4,8 @@ import {
     IAlgorithmOutput,
     IAlgorithmTripItemOutput,
     IAlgorithmExtraOutput
-} from '../types/algorithm';
+} from '../../types/algorithm';
+import { getRouteInfo } from './getRouteTime';
 
 interface IOrgTravelTime {
     //для связи времени прибытия с организацией
@@ -14,7 +15,7 @@ interface IOrgTravelTime {
     distance: number;
 }
 
-export default function getRoute(algorithmParams: IAlgorithmParams, callback: any){
+export function tripAlgorithm(algorithmParams: IAlgorithmParams, callback: any){
     let currentTime: number = algorithmParams.from;
     const ultimateTime: number = algorithmParams.to;
     let globalStart: IAlgorithmOrganizationParam = {
@@ -153,19 +154,8 @@ function getSortedRoutesTimeArray(StartOrg: IAlgorithmOrganizationParam, EndOrgs
 
 //время пути между двумя точками в минутах
 function getRouteTime(StartPoint: [number, number], EndPoint: [number, number], globalStartPoint: [number, number], callback: any) {
-    // @ts-ignore
-    ymaps.route(
-        [StartPoint, EndPoint, globalStartPoint], //нужно также проверять, успеем ли обратно
-        {routingMode: "auto"})
-        // @ts-ignore
-        .then(function (route) {
-            let routesTimeFor: number = route.getPaths().get(0).getJamsTime(); //время в секундах с учетом пробок "туда"
-            let routesTimeBack: number = route.getPaths().get(1).getJamsTime(); //"обратно"
-            const distance = route.getPaths().get(0).getLength() as number;
-            routesTimeFor = Math.floor(routesTimeFor / 60);
-            routesTimeBack = Math.floor(routesTimeBack / 60);
-            callback(routesTimeFor, routesTimeBack, distance);
-        });
+    getRouteInfo(StartPoint, EndPoint, globalStartPoint) //нужно также проверять, успеем ли обратно
+        .then(info => callback(info[0].time, info[1].time, info[0].distance));
 }
 
 //минимальное время прибытия в непросмотренные организации
