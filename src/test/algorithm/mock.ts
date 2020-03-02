@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ImportMock } from 'ts-mock-imports';
 
 declare global {

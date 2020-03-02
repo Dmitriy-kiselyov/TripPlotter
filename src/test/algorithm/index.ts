@@ -8,6 +8,8 @@ import { testStore } from '../initialStore';
 
 const params = getAlgorithmParams();
 
+console.log('START');
+
 tripAlgorithm(params, (trip: IAlgorithmOutput) => {
     printRoute(testStore, trip);
 });
