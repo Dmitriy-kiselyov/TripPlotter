@@ -14,7 +14,7 @@ import {
     IActionSetRoute,
     IActionSetStartTime
 } from '../types/actions';
-import { testStore } from './testInitialStore';
+import { testStore } from '../test/initialStore';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {

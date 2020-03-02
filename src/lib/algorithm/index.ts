@@ -5,7 +5,7 @@ import {
     IAlgorithmTripItemOutput,
     IAlgorithmExtraOutput
 } from '../../types/algorithm';
-import { getRouteInfo } from './getRouteTime';
+import { getRouteInfo } from './getRouteInfo';
 
 interface IOrgTravelTime {
     //для связи времени прибытия с организацией

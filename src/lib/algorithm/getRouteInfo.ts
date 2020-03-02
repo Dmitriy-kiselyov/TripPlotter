@@ -7,6 +7,9 @@ export interface IRouteInfo {
 
 const cache: Map<string, IRouteInfo> = new Map();
 
+// @ts-ignore Для тестирования алгоритма на сервере
+window.__routeInfoCache = cache;
+
 export function getRouteInfo(...coordinates: [number, number][]): Promise<IRouteInfo[]> {
     const info = tryGetCacheInfo(coordinates);
 
