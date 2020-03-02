@@ -12,6 +12,7 @@ import {
 import { getAssetName } from '../../lib/assetsNameMap';
 import { formatTime } from '../../lib/time';
 import { Text } from '../construct/Text/Text';
+import { formatDistance } from '../../lib/distance';
 
 import './TripRoute.scss';
 
@@ -137,26 +138,13 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
             <div className="TripRoute-RouteInfo">
                 <Text oneLine newLine>
                     {'В пути '}
-                    <Text color="primary">{this.formatDistance(curOrg.distance)}</Text>
+                    <Text color="primary">{formatDistance(curOrg.distance)}</Text>
                     {' ('}
                     {this.renderTime(toTime - fromTime)}
                     )
                 </Text>
             </div>
         );
-    }
-
-    private formatDistance(distance: number): string {
-        distance = Math.round(distance);
-
-        if (distance < 1000) {
-            return distance + ' м';
-        }
-
-        distance /= 1000;
-        distance = Math.floor(distance * 10) / 10;
-
-        return distance + ' км';
     }
 
     private renderTime(time: number): React.ReactElement {
