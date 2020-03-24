@@ -76,9 +76,11 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         if (this.props.tripRoute && !prevProps.tripRoute) {
             this.hideOrganizations();
             this.showTrip();
+            this.forceUpdate();
         }
         if (!this.props.tripRoute && prevProps.tripRoute) {
             this.hideTrip();
+            this.updateOrganizations();
         }
     }
 
@@ -117,6 +119,10 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             _this.map.controls.add(scaleButton);
         });
     };
+
+    forceUpdate(): void {
+        this.objectManager.setFilter(this.objectManagerFilter.bind(this));
+    }
 
     private setupObjectManager = () => {
         this.objectManager = new window.ymaps.ObjectManager({
@@ -190,7 +196,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         this.rememberIds(unknownFeatures);
 
         this.objectManager.add(getObjectManagerProps(unknownFeatures));
-        this.objectManager.setFilter(this.objectManagerFilter.bind(this)); // force rerender
+        this.forceUpdate();
 
         this.setOrganizationsPresets(); // after render
     }
