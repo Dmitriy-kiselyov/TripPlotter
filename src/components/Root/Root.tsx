@@ -71,6 +71,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
                 <Title text={showRoute ? 'Выбранная дата' : 'Выберите дату'}/>
                 <ArrayLayout>
                     <DatePicker
+                        date={this.props.date}
                         onShow={this.handleDateShow}
                         onChange={this.handleDateChange}
                         placeholder="Дата путешествия"

@@ -3,7 +3,7 @@ import { IStore } from '../types/store';
 export const testStore: IStore = {
     startTime: '5:00',
     endTime: '22:00',
-    date: new Date(),
+    date: new Date('2020-02-20'),
     tripList: [
         {
             organization: {
