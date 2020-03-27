@@ -1,6 +1,6 @@
 import { IOrganization } from './organization';
 import { IAssetName } from './assets';
-import { IStoreTripRoute } from './store';
+import { IStoreDate, IStoreTripRoute } from './store';
 
 export enum ACTION_TYPES {
     ADD_TO_LIST = 'ADD_TO_LIST',
@@ -11,7 +11,8 @@ export enum ACTION_TYPES {
     SET_DATE = 'SET_DATE',
     SET_ROUTE = 'SET_ROUTE',
     REMOVE_ROUTE = 'REMOVE_ROUTE',
-    SET_BALLOON = 'SET_BALLOON'
+    SET_BALLOON = 'SET_BALLOON',
+    SET_DATE_MODE = 'SET_DATE_MODE'
 }
 
 export interface IActionAddToList {
@@ -44,7 +45,7 @@ export interface IActionSetEndTime {
 
 export interface IActionSetDate {
     type: ACTION_TYPES.SET_DATE;
-    date: Date;
+    date: IStoreDate;
 }
 
 export interface IActionSetRoute {
@@ -61,5 +62,10 @@ export interface IActionSetBalloon {
     id: string | null;
 }
 
-export type IActions = IActionAddToList | IActionChangeTime | IActionRemoveFromList |
-    IActionSetStartTime | IActionSetEndTime | IActionSetDate | IActionSetRoute | IActionRemoveRoute | IActionSetBalloon;
+export interface IActionSetDateMode {
+    type: ACTION_TYPES.SET_DATE_MODE;
+    mode: 'single' | 'multi';
+}
+
+export type IActions = IActionAddToList | IActionChangeTime | IActionRemoveFromList | IActionSetStartTime |
+    IActionSetEndTime | IActionSetDate | IActionSetRoute | IActionRemoveRoute | IActionSetBalloon | IActionSetDateMode;

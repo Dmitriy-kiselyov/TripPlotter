@@ -26,6 +26,29 @@
             color: $primary;
         }
 
+        &.-range-to-,
+        &.-range-from- {
+            background-color: $primary-opacity-50;
+            border: none;
+        }
+
+        &.-in-range- {
+            background-color: $primary-opacity-25;
+
+            &.-focus- {
+                background-color: $primary-dark-opacity-75;
+            }
+
+            &.-other-month- {
+                background-color: $border;
+                color: white;
+
+                &.-focus- {
+                    background-color: $border-hover;
+                }
+            }
+        }
+
         &.-selected- {
             background-color: $primary;
 
@@ -35,6 +58,10 @@
 
             &.-focus- {
                 background-color: $primary-dark-opacity-75;
+            }
+
+            &.-other-month- {
+                background-color: $border-hover;
             }
         }
     }

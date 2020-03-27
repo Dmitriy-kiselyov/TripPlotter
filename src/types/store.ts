@@ -11,11 +11,13 @@ import {
 export interface IStore {
     startTime: string;
     endTime: string;
-    date: Date | null;
+    date: IStoreDate;
     tripList: IStoreTripItem[];
     tripRoute?: IStoreTripRoute;
     openedBalloon?: string;
 }
+
+export type IStoreDate = null | Date | [null, null] | [Date, Date];
 
 export interface IStoreTripItem {
     organization: IOrganization;

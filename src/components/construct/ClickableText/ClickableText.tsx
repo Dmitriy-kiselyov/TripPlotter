@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text } from '../Text/Text';
+
+import { Text, ITextChild } from '../Text/Text';
 
 import './ClickableText.scss';
 
 interface IClickableText {
-    children: string;
+    children: ITextChild | ITextChild[];
     onClick?: () => void;
     set?: boolean;
     className?: string;

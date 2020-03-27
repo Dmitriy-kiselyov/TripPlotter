@@ -1,8 +1,10 @@
 $gap: 10px;
 
 .ArrayLayout {
+    display: flex;
     margin-top: 5px;
     margin-bottom: 5px;
+    align-items: center;
 
     &-Item {
         display: inline-block;

@@ -4,7 +4,7 @@ import { cn } from '../../../lib/cn';
 
 import './Text.scss';
 
-type ITextChild = string | React.ReactElement;
+export type ITextChild = string | React.ReactElement;
 
 export interface ITextProps {
     className?: string;

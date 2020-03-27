@@ -8,12 +8,12 @@ import { RootLayout } from '../RootLayout/RootLayout';
 import { ToggleAssetsGroup } from '../ToggleAssetsGroup/ToggleAssetsGroup';
 import { IOrganization } from '../../types/organization';
 import { ArrayLayout } from '../construct/ArrayLayout/ArrayLayout';
-import { DatePicker } from '../construct/DatePicker/DatePicker';
+import { SingleDatePicker } from '../construct/DatePicker/SingleDatePicker';
 import { TimePicker } from '../construct/TimePicker/TimePicker';
 import { IAssetName } from '../../types/assets';
 import { TripList } from '../TripList/TripList';
 import { ToggleButton } from '../construct/ToggleButton/ToggleButton';
-import { IStore } from '../../types/store';
+import { IStore, IStoreDate } from '../../types/store';
 import { setStartTime } from '../../store/setStartTime';
 import { setEndTime } from '../../store/setEndTime';
 import { setDate } from '../../store/setDate';
@@ -25,13 +25,16 @@ import { IAlgorithmOutput } from '../../types/algorithm';
 import { removeRoute } from '../../store/removeRoute';
 import { TripRoute } from '../TripRoute/TripRoute';
 import { fetchOrganizationsToAlgorithmOutput } from '../../lib/fetchOrganizationsToAlgorithmOutput';
+import { Checkbox } from '../construct/Checkbox/Checkbox';
 
 import './Root.scss';
+import { setDateMode } from '../../store/setDateMode';
+import { MultiDatePicker } from '../construct/DatePicker/MultiDatePicker';
 
 interface IConnectRootProps {
     startTime: string;
     endTime: string;
-    date: Date | null;
+    date: IStoreDate;
     tripListSize: number;
     showRoute: boolean;
 }
@@ -69,15 +72,15 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         const right = (
             <>
                 <Title text={showRoute ? 'Выбранная дата' : 'Выберите дату'}/>
+                <Checkbox
+                    className="RootLayout-DateCheck"
+                    checked={!Array.isArray(this.props.date)}
+                    onChange={this.handleDateModeChange}
+                    text="Однодневный маршрут"
+                    disabled={showRoute}
+                />
                 <ArrayLayout>
-                    <DatePicker
-                        date={this.props.date}
-                        onShow={this.handleDateShow}
-                        onChange={this.handleDateChange}
-                        placeholder="Дата путешествия"
-                        validationError={this.state.dateValidation}
-                        disabled={showRoute}
-                    />
+                    {this.renderDatePicker()}
                     <ArrayLayout>
                         <TimePicker
                             value={this.props.startTime}
@@ -120,6 +123,34 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         );
     }
 
+    private renderDatePicker(): React.ReactElement | null {
+        const { showRoute, date } = this.props;
+
+        if (Array.isArray(date)) {
+            return (
+                <MultiDatePicker
+                    date={date[0] ? date : undefined}
+                    onShow={this.handleDateShow}
+                    onChange={this.handleMultiDateChange}
+                    placeholder="Даты путешествия"
+                    validationError={this.state.dateValidation}
+                    disabled={showRoute}
+                />
+            )
+        }
+
+        return (
+            <SingleDatePicker
+                date={date}
+                onShow={this.handleDateShow}
+                onChange={this.handleSingleChange}
+                placeholder="Дата путешествия"
+                validationError={this.state.dateValidation}
+                disabled={showRoute}
+            />
+        )
+    }
+
     private renderCategories(): React.ReactElement {
         return (
             <>
@@ -135,8 +166,16 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         });
     };
 
-    private handleDateChange = (date: Date) => {
+    private handleDateModeChange = (single: boolean) => {
+        this.props.dispatch(setDateMode(single ? 'single' : 'multi'));
+    };
+
+    private handleSingleChange = (date: Date | null) => {
         this.props.dispatch(setDate(date));
+    };
+
+    private handleMultiDateChange = (date: [Date, Date] | null) => {
+        this.props.dispatch(setDate(date ? date : [null, null]));
     };
 
     private handleStartTimeShow = () => {

@@ -1,7 +1,7 @@
 // @ts-ignore
 import { createStore } from 'redux';
 
-import { IStore } from '../types/store';
+import { IStore, IStoreDate } from '../types/store';
 import {
     ACTION_TYPES,
     IActionAddToList,
@@ -9,7 +9,7 @@ import {
     IActionRemoveFromList,
     IActions,
     IActionSetBalloon,
-    IActionSetDate,
+    IActionSetDate, IActionSetDateMode,
     IActionSetEndTime,
     IActionSetRoute,
     IActionSetStartTime
@@ -36,6 +36,8 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceRemoveRoute(state);
         case ACTION_TYPES.SET_BALLOON:
             return reduceSetBalloon(state, action);
+        case ACTION_TYPES.SET_DATE_MODE:
+            return reduceSetDateMode(state, action);
         default:
             return state;
     }
@@ -124,6 +126,31 @@ function reduceSetBalloon(state: IStore, action: IActionSetBalloon): IStore {
     return {
         ...state,
         openedBalloon: action.id
+    };
+}
+
+function reduceSetDateMode(state: IStore, action: IActionSetDateMode): IStore {
+    let date: IStoreDate = null;
+
+    if (action.mode === 'multi') {
+        if (state.date && !Array.isArray(state.date)) {
+            const nextDate = new Date(state.date.getTime());
+
+            nextDate.setDate(nextDate.getDate() + 1);
+
+            date = [state.date, nextDate];
+        } else {
+            date = [null, null];
+        }
+    } else {
+        if (Array.isArray(state.date)) {
+            date = state.date[0];
+        }
+    }
+
+    return {
+        ...state,
+        date
     };
 }
 
