@@ -8,7 +8,7 @@ import { Text } from '../construct/Text/Text';
 import { Icon } from '../construct/Icon/Icon';
 import { TimePicker } from '../construct/TimePicker/TimePicker';
 import { getAssetName } from '../../lib/assetsNameMap';
-import { parseTime, timeSection } from '../../lib/time';
+import { parseTime, formatTimeLong } from '../../lib/time';
 import { multiLang } from '../../lib/multiLang';
 import { changeTime } from '../../store/changeTime';
 import { removeFromList } from '../../store/removeFromList';
@@ -38,18 +38,6 @@ const countDictionary = {
     one: 'место',
     some: 'места',
     many: 'мест',
-};
-const hoursDictionary = {
-    none: 'часов',
-    one: 'час',
-    some: 'часа',
-    many: 'часов',
-};
-const minutesDictionary = {
-    none: 'минут',
-    one: 'минута',
-    some: 'минуты',
-    many: 'минут',
 };
 
 class TripListPresenter extends React.PureComponent<ITripListProps> {
@@ -83,14 +71,12 @@ class TripListPresenter extends React.PureComponent<ITripListProps> {
             minutes += parseTime(item.time);
         }
 
-        const totalTime = timeSection(minutes);
         const label = [
             'Выбрано',
             count,
             multiLang(count, countDictionary),
             'на',
-            (totalTime[0] === 0 ? '' : totalTime[0] + ' ' + multiLang(totalTime[0], hoursDictionary)),
-            (totalTime[1] === 0 ? ' ' : totalTime[1] + ' ' + multiLang(totalTime[1], minutesDictionary)),
+            formatTimeLong(minutes),
             'посещения'
         ].join(' ');
 

@@ -10,7 +10,7 @@ import {
     IStoreTripRouteFinish, IStoreTripRouteStart
 } from '../../types/store';
 import { getAssetName } from '../../lib/assetsNameMap';
-import { formatTime } from '../../lib/time';
+import { formatTime, formatTimeLong } from '../../lib/time';
 import { Text } from '../construct/Text/Text';
 import { formatDistance } from '../../lib/distance';
 
@@ -95,18 +95,18 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                     {
                         item.wait ? (
                             <div className="TripRoute-Row">
-                                <Text color="primary">{`Ожидание открытия примерно ${formatTime(item.wait)}`}</Text>
+                                <Text color="primary">{`Ожидание открытия примерно ${formatTimeLong(item.wait)}`}</Text>
                             </div>
                         ) : null
                     }
                     <div className="TripRoute-Row">
                         <Text oneLine newLine>
                             {'Посещение с '}
-                            <Text color="primary">{formatTime(from)}</Text>
+                            {this.renderTime(from)}
                             {' до '}
-                            <Text color="primary">{formatTime(to)}</Text>
+                            {this.renderTime(to)}
                             {' ('}
-                            {this.renderTime(to - from)}
+                            {this.renderTime(to - from, true)}
                             )
                         </Text>
                     </div>
@@ -140,15 +140,17 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                     {'В пути '}
                     <Text color="primary">{formatDistance(curOrg.distance)}</Text>
                     {' ('}
-                    {this.renderTime(toTime - fromTime)}
+                    {this.renderTime(toTime - fromTime, true)}
                     )
                 </Text>
             </div>
         );
     }
 
-    private renderTime(time: number): React.ReactElement {
-        return <Text color="primary">{formatTime(time)}</Text>;
+    private renderTime(time: number, long: boolean = false): React.ReactElement {
+        const format = long ? formatTimeLong : formatTime;
+
+        return <Text color="primary">{format(time)}</Text>;
     }
 
     private getLetter(index: number) {
