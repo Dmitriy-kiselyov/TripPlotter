@@ -212,7 +212,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
     private handleCalculateClick = () => {
         const validation: Partial<IState> = {};
 
-        if (!this.props.date) {
+        if (!this.props.date || (Array.isArray(this.props.date) && this.props.date[0] === null)) {
             validation.dateValidation = true;
         }
 

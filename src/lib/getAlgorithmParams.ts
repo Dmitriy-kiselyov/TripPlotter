@@ -6,12 +6,13 @@ import { IAvailableHours, IHourInterval, IHours } from '../types/organization';
 
 export function getAlgorithmParams(): IAlgorithmParams {
     const state = store.getState();
+    const date: Date = Array.isArray(state.date) ? state.date[0] : state.date;
 
     return {
         from: parseTime(state.startTime),
         to: parseTime(state.endTime),
         coordinates: getStartLocation(),
-        organizations: state.tripList.map((item: IStoreTripItem) => getOrganizationParams(item, state.date))
+        organizations: state.tripList.map((item: IStoreTripItem) => getOrganizationParams(item, date))
     }
 }
 
