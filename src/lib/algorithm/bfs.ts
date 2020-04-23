@@ -4,8 +4,8 @@ import {
     IAlgorithmOutput,
     IAlgorithmTripItemOutput,
     IAlgorithmExtraOutput,
-    IAlgorithmAvailableParam,
-    IAlgorithmStartItemOutput, IAlgorithmFinishItemOutput
+    IAlgorithmStartItemOutput,
+    IAlgorithmFinishItemOutput
 } from '../../types/algorithm';
 import { getRouteInfo } from './getRouteInfo';
 import { PriorityQueue } from './priorityQueue';

@@ -24,15 +24,15 @@ export interface IAvailableHours {
     TwentyFourHours?: boolean;
 
     Everyday?: boolean;
-    Weekdays?: string;
-    Weekend?: string;
-    Monday?: string;
-    Tuesday?: string;
-    Wednesday?: string;
-    Thursday?: string;
-    Friday?: string;
-    Saturday?: string;
-    Sunday?: string;
+    Weekdays?: boolean;
+    Weekend?: boolean;
+    Monday?: boolean;
+    Tuesday?: boolean;
+    Wednesday?: boolean;
+    Thursday?: boolean;
+    Friday?: boolean;
+    Saturday?: boolean;
+    Sunday?: boolean;
 }
 
 export interface IHourInterval {

@@ -1,9 +1,12 @@
 import { IStore } from '../types/store';
 
 export const testStore: IStore = {
-    startTime: '5:00',
-    endTime: '22:00',
-    date: new Date('2020-02-20'),
+    startTime: '08:00',
+    endTime: '20:00',
+    date: [
+        new Date('2020-02-20'),
+        new Date('2020-02-21')
+    ],
     tripList: [
         {
             organization: {
@@ -63,7 +66,7 @@ export const testStore: IStore = {
                 }
             },
             category: 'beach',
-            time: '02:00'
+            time: '05:00'
         },
         {
             organization: {
@@ -115,7 +118,7 @@ export const testStore: IStore = {
                 }
             },
             category: 'equestrian',
-            time: '01:45'
+            time: '03:15'
         },
         {
             organization: {
@@ -221,6 +224,114 @@ export const testStore: IStore = {
             },
             category: 'mountain',
             time: '02:00'
+        },
+        {
+            organization: {
+                id: '35908130183',
+                name: 'Художественная мастерская Eseniart',
+                address: 'Россия, Республика Крым, Ялта, улица Тимирязева, 37',
+                Phones: [
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 798-82-65'
+                    }
+                ],
+                Categories: [
+                    {
+                        'class': 'gallery',
+                        name: 'Художественная мастерская'
+                    },
+                    {
+                        'class': 'giftshop',
+                        name: 'Магазин подарков и сувениров'
+                    },
+                    {
+                        name: 'Студия графического дизайна'
+                    }
+                ],
+                Hours: {
+                    text: 'пн-пт 9:00–18:00',
+                    Availabilities: [
+                        {
+                            Intervals: [
+                                {
+                                    from: '09:00:00',
+                                    to: '18:00:00'
+                                }
+                            ],
+                            Monday: true,
+                            Tuesday: true,
+                            Wednesday: true,
+                            Thursday: true,
+                            Friday: true
+                        }
+                    ]
+                },
+                geometry: {
+                    type: 'Point',
+                    coordinates: [
+                        44.498257,
+                        34.140966
+                    ]
+                }
+            },
+            category: 'gallery',
+            time: '03:00'
+        },
+        {
+            organization: {
+                id: '179892968027',
+                name: 'Коннект Экспо',
+                address: 'Россия, Республика Крым, городской округ Симферополь, посёлок городского типа Аэрофлотский, площадь Аэропорта, 6',
+                url: 'https://connectexpo.ru/',
+                Phones: [
+                    {
+                        type: 'phone',
+                        formatted: '+7 (499) 350-45-64'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 970-99-11'
+                    }
+                ],
+                Categories: [
+                    {
+                        'class': 'exhibition center',
+                        name: 'Выставочный центр'
+                    },
+                    {
+                        'class': 'office',
+                        name: 'Конференц-зал'
+                    }
+                ],
+                Hours: {
+                    text: 'пн-пт 9:00–20:00',
+                    Availabilities: [
+                        {
+                            Intervals: [
+                                {
+                                    from: '09:00:00',
+                                    to: '20:00:00'
+                                }
+                            ],
+                            Monday: true,
+                            Tuesday: true,
+                            Wednesday: true,
+                            Thursday: true,
+                            Friday: true
+                        }
+                    ]
+                },
+                geometry: {
+                    type: 'Point',
+                    coordinates: [
+                        45.020785,
+                        33.997681
+                    ]
+                }
+            },
+            category: 'exhibition center',
+            time: '04:00'
         }
     ]
 };
