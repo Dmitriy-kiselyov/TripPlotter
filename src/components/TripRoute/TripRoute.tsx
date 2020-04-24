@@ -1,35 +1,42 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, DispatchProp } from 'react-redux';
 
 import { cn } from '../../lib/cn';
 import { Title } from '../construct/Title/Title';
 import {
-    IStore, IStoreTripRoute, IStoreTripRouteItem, IStoreTripRouteFinish, IStoreTripRouteStart, IStoreTripRouteDay
+    IStore,
+    IStoreTripRoute,
+    IStoreTripRouteItem,
+    IStoreTripRouteFinish,
+    IStoreTripRouteStart,
+    IStoreTripRouteDay,
+    IStoreFilledDate
 } from '../../types/store';
 import { getAssetName } from '../../lib/assetsNameMap';
 import { formatTime, formatTimeLong } from '../../lib/time';
 import { Text } from '../construct/Text/Text';
 import { formatDistance } from '../../lib/distance';
+import { ClickableText } from '../construct/ClickableText/ClickableText';
+import { formatDateLong } from '../../lib/date';
+import { setRouteDay } from '../../store/setRouteDay';
 
 import './TripRoute.scss';
 
 interface IConnectProps {
-    route?: IStoreTripRoute;
+    route: IStoreTripRoute;
+    date: IStoreFilledDate;
+    activeDay?: number;
 }
 
-class TripRoutePresenter extends React.PureComponent<IConnectProps> {
+type ITripRoutePropsWithConnect = IConnectProps & DispatchProp;
+
+class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect> {
     render() {
-        const { route } = this.props;
-
-        if (!route) {
-            return null;
-        }
-
-        const { days, extra } = route;
+        const { days, extra } = this.props.route;
 
         return (
             <div className="TripRoute">
-                <Title text="Маршрут"/>
+                {this.isSingleDate() && <Title text="Маршрут"/>}
                 {
                     days.map((day, i) => this.renderDay(day, i))
                 }
@@ -38,11 +45,18 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
         )
     }
 
+    private isSingleDate(): boolean {
+        return !Array.isArray(this.props.date);
+    }
+
     private renderDay(day: IStoreTripRouteDay, dayNumber: number): React.ReactElement {
         const { start, finish, route } = day;
 
         return (
-            <React.Fragment key={dayNumber}>
+            <div
+                className={cn('TripRoute-Day', { active: dayNumber === this.props.activeDay })}
+                key={dayNumber}
+            >
                 {this.renderDayTitle(dayNumber)}
                 {this.renderStartPoint(start)}
                 {
@@ -55,20 +69,50 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                 }
                 {this.renderRouteInfo(route[route.length - 1], finish)}
                 {this.renderEndPoint(finish, route.length)}
-            </React.Fragment>
+            </div>
         );
     }
 
     private renderDayTitle(dayNumber: number): React.ReactElement {
+        const { date } = this.props;
+
+        if (this.isSingleDate()) {
+            return null;
+        }
+
+        const currentDate = this.getNextDate((date as [Date, Date])[0], dayNumber);
+
         return (
-            <div className="TripRoute-DayTitleWrap">
-                <div className="TripRoute-DayTitleLine" />
-                <Title
-                    className="TripRoute-DayTitle"
-                    text={`День ${dayNumber + 1}`}
-                />
-            </div>
+            <>
+                <div className="TripRoute-DayTitleWrap">
+                    <div className="TripRoute-DayTitleLine" />
+                    <ClickableText
+                        className="TripRoute-DayTitle"
+                        size="xl"
+                        onClick={() => this.props.dispatch(setRouteDay(dayNumber))}
+                    >
+                        {`День ${dayNumber + 1}`}
+                    </ClickableText>
+                </div>
+                <div className="TripRoute-DayDate">
+                    <ClickableText
+                        newLine
+                        size="m"
+                        onClick={() => this.props.dispatch(setRouteDay(dayNumber))}
+                    >
+                        {formatDateLong(currentDate)}
+                    </ClickableText>
+                </div>
+            </>
         );
+    }
+
+    private getNextDate(date: Date, daysPassed: number): Date {
+        const newDate = new Date(date.getTime());
+
+        newDate.setDate(newDate.getDate() + daysPassed);
+
+        return newDate;
     }
 
     private renderExtra(): React.ReactElement {
@@ -182,6 +226,8 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
 
 export const TripRoute = connect(
     (state: IStore): IConnectProps => ({
-        route: state.tripRoute
+        route: state.tripRoute as IStoreTripRoute,
+        date: state.date as IStoreFilledDate,
+        activeDay: state.tripRouteDay
     })
 )(TripRoutePresenter);

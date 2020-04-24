@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { BaseDatePicker, IBaseDatePickerProps } from './BaseDatePicker';
+import { formatDate } from '../../../lib/date';
 
 export interface IMultiDatePicker extends IBaseDatePickerProps {
     date?: [Date, Date];
@@ -56,6 +58,6 @@ export class MultiDatePicker extends BaseDatePicker<IMultiDatePicker> {
             return undefined;
         }
 
-        return super.dateToString(date[0]) + ' – ' + super.dateToString(date[1]);
+        return formatDate(date[0]) + ' – ' + formatDate(date[1]);
     }
 }

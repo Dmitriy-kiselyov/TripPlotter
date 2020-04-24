@@ -5,6 +5,7 @@ import { cn } from '../../../lib/cn';
 import './Text.scss';
 
 export type ITextChild = string | React.ReactElement;
+export type ITextSize = 'm' | 'l' | 'xl';
 
 export interface ITextProps {
     className?: string;
@@ -15,6 +16,7 @@ export interface ITextProps {
     center?: boolean;
     oneLine?: boolean;
     onClick?: () => void;
+    size?: ITextSize;
 }
 
 export const Text: React.FC<ITextProps> = props => {
@@ -24,6 +26,7 @@ export const Text: React.FC<ITextProps> = props => {
         center: props.center || false,
         oneLine: props.oneLine || false,
         bold: props.bold || false,
+        size: props.size || 'm'
     };
 
     return (

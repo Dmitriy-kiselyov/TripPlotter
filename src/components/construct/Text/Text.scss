@@ -1,10 +1,24 @@
 @import "../../Constants";
 
 .Text {
-    font-size: $font-size-m;
-    line-height: $line-height-m;
-
     transition: color .1s linear;
+
+    &_size {
+        &_m {
+            font-size: $font-size-m;
+            line-height: $line-height-m;
+        }
+
+        &_l {
+            font-size: $font-size-l;
+            line-height: $line-height-l;
+        }
+
+        &_xl {
+            font-size: $font-size-xl;
+            line-height: $line-height-xl;
+        }
+    }
 
     &_color {
         &_black {

@@ -42,23 +42,44 @@
         font-size: 12px;
         font-weight: bold;
         text-align: center;
-        color: white;
-        background: #71B732;
         cursor: default;
+    }
 
-        &_place {
-            &_start {
-                background: #FF3333;
+    &-Day_active {
+        .TripRoute {
+            &-DayTitleLine {
+                border-top: 2px solid $primary;
             }
 
-            &_end {
-                background: #4296EA;
+            &-DayTitle {
+                color: $primary;
+            }
+
+            &-DayDate {
+                .ClickableText {
+                    color: $primary;
+                }
+            }
+
+            &-Point {
+                color: white;
+                background: #71B732;
+
+                &_place {
+                    &_start {
+                        background: #FF3333;
+                    }
+
+                    &_end {
+                        background: #4296EA;
+                    }
+                }
             }
         }
     }
 
     &-DayTitleWrap {
-        margin: $margin 0;
+        margin-top: $margin;
         text-align: center;
         position: relative;
     }
@@ -74,9 +95,19 @@
 
     &-DayTitle {
         display: inline-block;
+        vertical-align: middle;
         padding-left: $margin / 2;
         padding-right: $margin / 2;
         background: white;
+    }
+
+    &-DayDate {
+        margin-bottom: $margin;
+        text-align: center;
+
+        .ClickableText {
+            display: inline-block;
+        }
     }
 
     &-RouteInfo {

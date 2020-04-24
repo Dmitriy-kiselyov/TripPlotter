@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { BaseDatePicker, IBaseDatePickerProps } from './BaseDatePicker';
+import { formatDate } from '../../../lib/date';
 
 export interface ISingleDatePickerProps extends IBaseDatePickerProps {
     date?: Date;
@@ -34,6 +36,6 @@ export class SingleDatePicker extends BaseDatePicker<ISingleDatePickerProps> {
             return undefined;
         }
 
-        return super.dateToString(date);
+        return formatDate(date);
     }
 }

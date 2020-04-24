@@ -9,12 +9,14 @@ import {
     IActionRemoveFromList,
     IActions,
     IActionSetBalloon,
-    IActionSetDate, IActionSetDateMode,
+    IActionSetDate,
+    IActionSetDateMode,
     IActionSetEndTime,
     IActionSetRoute,
+    IActionSetRouteDay,
     IActionSetStartTime
 } from '../types/actions';
-import { testStore } from '../test/initialStore';
+import { testTripStore } from '../test/testTripStore';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {
@@ -36,6 +38,8 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceRemoveRoute(state);
         case ACTION_TYPES.SET_BALLOON:
             return reduceSetBalloon(state, action);
+        case ACTION_TYPES.SET_ROUTE_DAY:
+            return reduceSetRouteDay(state, action);
         case ACTION_TYPES.SET_DATE_MODE:
             return reduceSetDateMode(state, action);
         default:
@@ -104,10 +108,16 @@ function reduceSetDate(state: IStore, action: IActionSetDate) {
 }
 
 function reduceSetRoute(state: IStore, action: IActionSetRoute) {
-    return {
+    const newState = {
         ...state,
         tripRoute: action.route
+    };
+
+    if (action.route.days.length > 1) {
+        newState.tripRouteDay = 0;
     }
+
+    return newState;
 }
 
 function reduceRemoveRoute(state: IStore) {
@@ -127,6 +137,13 @@ function reduceSetBalloon(state: IStore, action: IActionSetBalloon): IStore {
         ...state,
         openedBalloon: action.id
     };
+}
+
+function reduceSetRouteDay(state: IStore, action: IActionSetRouteDay): IStore {
+    return {
+        ...state,
+        tripRouteDay: action.day
+    }
 }
 
 function reduceSetDateMode(state: IStore, action: IActionSetDateMode): IStore {
@@ -163,7 +180,7 @@ const initialStore: IStore = {
 
 export const store = createStore(
     reducer,
-    testStore,
+    testTripStore,
     // @ts-ignore https://github.com/zalmoxisus/redux-devtools-extension#usage
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

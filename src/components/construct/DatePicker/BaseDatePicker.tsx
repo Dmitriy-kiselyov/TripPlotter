@@ -53,12 +53,4 @@ export abstract class BaseDatePicker<P extends IBaseDatePickerProps> extends Rea
     }
 
     protected abstract getDateString(): string | undefined;
-
-    protected dateToString(date: Date): string | undefined {
-        return withLeadZero(date.getDate()) + '.' + withLeadZero(date.getMonth() + 1) + '.' + date.getFullYear();
-    }
-}
-
-function withLeadZero(n: number): string {
-    return n >= 10 ? String(n) : '0' + n;
 }

@@ -12,12 +12,14 @@ export interface IStore {
     startTime: string;
     endTime: string;
     date: IStoreDate;
+    tripRouteDay?: number;
     tripList: IStoreTripItem[];
     tripRoute?: IStoreTripRoute;
     openedBalloon?: string;
 }
 
-export type IStoreDate = null | Date | [null, null] | [Date, Date];
+export type IStoreFilledDate = Date | [Date, Date];
+export type IStoreDate = IStoreFilledDate | null | [null, null];
 
 export interface IStoreTripItem {
     organization: IOrganization;
