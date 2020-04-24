@@ -54,7 +54,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
 
         return (
             <div
-                className={cn('TripRoute-Day', { active: dayNumber === this.props.activeDay })}
+                className={cn('TripRoute-Day', { active: this.isSingleDate() || dayNumber === this.props.activeDay })}
                 key={dayNumber}
             >
                 {this.renderDayTitle(dayNumber)}

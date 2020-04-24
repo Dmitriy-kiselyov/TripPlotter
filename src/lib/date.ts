@@ -10,5 +10,15 @@ const month = ['января', 'февраля', 'марта', 'апреля', '
 const week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 
 export function formatDateLong(date: Date): string {
-    return `${week[date.getDay()]}, ${date.getDate()} ${month[date.getMonth()]}`;
+    return `${getWeekName(date)}, ${date.getDate()} ${month[date.getMonth()]}`;
+}
+
+function getWeekName(date: Date) {
+    let day = date.getDay();
+
+    if (day === 0) {
+        day = 7; // вс
+    }
+
+    return week[day - 1];
 }

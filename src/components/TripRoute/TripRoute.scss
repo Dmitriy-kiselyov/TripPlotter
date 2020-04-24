@@ -43,6 +43,8 @@
         font-weight: bold;
         text-align: center;
         cursor: default;
+
+        transition: background-color .1s ease-out, color .1s ease-out;
     }
 
     &-Day_active {
@@ -63,15 +65,15 @@
 
             &-Point {
                 color: white;
-                background: #71B732;
+                background-color: #71B732;
 
                 &_place {
                     &_start {
-                        background: #FF3333;
+                        background-color: #FF3333;
                     }
 
                     &_end {
-                        background: #4296EA;
+                        background-color: #4296EA;
                     }
                 }
             }

@@ -82,6 +82,10 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             this.hideTrip();
             this.updateOrganizations();
         }
+        if (this.props.tripRoute && prevProps.tripRoute && this.props.tripRoute.organizations !== prevProps.tripRoute.organizations) {
+            this.hideTrip();
+            this.showTrip();
+        }
     }
 
     componentDidMount(): void {
@@ -181,8 +185,16 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
         this.map.geoObjects.add(this.objectManager);
 
-        this.updateOrganizations();
+        this.firstSetup();
     };
+
+    private firstSetup(): void {
+        if (this.props.tripRoute) {
+            this.showTrip();
+        } else {
+            this.updateOrganizations();
+        }
+    }
 
     private updateOrganizations() {
         if (!this.map) {
@@ -298,8 +310,7 @@ export const Map = connect(
         };
 
         if (state.tripRoute) {
-            // TODO: активный маршрут
-            const trip = state.tripRoute.days[0].route;
+            const trip = state.tripRoute.days[state.tripRouteDay || 0].route;
 
             connectProps.tripRoute = {
                 organizations: trip.length > 0 ? trip : undefined,
