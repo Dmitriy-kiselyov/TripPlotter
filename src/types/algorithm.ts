@@ -1,15 +1,19 @@
 export interface IAlgorithmParams {
-    from: number;
-    to: number;
+    days: IAlgorithmDayParam[];
     coordinates: [number, number];
     organizations: IAlgorithmOrganizationParam[];
+}
+
+export interface IAlgorithmDayParam {
+    from: number;
+    to: number;
 }
 
 export interface IAlgorithmOrganizationParam {
     coordinates: [number, number];
     id: string;
     timeSpend: number;
-    available: IAlgorithmAvailableParam[];
+    available: IAlgorithmAvailableParam[][];
 }
 
 export interface IAlgorithmAvailableParam {
@@ -18,10 +22,15 @@ export interface IAlgorithmAvailableParam {
 }
 
 export interface IAlgorithmOutput {
+    coordinates: [number, number];
+    days: Array<IAlgorithmDayOutput | null>; // null – нечего делать в этот день
+    extra?: IAlgorithmExtraOutput[];
+}
+
+export interface IAlgorithmDayOutput {
     start: IAlgorithmStartItemOutput;
     route: IAlgorithmTripItemOutput[];
     finish: IAlgorithmFinishItemOutput;
-    extra?: IAlgorithmExtraOutput[];
 }
 
 export interface IAlgorithmTripItemOutput {
@@ -34,7 +43,6 @@ export interface IAlgorithmTripItemOutput {
 }
 
 export interface IAlgorithmStartItemOutput {
-    coordinates: [number, number];
     time: number;
 }
 

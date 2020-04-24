@@ -1,9 +1,30 @@
-import { IAlgorithmOutput } from '../../types/algorithm';
+import { IAlgorithmDayOutput, IAlgorithmOutput, IAlgorithmStartItemOutput } from '../../types/algorithm';
 import { IStore } from '../../types/store';
 import { formatTime, parseTime } from '../../lib/time';
 import { formatDistance } from '../../lib/distance';
 
 export function printRoute(store: IStore, route: IAlgorithmOutput): void {
+    for (let day = 0; day < route.days.length; day++) {
+        if (day) {
+            console.log('----------------', '\n');
+        }
+
+        printDay(day, route.days[day], store);
+    }
+
+    if (route.extra) {
+        printExtra(store, route);
+    }
+}
+
+function printDay(day: number, route: IAlgorithmDayOutput | null, store: IStore): void {
+    console.log('День №', day + 1);
+
+    if (!route) {
+        console.log('В этот день нечего делать :(');
+        return;
+    }
+
     console.log('Время начала:', formatTime(route.start.time));
 
     let lastTime = route.start.time;
@@ -26,10 +47,6 @@ export function printRoute(store: IStore, route: IAlgorithmOutput): void {
     console.log('Дорога домой', formatDistance(route.finish.distance), '(', formatTime(route.finish.time - lastTime), ')');
     console.log('Дома', formatTime(route.finish.time));
     console.log('В запасе осталось', formatTime(parseTime(store.endTime) - route.finish.time));
-
-    if (route.extra) {
-        printExtra(store, route);
-    }
 }
 
 function printExtra(store: IStore, route: IAlgorithmOutput) {

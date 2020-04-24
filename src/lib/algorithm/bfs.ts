@@ -5,9 +5,9 @@ import {
     IAlgorithmTripItemOutput,
     IAlgorithmExtraOutput,
     IAlgorithmStartItemOutput,
-    IAlgorithmFinishItemOutput
+    IAlgorithmFinishItemOutput, IAlgorithmDayOutput
 } from '../../types/algorithm';
-import { getRouteInfo } from './getRouteInfo';
+import { getRouteInfo, IRouteInfo } from './getRouteInfo';
 import { PriorityQueue } from './priorityQueue';
 
 export type ITripAlgorithmCallback = (trip: IAlgorithmOutput) => void;
@@ -19,22 +19,28 @@ interface IQueueNode {
 }
 
 interface IAlgorithmTripItemOutputExtend extends IAlgorithmTripItemOutput {
+    day: number; // порядковый номер даты
     finishTime: number; // для выбора лучшей точки
     finishDistance: number; // для формирования ответа алгоиритма
 }
 
+function nodeComparator(a: IQueueNode, b: IQueueNode): boolean {
+    return a.cur.day !== b.cur.day ? a.cur.day < b.cur.day : a.cur.to < b.cur.to;
+}
+
 export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, callback: ITripAlgorithmCallback) {
-    const queue = new PriorityQueue<IQueueNode>((a, b) => a.cur.to < b.cur.to);
+    const queue = new PriorityQueue<IQueueNode>(nodeComparator);
 
     queue.push({
         prevPath: null,
         cur: {
             id: 'start',
-            from: algorithmParams.from,
-            to: algorithmParams.from,
+            from: algorithmParams.days[0].from,
+            to: algorithmParams.days[0].from,
+            day: 0,
             coordinates: algorithmParams.coordinates,
             distance: 0,
-            finishTime: 0,
+            finishTime: algorithmParams.days[0].from,
             finishDistance: 0,
         },
         depth: 0
@@ -67,39 +73,6 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, callba
     callback(prepareResult(best, algorithmParams));
 }
 
-function prepareResult(node: IQueueNode, algorithmParams: IAlgorithmParams): IAlgorithmOutput {
-    const start: IAlgorithmStartItemOutput = {
-        coordinates: algorithmParams.coordinates,
-        time: algorithmParams.from
-    };
-    const finish: IAlgorithmFinishItemOutput = {
-        coordinates: algorithmParams.coordinates,
-        time: node.cur.finishTime,
-        distance: node.cur.finishDistance
-    };
-
-    let route: IAlgorithmTripItemOutput[] = [];
-
-    while(node.prevPath !== null) {
-        delete node.cur.finishTime;
-        delete node.cur.finishDistance;
-        route.push(node.cur);
-
-        node = node.prevPath;
-    }
-
-    route = route.reverse();
-
-    const extra = getExtraOutput(route, algorithmParams);
-
-    return {
-        start,
-        route,
-        finish,
-        extra
-    };
-}
-
 function getExtraOutput(route: IAlgorithmTripItemOutput[], algorithmParams: IAlgorithmParams): IAlgorithmExtraOutput[] {
     const map = new Map<string, IAlgorithmOrganizationParam>(algorithmParams.organizations.map(r => [r.id, r]));
 
@@ -124,6 +97,9 @@ function isVisited(node: IQueueNode, id: string): boolean {
 function compareNodes(a: IQueueNode, b: IQueueNode): number {
     if (a.depth !== b.depth) {
         return a.depth - b.depth;
+    }
+    if (a.cur.day !== b.cur.day) {
+        return a.cur.day - b.cur.day;
     }
 
     return a.cur.finishTime - b.cur.finishTime;
@@ -152,42 +128,63 @@ function promiseAll<T>(promises: Promise<T>[]): Promise<T[]> {
 }
 
 function countNextVertex(prev: IAlgorithmTripItemOutputExtend, next: IAlgorithmOrganizationParam, algorithmParams: IAlgorithmParams): Promise<IAlgorithmTripItemOutputExtend | null> {
-    return getRouteInfo(prev.coordinates, next.coordinates, algorithmParams.coordinates)
+    return getRouteInfo(prev.coordinates, next.coordinates, algorithmParams.coordinates, next.coordinates)
         .then(routeInfo => {
-            const nextFromTime = prev.to + routeInfo[0].time;
-            const nextAvailableFromTime = closestAvailableTime(nextFromTime, next);
+            let day = prev.day;
+            let result = getNextTrimItem(prev.day, prev.to, next, algorithmParams, routeInfo[0], routeInfo[1]);
 
-            if (nextAvailableFromTime == null) {
-                return null;
-            }
+            while (!result && day + 1 < algorithmParams.days.length) {
+                day++;
 
-            const nextLeaveTime = nextAvailableFromTime + next.timeSpend;
-            const estimateFinishTime = nextLeaveTime + routeInfo[1].time;
-
-            if (estimateFinishTime > algorithmParams.to) {
-                return null;
-            }
-
-            const result: IAlgorithmTripItemOutputExtend = {
-                id: next.id,
-                from: nextFromTime,
-                to: nextLeaveTime,
-                coordinates: next.coordinates,
-                distance: routeInfo[0].distance,
-                finishTime: nextLeaveTime + routeInfo[1].time,
-                finishDistance: routeInfo[1].distance
-            };
-
-            if (nextAvailableFromTime - nextFromTime > 0) {
-                result.wait = nextAvailableFromTime - nextFromTime;
+                result = getNextTrimItem(day, algorithmParams.days[day].from, next, algorithmParams, routeInfo[2], routeInfo[1]);
             }
 
             return result;
         });
 }
 
-function closestAvailableTime(time: number, org: IAlgorithmOrganizationParam): number | null {
-    for (const available of org.available) {
+function getNextTrimItem(
+    day: number,
+    fromTime: number,
+    next: IAlgorithmOrganizationParam,
+    algorithmParams: IAlgorithmParams,
+    forwardRoute: IRouteInfo,
+    backRoute: IRouteInfo
+): IAlgorithmTripItemOutputExtend | null {
+    const nextFromTime = fromTime + forwardRoute.time;
+    const nextAvailableFromTime = closestAvailableTime(day, nextFromTime, next);
+
+    if (nextAvailableFromTime == null) {
+        return null;
+    }
+
+    const nextLeaveTime = nextAvailableFromTime + next.timeSpend;
+    const estimateFinishTime = nextLeaveTime + backRoute.time;
+
+    if (estimateFinishTime > algorithmParams.days[day].to) {
+        return null;
+    }
+
+    const result: IAlgorithmTripItemOutputExtend = {
+        id: next.id,
+        from: nextFromTime,
+        to: nextLeaveTime,
+        day,
+        coordinates: next.coordinates,
+        distance: forwardRoute.distance,
+        finishTime: nextLeaveTime + backRoute.time,
+        finishDistance: backRoute.distance
+    };
+
+    if (nextAvailableFromTime - nextFromTime > 0) {
+        result.wait = nextAvailableFromTime - nextFromTime;
+    }
+
+    return result;
+}
+
+function closestAvailableTime(day: number, time: number, org: IAlgorithmOrganizationParam): number | null {
+    for (const available of org.available[day]) {
         if (available.from <= time && time + org.timeSpend <= available.to) {
             return time;
         }
@@ -198,4 +195,49 @@ function closestAvailableTime(time: number, org: IAlgorithmOrganizationParam): n
     }
 
     return null;
+}
+
+function prepareResult(node: IQueueNode, algorithmParams: IAlgorithmParams): IAlgorithmOutput {
+    let days: IAlgorithmDayOutput[] = [];
+    let allRoutes: IAlgorithmTripItemOutput[] = [];
+
+    for (let day = algorithmParams.days.length - 1; day >= 0; day--) {
+        if (node.cur.day !== day) { // нечего делать в этот день
+            days.push(null);
+            continue;
+        }
+
+        const start: IAlgorithmStartItemOutput = {
+            time: algorithmParams.days[day].from
+        };
+        const finish: IAlgorithmFinishItemOutput = {
+            time: node.cur.finishTime,
+            distance: node.cur.finishDistance
+        };
+        let route: IAlgorithmTripItemOutput[] = [];
+
+        while(node.prevPath !== null && node.cur.day === day) {
+            delete node.cur.finishTime;
+            delete node.cur.finishDistance;
+            delete node.cur.day;
+            route.push(node.cur);
+
+            node = node.prevPath;
+        }
+
+        route = route.reverse();
+        allRoutes.push(...route);
+
+        days.push({ start, route, finish });
+    }
+
+    days = days.reverse();
+
+    const extra = getExtraOutput(allRoutes, algorithmParams);
+
+    return {
+        coordinates: algorithmParams.coordinates,
+        days,
+        extra
+    };
 }

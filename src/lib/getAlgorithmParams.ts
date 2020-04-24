@@ -4,16 +4,23 @@ import { parseTime } from './time';
 import { IStoreTripItem } from '../types/store';
 import { IAvailableHours, IHourInterval, IHours } from '../types/organization';
 
+const DAY = 1000 * 60 * 60 * 24;
+
 export function getAlgorithmParams(): IAlgorithmParams {
     const state = store.getState();
-    const date: Date = Array.isArray(state.date) ? state.date[0] : state.date;
+    const date: [Date, Date] = Array.isArray(state.date) ? state.date : [state.date, state.date];
+    const from = parseTime(state.startTime);
+    const to = parseTime(state.endTime);
 
     return {
-        from: parseTime(state.startTime),
-        to: parseTime(state.endTime),
+        days: new Array(getDaysCount(date)).fill(0).map(() => ({ from, to })),
         coordinates: getStartLocation(),
         organizations: state.tripList.map((item: IStoreTripItem) => getOrganizationParams(item, date))
     }
+}
+
+function getDaysCount(date: [Date, Date]): number {
+    return Math.abs((+date[1] - +date[0]) / DAY) + 1;
 }
 
 // TODO: пользователь должен выбрать
@@ -21,13 +28,26 @@ export function getStartLocation(): [number, number] {
     return [44.936675, 34.134293]; // универ
 }
 
-function getOrganizationParams(item: IStoreTripItem, date: Date): IAlgorithmOrganizationParam {
+function getOrganizationParams(item: IStoreTripItem, date: [Date, Date]): IAlgorithmOrganizationParam {
     return {
         coordinates: item.organization.geometry.coordinates,
         id: item.organization.id,
         timeSpend: parseTime(item.time),
-        available: getAvailable(item.organization.Hours, date)
+        available: getDatesBetween(date).map(date => getAvailable(item.organization.Hours, date))
     }
+}
+
+function getDatesBetween(dates: [Date, Date]): Date[] {
+    const between = [dates[0]];
+    let current = +dates[0];
+
+    while (current < +dates[1]) {
+        current += DAY;
+
+        between.push(new Date(current));
+    }
+
+    return between;
 }
 
 function getAvailable(availableHours: IHours | undefined, date: Date): IAlgorithmAvailableParam[] {
