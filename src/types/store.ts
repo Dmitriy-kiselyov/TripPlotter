@@ -5,7 +5,7 @@ import {
     IAlgorithmOutput,
     IAlgorithmTripItemOutput,
     IAlgorithmStartItemOutput,
-    IAlgorithmFinishItemOutput
+    IAlgorithmFinishItemOutput, IAlgorithmDayOutput
 } from './algorithm';
 
 export interface IStore {
@@ -26,13 +26,12 @@ export interface IStoreTripItem {
 }
 
 export interface IStoreTripRoute extends IAlgorithmOutput {
-    start: IAlgorithmStartItemOutput;
-    route: IStoreTripRouteItem[];
-    finish: IAlgorithmFinishItemOutput;
+    days: Array<IStoreTripRouteDay | null>; // null – нечего делать в этот день
     extra?: IStoreTripRouteExtra[];
 }
 
 export type IStoreTripRouteStart = IAlgorithmStartItemOutput;
 export type IStoreTripRouteFinish = IAlgorithmFinishItemOutput;
 export type IStoreTripRouteItem = IAlgorithmTripItemOutput & IStoreTripItem;
+export interface IStoreTripRouteDay extends IAlgorithmDayOutput { route: IStoreTripRouteItem[] }
 export type IStoreTripRouteExtra = IAlgorithmExtraOutput & IStoreTripItem;

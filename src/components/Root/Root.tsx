@@ -241,9 +241,8 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
             return;
         }
 
-        tripAlgorithm(getAlgorithmParams(), (route: IAlgorithmOutput) => {
-            this.props.dispatch(setRoute(fetchOrganizationsToAlgorithmOutput(route)));
-        });
+        tripAlgorithm(getAlgorithmParams())
+            .then(route => this.props.dispatch(setRoute(fetchOrganizationsToAlgorithmOutput(route))));
     };
 
     static getDerivedStateFromProps(props: IRootProps): Partial<IState> {

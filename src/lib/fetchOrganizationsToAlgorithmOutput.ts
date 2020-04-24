@@ -1,17 +1,31 @@
-import { IAlgorithmExtraOutput, IAlgorithmOutput, IAlgorithmTripItemOutput } from '../types/algorithm';
-import { IStoreTripRoute } from '../types/store';
+import {
+    IAlgorithmDayOutput,
+    IAlgorithmExtraOutput,
+    IAlgorithmOutput,
+    IAlgorithmTripItemOutput
+} from '../types/algorithm';
+import { IStoreTripRouteDay, IStoreTripRoute, IStoreTripRouteItem } from '../types/store';
 import { store } from '../store/store';
 
-export function fetchOrganizationsToAlgorithmOutput(route: IAlgorithmOutput): IStoreTripRoute {
+export function fetchOrganizationsToAlgorithmOutput(output: IAlgorithmOutput): IStoreTripRoute {
     return {
-        start: route.start,
-        route: fetchTripList(route.route),
-        finish: route.finish,
-        extra: route.extra ? fetchExtras(route.extra) : undefined,
+        coordinates: output.coordinates,
+        days: fetchTripDays(output.days),
+        extra: output.extra ? fetchExtras(output.extra) : undefined,
     };
 }
 
-function fetchTripList(routeItems: IAlgorithmTripItemOutput[]) {
+function fetchTripDays(days: IAlgorithmDayOutput[]): IStoreTripRouteDay[] {
+    return days.map(day => {
+        return {
+            start: day.start,
+            finish: day.finish,
+            route: fetchTripList(day.route)
+        }
+    });
+}
+
+function fetchTripList(routeItems: IAlgorithmTripItemOutput[]): IStoreTripRouteItem[] {
     const { tripList } = store.getState();
 
     return routeItems.map(item => {

@@ -4,10 +4,7 @@ import { connect } from 'react-redux';
 import { cn } from '../../lib/cn';
 import { Title } from '../construct/Title/Title';
 import {
-    IStore,
-    IStoreTripRoute,
-    IStoreTripRouteItem,
-    IStoreTripRouteFinish, IStoreTripRouteStart
+    IStore, IStoreTripRoute, IStoreTripRouteItem, IStoreTripRouteFinish, IStoreTripRouteStart, IStoreTripRouteDay
 } from '../../types/store';
 import { getAssetName } from '../../lib/assetsNameMap';
 import { formatTime, formatTimeLong } from '../../lib/time';
@@ -22,18 +19,32 @@ interface IConnectProps {
 
 class TripRoutePresenter extends React.PureComponent<IConnectProps> {
     render() {
-        const { route: routeProps } = this.props;
+        const { route } = this.props;
 
-        if (!routeProps) {
+        if (!route) {
             return null;
         }
 
-        const { route, extra, start, finish } = routeProps;
+        const { days, extra } = route;
 
         return (
             <div className="TripRoute">
                 <Title text="Маршрут"/>
-                {this.renderStartPoint()}
+                {
+                    days.map((day, i) => this.renderDay(day, i))
+                }
+                {extra && extra.length > 0 ? this.renderExtra() : null}
+            </div>
+        )
+    }
+
+    private renderDay(day: IStoreTripRouteDay, dayNumber: number): React.ReactElement {
+        const { start, finish, route } = day;
+
+        return (
+            <React.Fragment key={dayNumber}>
+                {this.renderDayTitle(dayNumber)}
+                {this.renderStartPoint(start)}
                 {
                     route.map((item, index) => (
                         <React.Fragment key={item.id}>
@@ -43,10 +54,21 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
                     ))
                 }
                 {this.renderRouteInfo(route[route.length - 1], finish)}
-                {this.renderEndPoint()}
-                {extra && extra.length > 0 ? this.renderExtra() : null}
+                {this.renderEndPoint(finish, route.length)}
+            </React.Fragment>
+        );
+    }
+
+    private renderDayTitle(dayNumber: number): React.ReactElement {
+        return (
+            <div className="TripRoute-DayTitleWrap">
+                <div className="TripRoute-DayTitleLine" />
+                <Title
+                    className="TripRoute-DayTitle"
+                    text={`День ${dayNumber + 1}`}
+                />
             </div>
-        )
+        );
     }
 
     private renderExtra(): React.ReactElement {
@@ -67,14 +89,14 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
         );
     }
 
-    private renderStartPoint(): React.ReactElement {
+    private renderStartPoint(start: IStoreTripRouteStart): React.ReactElement {
         return (
             <div className="TripRoute-Item">
                 <span className={cn('TripRoute-Point', { place: 'start' })}>{this.getLetter(0)}</span>
                 <div className="TripRoute-Row">
                     <Text oneLine bold>Стартовая точка</Text>
                     &nbsp;
-                    {this.renderTime(this.props.route.start.time)}
+                    {this.renderTime(start.time)}
                 </div>
             </div>
         );
@@ -115,14 +137,14 @@ class TripRoutePresenter extends React.PureComponent<IConnectProps> {
         );
     }
 
-    private renderEndPoint(): React.ReactElement {
+    private renderEndPoint(finish: IStoreTripRouteFinish, index: number): React.ReactElement {
         return (
             <div className="TripRoute-Item">
-                <span className={cn('TripRoute-Point', { place: 'end' })}>{this.getLetter(this.props.route.route.length + 1)}</span>
+                <span className={cn('TripRoute-Point', { place: 'end' })}>{this.getLetter(index + 1)}</span>
                 <div className="TripRoute-Row">
                     <Text oneLine bold>Конечная точка</Text>
                     &nbsp;
-                    {this.renderTime(this.props.route.finish.time)}
+                    {this.renderTime(finish.time)}
                 </div>
             </div>
         );

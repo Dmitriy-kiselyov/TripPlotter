@@ -10,8 +10,6 @@ import {
 import { getRouteInfo, IRouteInfo } from './getRouteInfo';
 import { PriorityQueue } from './priorityQueue';
 
-export type ITripAlgorithmCallback = (trip: IAlgorithmOutput) => void;
-
 interface IQueueNode {
     prevPath: IQueueNode | null; // экономим память на создание объектов
     cur: IAlgorithmTripItemOutputExtend;
@@ -28,7 +26,7 @@ function nodeComparator(a: IQueueNode, b: IQueueNode): boolean {
     return a.cur.day !== b.cur.day ? a.cur.day < b.cur.day : a.cur.to < b.cur.to;
 }
 
-export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, callback: ITripAlgorithmCallback) {
+export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams): Promise<IAlgorithmOutput> {
     const queue = new PriorityQueue<IQueueNode>(nodeComparator);
 
     queue.push({
@@ -70,7 +68,7 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, callba
         }
     }
 
-    callback(prepareResult(best, algorithmParams));
+    return prepareResult(best, algorithmParams);
 }
 
 function getExtraOutput(route: IAlgorithmTripItemOutput[], algorithmParams: IAlgorithmParams): IAlgorithmExtraOutput[] {

@@ -57,6 +57,28 @@
         }
     }
 
+    &-DayTitleWrap {
+        margin: $margin 0;
+        text-align: center;
+        position: relative;
+    }
+
+    &-DayTitleLine {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        border-top: 2px dashed $light-grey;
+    }
+
+    &-DayTitle {
+        display: inline-block;
+        padding-left: $margin / 2;
+        padding-right: $margin / 2;
+        background: white;
+    }
+
     &-RouteInfo {
         margin: $margin $margin $margin 10px;
         border-left: 4px dotted #A051CC;

@@ -297,12 +297,13 @@ export const Map = connect(
             openedBalloon: state.openedBalloon
         };
 
-        if (state.tripRoute && state.tripRoute.route) {
-            const trip = state.tripRoute.route;
+        if (state.tripRoute) {
+            // TODO: активный маршрут
+            const trip = state.tripRoute.days[0].route;
 
             connectProps.tripRoute = {
                 organizations: trip.length > 0 ? trip : undefined,
-                location: state.tripRoute.start.coordinates
+                location: state.tripRoute.coordinates
             };
         }
 
