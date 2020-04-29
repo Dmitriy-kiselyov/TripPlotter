@@ -13,7 +13,8 @@ export enum ACTION_TYPES {
     REMOVE_ROUTE = 'REMOVE_ROUTE',
     SET_BALLOON = 'SET_BALLOON',
     SET_DATE_MODE = 'SET_DATE_MODE',
-    SET_ROUTE_DAY = 'SET_ROUTE_DAY'
+    SET_ROUTE_DAY = 'SET_ROUTE_DAY',
+    SET_ROUTE_CALCULATING = 'SET_ROUTE_CALCULATING'
 }
 
 export interface IActionAddToList {
@@ -73,6 +74,10 @@ export interface IActionSetRouteDay {
     day: number;
 }
 
+export interface IActionSetTripCalculating {
+    type: ACTION_TYPES.SET_ROUTE_CALCULATING;
+}
+
 export type IActions = IActionAddToList | IActionChangeTime | IActionRemoveFromList | IActionSetStartTime |
     IActionSetEndTime | IActionSetDate | IActionSetRoute | IActionRemoveRoute | IActionSetBalloon | IActionSetDateMode |
-    IActionSetRouteDay;
+    IActionSetRouteDay | IActionSetTripCalculating;

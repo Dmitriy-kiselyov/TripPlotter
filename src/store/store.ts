@@ -16,6 +16,7 @@ import {
     IActionSetRouteDay,
     IActionSetStartTime
 } from '../types/actions';
+import { testStore } from '../test/initialStore';
 import { testTripStore } from '../test/testTripStore';
 
 function reducer(state: IStore, action: IActions): IStore {
@@ -42,6 +43,8 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceSetRouteDay(state, action);
         case ACTION_TYPES.SET_DATE_MODE:
             return reduceSetDateMode(state, action);
+        case ACTION_TYPES.SET_ROUTE_CALCULATING:
+            return reduceSetRouteCalculating(state);
         default:
             return state;
     }
@@ -110,7 +113,8 @@ function reduceSetDate(state: IStore, action: IActionSetDate) {
 function reduceSetRoute(state: IStore, action: IActionSetRoute) {
     const newState = {
         ...state,
-        tripRoute: action.route
+        tripRoute: action.route,
+        routeCalculating: false
     };
 
     if (action.route.days.length > 1) {
@@ -171,6 +175,13 @@ function reduceSetDateMode(state: IStore, action: IActionSetDateMode): IStore {
     };
 }
 
+function reduceSetRouteCalculating(state: IStore): IStore {
+    return {
+        ...state,
+        routeCalculating: true,
+    }
+}
+
 const initialStore: IStore = {
     startTime: '',
     endTime: '',
@@ -180,7 +191,7 @@ const initialStore: IStore = {
 
 export const store = createStore(
     reducer,
-    testTripStore,
+    testStore,
     // @ts-ignore https://github.com/zalmoxisus/redux-devtools-extension#usage
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

@@ -21,15 +21,16 @@ import { parseTime } from '../../lib/time';
 import { getAlgorithmParams } from '../../lib/getAlgorithmParams';
 import { tripAlgorithm } from '../../lib/algorithm/index';
 import { setRoute } from '../../store/setRoute';
-import { IAlgorithmOutput } from '../../types/algorithm';
 import { removeRoute } from '../../store/removeRoute';
 import { TripRoute } from '../TripRoute/TripRoute';
 import { fetchOrganizationsToAlgorithmOutput } from '../../lib/fetchOrganizationsToAlgorithmOutput';
 import { Checkbox } from '../construct/Checkbox/Checkbox';
-
-import './Root.scss';
 import { setDateMode } from '../../store/setDateMode';
 import { MultiDatePicker } from '../construct/DatePicker/MultiDatePicker';
+import { CalculationModal } from '../CalculationModal/CalculationModal';
+import { setRouteCalculating } from '../../store/setRouteCalculating';
+
+import './Root.scss';
 
 interface IConnectRootProps {
     startTime: string;
@@ -37,6 +38,7 @@ interface IConnectRootProps {
     date: IStoreDate;
     tripListSize: number;
     showRoute: boolean;
+    routeCalculating?: boolean;
 }
 
 export type IRootProps = DispatchProp & IConnectRootProps;
@@ -59,7 +61,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
 
     render() {
         const { organizations, category } = this.state;
-        const { showRoute } = this.props;
+        const { showRoute, routeCalculating } = this.props;
 
         const left = (
             <Map
@@ -119,7 +121,10 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         );
 
         return (
-            <RootLayout left={left} right={right} />
+            <>
+                <RootLayout left={left} right={right} />
+                <CalculationModal visible={routeCalculating} />
+            </>
         );
     }
 
@@ -241,6 +246,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
             return;
         }
 
+        this.props.dispatch(setRouteCalculating());
         tripAlgorithm(getAlgorithmParams())
             .then(route => this.props.dispatch(setRoute(fetchOrganizationsToAlgorithmOutput(route))));
     };
@@ -262,6 +268,7 @@ export const Root = connect(
         endTime: state.endTime,
         date: state.date,
         tripListSize: state.tripList.length,
-        showRoute: Boolean(state.tripRoute)
+        showRoute: Boolean(state.tripRoute),
+        routeCalculating: state.routeCalculating
     })
 )(RootPresenter);

@@ -16,6 +16,7 @@ export interface IStore {
     tripList: IStoreTripItem[];
     tripRoute?: IStoreTripRoute;
     openedBalloon?: string;
+    routeCalculating?: boolean;
 }
 
 export type IStoreFilledDate = Date | [Date, Date];
