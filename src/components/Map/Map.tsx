@@ -341,7 +341,8 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         this.route = new window.ymaps.multiRouter.MultiRoute({
             referencePoints: coordinates
         }, {
-            boundsAutoApply: true
+            boundsAutoApply: true,
+            wayPointFinishVisible: false,
         });
 
         this.map.geoObjects.add(this.route);

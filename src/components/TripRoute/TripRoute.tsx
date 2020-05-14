@@ -68,7 +68,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
                     ))
                 }
                 {this.renderRouteInfo(route[route.length - 1], finish)}
-                {this.renderEndPoint(finish, route.length)}
+                {this.renderEndPoint(finish)}
             </div>
         );
     }
@@ -181,10 +181,10 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
         );
     }
 
-    private renderEndPoint(finish: IStoreTripRouteFinish, index: number): React.ReactElement {
+    private renderEndPoint(finish: IStoreTripRouteFinish): React.ReactElement {
         return (
             <div className="TripRoute-Item">
-                <span className={cn('TripRoute-Point', { place: 'end' })}>{this.getLetter(index + 1)}</span>
+                <span className={cn('TripRoute-Point', { place: 'end' })}>{this.getLetter(0)}</span>
                 <div className="TripRoute-Row">
                     <Text oneLine bold>Конечная точка</Text>
                     &nbsp;
