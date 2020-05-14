@@ -14,7 +14,8 @@ export enum ACTION_TYPES {
     SET_BALLOON = 'SET_BALLOON',
     SET_DATE_MODE = 'SET_DATE_MODE',
     SET_ROUTE_DAY = 'SET_ROUTE_DAY',
-    SET_ROUTE_CALCULATING = 'SET_ROUTE_CALCULATING'
+    SET_ROUTE_CALCULATING = 'SET_ROUTE_CALCULATING',
+    SET_LOCATION = 'SET_LOCATION'
 }
 
 export interface IActionAddToList {
@@ -78,6 +79,12 @@ export interface IActionSetTripCalculating {
     type: ACTION_TYPES.SET_ROUTE_CALCULATING;
 }
 
+export interface IActionSetLocation {
+    type: ACTION_TYPES.SET_LOCATION;
+    coords: [number, number];
+    auto: boolean;
+}
+
 export type IActions = IActionAddToList | IActionChangeTime | IActionRemoveFromList | IActionSetStartTime |
     IActionSetEndTime | IActionSetDate | IActionSetRoute | IActionRemoveRoute | IActionSetBalloon | IActionSetDateMode |
-    IActionSetRouteDay | IActionSetTripCalculating;
+    IActionSetRouteDay | IActionSetTripCalculating | IActionSetLocation;

@@ -12,12 +12,12 @@ import {
     IActionSetDate,
     IActionSetDateMode,
     IActionSetEndTime,
+    IActionSetLocation,
     IActionSetRoute,
     IActionSetRouteDay,
     IActionSetStartTime
 } from '../types/actions';
 import { testStore } from '../test/initialStore';
-import { testTripStore } from '../test/testTripStore';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {
@@ -45,6 +45,8 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceSetDateMode(state, action);
         case ACTION_TYPES.SET_ROUTE_CALCULATING:
             return reduceSetRouteCalculating(state);
+        case ACTION_TYPES.SET_LOCATION:
+            return reduceSetLocation(state, action);
         default:
             return state;
     }
@@ -179,6 +181,15 @@ function reduceSetRouteCalculating(state: IStore): IStore {
     return {
         ...state,
         routeCalculating: true,
+    }
+}
+
+function reduceSetLocation(state: IStore, action: IActionSetLocation): IStore {
+    const { type, ...location } = action;
+
+    return {
+        ...state,
+        location
     }
 }
 

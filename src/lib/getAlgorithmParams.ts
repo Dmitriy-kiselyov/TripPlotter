@@ -1,7 +1,7 @@
 import { store } from '../store/store';
 import { IAlgorithmParams, IAlgorithmOrganizationParam, IAlgorithmAvailableParam } from '../types/algorithm';
 import { parseTime } from './time';
-import { IStoreTripItem } from '../types/store';
+import { IStoreTripItem, IStore } from '../types/store';
 import { IAvailableHours, IHourInterval, IHours } from '../types/organization';
 
 const DAY = 1000 * 60 * 60 * 24;
@@ -14,7 +14,7 @@ export function getAlgorithmParams(): IAlgorithmParams {
 
     return {
         days: new Array(getDaysCount(date)).fill(0).map(() => ({ from, to })),
-        coordinates: getStartLocation(),
+        coordinates: getStartLocation(state),
         organizations: state.tripList.map((item: IStoreTripItem) => getOrganizationParams(item, date))
     }
 }
@@ -23,9 +23,8 @@ function getDaysCount(date: [Date, Date]): number {
     return Math.abs((+date[1] - +date[0]) / DAY) + 1;
 }
 
-// TODO: пользователь должен выбрать
-export function getStartLocation(): [number, number] {
-    return [44.936675, 34.134293]; // универ
+export function getStartLocation(state: IStore): [number, number] {
+    return state.location.coords;
 }
 
 function getOrganizationParams(item: IStoreTripItem, date: [Date, Date]): IAlgorithmOrganizationParam {

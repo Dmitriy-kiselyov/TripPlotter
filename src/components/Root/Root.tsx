@@ -29,8 +29,10 @@ import { setDateMode } from '../../store/setDateMode';
 import { MultiDatePicker } from '../construct/DatePicker/MultiDatePicker';
 import { CalculationModal } from '../CalculationModal/CalculationModal';
 import { setRouteCalculating } from '../../store/setRouteCalculating';
+import { AutoLocationButton } from '../AutoLocationButton/AutoLocationButton';
 
 import './Root.scss';
+import { Text } from '../construct/Text/Text';
 
 interface IConnectRootProps {
     startTime: string;
@@ -39,6 +41,7 @@ interface IConnectRootProps {
     tripListSize: number;
     showRoute: boolean;
     routeCalculating?: boolean;
+    startLocation?: [number, number];
 }
 
 export type IRootProps = DispatchProp & IConnectRootProps;
@@ -51,6 +54,7 @@ interface IState {
     startTimeValidation?: boolean;
     endTimeValidation?: boolean;
     tripListValidation?: boolean;
+    startLocationValidation?: boolean;
 }
 
 class RootPresenter extends React.PureComponent<IRootProps, IState> {
@@ -72,6 +76,54 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         );
 
         const right = (
+            <>
+                {this.renderDates()}
+                {this.renderLocation()}
+                {
+                    showRoute ? null : this.renderCategories()
+                }
+                {
+                    showRoute ? <TripRoute/> :  <TripList validationError={this.state.tripListValidation}/>
+                }
+                <ToggleButton
+                    id="calculate"
+                    set={showRoute}
+                    onClick={showRoute ? this.handleResetClick : this.handleCalculateClick}
+                >
+                    {showRoute ? 'Подобрать другой маршрут' : 'Рассчитать маршрут'}
+                </ToggleButton>
+            </>
+        );
+
+        return (
+            <>
+                <RootLayout left={left} right={right} />
+                <CalculationModal visible={routeCalculating} />
+            </>
+        );
+    }
+
+    private renderLocation(): React.ReactElement {
+        const { showRoute } = this.props;
+        const stat = this.props.startLocation ? 'Начальная точка выбрана' : 'Начальная точка не выбрана';
+        const validation = this.state.startLocationValidation;
+
+        return (
+            <>
+                <Title text={showRoute ? 'Начальная точка' : 'Выберите начальную точку'} />
+                <ArrayLayout>
+                    <AutoLocationButton />
+                    {null}
+                </ArrayLayout>
+                <Text color={validation ? 'red' : 'grey'} newLine center size="m">{stat}</Text>
+            </>
+        );
+    }
+
+    private renderDates(): React.ReactElement {
+        const { showRoute } = this.props;
+
+        return (
             <>
                 <Title text={showRoute ? 'Выбранная дата' : 'Выберите дату'}/>
                 <Checkbox
@@ -104,28 +156,8 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
                         />
                     </ArrayLayout>
                 </ArrayLayout>
-                {
-                    showRoute ? null : this.renderCategories()
-                }
-                {
-                    showRoute ? <TripRoute/> :  <TripList validationError={this.state.tripListValidation}/>
-                }
-                <ToggleButton
-                    id="calculate"
-                    set={showRoute}
-                    onClick={showRoute ? this.handleResetClick : this.handleCalculateClick}
-                >
-                    {showRoute ? 'Подобрать другой маршрут' : 'Рассчитать маршрут'}
-                </ToggleButton>
             </>
-        );
-
-        return (
-            <>
-                <RootLayout left={left} right={right} />
-                <CalculationModal visible={routeCalculating} />
-            </>
-        );
+        )
     }
 
     private renderDatePicker(): React.ReactElement | null {
@@ -239,6 +271,10 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
             validation.tripListValidation = true;
         }
 
+        if (!this.props.startLocation) {
+            validation.startLocationValidation = true;
+        }
+
         if (Object.keys(validation).length > 0) {
             // @ts-ignore
             this.setState(validation);
@@ -252,13 +288,17 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
     };
 
     static getDerivedStateFromProps(props: IRootProps): Partial<IState> {
+        const state: Partial<IState> = {};
+
         if (props.tripListSize !== 0) {
-            return {
-                tripListValidation: false
-            }
+            state.tripListValidation = false;
         }
 
-        return {};
+        if (props.startLocation) {
+            state.startLocationValidation = false;
+        }
+
+        return state;
     }
 }
 
@@ -269,6 +309,7 @@ export const Root = connect(
         date: state.date,
         tripListSize: state.tripList.length,
         showRoute: Boolean(state.tripRoute),
-        routeCalculating: state.routeCalculating
+        routeCalculating: state.routeCalculating,
+        startLocation: state.location ? state.location.coords : undefined
     })
 )(RootPresenter);

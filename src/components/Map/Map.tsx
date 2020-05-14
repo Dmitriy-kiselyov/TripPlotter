@@ -5,7 +5,7 @@ import {
     getObjectManagerProps, getOrganizationsFeatures, getTripListFeatures
 } from './helpers/getObjectManagerProps';
 import { IObjectManagerCluster, IObjectManagerFeature } from './types';
-import { orgColor, orgPreset, tripColor, tripPreset } from './helpers/colors';
+import { locationPreset, orgColor, orgPreset, tripColor, tripPreset } from './helpers/colors';
 
 import { loadScript } from '../../lib/loadScript';
 import { IOrganization } from '../../types/organization';
@@ -24,6 +24,7 @@ declare global {
 interface IConnectProps {
     tripRoute?: ITrip;
     tripList: IStoreTripItem[];
+    userLocation?: [number, number];
     openedBalloon?: string;
 }
 
@@ -57,6 +58,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     private route?: any;
     private knownIds: Set<string> = new Set();
     private shownIds: Set<string> = new Set();
+    private userLocationGeo?: any = null;
 
     componentDidUpdate(prevProps: Readonly<IMapPropsWithConnect>) {
         if (
@@ -75,16 +77,52 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
         if (this.props.tripRoute && !prevProps.tripRoute) {
             this.hideOrganizations();
+            this.hideUserLocation();
             this.showTrip();
             this.forceUpdate();
         }
         if (!this.props.tripRoute && prevProps.tripRoute) {
             this.hideTrip();
             this.updateOrganizations();
+            this.showUserLocation();
         }
         if (this.props.tripRoute && prevProps.tripRoute && this.props.tripRoute.organizations !== prevProps.tripRoute.organizations) {
             this.hideTrip();
             this.showTrip();
+        }
+        if (!prevProps.userLocation && this.props.userLocation) {
+            this.showUserLocation();
+        }
+    }
+
+    private showUserLocation(): void {
+        if (!this.props.userLocation) {
+            return;
+        }
+
+        this.userLocationGeo = new window.ymaps.GeoObject({
+            geometry: {
+                type: "Point",
+                coordinates: this.props.userLocation
+            },
+            properties: {
+                hintContent: 'Начальная точка маршрута'
+            }
+        }, {
+            preset: locationPreset,
+            // TODO
+            draggable: false,
+            zIndex: 1000,
+        });
+
+        this.map.geoObjects.add(this.userLocationGeo);
+    }
+
+    private hideUserLocation(): void {
+        if (this.userLocationGeo) {
+            this.map.geoObjects.remove(this.userLocationGeo);
+
+            this.userLocationGeo = null;
         }
     }
 
@@ -306,7 +344,8 @@ export const Map = connect(
     (state: IStore): IConnectProps => {
         const connectProps: IConnectProps = {
             tripList: state.tripList,
-            openedBalloon: state.openedBalloon
+            openedBalloon: state.openedBalloon,
+            userLocation: state.location ? state.location.coords : undefined,
         };
 
         if (state.tripRoute) {
