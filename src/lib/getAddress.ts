@@ -1,0 +1,5 @@
+export function getAddress(geocode: any): string {
+    const geoObject = geocode.geoObjects.get(0);
+
+    return geoObject.getAddressLine();
+}

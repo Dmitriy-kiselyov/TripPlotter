@@ -16,6 +16,8 @@ import { setBalloon } from '../../store/setBalloon';
 import { getBalloonLayout } from './helpers/getBalloonLayout';
 
 import './Map.scss';
+import { getAddress } from '../../lib/getAddress';
+import { setLocation } from '../../store/setLocation';
 
 declare global {
     interface Window { ymaps: any; }
@@ -90,7 +92,12 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             this.hideTrip();
             this.showTrip();
         }
+
         if (!prevProps.userLocation && this.props.userLocation) {
+            this.showUserLocation();
+        }
+        if (prevProps.userLocation && this.props.userLocation && prevProps.userLocation !== this.props.userLocation) {
+            this.hideUserLocation();
             this.showUserLocation();
         }
     }
@@ -106,13 +113,22 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
                 coordinates: this.props.userLocation
             },
             properties: {
-                hintContent: 'Начальная точка маршрута'
+                hintContent: 'Начальная точка маршрута (тяните, чтобы изменить положение)'
             }
         }, {
             preset: locationPreset,
-            // TODO
-            draggable: false,
+            draggable: true,
             zIndex: 1000,
+        });
+
+        this.userLocationGeo.events.add('dragend', (args: any) => {
+            const coordinates = args.originalEvent.target.geometry._coordinates;
+
+            window.ymaps.geocode(coordinates).then((geocode: any) => {
+                const address = getAddress(geocode);
+
+                this.props.dispatch(setLocation(coordinates, address, false));
+            });
         });
 
         this.map.geoObjects.add(this.userLocationGeo);
