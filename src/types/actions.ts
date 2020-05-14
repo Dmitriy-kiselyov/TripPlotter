@@ -82,6 +82,7 @@ export interface IActionSetTripCalculating {
 export interface IActionSetLocation {
     type: ACTION_TYPES.SET_LOCATION;
     coords: [number, number];
+    address: string;
     auto: boolean;
 }
 

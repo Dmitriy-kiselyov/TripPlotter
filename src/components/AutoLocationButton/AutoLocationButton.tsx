@@ -7,18 +7,14 @@ import { IStore } from '../../types/store';
 
 declare const ymaps: any;
 
-interface ILocationResult {
-    geoObjects: {
-        position: [number, number]
-    }
-}
-
 export const AutoLocationButton: React.FC = () => {
     const selected = useSelector((state: IStore) => state.location && state.location.auto);
     const dispatch = useDispatch();
 
     const handleAutoLocation = () => {
-        ymaps.geolocation.get({ provider: 'yandex' }).then((ans: ILocationResult) => dispatch(setLocation(ans.geoObjects.position, true)));
+        ymaps.geolocation.get({ provider: 'yandex' }).then((ans: any) => {
+            dispatch(setLocation(ans.geoObjects.position, ans.geoObjects.get(0).getAddressLine(), true));
+        });
     }
 
     return (

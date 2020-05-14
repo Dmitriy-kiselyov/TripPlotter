@@ -25,6 +25,7 @@ export type IStoreDate = IStoreFilledDate | null | [null, null];
 
 export interface IStoreLocation {
     coords: [number, number];
+    address: string;
     auto: boolean;
 }
 

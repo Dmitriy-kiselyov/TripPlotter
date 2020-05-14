@@ -13,7 +13,7 @@ import { TimePicker } from '../construct/TimePicker/TimePicker';
 import { IAssetName } from '../../types/assets';
 import { TripList } from '../TripList/TripList';
 import { ToggleButton } from '../construct/ToggleButton/ToggleButton';
-import { IStore, IStoreDate } from '../../types/store';
+import { IStore, IStoreDate, IStoreLocation } from '../../types/store';
 import { setStartTime } from '../../store/setStartTime';
 import { setEndTime } from '../../store/setEndTime';
 import { setDate } from '../../store/setDate';
@@ -30,9 +30,9 @@ import { MultiDatePicker } from '../construct/DatePicker/MultiDatePicker';
 import { CalculationModal } from '../CalculationModal/CalculationModal';
 import { setRouteCalculating } from '../../store/setRouteCalculating';
 import { AutoLocationButton } from '../AutoLocationButton/AutoLocationButton';
+import { Text } from '../construct/Text/Text';
 
 import './Root.scss';
-import { Text } from '../construct/Text/Text';
 
 interface IConnectRootProps {
     startTime: string;
@@ -41,7 +41,7 @@ interface IConnectRootProps {
     tripListSize: number;
     showRoute: boolean;
     routeCalculating?: boolean;
-    startLocation?: [number, number];
+    startLocation?: IStoreLocation;
 }
 
 export type IRootProps = DispatchProp & IConnectRootProps;
@@ -105,7 +105,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
 
     private renderLocation(): React.ReactElement {
         const { showRoute } = this.props;
-        const stat = this.props.startLocation ? 'Начальная точка выбрана' : 'Начальная точка не выбрана';
+        const stat = this.props.startLocation ? this.props.startLocation.address : 'Начальная точка не выбрана';
         const validation = this.state.startLocationValidation;
 
         return (
@@ -310,6 +310,6 @@ export const Root = connect(
         tripListSize: state.tripList.length,
         showRoute: Boolean(state.tripRoute),
         routeCalculating: state.routeCalculating,
-        startLocation: state.location ? state.location.coords : undefined
+        startLocation: state.location
     })
 )(RootPresenter);
