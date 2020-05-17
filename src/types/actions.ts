@@ -15,7 +15,8 @@ export enum ACTION_TYPES {
     SET_DATE_MODE = 'SET_DATE_MODE',
     SET_ROUTE_DAY = 'SET_ROUTE_DAY',
     SET_ROUTE_CALCULATING = 'SET_ROUTE_CALCULATING',
-    SET_LOCATION = 'SET_LOCATION'
+    SET_LOCATION = 'SET_LOCATION',
+    REMOVE_LOCATION = 'REMOVE_LOCATION'
 }
 
 export interface IActionAddToList {
@@ -86,6 +87,10 @@ export interface IActionSetLocation {
     auto: boolean;
 }
 
+export interface IActionRemoveLocation {
+    type: ACTION_TYPES.REMOVE_LOCATION;
+}
+
 export type IActions = IActionAddToList | IActionChangeTime | IActionRemoveFromList | IActionSetStartTime |
     IActionSetEndTime | IActionSetDate | IActionSetRoute | IActionRemoveRoute | IActionSetBalloon | IActionSetDateMode |
-    IActionSetRouteDay | IActionSetTripCalculating | IActionSetLocation;
+    IActionSetRouteDay | IActionSetTripCalculating | IActionSetLocation | IActionRemoveLocation;

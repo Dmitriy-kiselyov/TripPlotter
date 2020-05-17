@@ -29,7 +29,7 @@ import { setDateMode } from '../../store/setDateMode';
 import { MultiDatePicker } from '../construct/DatePicker/MultiDatePicker';
 import { CalculationModal } from '../CalculationModal/CalculationModal';
 import { setRouteCalculating } from '../../store/setRouteCalculating';
-import { AutoLocationButton } from '../AutoLocationButton/AutoLocationButton';
+import { UserLocation } from '../UserLocation/UserLocation';
 import { Text } from '../construct/Text/Text';
 
 import './Root.scss';
@@ -71,7 +71,6 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
             <Map
                 category={category ? category : undefined}
                 organizations={organizations ? organizations : undefined}
-                lockArea
             />
         );
 
@@ -105,17 +104,11 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
 
     private renderLocation(): React.ReactElement {
         const { showRoute } = this.props;
-        const stat = this.props.startLocation ? this.props.startLocation.address : 'Начальная точка не выбрана';
-        const validation = this.state.startLocationValidation;
 
         return (
             <>
-                <Title text={showRoute ? 'Начальная точка' : 'Выберите начальную точку'} />
-                <ArrayLayout>
-                    <AutoLocationButton />
-                    {null}
-                </ArrayLayout>
-                <Text color={validation ? 'red' : 'grey'} newLine center size="m">{stat}</Text>
+                <Title text={showRoute ? 'Стартовая точка' : 'Выберите стартовую точку'} />
+                <UserLocation validation={this.state.startLocationValidation} />
             </>
         );
     }

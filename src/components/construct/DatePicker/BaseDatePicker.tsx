@@ -5,6 +5,7 @@ import jquery from '../../../../node_modules/jquery';
 import '../../../../node_modules/air-datepicker';
 
 import { Input } from '../Input/Input';
+import { generateId } from '../../../lib/generateId';
 
 import './DatePicker.scss';
 
@@ -21,7 +22,7 @@ export abstract class BaseDatePicker<P extends IBaseDatePickerProps> extends Rea
     constructor(props: P) {
         super(props);
 
-        this.id = 'id' + String(Math.random()).slice(2);
+        this.id = generateId('date');
     }
 
     componentDidMount(): void {

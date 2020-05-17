@@ -7,21 +7,20 @@ import {
 import { IObjectManagerCluster, IObjectManagerFeature } from './types';
 import { locationPreset, orgColor, orgPreset, tripColor, tripPreset } from './helpers/colors';
 
-import { loadScript } from '../../lib/loadScript';
+import { loadMap } from '../../lib/loadMap';
 import { IOrganization } from '../../types/organization';
 import { IAssetName } from '../../types/assets';
 import { IAlgorithmTripItemOutput } from '../../types/algorithm';
 import { IStore, IStoreTripItem } from '../../types/store';
 import { setBalloon } from '../../store/setBalloon';
 import { getBalloonLayout } from './helpers/getBalloonLayout';
+import { getAddress } from '../../lib/parseGeocode';
+import { setLocation } from '../../store/setLocation';
+import { centerCoords, minCoords, maxCoords } from '../../lib/mapCoords';
 
 import './Map.scss';
-import { getAddress } from '../../lib/getAddress';
-import { setLocation } from '../../store/setLocation';
 
-declare global {
-    interface Window { ymaps: any; }
-}
+declare const ymaps: any;
 
 interface IConnectProps {
     tripRoute?: ITrip;
@@ -38,21 +37,11 @@ interface ITrip {
 export interface IMapProps {
     category?: IAssetName;
     organizations?: IOrganization[];
-    lockArea?: boolean;
 }
 
 type IMapPropsWithConnect = IMapProps & IConnectProps & DispatchProp;
 
-const mapSrc = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=86eaa852-1e95-493e-98e0-096aa08cc214';
-
-const minCoords = [43.00, 30.25];
-const maxCoords = [47.60, 38.75];
-const startCoords = [average(minCoords[0], maxCoords[0]), average(minCoords[1], maxCoords[1])];
 const initialZoom = 8;
-
-function average(a: number, b: number) {
-    return (a + b) / 2;
-}
 
 class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     private map?: any;
@@ -107,7 +96,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             return;
         }
 
-        this.userLocationGeo = new window.ymaps.GeoObject({
+        this.userLocationGeo = new ymaps.GeoObject({
             geometry: {
                 type: "Point",
                 coordinates: this.props.userLocation
@@ -121,10 +110,14 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             zIndex: 1000,
         });
 
+        this.map.setCenter(this.props.userLocation, 15, {
+            checkZoomRange: true
+        });
+
         this.userLocationGeo.events.add('dragend', (args: any) => {
             const coordinates = args.originalEvent.target.geometry._coordinates;
 
-            window.ymaps.geocode(coordinates).then((geocode: any) => {
+            ymaps.geocode(coordinates).then((geocode: any) => {
                 const address = getAddress(geocode);
 
                 this.props.dispatch(setLocation(coordinates, address, false));
@@ -143,39 +136,38 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     }
 
     componentDidMount(): void {
-        loadScript(mapSrc, this.showMap);
+        loadMap(this.showMap);
     }
 
     private showMap = () => {
-        const _this = this;
-
-        window.ymaps.ready(function () {
-            _this.map = new window.ymaps.Map('map', {
-                center: startCoords,
-                zoom: initialZoom,
-                controls: ['zoomControl', 'fullscreenControl']
-            }, {
-                restrictMapArea: _this.props.lockArea ? [minCoords, maxCoords] : undefined
-            });
-
-            _this.setupObjectManager();
-
-            const scaleButton = new window.ymaps.control.Button({
-                data: {
-                    content: "На всю карту",
-                },
-                options: {
-                    maxWidth: 150,
-                    selectOnClick: false
-                }
-            });
-
-            scaleButton.events.add('click', () => {
-                _this.map.setZoom(initialZoom);
-            });
-
-            _this.map.controls.add(scaleButton);
+        this.map = new ymaps.Map('map', {
+            center: centerCoords,
+            zoom: initialZoom,
+            controls: ['zoomControl', 'fullscreenControl']
+        }, {
+            restrictMapArea: [minCoords, maxCoords]
         });
+
+        this.setupObjectManager();
+
+        const scaleButton = new ymaps.control.Button({
+            data: {
+                content: "На всю карту",
+            },
+            options: {
+                maxWidth: 150,
+                selectOnClick: false
+            }
+        });
+
+        scaleButton.events.add('click', () => {
+            this.map.setZoom(initialZoom);
+        });
+
+        this.map.controls.add(scaleButton);
+
+        // @ts-ignore
+        window.map = this.map;
     };
 
     forceUpdate(): void {
@@ -183,7 +175,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     }
 
     private setupObjectManager = () => {
-        this.objectManager = new window.ymaps.ObjectManager({
+        this.objectManager = new ymaps.ObjectManager({
             clusterize: true,
             gridSize: 48,
 
@@ -338,7 +330,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         const { location, organizations } = this.props.tripRoute;
         const coordinates = [location].concat(organizations.map(org => org.coordinates)).concat([location]);
 
-        this.route = new window.ymaps.multiRouter.MultiRoute({
+        this.route = new ymaps.multiRouter.MultiRoute({
             referencePoints: coordinates
         }, {
             boundsAutoApply: true,

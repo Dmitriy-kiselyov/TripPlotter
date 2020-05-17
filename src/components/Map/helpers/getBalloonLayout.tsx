@@ -8,6 +8,8 @@ import { IObjectManagerCluster, IObjectManagerFeature } from '../types';
 import { Balloon } from '../../Balloon/Balloon';
 import { BalloonCluster } from '../../BalloonCluster/BalloonCluster';
 
+declare const ymaps: any;
+
 const layout = '<div id="balloon"></div>';
 
 let BalloonLayout: any;
@@ -21,7 +23,7 @@ export function getBalloonLayout(): any {
 }
 
 function createBalloonLayout() {
-    BalloonLayout = window.ymaps.templateLayoutFactory.createClass(
+    BalloonLayout = ymaps.templateLayoutFactory.createClass(
         layout,
         {
             build() {
@@ -41,17 +43,6 @@ function createBalloonLayout() {
                     ReactDOM.unmountComponentAtNode(this._container)
                 }
             },
-
-            // applyElementOffset: function () {
-            //     const container = this.getParentElement() as HTMLDivElement;
-            //     const floating = container.parentElement.parentElement.parentElement;
-            //
-            //     const top = getPixelValue(floating.style.top);
-            //     const height = getPixelValue(container.style.height);
-            //
-            //     container.style.height = height + 50 + 'px';
-            //     floating.style.top = top - 50 + 'px';
-            // },
 
             _renderBalloon() {
                 const data = this.getData().object as IObjectManagerFeature | IObjectManagerCluster;
@@ -78,11 +69,3 @@ function createBalloonLayout() {
         }
     );
 }
-
-// function getPixelValue(style: string): number {
-//     if (style.endsWith('px')) {
-//         return Number(style.slice(0, style.length - 2));
-//     }
-//
-//     return Number(style);
-// }

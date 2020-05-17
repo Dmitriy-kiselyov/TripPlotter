@@ -47,6 +47,8 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceSetRouteCalculating(state);
         case ACTION_TYPES.SET_LOCATION:
             return reduceSetLocation(state, action);
+        case ACTION_TYPES.REMOVE_LOCATION:
+            return reduceRemoveLocation(state);
         default:
             return state;
     }
@@ -190,6 +192,13 @@ function reduceSetLocation(state: IStore, action: IActionSetLocation): IStore {
     return {
         ...state,
         location
+    }
+}
+
+function reduceRemoveLocation(state: IStore): IStore {
+    return {
+        ...state,
+        location: null
     }
 }
 
