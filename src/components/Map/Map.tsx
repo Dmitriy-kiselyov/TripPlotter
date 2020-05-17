@@ -17,6 +17,8 @@ import { getBalloonLayout } from './helpers/getBalloonLayout';
 import { getAddress } from '../../lib/parseGeocode';
 import { setLocation } from '../../store/setLocation';
 import { centerCoords, minCoords, maxCoords } from '../../lib/mapCoords';
+import { ScaleButton } from './buttons/ScaleButton';
+import { ScaleFeaturesButton, getFeaturesBounds } from './buttons/ScaleFeaturesButton';
 
 import './Map.scss';
 
@@ -27,6 +29,7 @@ interface IConnectProps {
     tripList: IStoreTripItem[];
     userLocation?: [number, number];
     openedBalloon?: string;
+    routeCalculating?: boolean;
 }
 
 interface ITrip {
@@ -50,6 +53,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     private knownIds: Set<string> = new Set();
     private shownIds: Set<string> = new Set();
     private userLocationGeo?: any = null;
+    private scaleFeaturesButton?: any = null;
 
     componentDidUpdate(prevProps: Readonly<IMapPropsWithConnect>) {
         if (
@@ -85,10 +89,28 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         if (!prevProps.userLocation && this.props.userLocation) {
             this.showUserLocation();
         }
+        if (!prevProps.userLocation && this.props.userLocation && !prevProps.tripRoute) {
+            this.moveToUserLocation();
+        }
         if (prevProps.userLocation && this.props.userLocation && prevProps.userLocation !== this.props.userLocation) {
             this.hideUserLocation();
             this.showUserLocation();
+            this.moveToUserLocation();
         }
+
+        if (!prevProps.routeCalculating && this.props.routeCalculating) {
+            this.scaleToFeatures();
+        }
+    }
+
+    private moveToUserLocation(): void {
+        if (this.props.userLocation) {
+            this.map.setCenter(this.props.userLocation, 15);
+        }
+    }
+
+    private scaleToFeatures(): void {
+        this.map.setBounds(getFeaturesBounds());
     }
 
     private showUserLocation(): void {
@@ -108,10 +130,6 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
             preset: locationPreset,
             draggable: true,
             zIndex: 1000,
-        });
-
-        this.map.setCenter(this.props.userLocation, 15, {
-            checkZoomRange: true
         });
 
         this.userLocationGeo.events.add('dragend', (args: any) => {
@@ -150,24 +168,8 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
         this.setupObjectManager();
 
-        const scaleButton = new ymaps.control.Button({
-            data: {
-                content: "На всю карту",
-            },
-            options: {
-                maxWidth: 150,
-                selectOnClick: false
-            }
-        });
-
-        scaleButton.events.add('click', () => {
-            this.map.setZoom(initialZoom);
-        });
-
-        this.map.controls.add(scaleButton);
-
-        // @ts-ignore
-        window.map = this.map;
+        this.map.controls.add(ScaleFeaturesButton(this.map));
+        this.map.controls.add(ScaleButton(this.map, initialZoom));
     };
 
     forceUpdate(): void {
@@ -355,6 +357,7 @@ export const Map = connect(
             tripList: state.tripList,
             openedBalloon: state.openedBalloon,
             userLocation: state.location ? state.location.coords : undefined,
+            routeCalculating: state.routeCalculating,
         };
 
         if (state.tripRoute) {
