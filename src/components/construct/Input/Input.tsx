@@ -12,6 +12,8 @@ export interface IInputProps {
     textCenter?: boolean;
     value?: string;
     onChange?: (value: string) => void;
+    onFocus?: () => void;
+    onBlur?: () => void;
     validationError?: boolean;
     disabled?: boolean;
 }
@@ -37,6 +39,8 @@ export const Input: React.FC<IInputProps> = props => {
             value={props.value || ''}
             readOnly={props.readonly}
             onChange={onChange}
+            onFocus={props.onFocus}
+            onBlur={props.onBlur}
             id={props.id}
             placeholder={props.placeholder}
         />

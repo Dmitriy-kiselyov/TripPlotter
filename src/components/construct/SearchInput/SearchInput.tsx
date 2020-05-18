@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { Input } from '../Input/Input';
-import { generateId } from '../../../lib/generateId';
 import { loadMap } from '../../../lib/loadMap';
-import { maxCoords, minCoords } from '../../../lib/mapCoords';
+import { SearchInputSuggest } from './Suggest/SearchInput-Suggest';
+
+import './SearchInput.scss';
 
 export interface ISearchInputProps {
     className?: string;
@@ -14,37 +15,28 @@ export interface ISearchInputProps {
     disabled?: boolean;
 }
 
-declare const ymaps: any;
-
 interface IState {
     value: string;
+    suggest?: boolean;
 }
 
 export class SearchInput extends React.PureComponent<ISearchInputProps, IState> {
-    state = {
+    state: IState = {
         value: this.props.value || ''
     }
 
-    private id = generateId('search');
-    private suggest: any;
-
     componentDidMount() {
         loadMap(() => {
-            this.suggest = new ymaps.SuggestView(this.id, {
-                offset: [-1, 5, -1, 0],
-                results: 10,
-                boundedBy: [minCoords, maxCoords],
-                strictBounds: true
+            this.setState({
+                suggest: true
             });
-
-            this.suggest.events.add('select', (item: any) => {
-                const address = item.get('item').value;
-
-                if (this.props.onSelected) {
-                    this.props.onSelected(address);
-                }
-            })
         });
+    }
+
+    private handleSelect(address: string): void {
+        if (this.props.onSelected) {
+            this.props.onSelected(address);
+        }
     }
 
     componentDidUpdate(prevProps: ISearchInputProps, prevState: IState) {
@@ -55,23 +47,19 @@ export class SearchInput extends React.PureComponent<ISearchInputProps, IState> 
         }
     }
 
-    componentWillUnmount() {
-        if (this.suggest) {
-            this.suggest.destroy();
-        }
-    }
-
     render() {
         return (
-            <Input
-                id={this.id}
-                className={this.props.className}
-                placeholder={this.props.placeholder}
-                value={this.state.value}
-                onChange={value => this.setState({ value })}
-                validationError={this.props.validationError}
-                disabled={this.props.disabled}
-            />
+            <div className="SearchInput">
+                <Input
+                    className={this.props.className}
+                    placeholder={this.props.placeholder}
+                    value={this.state.value}
+                    onChange={value => this.setState({ value })}
+                    validationError={this.props.validationError}
+                    disabled={this.props.disabled}
+                />
+                { this.state.suggest && <SearchInputSuggest /> }
+            </div>
         );
     }
 }
