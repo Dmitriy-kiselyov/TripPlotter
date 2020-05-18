@@ -18,6 +18,7 @@ export interface ISearchInputProps {
 interface IState {
     value: string;
     suggest?: boolean;
+    focus?: boolean;
 }
 
 export class SearchInput extends React.PureComponent<ISearchInputProps, IState> {
@@ -31,12 +32,6 @@ export class SearchInput extends React.PureComponent<ISearchInputProps, IState> 
                 suggest: true
             });
         });
-    }
-
-    private handleSelect(address: string): void {
-        if (this.props.onSelected) {
-            this.props.onSelected(address);
-        }
     }
 
     componentDidUpdate(prevProps: ISearchInputProps, prevState: IState) {
@@ -57,9 +52,43 @@ export class SearchInput extends React.PureComponent<ISearchInputProps, IState> 
                     onChange={value => this.setState({ value })}
                     validationError={this.props.validationError}
                     disabled={this.props.disabled}
+                    onBlur={this.handleBlur}
+                    onFocus={this.handleFocus}
                 />
-                { this.state.suggest && <SearchInputSuggest /> }
+                {
+                    this.state.suggest && (
+                        <SearchInputSuggest
+                            value={this.state.value}
+                            onSelected={this.handleSelected}
+                            focus={this.state.focus}
+                        />
+                    )
+                }
             </div>
         );
+    }
+
+    private handleBlur = () => {
+        this.setState({
+            focus: false
+        });
+    }
+
+    private handleFocus = () => {
+        this.setState({
+            focus: true
+        });
+    }
+
+    private handleSelected = (address: string) => {
+        if (address === this.props.value) {
+            return this.setState({
+                value: address
+            });
+        }
+
+        if (this.props.onSelected) {
+            return this.props.onSelected(address);
+        }
     }
 }
