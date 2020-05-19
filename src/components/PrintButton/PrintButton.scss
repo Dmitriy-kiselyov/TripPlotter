@@ -1,0 +1,10 @@
+.noprint {
+    @media print {
+        display: none;
+    }
+}
+
+body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}

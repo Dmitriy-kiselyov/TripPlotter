@@ -18,6 +18,7 @@ import {
     IActionSetStartTime
 } from '../types/actions';
 import { testStore } from '../test/initialStore';
+import { testTripStore } from '../test/testTripStore';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {
@@ -211,7 +212,7 @@ const initialStore: IStore = {
 
 export const store = createStore(
     reducer,
-    testStore,
+    testTripStore,
     // @ts-ignore https://github.com/zalmoxisus/redux-devtools-extension#usage
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

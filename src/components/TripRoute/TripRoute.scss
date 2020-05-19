@@ -47,6 +47,10 @@
         transition: background-color .1s ease-out, color .1s ease-out;
     }
 
+    &-Day {
+        page-break-after: always;
+    }
+
     &-Day_active {
         .TripRoute {
             &-DayTitleLine {
@@ -61,6 +65,41 @@
                 .ClickableText {
                     color: $primary;
                 }
+            }
+
+            &-Point {
+                color: white;
+                background-color: #71B732;
+
+                &_place {
+                    &_start {
+                        background-color: #FF3333;
+                    }
+
+                    &_end {
+                        background-color: #FF3333;
+                    }
+                }
+            }
+        }
+    }
+
+    @media print {
+        .TripRoute {
+            &-DayTitleLine {
+                border-top: 2px solid $primary-dark;
+            }
+
+            &-DayTitle {
+                color: $primary-dark;
+            }
+
+            &-DayDate {
+                .ClickableText {
+                    color: $primary-dark;
+                }
+
+                margin-bottom: 16px;
             }
 
             &-Point {
@@ -117,6 +156,10 @@
         border-left: 4px dotted #A051CC;
         padding: $margin;
         text-align: center;
+
+        @media print {
+            padding: $margin * 2 $margin;
+        }
     }
 
     &-Category {

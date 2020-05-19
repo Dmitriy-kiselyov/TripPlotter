@@ -7,6 +7,14 @@ export const testTripStore: IStore = {
         new Date('2020-02-21'),
         new Date('2020-02-22')
     ],
+    location: {
+        coords: [
+            44.956358,
+            34.116407
+        ],
+        address: 'улица Блюхера, 3, Симферополь, Республика Крым, Россия',
+        auto: false
+    },
     tripRouteDay: 0,
     tripList: [
         {

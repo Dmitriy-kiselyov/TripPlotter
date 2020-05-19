@@ -30,7 +30,7 @@ import { MultiDatePicker } from '../construct/DatePicker/MultiDatePicker';
 import { CalculationModal } from '../CalculationModal/CalculationModal';
 import { setRouteCalculating } from '../../store/setRouteCalculating';
 import { UserLocation } from '../UserLocation/UserLocation';
-import { Text } from '../construct/Text/Text';
+import { PrintButton } from '../PrintButton/PrintButton';
 
 import './Root.scss';
 
@@ -77,14 +77,16 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         const right = (
             <>
                 {this.renderDates()}
-                {this.renderLocation()}
+                {!showRoute && this.renderLocation()}
                 {
                     showRoute ? null : this.renderCategories()
                 }
                 {
                     showRoute ? <TripRoute/> :  <TripList validationError={this.state.tripListValidation}/>
                 }
+                {showRoute && <PrintButton />}
                 <ToggleButton
+                    className="noprint"
                     id="calculate"
                     set={showRoute}
                     onClick={showRoute ? this.handleResetClick : this.handleCalculateClick}
@@ -103,11 +105,9 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
     }
 
     private renderLocation(): React.ReactElement {
-        const { showRoute } = this.props;
-
         return (
             <>
-                <Title text={showRoute ? 'Стартовая точка' : 'Выберите стартовую точку'} />
+                <Title text="Выберите стартовую точку" />
                 <UserLocation validation={this.state.startLocationValidation} />
             </>
         );
@@ -117,7 +117,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         const { showRoute } = this.props;
 
         return (
-            <>
+            <div className="noprint">
                 <Title text={showRoute ? 'Выбранная дата' : 'Выберите дату'}/>
                 <Checkbox
                     className="RootLayout-DateCheck"
@@ -149,7 +149,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
                         />
                     </ArrayLayout>
                 </ArrayLayout>
-            </>
+            </div>
         )
     }
 

@@ -26,6 +26,7 @@ interface IConnectProps {
     route: IStoreTripRoute;
     date: IStoreFilledDate;
     activeDay?: number;
+    userAddress: string;
 }
 
 type ITripRoutePropsWithConnect = IConnectProps & DispatchProp;
@@ -117,7 +118,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
 
     private renderExtra(): React.ReactElement {
         const extra = this.props.route.extra.map(extra => (
-            <div className="TripRoute-Item_no-point" key={extra.id}>
+            <div className="TripRoute-Item_no-point noprint" key={extra.id}>
                 <div className="TripRoute-Row">
                     <Text oneLine>{extra.organization.name}</Text>
                     <Text oneLine className="TripRoute-Category" color="grey">{getAssetName(extra.category)}</Text>
@@ -127,7 +128,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
 
         return (
             <>
-                <Title className="TripRoute-ExtraTitle" text="Не вместились в маршрут"/>
+                <Title className="TripRoute-ExtraTitle noprint" text="Не вместились в маршрут"/>
                 {extra}
             </>
         );
@@ -138,7 +139,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
             <div className="TripRoute-Item">
                 <span className={cn('TripRoute-Point', { place: 'start' })}>{this.getLetter(0)}</span>
                 <div className="TripRoute-Row">
-                    <Text oneLine bold>Стартовая точка</Text>
+                    <Text oneLine bold>{this.props.userAddress}</Text>
                     &nbsp;
                     {this.renderTime(start.time)}
                 </div>
@@ -186,7 +187,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
             <div className="TripRoute-Item">
                 <span className={cn('TripRoute-Point', { place: 'end' })}>{this.getLetter(0)}</span>
                 <div className="TripRoute-Row">
-                    <Text oneLine bold>Конечная точка</Text>
+                    <Text oneLine bold>{this.props.userAddress}</Text>
                     &nbsp;
                     {this.renderTime(finish.time)}
                 </div>
@@ -228,6 +229,13 @@ export const TripRoute = connect(
     (state: IStore): IConnectProps => ({
         route: state.tripRoute as IStoreTripRoute,
         date: state.date as IStoreFilledDate,
-        activeDay: state.tripRouteDay
+        activeDay: state.tripRouteDay,
+        userAddress: shortAddress(state.location.address),
     })
 )(TripRoutePresenter);
+
+function shortAddress(address: string): string {
+    const ending = ', Республика Крым, Россия';
+
+    return address.endsWith(ending) ? address.slice(0, address.length - ending.length) : address;
+}

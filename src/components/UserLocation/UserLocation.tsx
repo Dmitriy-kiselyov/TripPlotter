@@ -20,7 +20,6 @@ export interface IUserLocation {
 
 export const UserLocation: React.FC<IUserLocation> = props => {
     const location = useSelector((state: IStore) => state.location);
-    const showRoute = useSelector((state: IStore) => Boolean(state.tripRoute));
     const dispatch = useDispatch();
 
     const isAuto = Boolean(location && location.auto);
@@ -37,19 +36,13 @@ export const UserLocation: React.FC<IUserLocation> = props => {
 
     return (
         <div className="UserLocation">
-            {
-                showRoute ? <UserLocationStat /> : (
-                    <>
-                        <Checkbox
-                            checked={isAuto}
-                            text="Определить моё местоположение"
-                            onChange={isAuto ? handleChangeManual : handleAutoLocation}
-                        />
-                        { isAuto && <UserLocationAuto validation={props.validation} /> }
-                        { !isAuto && <UserLocationManual validation={props.validation} />}
-                    </>
-                )
-            }
+            <Checkbox
+                checked={isAuto}
+                text="Определить моё местоположение"
+                onChange={isAuto ? handleChangeManual : handleAutoLocation}
+            />
+            { isAuto && <UserLocationAuto validation={props.validation} /> }
+            { !isAuto && <UserLocationManual validation={props.validation} />}
         </div>
     );
 };
@@ -92,23 +85,6 @@ const UserLocationAuto: React.FC<IUserLocation> = props => {
             newLine
             center
             size="m"
-        >
-            {stat}
-        </Text>
-    );
-}
-
-const UserLocationStat: React.FC = () => {
-    const startLocation = useSelector((state: IStore) => state.location);
-    const stat = startLocation ? startLocation.address : 'Стартовая точка не выбрана';
-
-    return (
-        <Text
-            color="black"
-            newLine
-            center
-            size="m"
-            bold
         >
             {stat}
         </Text>

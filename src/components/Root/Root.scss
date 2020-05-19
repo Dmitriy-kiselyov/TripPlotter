@@ -1,7 +1,17 @@
+@import '../Constants';
+
 .RootLayout {
     .TripList,
     .TripRoute {
         margin: 20px 0;
+
+        @media print {
+            margin: 0;
+        }
+    }
+
+    .PrintButton {
+        margin-bottom: $margin;
     }
 
     .Hint,

@@ -8,6 +8,7 @@ import './ToggleButton.scss';
 export type IToggleButtonChild = (set: boolean) => React.ReactElement;
 
 interface IToggleButtonProps {
+    className?: string;
     id: string;
     children: string | IToggleButtonChild;
     set: boolean;
@@ -18,7 +19,7 @@ export class ToggleButton extends React.PureComponent<IToggleButtonProps> {
     render() {
         return (
             <button
-                className={cn('ToggleButton', { set: this.props.set })}
+                className={cn('ToggleButton', { set: this.props.set }, this.props.className)}
                 onClick={this.handleClick}
             >
                 {
