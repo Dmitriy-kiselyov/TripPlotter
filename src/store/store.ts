@@ -212,7 +212,7 @@ const initialStore: IStore = {
 
 export const store = createStore(
     reducer,
-    testTripStore,
+    testStore,
     // @ts-ignore https://github.com/zalmoxisus/redux-devtools-extension#usage
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

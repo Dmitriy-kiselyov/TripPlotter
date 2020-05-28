@@ -13,13 +13,26 @@ export function ScaleFeaturesButton(map: any) {
         }
     });
 
-    button.events.add('click', () => map.setBounds(getFeaturesBounds()));
+    button.events.add('click', () => {
+        const bounds = getFeaturesBounds();
+
+        if (bounds) {
+            map.setBounds(bounds);
+        }
+    });
 
     return button;
 }
 
-export function getFeaturesBounds() {
-    return [getBounds(Math.min), getBounds(Math.max)];
+export function getFeaturesBounds(): [[number, number], [number, number]] | null {
+    const bounds = [getBounds(Math.min), getBounds(Math.max)];
+
+    if (bounds[0][0] === bounds[1][0] && bounds[0][1] === bounds[1][1]) {
+        return null;
+    }
+
+    // @ts-ignore
+    return bounds;
 }
 
 function getBounds(compare: (a: number, b: number) => number): [number, number] {

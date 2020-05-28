@@ -20,14 +20,14 @@ export function setAutoLocation(dispatch: Dispatch<IActionSetLocation>): void {
         return;
     }
 
-    ymaps.geolocation.get({ provider: 'auto' }).then((ans: any) => {
-        autoLocationMemo = {
-            coordinates: ans.geoObjects.position,
-            address: getAddress(ans)
-        };
+ymaps.geolocation.get({ provider: 'auto' }).then((ans: any) => {
+    autoLocationMemo = {
+        coordinates: ans.geoObjects.position,
+        address: getAddress(ans)
+    };
 
-        setLocationFromMemo(dispatch);
-    });
+    setLocationFromMemo(dispatch);
+});
 }
 
 function setLocationFromMemo(dispatch: Dispatch<IActionSetLocation>): void {

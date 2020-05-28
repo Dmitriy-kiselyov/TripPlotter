@@ -53,7 +53,6 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
     private knownIds: Set<string> = new Set();
     private shownIds: Set<string> = new Set();
     private userLocationGeo?: any = null;
-    private scaleFeaturesButton?: any = null;
 
     componentDidUpdate(prevProps: Readonly<IMapPropsWithConnect>) {
         if (
@@ -69,6 +68,7 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
         if (prevProps.openedBalloon && !this.props.openedBalloon) {
             this.closeBalloon();
         }
+
 
         if (this.props.tripRoute && !prevProps.tripRoute) {
             this.hideOrganizations();
