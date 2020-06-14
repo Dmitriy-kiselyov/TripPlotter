@@ -77,7 +77,12 @@ class BalloonPresenter extends React.PureComponent<IBalloonPropsWithConnect, ISt
                     </Text>
                     <div>
                         <Rating rating={rating} />
-                        <Text className="Balloon-Visits" oneLine color="grey">на основе {visits} {multiLang(visits, visitDict)}</Text>
+                        <Text className="Balloon-Visits" oneLine color="grey">
+                            на основе&nbsp;
+                            <Text color="grey" bold>{visits}</Text>
+                            &nbsp;
+                            {multiLang(visits, visitDict)}
+                        </Text>
                     </div>
                     <Divider/>
                     {
@@ -179,11 +184,25 @@ class BalloonPresenter extends React.PureComponent<IBalloonPropsWithConnect, ISt
         if (url) {
             contacts.push({
                 type: 'site',
-                content: <Link text={url} url={url} />
+                content: <Link text={this.prepareLinkText(url)} url={url} />
             });
         }
 
         return contacts;
+    }
+
+    private prepareLinkText(url: string): string {
+        let startI = 0;
+        const endI = url.endsWith('/') ? url.length - 1 : url.length;
+        const starts = ['https://', 'http://'];
+
+        for (const start of starts) {
+            if (url.startsWith(start)) {
+                startI = start.length;
+            }
+        }
+
+        return url.substring(startI, endI);
     }
 
     private renderPhoneContacts(phones: IPhone[]): React.ReactElement {
