@@ -10,11 +10,31 @@ const cache: Map<string, IRouteInfo> = new Map();
 // @ts-ignore Для тестирования алгоритма на сервере
 window.__routeInfoCache = cache;
 
+const throttleTime = 50; // в мс
+let lastTime = 0;
+
+/*
+ * Чтобы основное ядро отдыхало и страница не висла
+ */
+function throttlePromise<T>(data: T): Promise<T> {
+    const curTime = Date.now();
+
+    if (curTime - lastTime > throttleTime) {
+        lastTime = curTime;
+
+        return new Promise(resolve => {
+            setTimeout(() => resolve(data), 0);
+        });
+    }
+
+    return Promise.resolve(data);
+}
+
 export function getRouteInfo(...coordinates: [number, number][]): Promise<IRouteInfo[]> {
     const info = tryGetCacheInfo(coordinates);
 
     if (info) {
-        return Promise.resolve(info);
+        return throttlePromise(info);
     }
 
     return ymaps.route(coordinates, { routingMode: 'auto' })
