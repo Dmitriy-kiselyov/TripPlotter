@@ -32,6 +32,18 @@
         background-image: url(assets/star.svg?fill=grey);
     }
 
+    &_type_ratingStar {
+        background-image: url(assets/rating-star.svg);
+    }
+
+    &_type_ratingHalfStar {
+        background-image: url(assets/rating-half-star.svg);
+    }
+
+    &_type_ratingEmptyStar {
+        background-image: url(assets/rating-star.svg?fill=%23eceff1);
+    }
+
     &_clickable {
         cursor: pointer;
         transition: all .1s;

@@ -1,0 +1,918 @@
+[
+    {
+        "id": "125214982058",
+        "name": "Зоопарк",
+        "address": "Россия, Республика Крым, Бахчисарай, Бахчисарайский парк миниатюр",
+        "url": "http://www.minibah.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 000-07-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.753895,
+                33.859237
+            ]
+        },
+        "extra": {
+            "rating": 4.9,
+            "count": 5527
+        }
+    },
+    {
+        "id": "48752286233",
+        "name": "Зоопарк Коктебель",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Коктебель, Морская улица, 77",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (908) 685-00-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964936,
+                35.259549
+            ]
+        },
+        "extra": {
+            "rating": 3.5,
+            "count": 28
+        }
+    },
+    {
+        "id": "111972923732",
+        "name": "Парк львов тайган",
+        "address": "Россия, Республика Крым, Белогорск",
+        "url": "http://park-taigan.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 886-81-79"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.057123,
+                34.59997
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 436
+        }
+    },
+    {
+        "id": "190150605785",
+        "name": "Контактный зоопарк Ребятам о зверятах",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Коктебель, улица Ленина, 140",
+        "url": "http://www.tozoo.ru/crimea",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (916) 144-31-20"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964719,
+                35.258596
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 67
+        }
+    },
+    {
+        "id": "218181488220",
+        "name": "Алуштинский Зоопарк",
+        "address": "Россия, Республика Крым, Алушта, улица Ленина, 13",
+        "url": "http://zoopark-alushta.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 000-07-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.670219,
+                34.413372
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 56
+        }
+    },
+    {
+        "id": "166354042626",
+        "name": "Зоопарк",
+        "address": "Россия, Республика Крым, Джанкойский район, село Завет-Ленинский, Парк культуры и отдыха имени Левона",
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.8681,
+                34.3938
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 85
+        }
+    },
+    {
+        "id": "156434334027",
+        "name": "Кроликопарк",
+        "address": "Россия, Республика Крым, Сакский район, село Червоное, трасса Евпатория-Симферополь",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 876-82-88"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.116553,
+                33.683742
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 170
+        }
+    },
+    {
+        "id": "1090797754",
+        "name": "Сказка",
+        "address": "Россия, Республика Крым, Ялта, улица Кирова, 156",
+        "url": "http://yaltazoo.org/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 793-45-80"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (3654) 23-24-82"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (3654) 31-00-30"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "forest",
+                "name": "Лесопарк, заповедник"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.494856,
+                34.118491
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 2713
+        }
+    },
+    {
+        "id": "25764176974",
+        "name": "Сад бабочек",
+        "address": "Россия, Республика Крым, Ялта, Ялтинская канатная дорога",
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.495162,
+                34.16607
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 76
+        }
+    },
+    {
+        "id": "73089519660",
+        "name": "Зоосад",
+        "address": "Россия, Республика Крым, Евпатория, улица Токарева, 43В",
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.193525,
+                33.360807
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 28
+        }
+    },
+    {
+        "id": "24358733020",
+        "name": "Ишачок",
+        "address": "Россия, Республика Крым, Бахчисарайский район, село Малое Садовое, улица Хрусталёва, 1",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 031-61-31"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 868-89-29"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.640166,
+                33.837821
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 188
+        }
+    },
+    {
+        "id": "1768392517",
+        "name": "Тропикпарк",
+        "address": "Россия, Республика Крым, Евпатория, улица Токарева, 43",
+        "url": "http://www.tropicpark.com.ua/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 063-91-11"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.193525,
+                33.360807
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 499
+        }
+    },
+    {
+        "id": "1243788361",
+        "name": "Алуштинский аквариум",
+        "address": "Россия, Республика Крым, Алушта, улица Горького, 4",
+        "url": "http://alushta-aqua.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 000-07-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "exhibition center",
+                "name": "Выставочный центр"
+            },
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "aquarium",
+                "name": "Дельфинарий, океанариум"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.671026,
+                34.411171
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 894
+        }
+    },
+    {
+        "id": "17508589229",
+        "name": "Акватория",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Виноградное, Бахчисарайское шоссе, 17А",
+        "url": "http://yalta.delfinary.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (915) 040-10-00"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (985) 860-22-22"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "aquarium",
+                "name": "Дельфинарий, океанариум"
+            },
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.485126,
+                34.122156
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 803
+        }
+    },
+    {
+        "id": "197549837104",
+        "name": "Ялтинский крокодиляриум",
+        "address": "Россия, Республика Крым, Ялта, улица Игнатенко, 1",
+        "url": "http://yalta-croco.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 000-07-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "exhibition center",
+                "name": "Выставочный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.496823,
+                34.170979
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 918
+        }
+    },
+    {
+        "id": "168012746645",
+        "name": "Крокодиловая ферма",
+        "address": "Россия, Республика Крым, Судак, улица Гагарина",
+        "url": "https://croco-farm.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (988) 000-09-88"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.8465,
+                34.982939
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 300
+        }
+    },
+    {
+        "id": "69741869517",
+        "name": "Парк Антилоп Сафари Ранч",
+        "address": "Россия, Республика Крым, Кировский район, село Изюмовка",
+        "url": "http://www.kozia-balka.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 808-12-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "вт-вс 10:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.043081,
+                35.133317
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 73
+        }
+    },
+    {
+        "id": "197803819316",
+        "name": "Енотодром",
+        "address": "Россия, Республика Крым, Ялта, улица Свердлова, 12Б",
+        "url": "http://enotodrom.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 217-51-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "name": "Вольер животных"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 11:00–18:45; сб,вс 10:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "11:00:00",
+                            "to": "18:45:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                },
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.496919,
+                34.173387
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 35
+        }
+    },
+    {
+        "id": "1788598722",
+        "name": "Аквариум",
+        "address": "Россия, Республика Крым, Евпатория, улица Горького, 5А/1",
+        "url": "http://evpaquarium.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 855-66-07"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "aquarium",
+                "name": "Дельфинарий, океанариум"
+            },
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–17:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.182803,
+                33.359621
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 918
+        }
+    },
+    {
+        "id": "1139996003",
+        "name": "Севастопольский зоопарк",
+        "address": "Россия, Севастополь, улица Бирюлёва, 34",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 032-52-70"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 053-60-76"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "forest",
+                "name": "Лесопарк, заповедник"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.594521,
+                33.544683
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 163
+        }
+    },
+    {
+        "id": "130993225591",
+        "name": "Saint Lazar",
+        "address": "Россия, Республика Крым, Симферопольский район, село Донское, Ново-Луговая улица, 11",
+        "url": "https://s-lazar.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 040-20-60"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "sanatorium",
+                "name": "Отдых на ферме"
+            },
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            }
+        ],
+        "Hours": {
+            "text": "вт-вс 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.036139,
+                34.217494
+            ]
+        },
+        "extra": {
+            "rating": 2.7,
+            "count": 5
+        }
+    }
+]

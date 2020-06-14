@@ -13,7 +13,7 @@ global.window = {};
 
 // store
 import * as storeModule from '../../store/store';
-import { testStore } from '../initialStore';
+import { testStore } from '../testStore';
 
 ImportMock.mockOther(storeModule, 'store', { getState: () => testStore });
 

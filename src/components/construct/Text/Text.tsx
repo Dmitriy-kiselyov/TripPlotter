@@ -4,7 +4,7 @@ import { cn } from '../../../lib/cn';
 
 import './Text.scss';
 
-export type ITextChild = string | React.ReactElement;
+export type ITextChild = string | number | React.ReactElement;
 export type ITextSize = 'm' | 'l' | 'xl';
 
 export interface ITextProps {

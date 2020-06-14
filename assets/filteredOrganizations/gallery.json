@@ -1,0 +1,52 @@
+[
+    {
+        "id": "145634383215",
+        "name": "Художественная Школа-Мастерская",
+        "address": "Россия, Республика Крым, Симферополь, улица Куйбышева, 2",
+        "url": "https://художественная-школа-симферополь.рф/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 090-53-33"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 745-55-71"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "further education",
+                "name": "Школа искусств"
+            },
+            {
+                "class": "further education",
+                "name": "Дополнительное образование"
+            },
+            {
+                "class": "gallery",
+                "name": "Художественная мастерская"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.959987,
+                34.109346
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 32
+        }
+    }
+]

@@ -4,18 +4,9 @@ export const testTripStore: IStore = {
     startTime: '08:00',
     endTime: '20:00',
     date: [
-        new Date('2020-02-21'),
-        new Date('2020-02-22')
+        new Date('2020-02-20'),
+        new Date('2020-02-21')
     ],
-    location: {
-        coords: [
-            44.956358,
-            34.116407
-        ],
-        address: 'улица Блюхера, 3, Симферополь, Республика Крым, Россия',
-        auto: false
-    },
-    tripRouteDay: 0,
     tripList: [
         {
             organization: {
@@ -50,6 +41,10 @@ export const testTripStore: IStore = {
                         45.057123,
                         34.59997
                     ]
+                },
+                extra: {
+                    rating: 4.5,
+                    count: 436
                 }
             },
             category: 'zoo',
@@ -57,21 +52,34 @@ export const testTripStore: IStore = {
         },
         {
             organization: {
-                id: '53590591549',
-                name: 'Пляж',
-                address: 'Россия, Республика Крым, городской округ Судак, посёлок городского типа Новый Свет, Набережная улица',
+                id: '114098162199',
+                name: 'Пляж Золотой песок',
+                address: 'Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский, Керченская улица',
                 Categories: [
                     {
                         'class': 'beach',
                         name: 'Пляж'
                     }
                 ],
+                Hours: {
+                    text: 'ежедневно, круглосуточно',
+                    Availabilities: [
+                        {
+                            TwentyFourHours: true,
+                            Everyday: true
+                        }
+                    ]
+                },
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.830287,
-                        34.918806
+                        45.1102,
+                        35.475235
                     ]
+                },
+                extra: {
+                    rating: 4.4,
+                    count: 671
                 }
             },
             category: 'beach',
@@ -124,6 +132,10 @@ export const testTripStore: IStore = {
                         45.098228,
                         34.625287
                     ]
+                },
+                extra: {
+                    rating: 4.7,
+                    count: 69
                 }
             },
             category: 'equestrian',
@@ -131,13 +143,36 @@ export const testTripStore: IStore = {
         },
         {
             organization: {
-                id: '132851386318',
-                name: 'Пещера Эмине-Баир-Хосар',
-                address: 'Россия, Республика Крым, Симферопольский район, Добровское сельское поселение',
+                id: '183504073061',
+                name: 'Никитский ботанический сад',
+                address: 'Россия, Республика Крым, городской округ Ялта, Никитский ботанический сад',
+                url: 'http://nikitasad.ru/',
+                Phones: [
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 902-63-05'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 902-63-07'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 902-63-06'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (3654) 25-05-30'
+                    }
+                ],
                 Categories: [
                     {
-                        'class': 'forest',
-                        name: 'Лесопарк, заповедник'
+                        'class': 'science',
+                        name: 'НИИ'
+                    },
+                    {
+                        'class': 'park',
+                        name: 'Парк культуры и отдыха'
                     }
                 ],
                 Hours: {
@@ -157,13 +192,17 @@ export const testTripStore: IStore = {
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.869632,
-                        34.240079
+                        44.510934,
+                        34.232675
                     ]
+                },
+                extra: {
+                    rating: 5,
+                    count: 3675
                 }
             },
             category: 'park',
-            time: '02:45'
+            time: '02:00'
         },
         {
             organization: {
@@ -207,6 +246,10 @@ export const testTripStore: IStore = {
                         44.936479,
                         34.134633
                     ]
+                },
+                extra: {
+                    rating: 4.2,
+                    count: 61
                 }
             },
             category: 'museum',
@@ -214,7 +257,7 @@ export const testTripStore: IStore = {
         },
         {
             organization: {
-                id: '146475692173',
+                id: '85882530676',
                 name: 'Южная Демерджи',
                 address: 'Россия, Республика Крым, городской округ Алушта',
                 Categories: [
@@ -226,62 +269,67 @@ export const testTripStore: IStore = {
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.754472,
-                        34.409678
+                        44.749393,
+                        34.414683
                     ]
+                },
+                extra: {
+                    rating: 5,
+                    count: 86
                 }
             },
             category: 'mountain',
-            time: '02:00'
+            time: '01:45'
         },
         {
             organization: {
-                id: '35908130183',
-                name: 'Художественная мастерская Eseniart',
-                address: 'Россия, Республика Крым, Ялта, улица Тимирязева, 37',
+                id: '145634383215',
+                name: 'Художественная Школа-Мастерская',
+                address: 'Россия, Республика Крым, Симферополь, улица Куйбышева, 2',
+                url: 'https://художественная-школа-симферополь.рф/',
                 Phones: [
                     {
                         type: 'phone',
-                        formatted: '+7 (978) 798-82-65'
+                        formatted: '+7 (978) 090-53-33'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 745-55-71'
                     }
                 ],
                 Categories: [
                     {
+                        'class': 'further education',
+                        name: 'Школа искусств'
+                    },
+                    {
+                        'class': 'further education',
+                        name: 'Дополнительное образование'
+                    },
+                    {
                         'class': 'gallery',
                         name: 'Художественная мастерская'
-                    },
-                    {
-                        'class': 'giftshop',
-                        name: 'Магазин подарков и сувениров'
-                    },
-                    {
-                        name: 'Студия графического дизайна'
                     }
                 ],
                 Hours: {
-                    text: 'пн-пт 9:00–18:00',
+                    text: 'ежедневно, круглосуточно',
                     Availabilities: [
                         {
-                            Intervals: [
-                                {
-                                    from: '09:00:00',
-                                    to: '18:00:00'
-                                }
-                            ],
-                            Monday: true,
-                            Tuesday: true,
-                            Wednesday: true,
-                            Thursday: true,
-                            Friday: true
+                            TwentyFourHours: true,
+                            Everyday: true
                         }
                     ]
                 },
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.498257,
-                        34.140966
+                        44.959987,
+                        34.109346
                     ]
+                },
+                extra: {
+                    rating: 4.4,
+                    count: 32
                 }
             },
             category: 'gallery',
@@ -337,16 +385,30 @@ export const testTripStore: IStore = {
                         45.020785,
                         33.997681
                     ]
+                },
+                extra: {
+                    rating: 4,
+                    count: 120
                 }
             },
             category: 'exhibition center',
             time: '04:00'
         }
     ],
+    location: {
+        coords: [
+            44.956358,
+            34.116407
+        ],
+        address: 'улица Блюхера, 3, Симферополь, Республика Крым, Россия',
+        auto: false
+    },
+    routeCalculating: false,
+    tripRouteDay: 0,
     tripRoute: {
         coordinates: [
-            44.936675,
-            34.134293
+            44.956358,
+            34.116407
         ],
         days: [
             {
@@ -354,19 +416,306 @@ export const testTripStore: IStore = {
                     time: 480
                 },
                 finish: {
-                    time: 1049,
-                    distance: 58693.09524798393
+                    time: 1131,
+                    distance: 89636.73798191547
                 },
                 route: [
                     {
+                        id: '145634383215',
+                        from: 483,
+                        to: 663,
+                        coordinates: [
+                            44.959987,
+                            34.109346
+                        ],
+                        distance: 1028.2157151699066,
+                        organization: {
+                            id: '145634383215',
+                            name: 'Художественная Школа-Мастерская',
+                            address: 'Россия, Республика Крым, Симферополь, улица Куйбышева, 2',
+                            url: 'https://художественная-школа-симферополь.рф/',
+                            Phones: [
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (978) 090-53-33'
+                                },
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (978) 745-55-71'
+                                }
+                            ],
+                            Categories: [
+                                {
+                                    'class': 'further education',
+                                    name: 'Школа искусств'
+                                },
+                                {
+                                    'class': 'further education',
+                                    name: 'Дополнительное образование'
+                                },
+                                {
+                                    'class': 'gallery',
+                                    name: 'Художественная мастерская'
+                                }
+                            ],
+                            Hours: {
+                                text: 'ежедневно, круглосуточно',
+                                Availabilities: [
+                                    {
+                                        TwentyFourHours: true,
+                                        Everyday: true
+                                    }
+                                ]
+                            },
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [
+                                    44.959987,
+                                    34.109346
+                                ]
+                            },
+                            extra: {
+                                rating: 4.4,
+                                count: 32
+                            }
+                        },
+                        category: 'gallery',
+                        time: '03:00'
+                    },
+                    {
+                        id: '85882530676',
+                        from: 750,
+                        to: 855,
+                        coordinates: [
+                            44.749393,
+                            34.414683
+                        ],
+                        distance: 50773.842190504074,
+                        organization: {
+                            id: '85882530676',
+                            name: 'Южная Демерджи',
+                            address: 'Россия, Республика Крым, городской округ Алушта',
+                            Categories: [
+                                {
+                                    'class': 'mountain',
+                                    name: 'Горная вершина'
+                                }
+                            ],
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [
+                                    44.749393,
+                                    34.414683
+                                ]
+                            },
+                            extra: {
+                                rating: 5,
+                                count: 86
+                            }
+                        },
+                        category: 'mountain',
+                        time: '01:45'
+                    },
+                    {
+                        id: '183504073061',
+                        from: 937,
+                        to: 1057,
+                        coordinates: [
+                            44.510934,
+                            34.232675
+                        ],
+                        distance: 48822.56355237961,
+                        organization: {
+                            id: '183504073061',
+                            name: 'Никитский ботанический сад',
+                            address: 'Россия, Республика Крым, городской округ Ялта, Никитский ботанический сад',
+                            url: 'http://nikitasad.ru/',
+                            Phones: [
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (978) 902-63-05'
+                                },
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (978) 902-63-07'
+                                },
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (978) 902-63-06'
+                                },
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (3654) 25-05-30'
+                                }
+                            ],
+                            Categories: [
+                                {
+                                    'class': 'science',
+                                    name: 'НИИ'
+                                },
+                                {
+                                    'class': 'park',
+                                    name: 'Парк культуры и отдыха'
+                                }
+                            ],
+                            Hours: {
+                                text: 'ежедневно, 9:00–19:00',
+                                Availabilities: [
+                                    {
+                                        Intervals: [
+                                            {
+                                                from: '09:00:00',
+                                                to: '19:00:00'
+                                            }
+                                        ],
+                                        Everyday: true
+                                    }
+                                ]
+                            },
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [
+                                    44.510934,
+                                    34.232675
+                                ]
+                            },
+                            extra: {
+                                rating: 5,
+                                count: 3675
+                            }
+                        },
+                        category: 'park',
+                        time: '02:00'
+                    }
+                ]
+            },
+            {
+                start: {
+                    time: 480
+                },
+                finish: {
+                    time: 1162,
+                    distance: 79263.0330619812
+                },
+                route: [
+                    {
+                        id: '1072971145',
+                        from: 490,
+                        to: 610,
+                        coordinates: [
+                            44.936479,
+                            34.134633
+                        ],
+                        distance: 123976.44426703453,
+                        organization: {
+                            id: '1072971145',
+                            name: 'Зоологический музей при Таврической академии КФУ им. Вернадского',
+                            address: 'Россия, Республика Крым, Симферополь, проспект Академика Вернадского, 4',
+                            url: 'http://zoomuseum.net/',
+                            Phones: [
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (978) 728-54-06'
+                                },
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (3652) 51-69-93'
+                                }
+                            ],
+                            Categories: [
+                                {
+                                    'class': 'museum',
+                                    name: 'Музей'
+                                }
+                            ],
+                            Hours: {
+                                text: 'ежедневно, 8:00–19:00',
+                                Availabilities: [
+                                    {
+                                        Intervals: [
+                                            {
+                                                from: '08:00:00',
+                                                to: '19:00:00'
+                                            }
+                                        ],
+                                        Everyday: true
+                                    }
+                                ]
+                            },
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [
+                                    44.936479,
+                                    34.134633
+                                ]
+                            },
+                            extra: {
+                                rating: 4.2,
+                                count: 61
+                            }
+                        },
+                        category: 'museum',
+                        time: '02:00'
+                    },
+                    {
+                        id: '111972923732',
+                        from: 659,
+                        to: 899,
+                        coordinates: [
+                            45.057123,
+                            34.59997
+                        ],
+                        distance: 47075.41079425812,
+                        organization: {
+                            id: '111972923732',
+                            name: 'Парк львов тайган',
+                            address: 'Россия, Республика Крым, Белогорск',
+                            url: 'http://park-taigan.ru/',
+                            Phones: [
+                                {
+                                    type: 'phone',
+                                    formatted: '+7 (978) 886-81-79'
+                                }
+                            ],
+                            Categories: [
+                                {
+                                    'class': 'zoo',
+                                    name: 'Зоопарк'
+                                }
+                            ],
+                            Hours: {
+                                text: 'ежедневно, круглосуточно',
+                                Availabilities: [
+                                    {
+                                        TwentyFourHours: true,
+                                        Everyday: true
+                                    }
+                                ]
+                            },
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [
+                                    45.057123,
+                                    34.59997
+                                ]
+                            },
+                            extra: {
+                                rating: 4.5,
+                                count: 436
+                            }
+                        },
+                        category: 'zoo',
+                        time: '04:00'
+                    },
+                    {
                         id: '40573545203',
-                        from: 529,
-                        to: 724,
+                        from: 910,
+                        to: 1105,
                         coordinates: [
                             45.098228,
                             34.625287
                         ],
-                        distance: 50942.45676088333,
+                        distance: 6532.878223896027,
                         organization: {
                             id: '40573545203',
                             name: 'Конно-спортивный клуб Cowboy',
@@ -413,326 +762,98 @@ export const testTripStore: IStore = {
                                     45.098228,
                                     34.625287
                                 ]
+                            },
+                            extra: {
+                                rating: 4.7,
+                                count: 69
                             }
                         },
                         category: 'equestrian',
                         time: '03:15'
-                    },
-                    {
-                        id: '179892968027',
-                        from: 783,
-                        to: 1023,
-                        coordinates: [
-                            45.020785,
-                            33.997681
-                        ],
-                        distance: 58693.09524798393,
-                        organization: {
-                            id: '179892968027',
-                            name: 'Коннект Экспо',
-                            address: 'Россия, Республика Крым, городской округ Симферополь, посёлок городского типа Аэрофлотский, площадь Аэропорта, 6',
-                            url: 'https://connectexpo.ru/',
-                            Phones: [
-                                {
-                                    type: 'phone',
-                                    formatted: '+7 (499) 350-45-64'
-                                },
-                                {
-                                    type: 'phone',
-                                    formatted: '+7 (978) 970-99-11'
-                                }
-                            ],
-                            Categories: [
-                                {
-                                    'class': 'exhibition center',
-                                    name: 'Выставочный центр'
-                                },
-                                {
-                                    'class': 'office',
-                                    name: 'Конференц-зал'
-                                }
-                            ],
-                            Hours: {
-                                text: 'пн-пт 9:00–20:00',
-                                Availabilities: [
-                                    {
-                                        Intervals: [
-                                            {
-                                                from: '09:00:00',
-                                                to: '20:00:00'
-                                            }
-                                        ],
-                                        Monday: true,
-                                        Tuesday: true,
-                                        Wednesday: true,
-                                        Thursday: true,
-                                        Friday: true
-                                    }
-                                ]
-                            },
-                            geometry: {
-                                type: 'Point',
-                                coordinates: [
-                                    45.020785,
-                                    33.997681
-                                ]
-                            }
-                        },
-                        category: 'exhibition center',
-                        time: '04:00'
-                    }
-                ]
-            },
-            {
-                start: {
-                    time: 480
-                },
-                finish: {
-                    time: 1181,
-                    distance: 65921.05463027954
-                },
-                route: [
-                    {
-                        id: '132851386318',
-                        from: 495,
-                        to: 705,
-                        coordinates: [
-                            44.869632,
-                            34.240079
-                        ],
-                        distance: 122087.89395165443,
-                        wait: 45,
-                        organization: {
-                            id: '132851386318',
-                            name: 'Пещера Эмине-Баир-Хосар',
-                            address: 'Россия, Республика Крым, Симферопольский район, Добровское сельское поселение',
-                            Categories: [
-                                {
-                                    'class': 'forest',
-                                    name: 'Лесопарк, заповедник'
-                                }
-                            ],
-                            Hours: {
-                                text: 'ежедневно, 9:00–19:00',
-                                Availabilities: [
-                                    {
-                                        Intervals: [
-                                            {
-                                                from: '09:00:00',
-                                                to: '19:00:00'
-                                            }
-                                        ],
-                                        Everyday: true
-                                    }
-                                ]
-                            },
-                            geometry: {
-                                type: 'Point',
-                                coordinates: [
-                                    44.869632,
-                                    34.240079
-                                ]
-                            }
-                        },
-                        category: 'park',
-                        time: '02:45'
-                    },
-                    {
-                        id: '1072971145',
-                        from: 722,
-                        to: 842,
-                        coordinates: [
-                            44.936479,
-                            34.134633
-                        ],
-                        distance: 12505.961929559708,
-                        organization: {
-                            id: '1072971145',
-                            name: 'Зоологический музей при Таврической академии КФУ им. Вернадского',
-                            address: 'Россия, Республика Крым, Симферополь, проспект Академика Вернадского, 4',
-                            url: 'http://zoomuseum.net/',
-                            Phones: [
-                                {
-                                    type: 'phone',
-                                    formatted: '+7 (978) 728-54-06'
-                                },
-                                {
-                                    type: 'phone',
-                                    formatted: '+7 (3652) 51-69-93'
-                                }
-                            ],
-                            Categories: [
-                                {
-                                    'class': 'museum',
-                                    name: 'Музей'
-                                }
-                            ],
-                            Hours: {
-                                text: 'ежедневно, 8:00–19:00',
-                                Availabilities: [
-                                    {
-                                        Intervals: [
-                                            {
-                                                from: '08:00:00',
-                                                to: '19:00:00'
-                                            }
-                                        ],
-                                        Everyday: true
-                                    }
-                                ]
-                            },
-                            geometry: {
-                                type: 'Point',
-                                coordinates: [
-                                    44.936479,
-                                    34.134633
-                                ]
-                            }
-                        },
-                        category: 'museum',
-                        time: '02:00'
-                    },
-                    {
-                        id: '111972923732',
-                        from: 890,
-                        to: 1130,
-                        coordinates: [
-                            45.057123,
-                            34.59997
-                        ],
-                        distance: 47104.110860824585,
-                        organization: {
-                            id: '111972923732',
-                            name: 'Парк львов тайган',
-                            address: 'Россия, Республика Крым, Белогорск',
-                            url: 'http://park-taigan.ru/',
-                            Phones: [
-                                {
-                                    type: 'phone',
-                                    formatted: '+7 (978) 886-81-79'
-                                }
-                            ],
-                            Categories: [
-                                {
-                                    'class': 'zoo',
-                                    name: 'Зоопарк'
-                                }
-                            ],
-                            Hours: {
-                                text: 'ежедневно, круглосуточно',
-                                Availabilities: [
-                                    {
-                                        TwentyFourHours: true,
-                                        Everyday: true
-                                    }
-                                ]
-                            },
-                            geometry: {
-                                type: 'Point',
-                                coordinates: [
-                                    45.057123,
-                                    34.59997
-                                ]
-                            }
-                        },
-                        category: 'zoo',
-                        time: '04:00'
                     }
                 ]
             }
         ],
         extra: [
             {
-                id: '53590591549',
+                id: '114098162199',
                 coordinates: [
-                    44.830287,
-                    34.918806
+                    45.1102,
+                    35.475235
                 ],
                 organization: {
-                    id: '53590591549',
-                    name: 'Пляж',
-                    address: 'Россия, Республика Крым, городской округ Судак, посёлок городского типа Новый Свет, Набережная улица',
+                    id: '114098162199',
+                    name: 'Пляж Золотой песок',
+                    address: 'Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский, Керченская улица',
                     Categories: [
                         {
                             'class': 'beach',
                             name: 'Пляж'
                         }
                     ],
+                    Hours: {
+                        text: 'ежедневно, круглосуточно',
+                        Availabilities: [
+                            {
+                                TwentyFourHours: true,
+                                Everyday: true
+                            }
+                        ]
+                    },
                     geometry: {
                         type: 'Point',
                         coordinates: [
-                            44.830287,
-                            34.918806
+                            45.1102,
+                            35.475235
                         ]
+                    },
+                    extra: {
+                        rating: 4.4,
+                        count: 671
                     }
                 },
                 category: 'beach',
                 time: '05:00'
             },
             {
-                id: '146475692173',
+                id: '179892968027',
                 coordinates: [
-                    44.754472,
-                    34.409678
+                    45.020785,
+                    33.997681
                 ],
                 organization: {
-                    id: '146475692173',
-                    name: 'Южная Демерджи',
-                    address: 'Россия, Республика Крым, городской округ Алушта',
-                    Categories: [
-                        {
-                            'class': 'mountain',
-                            name: 'Горная вершина'
-                        }
-                    ],
-                    geometry: {
-                        type: 'Point',
-                        coordinates: [
-                            44.754472,
-                            34.409678
-                        ]
-                    }
-                },
-                category: 'mountain',
-                time: '02:00'
-            },
-            {
-                id: '35908130183',
-                coordinates: [
-                    44.498257,
-                    34.140966
-                ],
-                organization: {
-                    id: '35908130183',
-                    name: 'Художественная мастерская Eseniart',
-                    address: 'Россия, Республика Крым, Ялта, улица Тимирязева, 37',
+                    id: '179892968027',
+                    name: 'Коннект Экспо',
+                    address: 'Россия, Республика Крым, городской округ Симферополь, посёлок городского типа Аэрофлотский, площадь Аэропорта, 6',
+                    url: 'https://connectexpo.ru/',
                     Phones: [
                         {
                             type: 'phone',
-                            formatted: '+7 (978) 798-82-65'
+                            formatted: '+7 (499) 350-45-64'
+                        },
+                        {
+                            type: 'phone',
+                            formatted: '+7 (978) 970-99-11'
                         }
                     ],
                     Categories: [
                         {
-                            'class': 'gallery',
-                            name: 'Художественная мастерская'
+                            'class': 'exhibition center',
+                            name: 'Выставочный центр'
                         },
                         {
-                            'class': 'giftshop',
-                            name: 'Магазин подарков и сувениров'
-                        },
-                        {
-                            name: 'Студия графического дизайна'
+                            'class': 'office',
+                            name: 'Конференц-зал'
                         }
                     ],
                     Hours: {
-                        text: 'пн-пт 9:00–18:00',
+                        text: 'пн-пт 9:00–20:00',
                         Availabilities: [
                             {
                                 Intervals: [
                                     {
                                         from: '09:00:00',
-                                        to: '18:00:00'
+                                        to: '20:00:00'
                                     }
                                 ],
                                 Monday: true,
@@ -746,14 +867,18 @@ export const testTripStore: IStore = {
                     geometry: {
                         type: 'Point',
                         coordinates: [
-                            44.498257,
-                            34.140966
+                            45.020785,
+                            33.997681
                         ]
+                    },
+                    extra: {
+                        rating: 4,
+                        count: 120
                     }
                 },
-                category: 'gallery',
-                time: '03:00'
+                category: 'exhibition center',
+                time: '04:00'
             }
         ]
-    }
+    },
 };

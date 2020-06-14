@@ -20,7 +20,7 @@ export function getAsset(id: string): IOrganization[] | null {
 }
 
 function load(id: string, cb: (asset: IOrganization[]) => void) {
-    const path = `assets/organizations/${id}.json`;
+    const path = `assets/filteredOrganizations/${id}.json`;
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';

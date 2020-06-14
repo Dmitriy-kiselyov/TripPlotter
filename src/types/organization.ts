@@ -7,6 +7,12 @@ export interface IOrganization {
     Hours?: IHours;
     Phones?: IPhone[];
     geometry: IGeometry;
+    extra: IOrganizationExtra;
+}
+
+export interface IOrganizationExtra {
+    rating: number;
+    count: number;
 }
 
 export interface ICategory {

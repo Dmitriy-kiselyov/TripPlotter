@@ -1,0 +1,1909 @@
+[
+    {
+        "id": "1368880832",
+        "name": "Меганом",
+        "address": "Россия, Республика Крым, Симферополь, Евпаторийское шоссе, 8",
+        "url": "http://meganom.net/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (918) 059-87-33"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "malls",
+                "name": "Торговый центр"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.971014,
+                34.077005
+            ]
+        },
+        "extra": {
+            "rating": 5,
+            "count": 16980
+        }
+    },
+    {
+        "id": "1241494782",
+        "name": "Бахчисарайский парк миниатюр",
+        "address": "Россия, Республика Крым, Бахчисарай, улица Ленина, 4",
+        "url": "http://minibah.ru/",
+        "Categories": [
+            {
+                "class": "park",
+                "name": "Парк культуры и отдыха"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "museum",
+                "name": "Музей"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.753961,
+                33.861114
+            ]
+        },
+        "extra": {
+            "rating": 4.9,
+            "count": 5527
+        }
+    },
+    {
+        "id": "155554271810",
+        "name": "Fruit-cocktail",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Коктебель",
+        "url": "https://fruit-cocktail.net/",
+        "Categories": [
+            {
+                "name": "Овощи и фрукты оптом"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.960031,
+                35.239471
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 3
+        }
+    },
+    {
+        "id": "125214982058",
+        "name": "Зоопарк",
+        "address": "Россия, Республика Крым, Бахчисарай, Бахчисарайский парк миниатюр",
+        "url": "http://www.minibah.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 000-07-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.753929,
+                33.858419
+            ]
+        },
+        "extra": {
+            "rating": 4.9,
+            "count": 5527
+        }
+    },
+    {
+        "id": "79009963580",
+        "name": "Фабрика Гонок Форсаж",
+        "address": "Россия, Республика Крым, Саки, Заводская улица, 97",
+        "url": "http://www.fabrika-gonok.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 994-28-88"
+            }
+        ],
+        "Categories": [
+            {
+                "name": "Аэротруба"
+            },
+            {
+                "class": "racing",
+                "name": "Картинг"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.140166,
+                33.562267
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 14
+        }
+    },
+    {
+        "id": "14748882017",
+        "name": "Mriya Resort & SPA",
+        "address": "Россия, Республика Крым, городской округ Ялта, село Оползневое",
+        "url": "http://mriyaresort.crimeabest.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (989) 124-50-50"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "spa",
+                "name": "Спа-салон"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.408987,
+                33.941253
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 9
+        }
+    },
+    {
+        "id": "165856818113",
+        "name": "Детский развлекательный центр",
+        "address": "Россия, Республика Крым, Симферополь, улица Трубаченко, 22",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "name": "Центр развития ребёнка"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.927943,
+                34.094869
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 56
+        }
+    },
+    {
+        "id": "34933419253",
+        "name": "Феостория",
+        "address": "Россия, Республика Крым, Феодосия, проспект Айвазовского, 31",
+        "url": "http://feostory.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 256-87-22"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Музей"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "further education",
+                "name": "Курсы и мастер-классы"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.037477,
+                35.382071
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 55
+        }
+    },
+    {
+        "id": "71525981602",
+        "name": "Два капитана",
+        "address": "Россия, Республика Крым, Евпатория, улица Фрунзе, 4Б",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.184991,
+                33.360002
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 10
+        }
+    },
+    {
+        "id": "84777150729",
+        "name": "Ufo на марсе",
+        "address": "Россия, Республика Крым, Сакский район",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.290345,
+                33.041653
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 8
+        }
+    },
+    {
+        "id": "74002684267",
+        "name": "Mojito Beach Club",
+        "address": "Россия, Республика Крым, Судак, Набережная улица, 1",
+        "url": "http://3dtour82.ru/Mohito/Mohito.html",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 832-85-49"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.839943,
+                34.980478
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 51
+        }
+    },
+    {
+        "id": "136801716421",
+        "name": "LaserLand",
+        "address": "Россия, Республика Крым, Симферополь, Севастопольская улица, 62",
+        "url": "http://simferopol.laser-land.ru/",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.937806,
+                34.093014
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 17
+        }
+    },
+    {
+        "id": "115250783963",
+        "name": "Крым в миниатюре",
+        "address": "Россия, Республика Крым, Алушта, улица Горького, 7",
+        "url": "http://park-miniatur.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 000-07-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Музей"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.670747,
+                34.410063
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 174
+        }
+    },
+    {
+        "id": "241909949609",
+        "name": "Культурно-туристический центр Деревня",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Парковое",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "8 (800) 707-58-82"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 733-45-55"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.400023,
+                33.917652
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 22
+        }
+    },
+    {
+        "id": "189517661801",
+        "name": "Игровой центр",
+        "address": "Россия, Республика Крым, городской округ Ялта, село Оползневое, улица Генерала Острякова, 9",
+        "url": "http://mriyaresort.com/kids/igrovoy_centr/",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 12:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "12:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.397927,
+                33.938911
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 21
+        }
+    },
+    {
+        "id": "142371698508",
+        "name": "Barrakuda",
+        "address": "Россия, Республика Крым, городской округ Феодосия, село Краснокаменка, Нижний городок",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 067-07-83"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "paintball",
+                "name": "Пейнтбол"
+            },
+            {
+                "class": "winter",
+                "name": "Зимние развлечения"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.918033,
+                35.095917
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 5
+        }
+    },
+    {
+        "id": "59751268791",
+        "name": "Знаниум",
+        "address": "Россия, Республика Крым, Симферополь, Киевская улица, 115",
+        "url": "http://www.znaniym.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 839-74-84"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964744,
+                34.106678
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 94
+        }
+    },
+    {
+        "id": "1707934838",
+        "name": "Волшебная страна",
+        "address": "Россия, Республика Крым, городской округ Симферополь, посёлок городского типа Грэсовский, улица Кржижановского, 24",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 222-70-47"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "name": "Центр развития ребёнка"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.009534,
+                34.027464
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 18
+        }
+    },
+    {
+        "id": "43308514979",
+        "name": "Qudro4x4active",
+        "address": "Россия, Республика Крым, городской округ Судак, СОТ Капсель",
+        "url": "http://sudak4x4.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 126-12-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.844925,
+                35.02633
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 15
+        }
+    },
+    {
+        "id": "209547733076",
+        "name": "Беларусь",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Кореиз, посёлок Мисхор",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 12:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "12:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.427398,
+                34.077895
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 61
+        }
+    },
+    {
+        "id": "113263654861",
+        "name": "Викинг",
+        "address": "Россия, Республика Крым, Симферопольский район, село Перевальное, Стадионная улица, 15",
+        "url": "http://viking-crimea.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 116-07-00"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 116-05-00"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 118-05-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "restaurants",
+                "name": "Ресторан"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.861276,
+                34.332948
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 774
+        }
+    },
+    {
+        "id": "38790405402",
+        "name": "Детская игровая комната Комикс Лэнд",
+        "address": "Россия, Республика Крым, Феодосия, улица Федько, 25",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 020-68-22"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.044649,
+                35.379812
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 11
+        }
+    },
+    {
+        "id": "112679537596",
+        "name": "Сова",
+        "address": "Россия, Республика Крым, Евпатория, улица Белинского, 3В",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 717-00-15"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пт-вс 15:00–3:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "15:00:00",
+                            "to": "03:00:00"
+                        }
+                    ],
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.189346,
+                33.370625
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 240
+        }
+    },
+    {
+        "id": "223398223727",
+        "name": "Развлекательный центр Гладиатор",
+        "address": "Россия, Республика Крым, Евпатория, улица Горького, 5В",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.182831,
+                33.360191
+            ]
+        },
+        "extra": {
+            "rating": 3.1,
+            "count": 11
+        }
+    },
+    {
+        "id": "197549837104",
+        "name": "Ялтинский крокодиляриум",
+        "address": "Россия, Республика Крым, Ялта, улица Игнатенко, 1",
+        "url": "http://yalta-croco.ru/",
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "exhibition center",
+                "name": "Выставочный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.496865,
+                34.170956
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 918
+        }
+    },
+    {
+        "id": "190150605785",
+        "name": "Контактный зоопарк Ребятам о зверятах",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Коктебель, улица Ленина, 140",
+        "url": "http://www.tozoo.ru/crimea",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (916) 144-31-20"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "zoo",
+                "name": "Зоопарк"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964731,
+                35.258638
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 67
+        }
+    },
+    {
+        "id": "1363448761",
+        "name": "Центрум",
+        "address": "Россия, Республика Крым, Симферополь, Севастопольская улица, 62",
+        "url": "http://centrum-trk.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 977-82-77"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 104-92-83"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "malls",
+                "name": "Торговый центр"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.938379,
+                34.09357
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 4424
+        }
+    },
+    {
+        "id": "164690644608",
+        "name": "Мир динозавров",
+        "address": "Россия, Республика Крым, Симферополь, Объездная улица, 10",
+        "url": "http://dinosimf.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 590-94-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "exhibition center",
+                "name": "Выставочный центр"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "сб,вс 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.941462,
+                34.085082
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 12
+        }
+    },
+    {
+        "id": "65920868467",
+        "name": "Union",
+        "address": "Россия, Республика Крым, Евпатория, проспект Ленина, 17А",
+        "url": "http://hotel-union.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36569) 6-32-31"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.189872,
+                33.364817
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 180
+        }
+    },
+    {
+        "id": "1707060492",
+        "name": "Столица",
+        "address": "Россия, Республика Крым, Симферополь, улица Карла Маркса, 51",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 735-75-63"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 833-05-80"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "amusement",
+                "name": "Антикафе"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.957579,
+                34.0891
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 19
+        }
+    },
+    {
+        "id": "226990552868",
+        "name": "Гринвич",
+        "address": "Россия, Республика Крым, Феодосия, Галерейная улица, 7",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.0318,
+                35.380812
+            ]
+        },
+        "extra": {
+            "rating": 3.4,
+            "count": 19
+        }
+    },
+    {
+        "id": "27082324302",
+        "name": "Sota",
+        "address": "Россия, Республика Крым, Симферополь, улица Карла Маркса, 28",
+        "url": "http://www.sotahub.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 500-28-28"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "exhibition center",
+                "name": "Выставочный центр"
+            },
+            {
+                "class": "office",
+                "name": "Конференц-зал"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 12:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "12:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.953168,
+                34.095116
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 6
+        }
+    },
+    {
+        "id": "1477638111",
+        "name": "Baby Boom",
+        "address": "Россия, Республика Крым, Симферополь, Киевская улица, 189Б",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–21:45",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:45:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.987185,
+                34.086835
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 36
+        }
+    },
+    {
+        "id": "87122964798",
+        "name": "Кемпинг в Крыму",
+        "address": "Россия, Республика Крым, Керчь, улица Аршинцевская Коса",
+        "Categories": [
+            {
+                "class": "sanatorium",
+                "name": "Санаторий"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "leisure club",
+                "name": "Клуб досуга"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.260167,
+                36.43326
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 8
+        }
+    },
+    {
+        "id": "172229411677",
+        "name": "У Айше",
+        "address": "Россия, Республика Крым, Бахчисарайский район, село Ходжа Сала, улица Челеби, 2А",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 774-33-58"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 774-33-56"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 6:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "06:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.607052,
+                33.790924
+            ]
+        },
+        "extra": {
+            "rating": 4.8,
+            "count": 356
+        }
+    },
+    {
+        "id": "231565083933",
+        "name": "Страж Империи",
+        "address": "Россия, Республика Крым, Алушта, улица Ленина, 10",
+        "url": "http://strage-imperii.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 000-06-77"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "class": "quest",
+                "name": "Квесты"
+            },
+            {
+                "class": "hotels",
+                "name": "Гостиница"
+            }
+        ],
+        "Hours": {
+            "text": "пт-вс 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.674488,
+                34.414378
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 69
+        }
+    },
+    {
+        "id": "220343446267",
+        "name": "Колесо обозрения",
+        "address": "Россия, Республика Крым, Симферополь, парк имени Юрия Гагарина",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            },
+            {
+                "name": "Аттракцион"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ср круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Wednesday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964683,
+                34.101534
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 67
+        }
+    },
+    {
+        "id": "125163789762",
+        "name": "Батутия",
+        "address": "Россия, Республика Крым, Симферополь, Севастопольская улица, 62",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 072-31-12"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 124-02-49"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "trampoline",
+                "name": "Батутный центр"
+            },
+            {
+                "class": "sportcenter",
+                "name": "Спортивно-развлекательный центр"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 12:00–22:00; сб,вс 10:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "12:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                },
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.937435,
+                34.092512
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 99
+        }
+    },
+    {
+        "id": "119637604929",
+        "name": "Ледник",
+        "address": "Россия, Республика Крым, Симферополь, Севастопольская улица, 62А",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 594-70-83"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "skating rink",
+                "name": "Каток"
+            },
+            {
+                "class": "malls",
+                "name": "Торговый центр"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-чт 10:00–21:00; пт-вс 10:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true
+                },
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.937806,
+                34.093014
+            ]
+        },
+        "extra": {
+            "rating": 2.7,
+            "count": 8
+        }
+    },
+    {
+        "id": "157743122854",
+        "name": "Море чудес",
+        "address": "Россия, Республика Крым, Симферополь, Кечкеметская улица, 62",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 723-84-43"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 723-84-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            },
+            {
+                "name": "Праздничное агентство"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.977294,
+                34.107019
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 95
+        }
+    },
+    {
+        "id": "160480676961",
+        "name": "Arena Vr",
+        "address": "Россия, Республика Крым, Симферополь, Киевская улица, 115",
+        "url": "http://arena-space.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 002-34-29"
+            }
+        ],
+        "Categories": [
+            {
+                "name": "Клуб виртуальной реальности"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964247,
+                34.106372
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 12
+        }
+    },
+    {
+        "id": "8314142989",
+        "name": "Квест Штрихкот",
+        "address": "Россия, Республика Крым, Феодосия, улица Вити Коробкова, 14Б",
+        "url": "http://shtrihkot.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 555-89-88"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (916) 187-12-39"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "quest",
+                "name": "Квесты"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 12:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "12:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.024485,
+                35.384821
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 34
+        }
+    },
+    {
+        "id": "1309902796",
+        "name": "IQ Квеструм",
+        "address": "Россия, Республика Крым, Симферополь, проспект Кирова, 12А",
+        "url": "https://iq-quest.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 048-20-30"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "quest",
+                "name": "Квесты"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 13:00–21:00; сб,вс 11:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "13:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                },
+                {
+                    "Intervals": [
+                        {
+                            "from": "11:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.945851,
+                34.094533
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 65
+        }
+    },
+    {
+        "id": "142550168521",
+        "name": "Родничок",
+        "address": "Россия, Республика Крым, Кировский район, Первомайское сельское поселение",
+        "url": "http://krymology.info/index.php/Родничок_(туристская_стоянка)",
+        "Categories": [
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.034492,
+                35.067387
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 5
+        }
+    }
+]

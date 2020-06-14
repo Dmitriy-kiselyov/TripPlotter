@@ -4,8 +4,8 @@ export const testStore: IStore = {
     startTime: '08:00',
     endTime: '20:00',
     date: [
-        new Date('2020-02-21'),
-        new Date('2020-02-22')
+        new Date('2020-02-20'),
+        new Date('2020-02-21')
     ],
     tripList: [
         {
@@ -41,6 +41,10 @@ export const testStore: IStore = {
                         45.057123,
                         34.59997
                     ]
+                },
+                extra: {
+                    rating: 4.5,
+                    count: 436
                 }
             },
             category: 'zoo',
@@ -48,21 +52,34 @@ export const testStore: IStore = {
         },
         {
             organization: {
-                id: '53590591549',
-                name: 'Пляж',
-                address: 'Россия, Республика Крым, городской округ Судак, посёлок городского типа Новый Свет, Набережная улица',
+                id: '114098162199',
+                name: 'Пляж Золотой песок',
+                address: 'Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский, Керченская улица',
                 Categories: [
                     {
                         'class': 'beach',
                         name: 'Пляж'
                     }
                 ],
+                Hours: {
+                    text: 'ежедневно, круглосуточно',
+                    Availabilities: [
+                        {
+                            TwentyFourHours: true,
+                            Everyday: true
+                        }
+                    ]
+                },
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.830287,
-                        34.918806
+                        45.1102,
+                        35.475235
                     ]
+                },
+                extra: {
+                    rating: 4.4,
+                    count: 671
                 }
             },
             category: 'beach',
@@ -115,6 +132,10 @@ export const testStore: IStore = {
                         45.098228,
                         34.625287
                     ]
+                },
+                extra: {
+                    rating: 4.7,
+                    count: 69
                 }
             },
             category: 'equestrian',
@@ -122,13 +143,36 @@ export const testStore: IStore = {
         },
         {
             organization: {
-                id: '132851386318',
-                name: 'Пещера Эмине-Баир-Хосар',
-                address: 'Россия, Республика Крым, Симферопольский район, Добровское сельское поселение',
+                id: '183504073061',
+                name: 'Никитский ботанический сад',
+                address: 'Россия, Республика Крым, городской округ Ялта, Никитский ботанический сад',
+                url: 'http://nikitasad.ru/',
+                Phones: [
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 902-63-05'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 902-63-07'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 902-63-06'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (3654) 25-05-30'
+                    }
+                ],
                 Categories: [
                     {
-                        'class': 'forest',
-                        name: 'Лесопарк, заповедник'
+                        'class': 'science',
+                        name: 'НИИ'
+                    },
+                    {
+                        'class': 'park',
+                        name: 'Парк культуры и отдыха'
                     }
                 ],
                 Hours: {
@@ -148,13 +192,17 @@ export const testStore: IStore = {
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.869632,
-                        34.240079
+                        44.510934,
+                        34.232675
                     ]
+                },
+                extra: {
+                    rating: 5,
+                    count: 3675
                 }
             },
             category: 'park',
-            time: '02:45'
+            time: '02:00'
         },
         {
             organization: {
@@ -198,6 +246,10 @@ export const testStore: IStore = {
                         44.936479,
                         34.134633
                     ]
+                },
+                extra: {
+                    rating: 4.2,
+                    count: 61
                 }
             },
             category: 'museum',
@@ -205,7 +257,7 @@ export const testStore: IStore = {
         },
         {
             organization: {
-                id: '146475692173',
+                id: '85882530676',
                 name: 'Южная Демерджи',
                 address: 'Россия, Республика Крым, городской округ Алушта',
                 Categories: [
@@ -217,62 +269,67 @@ export const testStore: IStore = {
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.754472,
-                        34.409678
+                        44.749393,
+                        34.414683
                     ]
+                },
+                extra: {
+                    rating: 5,
+                    count: 86
                 }
             },
             category: 'mountain',
-            time: '02:00'
+            time: '01:45'
         },
         {
             organization: {
-                id: '35908130183',
-                name: 'Художественная мастерская Eseniart',
-                address: 'Россия, Республика Крым, Ялта, улица Тимирязева, 37',
+                id: '145634383215',
+                name: 'Художественная Школа-Мастерская',
+                address: 'Россия, Республика Крым, Симферополь, улица Куйбышева, 2',
+                url: 'https://художественная-школа-симферополь.рф/',
                 Phones: [
                     {
                         type: 'phone',
-                        formatted: '+7 (978) 798-82-65'
+                        formatted: '+7 (978) 090-53-33'
+                    },
+                    {
+                        type: 'phone',
+                        formatted: '+7 (978) 745-55-71'
                     }
                 ],
                 Categories: [
                     {
+                        'class': 'further education',
+                        name: 'Школа искусств'
+                    },
+                    {
+                        'class': 'further education',
+                        name: 'Дополнительное образование'
+                    },
+                    {
                         'class': 'gallery',
                         name: 'Художественная мастерская'
-                    },
-                    {
-                        'class': 'giftshop',
-                        name: 'Магазин подарков и сувениров'
-                    },
-                    {
-                        name: 'Студия графического дизайна'
                     }
                 ],
                 Hours: {
-                    text: 'пн-пт 9:00–18:00',
+                    text: 'ежедневно, круглосуточно',
                     Availabilities: [
                         {
-                            Intervals: [
-                                {
-                                    from: '09:00:00',
-                                    to: '18:00:00'
-                                }
-                            ],
-                            Monday: true,
-                            Tuesday: true,
-                            Wednesday: true,
-                            Thursday: true,
-                            Friday: true
+                            TwentyFourHours: true,
+                            Everyday: true
                         }
                     ]
                 },
                 geometry: {
                     type: 'Point',
                     coordinates: [
-                        44.498257,
-                        34.140966
+                        44.959987,
+                        34.109346
                     ]
+                },
+                extra: {
+                    rating: 4.4,
+                    count: 32
                 }
             },
             category: 'gallery',
@@ -328,10 +385,22 @@ export const testStore: IStore = {
                         45.020785,
                         33.997681
                     ]
+                },
+                extra: {
+                    rating: 4,
+                    count: 120
                 }
             },
             category: 'exhibition center',
             time: '04:00'
         }
-    ]
+    ],
+    location: {
+        coords: [
+            44.956358,
+            34.116407
+        ],
+        address: 'улица Блюхера, 3, Симферополь, Республика Крым, Россия',
+        auto: false
+    }
 };

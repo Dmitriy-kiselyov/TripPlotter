@@ -1,0 +1,19 @@
+@import '../../Constants.scss';
+
+.Rating {
+    display: inline-block;
+    white-space: nowrap;
+
+    .Icon {
+        vertical-align: text-bottom;
+
+        + .Icon {
+            margin-left: $margin / 4;
+        }
+    }
+
+    .Text {
+        margin-left: $margin / 2;
+        vertical-align: middle;
+    }
+}

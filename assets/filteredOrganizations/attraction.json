@@ -1,0 +1,745 @@
+[
+    {
+        "id": "146216200587",
+        "name": "Детский Парк Аттракционов Дримвуд",
+        "address": "Россия, Республика Крым, городской округ Ялта, село Оползневое",
+        "url": "https://dreamwoodpark.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "8 (800) 550-56-94"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            },
+            {
+                "name": "Организация и проведение детских праздников"
+            }
+        ],
+        "Hours": {
+            "text": "ср-вс 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.39774,
+                33.936079
+            ]
+        },
+        "extra": {
+            "rating": 5,
+            "count": 1632
+        }
+    },
+    {
+        "id": "208773013533",
+        "name": "Парк аттракционов",
+        "address": "Россия, Республика Крым, Судак, Кипарисовая аллея, 15",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            },
+            {
+                "class": "park",
+                "name": "Парк культуры и отдыха"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.841427,
+                34.974134
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 19
+        }
+    },
+    {
+        "id": "4537696838",
+        "name": "Парк аттракционов",
+        "address": "Россия, Республика Крым, посёлок городского типа Черноморское, Центральная аллея",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.5131,
+                32.704461
+            ]
+        },
+        "extra": {
+            "rating": 3.6,
+            "count": 11
+        }
+    },
+    {
+        "id": "153940807724",
+        "name": "Парк аттракционов",
+        "address": "Россия, Республика Крым, Евпатория, набережная Горького, 6",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.184857,
+                33.369231
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 178
+        }
+    },
+    {
+        "id": "173961233726",
+        "name": "Сказка",
+        "address": "Россия, Республика Крым, Феодосия, набережная Десантников",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 836-66-78"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.030758,
+                35.38514
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 18
+        }
+    },
+    {
+        "id": "220343446267",
+        "name": "Колесо обозрения",
+        "address": "Россия, Республика Крым, Симферополь, парк имени Юрия Гагарина",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            },
+            {
+                "name": "Аттракцион"
+            },
+            {
+                "class": "entertainments",
+                "name": "Развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ср круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Wednesday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964683,
+                34.101534
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 67
+        }
+    },
+    {
+        "id": "214847764112",
+        "name": "Колесо обозрения",
+        "address": "Россия, Республика Крым, Евпатория, набережная Валентины Терешковой",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.194821,
+                33.37687
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 474
+        }
+    },
+    {
+        "id": "11861417621",
+        "name": "Парк Аттракционов",
+        "address": "Россия, Республика Крым, Евпатория, Детский парк",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.194103,
+                33.360361
+            ]
+        },
+        "extra": {
+            "rating": 3.7,
+            "count": 138
+        }
+    },
+    {
+        "id": "18558483147",
+        "name": "Банзай",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Гурзуф, набережная Пушкина",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.536743,
+                34.274348
+            ]
+        },
+        "extra": {
+            "rating": 3.3,
+            "count": 31
+        }
+    },
+    {
+        "id": "235347034397",
+        "name": "Американские горки",
+        "address": "Россия, Республика Крым, Симферополь, Детский парк",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.955603,
+                34.11066
+            ]
+        },
+        "extra": {
+            "rating": 3.1,
+            "count": 25
+        }
+    },
+    {
+        "id": "1708038943",
+        "name": "Парк Фрунзе",
+        "address": "Россия, Республика Крым, Евпатория, улица Горького, 9И",
+        "Categories": [
+            {
+                "class": "park",
+                "name": "Парк культуры и отдыха"
+            },
+            {
+                "name": "Сквер"
+            },
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.181658,
+                33.35709
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 866
+        }
+    },
+    {
+        "id": "1893946475",
+        "name": "Затерянный мир",
+        "address": "Россия, Республика Крым, Евпатория, улица Маяковского, 2",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 727-57-64"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "Hours": {
+            "text": "сб,вс 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.179013,
+                33.354379
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 345
+        }
+    },
+    {
+        "id": "95363083301",
+        "name": "Веревочный парк",
+        "address": "Россия, Республика Крым, Евпатория, парк имени Ленина",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 857-52-07"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 081-00-87"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            },
+            {
+                "class": "rope park",
+                "name": "Верёвочный парк"
+            },
+            {
+                "class": "sportcenter",
+                "name": "Спортивно-развлекательный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.186408,
+                33.338602
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 76
+        }
+    },
+    {
+        "id": "230049945471",
+        "name": "Аттракцион зиплайн Адренорлин",
+        "address": "Россия, Республика Крым, Ялта, набережная имени В.И. Ленина",
+        "url": "http://adrenorlin.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 071-17-07"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.489711,
+                34.162322
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 29
+        }
+    },
+    {
+        "id": "1204036540",
+        "name": "МБУК Детский парк",
+        "address": "Россия, Республика Крым, Симферополь, проспект Кирова, 51",
+        "url": "http://childrenpark.crimea.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (3652) 25-31-16"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (3652) 27-88-86"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            },
+            {
+                "class": "park",
+                "name": "Парк культуры и отдыха"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.956587,
+                34.10895
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 2888
+        }
+    },
+    {
+        "id": "169706458461",
+        "name": "Стадион Авангард",
+        "address": "Россия, Республика Крым, Евпатория, квартал Курортный",
+        "Categories": [
+            {
+                "class": "landmark",
+                "name": "Достопримечательность"
+            },
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.188219,
+                33.359573
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 70
+        }
+    },
+    {
+        "id": "193972449848",
+        "name": "Спортивно-развлекательный центр Спартак",
+        "address": "Россия, Республика Крым, Феодосия, проспект Айвазовского, 19",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 064-83-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "rope park",
+                "name": "Верёвочный парк"
+            },
+            {
+                "class": "sportcenter",
+                "name": "Спортивно-развлекательный центр"
+            },
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.033304,
+                35.381729
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 41
+        }
+    },
+    {
+        "id": "112326826457",
+        "name": "Перевернутый дом",
+        "address": "Россия, Республика Крым, Евпатория, квартал Курортный",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 209-48-87"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            }
+        ],
+        "Hours": {
+            "text": "сб,вс 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.188428,
+                33.359142
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 85
+        }
+    },
+    {
+        "id": "3424344212",
+        "name": "Детские аттракционы",
+        "address": "Россия, Республика Крым, Керчь",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.355163,
+                36.475611
+            ]
+        },
+        "extra": {
+            "rating": 3.3,
+            "count": 19
+        }
+    },
+    {
+        "id": "46143894033",
+        "name": "Парк аттракционов",
+        "address": "Россия, Республика Крым, городской округ Евпатория, посёлок городского типа Заозёрное, улица Аллея Дружбы",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.159849,
+                33.284066
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 4
+        }
+    },
+    {
+        "id": "4531249789",
+        "name": "Парк аттракционов",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Курортное, Набережная улица",
+        "Categories": [
+            {
+                "class": "attraction",
+                "name": "Парк аттракционов"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.910139,
+                35.193183
+            ]
+        },
+        "extra": {
+            "rating": 3.7,
+            "count": 8
+        }
+    }
+]

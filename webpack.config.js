@@ -52,7 +52,7 @@ module.exports = {
             filename: "./index.html"
         }),
         new CopyPlugin([
-            { from: 'assets/organizations/*.json', to: '' }
+            { from: 'assets/filteredOrganizations/*.json', to: '' }
         ]),
         new webpack.ProvidePlugin({
             $: "jquery",

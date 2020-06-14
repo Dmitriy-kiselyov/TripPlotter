@@ -8,7 +8,7 @@ import './mock';
 import { getAlgorithmParams } from '../../lib/getAlgorithmParams';
 import { tripAlgorithm } from '../../lib/algorithm';
 import { printRoute } from './printRoute';
-import { testStore } from '../initialStore';
+import { testStore } from '../testStore';
 
 const params = getAlgorithmParams();
 

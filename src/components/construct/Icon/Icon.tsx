@@ -4,7 +4,7 @@ import { cn } from '../../../lib/cn';
 
 import './Icon.scss';
 
-export type IIconType = 'call' | 'clock' | 'site' | 'map' | 'cross' | 'star';
+export type IIconType = 'call' | 'clock' | 'site' | 'map' | 'cross' | 'star' | 'ratingStar' | 'ratingHalfStar' | 'ratingEmptyStar';
 
 export interface IIconProps {
     type: IIconType;

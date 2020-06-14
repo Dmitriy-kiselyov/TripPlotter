@@ -17,7 +17,7 @@ import {
     IActionSetRouteDay,
     IActionSetStartTime
 } from '../types/actions';
-import { testStore } from '../test/initialStore';
+import { testStore } from '../test/testStore';
 import { testTripStore } from '../test/testTripStore';
 
 function reducer(state: IStore, action: IActions): IStore {

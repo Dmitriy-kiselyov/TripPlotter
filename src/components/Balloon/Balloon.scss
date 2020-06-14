@@ -11,8 +11,11 @@
         line-height: $line-height-xl;
         font-weight: 700;
         color: $primary-dark;
+    }
 
-        margin-bottom: 5px;
+    &-Visits {
+        margin-left: $margin;
+        vertical-align: middle;
     }
 
     &-Contact {

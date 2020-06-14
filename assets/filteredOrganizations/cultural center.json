@@ -1,0 +1,1892 @@
+[
+    {
+        "id": "157836634544",
+        "name": "Общественно-культурный центр Крымского содового завода",
+        "address": "Россия, Республика Крым, Красноперекопск",
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.971146,
+                33.811099
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 14
+        }
+    },
+    {
+        "id": "53055419602",
+        "name": "Культурно-этнографический центр Малый Иерусалим",
+        "address": "Россия, Республика Крым, Евпатория, улица Караева, 18",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 794-33-01"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36569) 2-35-41"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 009-32-99"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–16:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "16:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.199485,
+                33.380581
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 11
+        }
+    },
+    {
+        "id": "147351298655",
+        "name": "Республиканский дом культуры",
+        "address": "Россия, Республика Крым, посёлок городского типа Красногвардейское",
+        "url": "https://cnt-rk.crm.muzkult.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36556) 2-17-14"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36556) 2-16-94"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 9:00–18:00, перерыв 13:00–14:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "13:00:00"
+                        },
+                        {
+                            "from": "14:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.511327,
+                34.309095
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 31
+        }
+    },
+    {
+        "id": "213993450080",
+        "name": "В гостях у Крымских татар",
+        "address": "Россия, Республика Крым, Бахчисарай, Симферопольская улица, 5В",
+        "url": "http://вгостяхукрымскихтатар.рф/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 555-44-33"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 11:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "11:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.754945,
+                33.856793
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 14
+        }
+    },
+    {
+        "id": "135533719254",
+        "name": "Кахве-хане Искудар",
+        "address": "Россия, Республика Крым, Бахчисарай, улица Ленина, 85",
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 9:00–17:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.749286,
+                33.882566
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 22
+        }
+    },
+    {
+        "id": "1322869814",
+        "name": "Центр французского языка и культуры Le français facile",
+        "address": "Россия, Республика Крым, Симферополь, Киевская улица, 16",
+        "url": "http://francais.crimea.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 558-18-18"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 918-18-80"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "further education",
+                "name": "Курсы иностранных языков"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "further education",
+                "name": "Дополнительное образование"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.951012,
+                34.123189
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 14
+        }
+    },
+    {
+        "id": "9470966780",
+        "name": "Теккие дервишей",
+        "address": "Россия, Республика Крым, Евпатория, улица Караева, 18",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 048-97-21"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 794-33-01"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–17:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.199459,
+                33.380584
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 203
+        }
+    },
+    {
+        "id": "92044699390",
+        "name": "Текие Дервишей",
+        "address": "Россия, Республика Крым, Евпатория, улица Караева, 18",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 794-33-01"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36569) 2-35-41"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Музей"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "вт-вс 10:00–17:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.199479,
+                33.380581
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 203
+        }
+    },
+    {
+        "id": "172647652363",
+        "name": "Центр культуры искусств и спорта",
+        "address": "Россия, Республика Крым, Симферополь, улица Маяковского, 14",
+        "url": "http://crimea-dance.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 735-40-26"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (988) 289-88-38"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "further education",
+                "name": "Школа танцев"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "fitness",
+                "name": "Фитнес-клуб"
+            }
+        ],
+        "Hours": {
+            "text": "пн-сб 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.95021,
+                34.089061
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 15
+        }
+    },
+    {
+        "id": "1708551304",
+        "name": "Производственно-аграрное Объединение Массандра",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Массандра, улица Винодела Егорова, 9",
+        "url": "http://massandra.su/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (3654) 26-16-83"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 917-91-71"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (3654) 35-24-38"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 11:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "11:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.517711,
+                34.187912
+            ]
+        },
+        "extra": {
+            "rating": 5,
+            "count": 127
+        }
+    },
+    {
+        "id": "80635922390",
+        "name": "Лекторий Артпространство",
+        "address": "Россия, Республика Крым, Симферополь, парк имени Юрия Гагарина",
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964929,
+                34.099887
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 10
+        }
+    },
+    {
+        "id": "49236050780",
+        "name": "Клёновский сельский клуб",
+        "address": "Россия, Республика Крым, Симферопольский район, Донское сельское поселение, село Клёновка, Садовая улица, 1Б",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 816-81-78"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "вт-сб 9:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.128587,
+                34.193355
+            ]
+        },
+        "extra": {
+            "rating": 3.4,
+            "count": 11
+        }
+    },
+    {
+        "id": "1265180505",
+        "name": "Крымский республиканский Дворец культуры профсоюзов",
+        "address": "Россия, Республика Крым, Симферополь, Киевская улица, 115",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 816-79-79"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (3652) 25-60-30"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 712-20-64"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964684,
+                34.106382
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 668
+        }
+    },
+    {
+        "id": "208201381054",
+        "name": "Сельский клуб",
+        "address": "Россия, Республика Крым, Белогорский район, село Балки, улица Гагарина, 24А",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 893-83-08"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            }
+        ],
+        "Hours": {
+            "text": "вт-сб 9:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.993477,
+                34.456856
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 8
+        }
+    },
+    {
+        "id": "179343725929",
+        "name": "Дом Дружбы Народов",
+        "address": "Россия, Республика Крым, Симферополь, улица Пушкина, 20",
+        "url": "http://ddncrimea.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 701-81-34"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 9:00–18:00, перерыв 13:00–14:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "13:00:00"
+                        },
+                        {
+                            "from": "14:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.947662,
+                34.094885
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 18
+        }
+    },
+    {
+        "id": "1187123839",
+        "name": "Дом культуры железнодорожников",
+        "address": "Россия, Республика Крым, Симферополь, Привокзальная площадь, 3А",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (3652) 66-24-80"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (3652) 66-21-17"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:30–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:30:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.963105,
+                34.083862
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 30
+        }
+    },
+    {
+        "id": "66292879943",
+        "name": "Караимская кенаса",
+        "address": "Россия, Республика Крым, Симферополь, Караимская улица, 6",
+        "url": "http://karai.crimea.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (918) 324-00-99"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 838-49-21"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 816-32-75"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "landmark",
+                "name": "Достопримечательность"
+            },
+            {
+                "name": "Религиозное объединение"
+            }
+        ],
+        "Hours": {
+            "text": "сб 10:00–12:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "12:00:00"
+                        }
+                    ],
+                    "Saturday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.945366,
+                34.103593
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 5
+        }
+    },
+    {
+        "id": "163950549907",
+        "name": "Мирновский Дом культуры",
+        "address": "Россия, Республика Крым, городской округ Евпатория, поселок городского типа Мирный, Школьная улица, 14Б",
+        "url": "http://mirndk.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 010-25-22"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 794-48-30"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "name": "Организация и проведение детских праздников"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 9:00–18:00, перерыв 13:00–14:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "13:00:00"
+                        },
+                        {
+                            "from": "14:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.30932,
+                33.036335
+            ]
+        },
+        "extra": {
+            "rating": 3.3,
+            "count": 30
+        }
+    },
+    {
+        "id": "52365520909",
+        "name": "Звездный",
+        "address": "Россия, Республика Крым, Феодосия, улица Генерала Горбачева, 5А",
+        "url": "http://zvezdniy-feodosiya.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 917-70-05"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36562) 3-30-80"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "concert hall",
+                "name": "Концертный зал"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "concert hall",
+                "name": "Филармония"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.039116,
+                35.38135
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 88
+        }
+    },
+    {
+        "id": "103814347992",
+        "name": "Крымский государственный театр юного зрителя",
+        "address": "Россия, Республика Крым, Евпатория, улица Бартенева, 1",
+        "url": "http://www.golden-key.info/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36569) 6-04-60"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 149-25-87"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36569) 6-25-24"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 753-53-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "theatre",
+                "name": "Театр"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "вт-вс 9:00–18:00, перерыв 12:00–13:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "12:00:00"
+                        },
+                        {
+                            "from": "13:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.191568,
+                33.372898
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 109
+        }
+    },
+    {
+        "id": "48818004498",
+        "name": "Культурный центр имени Богатикова",
+        "address": "Россия, Республика Крым, Керчь, улица Свердлова, 6",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36561) 2-01-56"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36561) 2-12-21"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 8:00–17:00, перерыв 12:00–13:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "12:00:00"
+                        },
+                        {
+                            "from": "13:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.349064,
+                36.472965
+            ]
+        },
+        "extra": {
+            "rating": 3.1,
+            "count": 40
+        }
+    },
+    {
+        "id": "198296905319",
+        "name": "Джанкойский городской центр культуры и досуга",
+        "address": "Россия, Республика Крым, Джанкой, улица Ленина, 45/2",
+        "url": "http://dzhankoy.rk.gov.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36564) 3-41-34"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 787-15-92"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 8:00–17:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.705916,
+                34.398986
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 129
+        }
+    },
+    {
+        "id": "173630444859",
+        "name": "МБУДО центр детского и юношеского творчества",
+        "address": "Россия, Республика Крым, Керчь, улица Кирова, 89",
+        "url": "http://mbudotsdyut.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36561) 5-25-98"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36561) 5-46-48"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (36561) 5-16-42"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "further education",
+                "name": "Дополнительное образование"
+            },
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "вт-вс 9:00–17:30",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "17:30:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.364471,
+                36.503037
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 34
+        }
+    },
+    {
+        "id": "48200634267",
+        "name": "Культурно-досуговый центр дом творчества Подмосковье",
+        "address": "Россия, Республика Крым, Алушта, улица Владимира Хромых, 18",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36560) 5-88-59"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 741-86-90"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 8:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.675557,
+                34.410731
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 24
+        }
+    },
+    {
+        "id": "1325322731",
+        "name": "Историко-археологический музей-заповедник Неаполь Скифский",
+        "address": "Россия, Республика Крым, Симферополь, Археологическая улица, 1",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 792-56-42"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 847-71-58"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Музей"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "вт-вс 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.940105,
+                34.119757
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 119
+        }
+    },
+    {
+        "id": "1393108668",
+        "name": "Молодежный центр SouthLife",
+        "address": "Крым, Ялта г., ул. Крупской, 48",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 091-65-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "further education",
+                "name": "Школа танцев"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "further education",
+                "name": "Фотошкола"
+            },
+            {
+                "class": "baby club",
+                "name": "Клуб для детей и подростков"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 16:00–21:00; сб 12:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "16:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                },
+                {
+                    "Intervals": [
+                        {
+                            "from": "12:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Saturday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.496135,
+                34.1369
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 19
+        }
+    },
+    {
+        "id": "144217639530",
+        "name": "Далёковский сельский дом культуры МБУК Централизованная клубная система",
+        "address": "Россия, Республика Крым, Черноморский район, село Далёкое, Советская улица, 36",
+        "url": "http://chernomkultura.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 263-48-58"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 8:00–17:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.660533,
+                33.08106
+            ]
+        },
+        "extra": {
+            "rating": 2.6,
+            "count": 5
+        }
+    },
+    {
+        "id": "139815390292",
+        "name": "Центр культуры искусств и спорта",
+        "address": "Россия, Республика Крым, Симферополь, улица Маяковского, 14",
+        "url": "http://crimea-dance.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (988) 289-88-38"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 735-40-26"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "further education",
+                "name": "Школа танцев"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "fitness",
+                "name": "Фитнес-клуб"
+            }
+        ],
+        "Hours": {
+            "text": "пн-сб 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.95019,
+                34.089026
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 15
+        }
+    },
+    {
+        "id": "181005841988",
+        "name": "Либра-Центр",
+        "address": "Россия, Севастополь, набережная Адмирала Клокачёва, 3",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 783-35-75"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.616276,
+                33.5179
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 48
+        }
+    },
+    {
+        "id": "191543228172",
+        "name": "Праздничное агенство",
+        "address": "Россия, Севастополь, Большая Морская улица, 19",
+        "url": "http://www.sevbal.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 211-15-05"
+            }
+        ],
+        "Categories": [
+            {
+                "name": "Праздничное агентство"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.606536,
+                33.522171
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 21
+        }
+    },
+    {
+        "id": "99463689924",
+        "name": "ГБУК г. Севастополя Дворец культуры Севастопольский",
+        "address": "Россия, Севастополь, Балаклавский район, Балаклавский муниципальный округ, посёлок Сахарная Головка, улица Тимирязева, 23",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 72-36-98"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (06927) 2-37-51"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "baby club",
+                "name": "Клуб для детей и подростков"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.583622,
+                33.638792
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 101
+        }
+    },
+    {
+        "id": "1334036186",
+        "name": "Морская библиотека имени адмирала М. П. Лазарева, культурный центр Черноморского флота",
+        "address": "Россия, Севастополь, проспект Нахимова, 7",
+        "url": "http://www.sevmb.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 54-33-15"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 54-37-58"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "library",
+                "name": "Библиотека"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "вт-сб 11:00–19:00; вс 11:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "11:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true
+                },
+                {
+                    "Intervals": [
+                        {
+                            "from": "11:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.614011,
+                33.522802
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 20
+        }
+    },
+    {
+        "id": "1055207086",
+        "name": "ГБУК Дворец культуры рыбаков",
+        "address": "Россия, Севастополь, улица Павла Корчагина, 1",
+        "url": "https://севдкр.рф/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 42-91-82"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 41-06-86"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 42-91-83"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 41-06-91"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 41-06-57"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 741-06-93"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 41-06-73"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (06924) 1-12-21"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 41-12-09"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "concert hall",
+                "name": "Концертный зал"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 10:00–17:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.584497,
+                33.434915
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 250
+        }
+    },
+    {
+        "id": "1277361374",
+        "name": "Севастопольский военно-исторический музей-заповедник",
+        "address": "Россия, Севастополь, Исторический бульвар, 1",
+        "url": "http://sevmuseum.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 22-21-11"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (988) 509-75-30"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Музей"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            }
+        ],
+        "Hours": {
+            "text": "вт-вс 10:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true,
+                    "Saturday": true,
+                    "Sunday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.594603,
+                33.521682
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 1093
+        }
+    },
+    {
+        "id": "1144243059",
+        "name": "Терновский центр культуры и досуга",
+        "address": "Россия, Севастополь, Балаклавский район, Терновский муниципальный округ, село Терновка, улица Ленина, 7",
+        "url": "https://sevastopol.gov.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (8692) 63-94-10"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (06926) 3-94-10"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 784-09-79"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "museum",
+                "name": "Дом культуры"
+            },
+            {
+                "class": "cultural center",
+                "name": "Культурный центр"
+            },
+            {
+                "class": "leisure club",
+                "name": "Клуб досуга"
+            },
+            {
+                "class": "concert hall",
+                "name": "Концертный зал"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 9:00–17:30",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "17:30:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.577675,
+                33.752991
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 16
+        }
+    }
+]

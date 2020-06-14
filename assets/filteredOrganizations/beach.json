@@ -1,0 +1,6086 @@
+[
+    {
+        "id": "130056684314",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Сакский район, коттеджный посёлок Парус",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.322694,
+                33.027465
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 13
+        }
+    },
+    {
+        "id": "155890135397",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Сакский район",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.315598,
+                33.00442
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 6
+        }
+    },
+    {
+        "id": "88566482235",
+        "name": "Меганом beach club",
+        "address": "Россия, Республика Крым, городской округ Судак",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 051-56-84"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            },
+            {
+                "class": "bars",
+                "name": "Бар, паб"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–23:50",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "23:50:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.818803,
+                35.046556
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 132
+        }
+    },
+    {
+        "id": "196192191316",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Раздольненский район, Славновское сельское поселение, Бакальская коса",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.787136,
+                33.169575
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 51
+        }
+    },
+    {
+        "id": "139728153572",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Ленинский район, Семисотское сельское поселение",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.290875,
+                35.496364
+            ]
+        },
+        "extra": {
+            "rating": 2.9,
+            "count": 6
+        }
+    },
+    {
+        "id": "154020423673",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Кореиз, поселок Мисхор",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.423209,
+                34.075758
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 19
+        }
+    },
+    {
+        "id": "95970551490",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Феодосия",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.062949,
+                35.397437
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 42
+        }
+    },
+    {
+        "id": "122808111274",
+        "name": "Зелёный мыс",
+        "address": "Россия, Республика Крым, городской округ Ялта, Алупка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.415923,
+                34.04824
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 117
+        }
+    },
+    {
+        "id": "138157348600",
+        "name": "Cosa village",
+        "address": "Россия, Республика Крым, Сакский район, СНТ Вотчина",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (916) 109-51-63"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 260-81-21"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (915) 567-34-42"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.30351,
+                33.022057
+            ]
+        },
+        "extra": {
+            "rating": 3.4,
+            "count": 6
+        }
+    },
+    {
+        "id": "126808652877",
+        "name": "Парадис",
+        "address": "Россия, Республика Крым, Сакский район, село Уютное, Софиевская улица",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (989) 274-51-12"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.16449,
+                33.241331
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 22
+        }
+    },
+    {
+        "id": "217888185970",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Симферопольский район, Николаевское сельское поселение",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 763-47-33"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.982853,
+                33.60593
+            ]
+        },
+        "extra": {
+            "rating": 3.5,
+            "count": 67
+        }
+    },
+    {
+        "id": "44086588807",
+        "name": "Пляж Майами",
+        "address": "Россия, Республика Крым, Черноморский район, Оленевское сельское поселение, село Оленевка",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 272-88-82"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 272-88-81"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "name": "Пункт проката"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.379593,
+                32.512216
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 265
+        }
+    },
+    {
+        "id": "240003827799",
+        "name": "Черепаший пляж",
+        "address": "Россия, Республика Крым, городской округ Судак",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.836426,
+                34.940203
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 19
+        }
+    },
+    {
+        "id": "131588082176",
+        "name": "Пляж фестиваля Экстрим Крым",
+        "address": "Россия, Республика Крым, Черноморский район, Оленевское сельское поселение, село Оленевка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.362288,
+                32.51378
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 177
+        }
+    },
+    {
+        "id": "207634562088",
+        "name": "Пляж Фотон Райт",
+        "address": "Россия, Республика Крым, городской округ Евпатория, посёлок городского типа Заозёрное",
+        "url": "https://footoon.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 144-10-20"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "name": "Аттракцион"
+            },
+            {
+                "class": "childrens playground",
+                "name": "Детские игровые залы и площадки"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.150488,
+                33.255406
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 111
+        }
+    },
+    {
+        "id": "14024010865",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Парковое",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.399097,
+                33.917068
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 20
+        }
+    },
+    {
+        "id": "1232432804",
+        "name": "Эволюция",
+        "address": "Россия, Республика Крым, город Евпатория, посёлок городского типа Заозёрное, улица Аллея Дружбы, 1",
+        "url": "http://evolutionsport.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36569) 2-16-33"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 712-26-92"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 870-78-89"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 881-82-45"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (981) 841-77-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "sportcenter",
+                "name": "Спортивный комплекс"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "sports base",
+                "name": "Спортивная база"
+            },
+            {
+                "class": "swimming pool",
+                "name": "Бассейн"
+            },
+            {
+                "class": "sanatorium",
+                "name": "Дом отдыха"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.181195,
+                33.313528
+            ]
+        },
+        "extra": {
+            "rating": 4.9,
+            "count": 374
+        }
+    },
+    {
+        "id": "98051462743",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Алушта, Набережная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.651554,
+                34.402835
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 196
+        }
+    },
+    {
+        "id": "208526612481",
+        "name": "Пляж Эко-Вилладж",
+        "address": "Россия, Республика Крым, городской округ Алушта, село Приветное, Курортная улица",
+        "url": "http://eko-village.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 983-02-02"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 705-84-14"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.78674,
+                34.649355
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 70
+        }
+    },
+    {
+        "id": "195570370196",
+        "name": "Пляж Краб",
+        "address": "Россия, Республика Крым, Сакский район, село Штормовое, Набережная улица",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 125-52-73"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.26069,
+                33.082049
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 330
+        }
+    },
+    {
+        "id": "213894014255",
+        "name": "Пляж Береговое",
+        "address": "Россия, Республика Крым, городской округ Феодосия, село Береговое",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.099058,
+                35.448969
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 28
+        }
+    },
+    {
+        "id": "81109502232",
+        "name": "Алые Паруса",
+        "address": "Россия, Республика Крым, Черноморский район, село Межводное",
+        "url": "http://krym-invest-region.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (495) 662-40-25"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 18:00–10:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "18:00:00",
+                            "to": "10:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.561044,
+                32.838885
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 11
+        }
+    },
+    {
+        "id": "47343834662",
+        "name": "Детский пляж",
+        "address": "Россия, Республика Крым, Ленинский район, Щёлкино",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.432439,
+                35.820215
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 31
+        }
+    },
+    {
+        "id": "182079322068",
+        "name": "ВайлдБич",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский, озеро Аджиголь",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (986) 929-35-83"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "hotels",
+                "name": "Кемпинг"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.106389,
+                35.463566
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 7
+        }
+    },
+    {
+        "id": "18301164209",
+        "name": "Пляж сан. Черноморье",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Ливадия",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.472744,
+                34.151644
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 60
+        }
+    },
+    {
+        "id": "221907687828",
+        "name": "Мохито",
+        "address": "Россия, Республика Крым, Судак",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.83909,
+                34.960249
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 158
+        }
+    },
+    {
+        "id": "92710868980",
+        "name": "Пляж Краб",
+        "address": "Россия, Республика Крым, Сакский район, село Штормовое",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (918) 481-79-37"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.265933,
+                33.087198
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 35
+        }
+    },
+    {
+        "id": "90802942999",
+        "name": "Дива",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Симеиз",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.401921,
+                34.000822
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 119
+        }
+    },
+    {
+        "id": "131204729469",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Алушта, село Малореченское",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.755713,
+                34.561908
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 42
+        }
+    },
+    {
+        "id": "200307330514",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Сакский район, село Поповка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.299116,
+                33.026269
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 379
+        }
+    },
+    {
+        "id": "238200431524",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, село Оползневое",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.395053,
+                33.932495
+            ]
+        },
+        "extra": {
+            "rating": 3.6,
+            "count": 27
+        }
+    },
+    {
+        "id": "138271299009",
+        "name": "Семашко",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Симеиз",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.403008,
+                34.008125
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 36
+        }
+    },
+    {
+        "id": "177091839734",
+        "name": "Смешанные товары",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Береговое, Кипарисная улица, 39",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.404141,
+                33.893223
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 11
+        }
+    },
+    {
+        "id": "114755886108",
+        "name": "Пляж Нептун",
+        "address": "Россия, Республика Крым, городской округ Керчь, Аршинцевская коса",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.248164,
+                36.423831
+            ]
+        },
+        "extra": {
+            "rating": 3.2,
+            "count": 8
+        }
+    },
+    {
+        "id": "168637133536",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Алушта, село Малореченское, Морская улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.755391,
+                34.560436
+            ]
+        },
+        "extra": {
+            "rating": 2.8,
+            "count": 19
+        }
+    },
+    {
+        "id": "94724075556",
+        "name": "Пляж Мохито",
+        "address": "Россия, Республика Крым, городской округ Евпатория, посёлок городского типа Заозёрное",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (918) 318-64-17"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "childrens camp",
+                "name": "Детский лагерь отдыха"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.148868,
+                33.258168
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 163
+        }
+    },
+    {
+        "id": "219624024171",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Гурзуф, набережная Пушкина",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.540287,
+                34.276581
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 630
+        }
+    },
+    {
+        "id": "206863530356",
+        "name": "Пляж Вега",
+        "address": "Россия, Республика Крым, Сакский район, село Штормовое",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (918) 481-79-37"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.262488,
+                33.079876
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 16
+        }
+    },
+    {
+        "id": "226664015406",
+        "name": "Пляж Чембало",
+        "address": "Россия, Республика Крым, Бахчисарайский район, село Песчаное",
+        "url": "http://alma-park.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "8 (800) 250-88-88"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 950-88-88"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.859295,
+                33.603409
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 19
+        }
+    },
+    {
+        "id": "116897456733",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Судак",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.819997,
+                35.044598
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 344
+        }
+    },
+    {
+        "id": "30335432069",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Сакский район, посёлок городского типа Новофёдоровка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.091219,
+                33.555966
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 516
+        }
+    },
+    {
+        "id": "235515237616",
+        "name": "Пляж Боро-Боро",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Коктебель",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.967883,
+                35.267576
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 74
+        }
+    },
+    {
+        "id": "61540451014",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский, Вертолетная улица, 2, корп. 4",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.124216,
+                35.524204
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 27
+        }
+    },
+    {
+        "id": "41533652163",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Ливадия, Виноградная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.46753,
+                34.149472
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 43
+        }
+    },
+    {
+        "id": "4672025378",
+        "name": "Санаторий Парус, пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Гаспра",
+        "url": "http://www.sanparus.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 072-66-90"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.434695,
+                34.130585
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 13
+        }
+    },
+    {
+        "id": "162236885093",
+        "name": "Резиденция Небо",
+        "address": "Россия, Республика Крым, Ялта, улица Дражинского, 50Б",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 051-20-10"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "restaurants",
+                "name": "Ресторан"
+            },
+            {
+                "class": "night club",
+                "name": "Ночной клуб"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.500371,
+                34.191391
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 90
+        }
+    },
+    {
+        "id": "51108066360",
+        "name": "Пляж Алые Паруса",
+        "address": "Россия, Республика Крым, Феодосия",
+        "url": "http://www.a-parusa.com/pages/plyaj_zolotie_peski/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 700-38-84"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            },
+            {
+                "class": "bars",
+                "name": "Бар, паб"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.076868,
+                35.413325
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 557
+        }
+    },
+    {
+        "id": "49104218302",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Ялта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.498517,
+                34.181581
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 32
+        }
+    },
+    {
+        "id": "54911647367",
+        "name": "Золотой пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Курпаты, Алупкинское шоссе, 8Д",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (989) 258-98-21"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:30–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:30:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.445924,
+                34.134749
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 17
+        }
+    },
+    {
+        "id": "18882306530",
+        "name": "Межводненский грязевой пляж",
+        "address": "Россия, Республика Крым, 35Н-620",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.581709,
+                32.854301
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 59
+        }
+    },
+    {
+        "id": "133986181178",
+        "name": "Городской пляж",
+        "address": "Россия, Республика Крым, городской округ Керчь, Аршинцевская коса",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.25439,
+                36.429703
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 885
+        }
+    },
+    {
+        "id": "204624152967",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, поселок городского типа Кацивели",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.391403,
+                33.964019
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 49
+        }
+    },
+    {
+        "id": "119556997580",
+        "name": "Дельфиний пляж",
+        "address": "Россия, Республика Крым, Сакский район",
+        "url": "http://дельфинийпляж.рф/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 777-71-01"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "name": "Аттракцион"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.168473,
+                33.236535
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 28
+        }
+    },
+    {
+        "id": "67902774865",
+        "name": "Пляж Sunset",
+        "address": "Россия, Республика Крым, Черноморский район, Оленевское сельское поселение, село Оленевка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.36777,
+                32.515509
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 536
+        }
+    },
+    {
+        "id": "244332547019",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Алушта, посёлок Семидворье, микрорайон Волна",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.690572,
+                34.436652
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 34
+        }
+    },
+    {
+        "id": "107947146422",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.395953,
+                33.808988
+            ]
+        },
+        "extra": {
+            "rating": 3.6,
+            "count": 12
+        }
+    },
+    {
+        "id": "155852353365",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Судак",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.834295,
+                35.005077
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 142
+        }
+    },
+    {
+        "id": "152721692315",
+        "name": "Пляж Ласковый Берег",
+        "address": "Россия, Республика Крым, Алушта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.673954,
+                34.41634
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 1552
+        }
+    },
+    {
+        "id": "1034116761",
+        "name": "Sunrise/Пляж 117",
+        "address": "Россия, Республика Крым, Феодосия, Керченское шоссе, 72К",
+        "url": "http://www.motel-feodosia.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 826-01-17"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.07855,
+                35.415236
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 551
+        }
+    },
+    {
+        "id": "33456924642",
+        "name": "Пляж Бриз",
+        "address": "Россия, Республика Крым, Бахчисарайский район, село Песчаное",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.861476,
+                33.604384
+            ]
+        },
+        "extra": {
+            "rating": 2.7,
+            "count": 22
+        }
+    },
+    {
+        "id": "79863665801",
+        "name": "Пляж для людей с ограниченными возможностями",
+        "address": "Россия, Республика Крым, Сакский район, село Прибрежное",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.151513,
+                33.489884
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 22
+        }
+    },
+    {
+        "id": "170185695533",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Судак, Набережная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.840596,
+                34.969949
+            ]
+        },
+        "extra": {
+            "rating": 3.5,
+            "count": 30
+        }
+    },
+    {
+        "id": "54094915929",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Отрадное, шоссе Дражинского, 2А",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.49975,
+                34.197085
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 65
+        }
+    },
+    {
+        "id": "80074858670",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Черноморский район, Новосельское сельское поселение",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.525261,
+                32.711086
+            ]
+        },
+        "extra": {
+            "rating": 3.3,
+            "count": 17
+        }
+    },
+    {
+        "id": "81352836257",
+        "name": "Пляж Рыбзик",
+        "address": "Россия, Республика Крым, посёлок городского типа Черноморское, Корабельная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.516767,
+                32.681525
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 105
+        }
+    },
+    {
+        "id": "179308972745",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Алушта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:30",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:30:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.668008,
+                34.413342
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 57
+        }
+    },
+    {
+        "id": "109277336238",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Коктебель, улица Десантников",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.955587,
+                35.248507
+            ]
+        },
+        "extra": {
+            "rating": 3.1,
+            "count": 37
+        }
+    },
+    {
+        "id": "243836349341",
+        "name": "Русалка",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Кореиз, посёлок Мисхор",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.427403,
+                34.089942
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 241
+        }
+    },
+    {
+        "id": "224326669298",
+        "name": "Кабинки переодевания",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Гаспра, Харакский парк",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.429094,
+                34.114493
+            ]
+        },
+        "extra": {
+            "rating": 2.9,
+            "count": 31
+        }
+    },
+    {
+        "id": "77011089421",
+        "name": "Приморский пляж",
+        "address": "Россия, Республика Крым, Ялта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 0:00–23:00, перерыв 1:00–6:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "00:00:00",
+                            "to": "01:00:00"
+                        },
+                        {
+                            "from": "06:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.487525,
+                34.161501
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 2557
+        }
+    },
+    {
+        "id": "235963238272",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, посёлок городского типа Черноморское",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.515011,
+                32.672708
+            ]
+        },
+        "extra": {
+            "rating": 3.7,
+            "count": 26
+        }
+    },
+    {
+        "id": "202789135023",
+        "name": "Asteras",
+        "address": "Россия, Республика Крым, Евпатория, улица Горького, 1В",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 576-61-76"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.183286,
+                33.362181
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 79
+        }
+    },
+    {
+        "id": "181089693749",
+        "name": "Пляж Песчаная балка",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.125995,
+                35.533017
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 92
+        }
+    },
+    {
+        "id": "182043135421",
+        "name": "Агатовый пляж",
+        "address": "Россия, Республика Крым, городской округ Феодосия",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 700-63-03"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.956334,
+                35.359018
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 130
+        }
+    },
+    {
+        "id": "132266780457",
+        "name": "Орхидея",
+        "address": "Россия, Республика Крым, Симферопольский район, поселок городского типа Николаевка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964135,
+                33.602963
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 43
+        }
+    },
+    {
+        "id": "114712240387",
+        "name": "Пляж санатория Буревестник МВД России",
+        "address": "Россия, Республика Крым, Евпатория",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.17296,
+                33.332905
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 59
+        }
+    },
+    {
+        "id": "54565990018",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Феодосия",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.072948,
+                35.408276
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 124
+        }
+    },
+    {
+        "id": "123308468376",
+        "name": "Песчаная Балка",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский, Вертолетная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.122533,
+                35.517244
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 25
+        }
+    },
+    {
+        "id": "166743454198",
+        "name": "Южная точка",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.113568,
+                35.486041
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 13
+        }
+    },
+    {
+        "id": "78413884104",
+        "name": "Центральный пляж",
+        "address": "Россия, Республика Крым, Судак, Курортное шоссе",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.839821,
+                34.974701
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 1329
+        }
+    },
+    {
+        "id": "132051365572",
+        "name": "Пляж санатория Форос",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Форос",
+        "url": "http://sanforos-krym.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 917-93-38"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.388318,
+                33.774086
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 56
+        }
+    },
+    {
+        "id": "193560634892",
+        "name": "Горняк",
+        "address": "Россия, Республика Крым, Симферопольский район, поселок городского типа Николаевка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.963226,
+                33.603373
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 18
+        }
+    },
+    {
+        "id": "9253738684",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Ленинский район, городское поселение Щёлкино",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.426474,
+                35.811213
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 31
+        }
+    },
+    {
+        "id": "173209581799",
+        "name": "Пляж Меллас",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Санаторное, мыс Гусиный",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.400806,
+                33.835029
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 15
+        }
+    },
+    {
+        "id": "212833446289",
+        "name": "Нудистский пляж",
+        "address": "Россия, Республика Крым, городской округ Феодосия, урочище Лисья Бухта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.898947,
+                35.164027
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 41
+        }
+    },
+    {
+        "id": "171429713453",
+        "name": "Пляж ОЛЦ Северный",
+        "address": "Россия, Республика Крым, городской округ Евпатория, посёлок городского типа Заозёрное",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.154976,
+                33.287775
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 64
+        }
+    },
+    {
+        "id": "7139335806",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Отрадное, Отрадная улица, 25",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.503476,
+                34.211982
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 187
+        }
+    },
+    {
+        "id": "78158262832",
+        "name": "Пляж Голубой залив",
+        "address": "Россия, Республика Крым, городской округ Феодосия, поселок городского типа Коктебель, Морская улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.959818,
+                35.25255
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 336
+        }
+    },
+    {
+        "id": "181193911034",
+        "name": "Нудистский пляж",
+        "address": "Россия, Республика Крым, городской округ Судак",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.8345,
+                34.938211
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 11
+        }
+    },
+    {
+        "id": "174639778930",
+        "name": "Нудистский Пляж",
+        "address": "Россия, Республика Крым, городской округ Феодосия, урочище Лисья Бухта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.894305,
+                35.15793
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 15
+        }
+    },
+    {
+        "id": "4500198263",
+        "name": "Леон, спасательный пост",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Орджоникидзе, Кипарисовая улица, 2А",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 031-02-43"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–19:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "19:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964959,
+                35.348672
+            ]
+        },
+        "extra": {
+            "rating": 1.8,
+            "count": 11
+        }
+    },
+    {
+        "id": "31147062025",
+        "name": "Бухта Любви",
+        "address": "Россия, Республика Крым, Черноморский район, Оленевское сельское поселение, село Оленевка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.344468,
+                32.500966
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 159
+        }
+    },
+    {
+        "id": "242679007067",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Судак, Набережная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.836304,
+                34.985345
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 758
+        }
+    },
+    {
+        "id": "114098162199",
+        "name": "Пляж Золотой песок",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский, Керченская улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.1102,
+                35.475235
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 671
+        }
+    },
+    {
+        "id": "121445709295",
+        "name": "Мирамар",
+        "address": "Россия, Республика Крым, Феодосия, Керченское шоссе, 72В",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 118-48-68"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 897-33-67"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "restaurants",
+                "name": "Ресторан"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.082103,
+                35.420286
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 171
+        }
+    },
+    {
+        "id": "33473030120",
+        "name": "Первый городской пляж",
+        "address": "Россия, Республика Крым, Феодосия, проспект Айвазовского",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 5:00–23:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "05:00:00",
+                            "to": "23:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.039936,
+                35.383012
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 1039
+        }
+    },
+    {
+        "id": "53590591549",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Судак, посёлок городского типа Новый Свет, Набережная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.830287,
+                34.918806
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 203
+        }
+    },
+    {
+        "id": "219191674162",
+        "name": "Пляж № Ев003а",
+        "address": "Россия, Республика Крым, городской округ Симферополь",
+        "url": "http://3dtour82.ru/PlyazhEVOOZA/PlyazhEVOOZA.html",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 855-33-50"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.927947,
+                34.144048
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 13
+        }
+    },
+    {
+        "id": "105298485364",
+        "name": "Приморье",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Симеиз, улица Владимира Луговского, 20",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.404996,
+                34.012332
+            ]
+        },
+        "extra": {
+            "rating": 3.3,
+            "count": 31
+        }
+    },
+    {
+        "id": "143166067803",
+        "name": "Санта Барбара пляж",
+        "address": "Россия, Республика Крым, городской округ Алушта, посёлок Утёс, ПКРН Утес",
+        "url": "http://santabarbara.com.ua/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 833-77-22"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.596716,
+                34.371717
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 363
+        }
+    },
+    {
+        "id": "62248331148",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Гаспра, Алупкинское шоссе, 19А",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.429047,
+                34.109218
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 55
+        }
+    },
+    {
+        "id": "96608814844",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Керчь, микрорайон Капканы",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.347534,
+                36.584065
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 20
+        }
+    },
+    {
+        "id": "208633733568",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Бахчисарайский район, село Песчаное",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.845427,
+                33.593074
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 19
+        }
+    },
+    {
+        "id": "43948417160",
+        "name": "Супер Аква",
+        "address": "Россия, Республика Крым, городской округ Евпатория, посёлок городского типа Заозёрное, улица Аллея Дружбы, 3",
+        "url": "https://www.superaquabeach.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 221-88-05"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (916) 241-10-11"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.174162,
+                33.305891
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 681
+        }
+    },
+    {
+        "id": "90995325290",
+        "name": "Пляж ФГБУ Военный санаторий Крым Министерства обороны Российской Федерации",
+        "address": "Россия, Республика Крым, городской округ Алушта, посёлок городского типа Партенит",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.570671,
+                34.345939
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 36
+        }
+    },
+    {
+        "id": "176852679114",
+        "name": "Мадагаскар",
+        "address": "Россия, Республика Крым, Евпатория",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 876-10-20"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.194531,
+                33.409999
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 79
+        }
+    },
+    {
+        "id": "187857894859",
+        "name": "Пляж Нимфей",
+        "address": "Россия, Республика Крым, Керчь, улица Аршинцевская Коса",
+        "url": "http://nimfei.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 201-92-73"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "restaurants",
+                "name": "Ресторан"
+            },
+            {
+                "class": "supermarket",
+                "name": "Мороженое"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.260135,
+                36.433189
+            ]
+        },
+        "extra": {
+            "rating": 3.6,
+            "count": 9
+        }
+    },
+    {
+        "id": "186485429451",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Судак",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.838696,
+                34.953607
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 31
+        }
+    },
+    {
+        "id": "155736842734",
+        "name": "Пляж Золотая Кафа",
+        "address": "Россия, Республика Крым, городской округ Феодосия, село Береговое, Курортная улица, 2",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (965) 019-99-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.103869,
+                35.458201
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 76
+        }
+    },
+    {
+        "id": "183851951988",
+        "name": "Пляж № 51",
+        "address": "Россия, Республика Крым, городской округ Феодосия, село Береговое",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.102888,
+                35.457213
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 14
+        }
+    },
+    {
+        "id": "142059592904",
+        "name": "Лягушка",
+        "address": "Россия, Республика Крым, городской округ Ялта, Алупка",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 840-66-96"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (988) 366-57-34"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.405305,
+                34.030253
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 206
+        }
+    },
+    {
+        "id": "195145422505",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Евпатория",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.195431,
+                33.407294
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 298
+        }
+    },
+    {
+        "id": "204106831289",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Керчь",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.346916,
+                36.598866
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 44
+        }
+    },
+    {
+        "id": "185095776723",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Орджоникидзе",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.964515,
+                35.350332
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 129
+        }
+    },
+    {
+        "id": "184296839022",
+        "name": "Пляж б/о Артемида",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Понизовка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.392781,
+                33.948168
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 66
+        }
+    },
+    {
+        "id": "156369853036",
+        "name": "Пляж Солнышко",
+        "address": "Россия, Республика Крым, Евпатория",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.159464,
+                33.4772
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 290
+        }
+    },
+    {
+        "id": "7973522201",
+        "name": "Z. City",
+        "address": "Россия, Республика Крым, Сакский район, село Поповка, аллея Вити Ковбоя",
+        "url": "https://z.city/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "8 (800) 707-23-68"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "sportcenter",
+                "name": "Спортивно-развлекательный центр"
+            },
+            {
+                "class": "park",
+                "name": "Парк культуры и отдыха"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.292611,
+                33.039001
+            ]
+        },
+        "extra": {
+            "rating": 4.5,
+            "count": 1135
+        }
+    },
+    {
+        "id": "178141645926",
+        "name": "Полет",
+        "address": "Россия, Республика Крым, Симферопольский район, поселок городского типа Николаевка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.974015,
+                33.599269
+            ]
+        },
+        "extra": {
+            "rating": 3.4,
+            "count": 9
+        }
+    },
+    {
+        "id": "216405645414",
+        "name": "Городской пляж",
+        "address": "Россия, Республика Крым, Евпатория, улица Горького, 5У",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.182374,
+                33.361152
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 1256
+        }
+    },
+    {
+        "id": "119847245876",
+        "name": "Atlantik Beach",
+        "address": "Россия, Республика Крым, Феодосия, Черноморская набережная, 6",
+        "url": "http://atlantik-plus.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 747-73-00"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.055308,
+                35.389759
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 160
+        }
+    },
+    {
+        "id": "129769856436",
+        "name": "Куба",
+        "address": "Россия, Республика Крым, Евпатория, Симферопольская улица, 2",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 969-07-71"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.194367,
+                33.411148
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 24
+        }
+    },
+    {
+        "id": "233468821459",
+        "name": "Царский пляж",
+        "address": "Россия, Республика Крым, городской округ Судак",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.821032,
+                34.90487
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 524
+        }
+    },
+    {
+        "id": "1191933212",
+        "name": "Leto-feo.com",
+        "address": "Россия, Республика Крым, Феодосия, Адмиральский бульвар, 26",
+        "url": "http://leto-feo.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 092-82-00"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 723-60-29"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "hotels",
+                "name": "Жильё посуточно"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "travel",
+                "name": "Бронирование гостиниц"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–21:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "21:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.023252,
+                35.382762
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 15
+        }
+    },
+    {
+        "id": "45299185959",
+        "name": "Дикий пляж",
+        "address": "Россия, Республика Крым, Ленинский район, Семисотское сельское поселение, село Каменское",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.283554,
+                35.52193
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 40
+        }
+    },
+    {
+        "id": "119624009134",
+        "name": "Нудистский пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Симеиз",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.400417,
+                33.991625
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 41
+        }
+    },
+    {
+        "id": "83544552566",
+        "name": "Пляж Гороно",
+        "address": "Россия, Республика Крым, Ялта, улица Дражинского, 7А",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–18:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "18:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.496654,
+                34.175053
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 183
+        }
+    },
+    {
+        "id": "74690057843",
+        "name": "Вилла Мишель",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок Даниловка, Лесная улица",
+        "url": "http://www.villa-mishel.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 827-72-81"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.52053,
+                34.2556
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 5
+        }
+    },
+    {
+        "id": "107200697080",
+        "name": "Нарышкинские камни",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Симеиз",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 733-78-88"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.402582,
+                34.004837
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 193
+        }
+    },
+    {
+        "id": "69637783744",
+        "name": "Чёрная жемчужина",
+        "address": "Россия, Республика Крым, городской округ Алушта, село Приветное, курорт Канака",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 740-06-83"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "hotels",
+                "name": "Жильё посуточно"
+            },
+            {
+                "class": "sanatorium",
+                "name": "Дом отдыха"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.785741,
+                34.645687
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 24
+        }
+    },
+    {
+        "id": "74181108773",
+        "name": "Пляж пансионат Нева",
+        "address": "Россия, Республика Крым, Алушта, улица Восточная Набережная",
+        "url": "https://www.neva-alushta.com/plyazh",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "8 (800) 775-92-81"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 782-53-04"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 7:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "07:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.674451,
+                34.416929
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 26
+        }
+    },
+    {
+        "id": "244463495908",
+        "name": "Ривьера",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Приморский",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "hotels",
+                "name": "Кемпинг"
+            },
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.106273,
+                35.463828
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 50
+        }
+    },
+    {
+        "id": "178853234672",
+        "name": "Кафе Жаrа",
+        "address": "Россия, Республика Крым, Феодосия, Черноморская набережная, 42Б",
+        "url": "https://feo.today/places/580-lounge-bar-zhara.html",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 762-83-37"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 882-83-29"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "cafe",
+                "name": "Кафе"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "bars",
+                "name": "Кальян-бар"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.061571,
+                35.395874
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 19
+        }
+    },
+    {
+        "id": "75219835827",
+        "name": "Нимфей",
+        "address": "Россия, Республика Крым, городской округ Керчь, Аршинцевская коса",
+        "url": "http://nimfei.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 201-92-73"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 575-50-51"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.251993,
+                36.42763
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 75
+        }
+    },
+    {
+        "id": "1077095669",
+        "name": "Золотой пляж",
+        "address": "Республика Крым, Феодосия, Керченское шоссе, 74",
+        "url": "https://krymtur.com/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 736-03-60"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (3652) 25-03-50"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.089013,
+                35.430878
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 26
+        }
+    },
+    {
+        "id": "193336651068",
+        "name": "Пляж Жемчужный",
+        "address": "Россия, Республика Крым, Феодосия, Черноморская набережная",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 856-70-55"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.054091,
+                35.389664
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 257
+        }
+    },
+    {
+        "id": "128497509208",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Керчь",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.301575,
+                36.459881
+            ]
+        },
+        "extra": {
+            "rating": 2.4,
+            "count": 48
+        }
+    },
+    {
+        "id": "106280918514",
+        "name": "Молодёжный пляж",
+        "address": "Россия, Республика Крым, Керчь",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.35253,
+                36.523132
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 285
+        }
+    },
+    {
+        "id": "1125022909",
+        "name": "Монтажник",
+        "address": "Россия, Республика Крым, Симферопольский район, Николаевское сельское поселение, поселок городского типа Николаевка, Набережная улица, 34",
+        "url": "http://www.базамонтажник.рф/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 858-03-76"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 709-37-74"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "sanatorium",
+                "name": "Турбаза"
+            },
+            {
+                "class": "beach",
+                "name": "Пляж"
+            },
+            {
+                "class": "hotels",
+                "name": "Гостиница"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.971863,
+                33.600919
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 31
+        }
+    },
+    {
+        "id": "57147878023",
+        "name": "Пляж ДОЛ Казакевича",
+        "address": "Россия, Республика Крым, Бахчисарайский район, село Песчаное",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.85163,
+                33.599068
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 13
+        }
+    },
+    {
+        "id": "118984250418",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Ялта, посёлок городского типа Кореиз",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.428485,
+                34.094718
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 7
+        }
+    },
+    {
+        "id": "231598057221",
+        "name": "Beach club 117",
+        "address": "Россия, Республика Крым, Феодосия, Керченское шоссе",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.071478,
+                35.390514
+            ]
+        },
+        "extra": {
+            "rating": 4.6,
+            "count": 151
+        }
+    },
+    {
+        "id": "1049102466",
+        "name": "МУП ГОС Судакмортранс",
+        "address": "Россия, Республика Крым, Судак, Октябрьская улица, 34",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36566) 3-26-52"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "пн-пт 8:00–17:00, перерыв 12:00–13:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "12:00:00"
+                        },
+                        {
+                            "from": "13:00:00",
+                            "to": "17:00:00"
+                        }
+                    ],
+                    "Monday": true,
+                    "Tuesday": true,
+                    "Wednesday": true,
+                    "Thursday": true,
+                    "Friday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.853101,
+                34.973875
+            ]
+        },
+        "extra": {
+            "rating": 2.8,
+            "count": 29
+        }
+    },
+    {
+        "id": "164285941522",
+        "name": "Остров Сокровищ",
+        "address": "Россия, Республика Крым, Керчь, Набережная улица, 4А",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 096-53-55"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 10:00–0:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "10:00:00",
+                            "to": "00:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.344184,
+                36.470756
+            ]
+        },
+        "extra": {
+            "rating": 3,
+            "count": 47
+        }
+    },
+    {
+        "id": "189965938730",
+        "name": "Дикий пляж",
+        "address": "Россия, Республика Крым, Ленинский район, Караларский природный парк",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.474734,
+                36.249314
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 3
+        }
+    },
+    {
+        "id": "38371651475",
+        "name": "Пляж Маяк",
+        "address": "Россия, Республика Крым, Ленинский район, Глазовское сельское поселение",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.39425,
+                36.627571
+            ]
+        },
+        "extra": {
+            "rating": 3.1,
+            "count": 11
+        }
+    },
+    {
+        "id": "64753735488",
+        "name": "Дикий пляж",
+        "address": "Россия, Республика Крым, Ленинский район, Мысовское сельское поселение",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.421228,
+                35.79993
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 6
+        }
+    },
+    {
+        "id": "58486551860",
+        "name": "Пляж Азов",
+        "address": "Россия, Республика Крым, Ленинский район, Семисотское сельское поселение",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.329253,
+                35.414943
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 3
+        }
+    },
+    {
+        "id": "22876988992",
+        "name": "Пляж Голубая бухта",
+        "address": "Россия, Севастополь, поселок Казачья Бухта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.555963,
+                33.40851
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 919
+        }
+    },
+    {
+        "id": "8218138256",
+        "name": "Магарач",
+        "address": "Россия, Республика Крым, Бахчисарайский район, село Песчаное",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.870587,
+                33.607668
+            ]
+        },
+        "extra": {
+            "rating": 3.4,
+            "count": 4
+        }
+    },
+    {
+        "id": "111382684254",
+        "name": "Дикий пляж",
+        "address": "Россия, Республика Крым, Ленинский район, мыс Казантип",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.46778,
+                35.830939
+            ]
+        },
+        "extra": {
+            "rating": 3.7,
+            "count": 3
+        }
+    },
+    {
+        "id": "174716411049",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Ленинский район, село Южное",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.117367,
+                35.657
+            ]
+        },
+        "extra": {
+            "rating": 3.5,
+            "count": 8
+        }
+    },
+    {
+        "id": "242467523569",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Ленинский район",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.130523,
+                35.583743
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 3
+        }
+    },
+    {
+        "id": "82677263294",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, городской округ Феодосия, посёлок городского типа Курортное, Набережная улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.909718,
+                35.19322
+            ]
+        },
+        "extra": {
+            "rating": 3.6,
+            "count": 3
+        }
+    },
+    {
+        "id": "163273290265",
+        "name": "Командирский пляж",
+        "address": "Россия, Севастополь, Балаклавский район, Балаклавский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.466508,
+                33.638343
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 15
+        }
+    },
+    {
+        "id": "136185180765",
+        "name": "Пляж",
+        "address": "Россия, Республика Крым, Евпатория",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.186403,
+                33.430159
+            ]
+        },
+        "extra": {
+            "rating": 3.6,
+            "count": 6
+        }
+    },
+    {
+        "id": "147789679827",
+        "name": "Пляж",
+        "address": "Россия, Севастополь, Нахимовский район, Качинский муниципальный округ, посёлок городского типа Кача, улица Авиаторов, 1Г",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.780871,
+                33.537344
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 140
+        }
+    },
+    {
+        "id": "66730264259",
+        "name": "Пляж Учкуевка",
+        "address": "Россия, Севастополь, район Северная Сторона",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.647555,
+                33.53755
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 116
+        }
+    },
+    {
+        "id": "169101687570",
+        "name": "Пионерский пляж",
+        "address": "Россия, Севастополь, Балаклавский район, Орлиновский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.417888,
+                33.681411
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 14
+        }
+    },
+    {
+        "id": "151459886583",
+        "name": "Любимовка",
+        "address": "Россия, Севастополь, Нахимовский район",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.666738,
+                33.545314
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 663
+        }
+    },
+    {
+        "id": "97674685400",
+        "name": "Яшмовый пляж",
+        "address": "Россия, Севастополь, микрорайон Фиолент",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.503483,
+                33.507114
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 1005
+        }
+    },
+    {
+        "id": "76179690765",
+        "name": "Пляж Черепашка",
+        "address": "Россия, Керченский пролив",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.363444,
+                36.502325
+            ]
+        },
+        "extra": {
+            "rating": 2.8,
+            "count": 256
+        }
+    },
+    {
+        "id": "61027619739",
+        "name": "Пляж Дальний Инжир",
+        "address": "Россия, Севастополь, Балаклавский район, Орлиновский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.463235,
+                33.6397
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 24
+        }
+    },
+    {
+        "id": "9368744782",
+        "name": "Ближний пляж",
+        "address": "Россия, Севастополь, Балаклавский район, Балаклавский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.487892,
+                33.617041
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 97
+        }
+    },
+    {
+        "id": "22484323313",
+        "name": "Песочный",
+        "address": "Россия, Севастополь, улица Ефремова, 42",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.607648,
+                33.481367
+            ]
+        },
+        "extra": {
+            "rating": 4,
+            "count": 273
+        }
+    },
+    {
+        "id": "86126288482",
+        "name": "Инкерманский пляж",
+        "address": "Россия, Севастополь, Балаклавский район, Инкерман",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.614097,
+                33.60051
+            ]
+        },
+        "extra": {
+            "rating": 1.9,
+            "count": 23
+        }
+    },
+    {
+        "id": "219733605395",
+        "name": "Пляж",
+        "address": "Россия, Севастополь, микрорайон Казачья Бухта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.563063,
+                33.400751
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 61
+        }
+    },
+    {
+        "id": "224094270052",
+        "name": "Пляж Толстяк",
+        "address": "Россия, Севастополь, район Северная Сторона",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.638135,
+                33.522583
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 364
+        }
+    },
+    {
+        "id": "220589157363",
+        "name": "Пляж базы отдыха Каравелла",
+        "address": "Россия, Севастополь, микрорайон Фиолент",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.511919,
+                33.478978
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 242
+        }
+    },
+    {
+        "id": "226376088725",
+        "name": "Пляж Шайтан",
+        "address": "Россия, Севастополь, Балаклава",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.492771,
+                33.603509
+            ]
+        },
+        "extra": {
+            "rating": 3.4,
+            "count": 14
+        }
+    },
+    {
+        "id": "30331084751",
+        "name": "Пляж Констатиновский",
+        "address": "Россия, Севастополь, район Северная Сторона",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.628939,
+                33.518023
+            ]
+        },
+        "extra": {
+            "rating": 3.4,
+            "count": 15
+        }
+    },
+    {
+        "id": "198412619992",
+        "name": "Пляж",
+        "address": "Россия, Севастополь, Историческая улица",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.496728,
+                33.598739
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 60
+        }
+    },
+    {
+        "id": "176715439797",
+        "name": "Пляж Маяк на Фиоленте",
+        "address": "Россия, Севастополь, микрорайон Фиолент",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.523785,
+                33.466705
+            ]
+        },
+        "extra": {
+            "rating": 4.4,
+            "count": 450
+        }
+    },
+    {
+        "id": "190396117560",
+        "name": "Пляж санатория Москва-Крым",
+        "address": "Россия, Республика Крым, Керчь, Московская улица, 18",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.354576,
+                36.520121
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 12
+        }
+    },
+    {
+        "id": "209902532181",
+        "name": "Пляж",
+        "address": "Россия, Севастополь, Нахимовский район, Качинский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.725627,
+                33.548592
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 9
+        }
+    },
+    {
+        "id": "208749019885",
+        "name": "Нахимовец",
+        "address": "Россия, Севастополь, Нахимовский район, Качинский муниципальный округ",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 865-85-45"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.721844,
+                33.548944
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 105
+        }
+    },
+    {
+        "id": "24077422452",
+        "name": "Затерянный Мир",
+        "address": "Россия, Севастополь, ландшафтный заказник Затерянный мир",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.428295,
+                33.648912
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 10
+        }
+    },
+    {
+        "id": "10741861966",
+        "name": "Пляж Адмиральская Лагуна в Песчаной бухте",
+        "address": "Россия, Севастополь, Гагаринский район",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.598254,
+                33.428916
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 822
+        }
+    },
+    {
+        "id": "216788456107",
+        "name": "Любимовка-3",
+        "address": "Россия, Севастополь, Нахимовский район, посёлок Любимовка",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.660765,
+                33.544224
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 164
+        }
+    },
+    {
+        "id": "206859151829",
+        "name": "Омега",
+        "address": "Россия, Севастополь, Гагаринский район",
+        "url": "https://пляж-омега.рф/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 210-62-21"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 8:00–20:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "08:00:00",
+                            "to": "20:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.597991,
+                33.44367
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 483
+        }
+    },
+    {
+        "id": "21491647382",
+        "name": "Пляж",
+        "address": "Россия, Севастополь, мыс Фиолент",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.503149,
+                33.483052
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 10
+        }
+    },
+    {
+        "id": "231031430689",
+        "name": "Пляж",
+        "address": "Россия, Севастополь, Казачья бухта",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.567068,
+                33.413244
+            ]
+        },
+        "extra": {
+            "rating": 3.3,
+            "count": 38
+        }
+    },
+    {
+        "id": "79561587274",
+        "name": "Лазурный берег",
+        "address": "Россия, Севастополь, квартал Адмиральская",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (985) 077-78-71"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.731267,
+                33.547164
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 23
+        }
+    },
+    {
+        "id": "178475437389",
+        "name": "Мол",
+        "address": "Россия, Севастополь, квартал Голобиновский",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.618044,
+                33.506293
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 66
+        }
+    },
+    {
+        "id": "1692589576",
+        "name": "Мыс Фиолент",
+        "address": "Россия, Севастополь, Балаклавский район, Балаклавский муниципальный округ, ТСН СТ Фиолент, 139",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 888-93-63"
+            },
+            {
+                "type": "phone",
+                "formatted": "+7 (978) 111-79-78"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, 9:00–22:00",
+            "Availabilities": [
+                {
+                    "Intervals": [
+                        {
+                            "from": "09:00:00",
+                            "to": "22:00:00"
+                        }
+                    ],
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.507624,
+                33.484334
+            ]
+        },
+        "extra": {
+            "rating": 4.7,
+            "count": 345
+        }
+    },
+    {
+        "id": "232217887826",
+        "name": "Пляж",
+        "address": "Россия, Севастополь",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.817426,
+                33.55184
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 10
+        }
+    },
+    {
+        "id": "61387619071",
+        "name": "Аполлоновая Бухта",
+        "address": "Россия, Севастополь, балка Аполлонова",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.615825,
+                33.541975
+            ]
+        },
+        "extra": {
+            "rating": 3.6,
+            "count": 35
+        }
+    },
+    {
+        "id": "47896957013",
+        "name": "Царский пляж",
+        "address": "Россия, Севастополь, микрорайон Фиолент",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.508361,
+                33.481825
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 222
+        }
+    },
+    {
+        "id": "83511385817",
+        "name": "Пляж Патриот",
+        "address": "Россия, Севастополь, микрорайон Фиолент",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.509357,
+                33.480675
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 61
+        }
+    },
+    {
+        "id": "47831885741",
+        "name": "Пляж Солнечный пляж",
+        "address": "Россия, Севастополь, улица Надежды Островской",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.605422,
+                33.485242
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 470
+        }
+    },
+    {
+        "id": "59147560168",
+        "name": "Пляж Дача Мокроусова",
+        "address": "Россия, Севастополь, район Северная Сторона",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.651653,
+                33.538886
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 169
+        }
+    },
+    {
+        "id": "11378300267",
+        "name": "Солдатский пляж",
+        "address": "Россия, Севастополь, Таврическая набережная, 71",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.495531,
+                33.592321
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 246
+        }
+    },
+    {
+        "id": "172189346340",
+        "name": "Пляж Лазурь",
+        "address": "Россия, Севастополь, район Северная Сторона",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.642578,
+                33.534188
+            ]
+        },
+        "extra": {
+            "rating": 3.7,
+            "count": 47
+        }
+    },
+    {
+        "id": "174744193862",
+        "name": "Немецкая балка",
+        "address": "Россия, Севастополь, Нахимовский район, Качинский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.751556,
+                33.542017
+            ]
+        },
+        "extra": {
+            "rating": 4.3,
+            "count": 160
+        }
+    },
+    {
+        "id": "114777003070",
+        "name": "Золотой пляж",
+        "address": "Россия, Севастополь, Балаклавский район, Балаклавский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.479852,
+                33.629869
+            ]
+        },
+        "extra": {
+            "rating": 4.1,
+            "count": 66
+        }
+    },
+    {
+        "id": "51415986398",
+        "name": "Красные камни",
+        "address": "Россия, Севастополь, квартал Лётчики",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.599572,
+                33.467635
+            ]
+        },
+        "extra": {
+            "rating": 3.1,
+            "count": 24
+        }
+    },
+    {
+        "id": "116686392702",
+        "name": "Пляж Дельфин",
+        "address": "Россия, Севастополь, квартал Ласпи",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.413182,
+                33.711048
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 48
+        }
+    },
+    {
+        "id": "228329687780",
+        "name": "Белый пляж",
+        "address": "Россия, Севастополь, Балаклавский район, Орлиновский муниципальный округ",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.455216,
+                33.642175
+            ]
+        },
+        "extra": {
+            "rating": 3.8,
+            "count": 4
+        }
+    },
+    {
+        "id": "92035398860",
+        "name": "Ветеран",
+        "address": "Россия, Каламитский залив",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "Hours": {
+            "text": "ежедневно, круглосуточно",
+            "Availabilities": [
+                {
+                    "TwentyFourHours": true,
+                    "Everyday": true
+                }
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.967003,
+                33.601985
+            ]
+        },
+        "extra": {
+            "rating": 1.9,
+            "count": 21
+        }
+    },
+    {
+        "id": "87058174033",
+        "name": "Пляж",
+        "address": "Россия, Севастополь, микрорайон Лётчики",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.608825,
+                33.452493
+            ]
+        },
+        "extra": {
+            "rating": 3.9,
+            "count": 4
+        }
+    },
+    {
+        "id": "145444522104",
+        "name": "Шкипер",
+        "address": "Россия, Севастополь, район Северная Сторона",
+        "Categories": [
+            {
+                "class": "beach",
+                "name": "Пляж"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.629385,
+                33.523107
+            ]
+        },
+        "extra": {
+            "rating": 1.6,
+            "count": 8
+        }
+    }
+]

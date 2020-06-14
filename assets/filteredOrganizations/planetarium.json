@@ -1,0 +1,58 @@
+[
+    {
+        "id": "153258372953",
+        "name": "Крымская астрофизическая обсерватория",
+        "address": "Россия, Республика Крым, Бахчисарайский район, посёлок городского типа Научный",
+        "url": "http://www.craocrimea.ru/",
+        "Phones": [
+            {
+                "type": "phone",
+                "formatted": "+7 (36554) 7-11-61"
+            }
+        ],
+        "Categories": [
+            {
+                "class": "planetarium",
+                "name": "Планетарий"
+            },
+            {
+                "class": "museum",
+                "name": "Музей"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                44.727943,
+                34.011913
+            ]
+        },
+        "extra": {
+            "rating": 5,
+            "count": 127
+        }
+    },
+    {
+        "id": "232934138445",
+        "name": "40-й Отдельный Командно-измерительный комплекс",
+        "address": "Россия, Республика Крым, Сакский район",
+        "url": "http://spacecenter.gov.ua/",
+        "Categories": [
+            {
+                "class": "planetarium",
+                "name": "Планетарий"
+            }
+        ],
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                45.219528,
+                33.163111
+            ]
+        },
+        "extra": {
+            "rating": 4.2,
+            "count": 10
+        }
+    }
+]

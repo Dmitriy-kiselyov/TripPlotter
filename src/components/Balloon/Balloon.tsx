@@ -11,6 +11,7 @@ import { ToggleButton } from '../construct/ToggleButton/ToggleButton';
 import { Hint } from '../construct/Hint/Hint';
 import { TimePicker } from '../construct/TimePicker/TimePicker';
 import { Text } from '../construct/Text/Text';
+import { Rating } from '../construct/Rating/Rating';
 
 import { IStore } from '../../types/store';
 import { addToList } from '../../store/addToList';
@@ -19,6 +20,7 @@ import { changeTime } from '../../store/changeTime';
 import { getTripItem } from '../../store/getTripItem';
 
 import './Balloon.scss';
+import { IMultiLang, multiLang } from '../../lib/multiLang';
 
 interface IBalloonProps extends IBalloonFactoryProps {
     forwardRef?: React.RefObject<HTMLDivElement>;
@@ -31,6 +33,13 @@ interface IConnectProps {
 }
 
 type IBalloonPropsWithConnect = IBalloonProps & IConnectProps & DispatchProp;
+
+const visitDict: IMultiLang = {
+    none: 'оценок',
+    one: 'оценки',
+    some: 'оценкок',
+    many: 'оценок'
+}
 
 interface IContact {
     type: IIconType;
@@ -53,6 +62,7 @@ class BalloonPresenter extends React.PureComponent<IBalloonPropsWithConnect, ISt
         }
 
         const { name, Categories } = this.props.organization;
+        const { rating, count: visits } = this.props.organization.extra;
         const { inList, forwardRef } = this.props;
         const { time } = this.state;
 
@@ -65,6 +75,10 @@ class BalloonPresenter extends React.PureComponent<IBalloonPropsWithConnect, ISt
                     <Text color="grey">
                         {this.getCategories(Categories)}
                     </Text>
+                    <div>
+                        <Rating rating={rating} />
+                        <Text className="Balloon-Visits" oneLine color="grey">на основе {visits} {multiLang(visits, visitDict)}</Text>
+                    </div>
                     <Divider/>
                     {
                         this.getContacts().map(contact => (
