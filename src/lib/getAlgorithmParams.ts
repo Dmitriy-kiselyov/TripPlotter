@@ -20,7 +20,7 @@ export function getAlgorithmParams(): IAlgorithmParams {
 }
 
 function getDaysCount(date: [Date, Date]): number {
-    return Math.abs((+date[1] - +date[0]) / DAY) + 1;
+    return Math.ceil((+date[1] - +date[0]) / DAY) + 1;
 }
 
 export function getStartLocation(state: IStore): [number, number] {

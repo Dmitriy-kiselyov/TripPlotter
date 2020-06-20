@@ -15,8 +15,12 @@ export function fetchOrganizationsToAlgorithmOutput(output: IAlgorithmOutput): I
     };
 }
 
-function fetchTripDays(days: IAlgorithmDayOutput[]): IStoreTripRouteDay[] {
+function fetchTripDays(days: Array<IAlgorithmDayOutput | null>): IStoreTripRouteDay[] {
     return days.map(day => {
+        if (!day) {
+            return null;
+        }
+
         return {
             start: day.start,
             finish: day.finish,

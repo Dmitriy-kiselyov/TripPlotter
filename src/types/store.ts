@@ -17,8 +17,10 @@ export interface IStore {
     tripList: IStoreTripItem[];
     tripRoute?: IStoreTripRoute;
     openedBalloon?: string;
-    routeCalculating?: boolean;
+    routeCalculation?: IStoreRouteCalculation;
 }
+
+export type IStoreRouteCalculation = Set<string>; // org id
 
 export type IStoreFilledDate = Date | [Date, Date];
 export type IStoreDate = IStoreFilledDate | null | [null, null];

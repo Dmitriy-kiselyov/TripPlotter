@@ -9,6 +9,8 @@ import {
 } from '../../types/algorithm';
 import { getRouteInfo, IRouteInfo } from './getRouteInfo';
 import { PriorityQueue } from './priorityQueue';
+import { IAlgorithmBestRoute, IAlgorithmRouteCallback } from './typings';
+import { AlgorithmStopper } from './stopper';
 
 interface IQueueNode {
     prevPath: IQueueNode | null; // экономим память на создание объектов
@@ -26,7 +28,7 @@ function nodeComparator(a: IQueueNode, b: IQueueNode): boolean {
     return a.cur.day !== b.cur.day ? a.cur.day < b.cur.day : a.cur.to < b.cur.to;
 }
 
-export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams): Promise<IAlgorithmOutput> {
+export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeCb?: IAlgorithmRouteCallback, stopper?: AlgorithmStopper): Promise<IAlgorithmOutput> {
     const queue = new PriorityQueue<IQueueNode>(nodeComparator);
 
     queue.push({
@@ -51,6 +53,12 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams): Promi
 
         if (compareNodes(best, prev) < 0) {
             best = prev;
+
+            routeCb && routeCb(prepareRouteCalculation(best));
+        }
+
+        if (stopper && stopper.isStopped()) {
+            return prepareResult(best, algorithmParams);
         }
 
         const notVisitedOrganizations = algorithmParams.organizations.filter(org => !isVisited(prev, org.id));
@@ -69,6 +77,18 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams): Promi
     }
 
     return prepareResult(best, algorithmParams);
+}
+
+function prepareRouteCalculation(best: IQueueNode): IAlgorithmBestRoute {
+    const set: IAlgorithmBestRoute = new Set();
+
+    while (best) {
+        set.add(best.cur.id);
+
+        best = best.prevPath;
+    }
+
+    return set;
 }
 
 function getExtraOutput(route: IAlgorithmTripItemOutput[], algorithmParams: IAlgorithmParams): IAlgorithmExtraOutput[] {

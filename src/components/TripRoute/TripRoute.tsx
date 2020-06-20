@@ -50,15 +50,23 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
         return !Array.isArray(this.props.date);
     }
 
-    private renderDay(day: IStoreTripRouteDay, dayNumber: number): React.ReactElement {
-        const { start, finish, route } = day;
-
+    private renderDay(day: IStoreTripRouteDay | null, dayNumber: number): React.ReactElement {
         return (
             <div
                 className={cn('TripRoute-Day', { active: this.isSingleDate() || dayNumber === this.props.activeDay })}
                 key={dayNumber}
             >
-                {this.renderDayTitle(dayNumber)}
+                {this.renderDayTitle(dayNumber, Boolean(day))}
+                {day ? this.renderDayRoute(day) : this.renderDayEmpty()}
+            </div>
+        );
+    }
+
+    private renderDayRoute(day: IStoreTripRouteDay): React.ReactElement {
+        const { start, finish, route } = day;
+
+        return (
+            <>
                 {this.renderStartPoint(start)}
                 {
                     route.map((item, index) => (
@@ -70,11 +78,23 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
                 }
                 {this.renderRouteInfo(route[route.length - 1], finish)}
                 {this.renderEndPoint(finish)}
-            </div>
-        );
+            </>
+        )
     }
 
-    private renderDayTitle(dayNumber: number): React.ReactElement {
+    private renderDayEmpty(): React.ReactElement {
+        return (
+            <Text
+                color="grey"
+                newLine
+                center
+            >
+                Нечего делать в этот день
+            </Text>
+        )
+    }
+
+    private renderDayTitle(dayNumber: number, clickable?: boolean): React.ReactElement {
         const { date } = this.props;
 
         if (this.isSingleDate()) {
@@ -83,6 +103,8 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
 
         const currentDate = this.getNextDate((date as [Date, Date])[0], dayNumber);
 
+        const handleClick = clickable ? () => this.props.dispatch(setRouteDay(dayNumber)) : undefined;
+
         return (
             <>
                 <div className="TripRoute-DayTitleWrap">
@@ -90,7 +112,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
                     <ClickableText
                         className="TripRoute-DayTitle"
                         size="xl"
-                        onClick={() => this.props.dispatch(setRouteDay(dayNumber))}
+                        onClick={handleClick}
                     >
                         {`День ${dayNumber + 1}`}
                     </ClickableText>
@@ -99,7 +121,7 @@ class TripRoutePresenter extends React.PureComponent<ITripRoutePropsWithConnect>
                     <ClickableText
                         newLine
                         size="m"
-                        onClick={() => this.props.dispatch(setRouteDay(dayNumber))}
+                        onClick={handleClick}
                     >
                         {formatDateLong(currentDate)}
                     </ClickableText>

@@ -14,11 +14,11 @@ import {
     IActionSetEndTime,
     IActionSetLocation,
     IActionSetRoute,
+    IActionSetRouteCalculation,
     IActionSetRouteDay,
     IActionSetStartTime
 } from '../types/actions';
 import { testStore } from '../test/testStore';
-import { testTripStore } from '../test/testTripStore';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {
@@ -44,8 +44,10 @@ function reducer(state: IStore, action: IActions): IStore {
             return reduceSetRouteDay(state, action);
         case ACTION_TYPES.SET_DATE_MODE:
             return reduceSetDateMode(state, action);
-        case ACTION_TYPES.SET_ROUTE_CALCULATING:
-            return reduceSetRouteCalculating(state);
+        case ACTION_TYPES.SET_ROUTE_CALCULATION:
+            return reduceSetRouteCalculation(state, action);
+        case ACTION_TYPES.STOP_ROUTE_CALCULATION:
+            return reduceStopRouteCalculation(state);
         case ACTION_TYPES.SET_LOCATION:
             return reduceSetLocation(state, action);
         case ACTION_TYPES.REMOVE_LOCATION:
@@ -68,10 +70,6 @@ function reduceAddToList(state: IStore, action: IActionAddToList): IStore {
 
 function reduceRemoveFromList(state: IStore, action: IActionRemoveFromList): IStore {
     let newState = { ...state };
-
-    if (action.id === state.openedBalloon) {
-        delete newState.openedBalloon;
-    }
 
     newState.tripList = newState.tripList.filter(item => item.organization.id !== action.id);
 
@@ -116,10 +114,10 @@ function reduceSetDate(state: IStore, action: IActionSetDate) {
 }
 
 function reduceSetRoute(state: IStore, action: IActionSetRoute) {
-    const newState = {
+    const newState: IStore = {
         ...state,
         tripRoute: action.route,
-        routeCalculating: false
+        routeCalculation: undefined,
     };
 
     if (action.route.days.length > 1) {
@@ -180,11 +178,18 @@ function reduceSetDateMode(state: IStore, action: IActionSetDateMode): IStore {
     };
 }
 
-function reduceSetRouteCalculating(state: IStore): IStore {
+function reduceSetRouteCalculation(state: IStore, action: IActionSetRouteCalculation): IStore {
     return {
         ...state,
-        routeCalculating: true,
+        routeCalculation: action.current || new Set(),
     }
+}
+
+function reduceStopRouteCalculation(state: IStore): IStore {
+    return {
+        ...state,
+        routeCalculation: undefined
+    };
 }
 
 function reduceSetLocation(state: IStore, action: IActionSetLocation): IStore {

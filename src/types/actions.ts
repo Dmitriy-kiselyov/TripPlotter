@@ -1,6 +1,6 @@
 import { IOrganization } from './organization';
 import { IAssetName } from './assets';
-import { IStoreDate, IStoreTripRoute } from './store';
+import { IStoreDate, IStoreRouteCalculation, IStoreTripRoute } from './store';
 
 export enum ACTION_TYPES {
     ADD_TO_LIST = 'ADD_TO_LIST',
@@ -14,7 +14,8 @@ export enum ACTION_TYPES {
     SET_BALLOON = 'SET_BALLOON',
     SET_DATE_MODE = 'SET_DATE_MODE',
     SET_ROUTE_DAY = 'SET_ROUTE_DAY',
-    SET_ROUTE_CALCULATING = 'SET_ROUTE_CALCULATING',
+    SET_ROUTE_CALCULATION = 'SET_ROUTE_CALCULATION',
+    STOP_ROUTE_CALCULATION = 'STOP_ROUTE_CALCULATION',
     SET_LOCATION = 'SET_LOCATION',
     REMOVE_LOCATION = 'REMOVE_LOCATION'
 }
@@ -76,8 +77,13 @@ export interface IActionSetRouteDay {
     day: number;
 }
 
-export interface IActionSetTripCalculating {
-    type: ACTION_TYPES.SET_ROUTE_CALCULATING;
+export interface IActionSetRouteCalculation {
+    type: ACTION_TYPES.SET_ROUTE_CALCULATION;
+    current?: IStoreRouteCalculation;
+}
+
+export interface IActionStopRouteCalculation {
+    type: ACTION_TYPES.STOP_ROUTE_CALCULATION;
 }
 
 export interface IActionSetLocation {
@@ -93,4 +99,4 @@ export interface IActionRemoveLocation {
 
 export type IActions = IActionAddToList | IActionChangeTime | IActionRemoveFromList | IActionSetStartTime |
     IActionSetEndTime | IActionSetDate | IActionSetRoute | IActionRemoveRoute | IActionSetBalloon | IActionSetDateMode |
-    IActionSetRouteDay | IActionSetTripCalculating | IActionSetLocation | IActionRemoveLocation;
+    IActionSetRouteDay | IActionSetRouteCalculation | IActionSetLocation | IActionRemoveLocation | IActionStopRouteCalculation;

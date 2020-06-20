@@ -28,11 +28,14 @@ import { Checkbox } from '../construct/Checkbox/Checkbox';
 import { setDateMode } from '../../store/setDateMode';
 import { MultiDatePicker } from '../construct/DatePicker/MultiDatePicker';
 import { CalculationModal } from '../CalculationModal/CalculationModal';
-import { setRouteCalculating } from '../../store/setRouteCalculating';
+import { setRouteCalculation } from '../../store/setRouteCalculation';
 import { UserLocation } from '../UserLocation/UserLocation';
 import { PrintButton } from '../PrintButton/PrintButton';
+import { IAlgorithmBestRoute } from '../../lib/algorithm/typings';
+import { throttle } from '../../lib/throttle';
 
 import './Root.scss';
+import { AlgorithmStopper } from '../../lib/algorithm/stopper';
 
 interface IConnectRootProps {
     startTime: string;
@@ -63,9 +66,18 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         organizations: null
     };
 
+    private algorithmStopper?: AlgorithmStopper;
+
+    componentDidUpdate(prevProps: Readonly<IRootProps>) {
+        if (prevProps.routeCalculating && !this.props.routeCalculating) {
+            this.algorithmStopper && this.algorithmStopper.stop();
+            this.algorithmStopper = undefined;
+        }
+    }
+
     render() {
         const { organizations, category } = this.state;
-        const { showRoute, routeCalculating } = this.props;
+        const { showRoute } = this.props;
 
         const left = (
             <Map
@@ -99,7 +111,7 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
         return (
             <>
                 <RootLayout left={left} right={right} />
-                <CalculationModal visible={routeCalculating} />
+                <CalculationModal />
             </>
         );
     }
@@ -275,10 +287,16 @@ class RootPresenter extends React.PureComponent<IRootProps, IState> {
             return;
         }
 
-        this.props.dispatch(setRouteCalculating());
-        tripAlgorithm(getAlgorithmParams())
+        this.algorithmStopper = new AlgorithmStopper();
+
+        this.props.dispatch(setRouteCalculation());
+        tripAlgorithm(getAlgorithmParams(), this.handleCalculationResponse, this.algorithmStopper)
             .then(route => this.props.dispatch(setRoute(fetchOrganizationsToAlgorithmOutput(route))));
     };
+
+    private handleCalculationResponse = throttle((route: IAlgorithmBestRoute) => {
+        this.props.routeCalculating && this.props.dispatch(setRouteCalculation(route));
+    }, 500);
 
     static getDerivedStateFromProps(props: IRootProps): Partial<IState> {
         const state: Partial<IState> = {};
@@ -302,7 +320,7 @@ export const Root = connect(
         date: state.date,
         tripListSize: state.tripList.length,
         showRoute: Boolean(state.tripRoute),
-        routeCalculating: state.routeCalculating,
-        startLocation: state.location
+        startLocation: state.location,
+        routeCalculating: Boolean(state.routeCalculation),
     })
 )(RootPresenter);

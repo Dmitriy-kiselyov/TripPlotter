@@ -5,7 +5,7 @@ export const testStore: IStore = {
     endTime: '20:00',
     date: [
         new Date('2020-02-20'),
-        new Date('2020-02-21')
+        new Date('2020-02-22')
     ],
     tripList: [
         {

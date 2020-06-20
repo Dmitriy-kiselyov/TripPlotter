@@ -403,7 +403,6 @@ export const testTripStore: IStore = {
         address: 'улица Блюхера, 3, Симферополь, Республика Крым, Россия',
         auto: false
     },
-    routeCalculating: false,
     tripRouteDay: 0,
     tripRoute: {
         coordinates: [

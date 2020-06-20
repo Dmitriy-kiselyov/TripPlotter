@@ -170,6 +170,10 @@ class MapPresenter extends React.PureComponent<IMapPropsWithConnect> {
 
         this.map.controls.add(ScaleFeaturesButton(this.map));
         this.map.controls.add(ScaleButton(this.map, initialZoom));
+
+        if (this.props.userLocation) {
+            this.showUserLocation();
+        }
     };
 
     forceUpdate(): void {
@@ -357,7 +361,7 @@ export const Map = connect(
             tripList: state.tripList,
             openedBalloon: state.openedBalloon,
             userLocation: state.location ? state.location.coords : undefined,
-            routeCalculating: state.routeCalculating,
+            routeCalculating: Boolean(state.routeCalculation),
         };
 
         if (state.tripRoute) {
