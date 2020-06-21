@@ -19,6 +19,8 @@ import {
     IActionSetStartTime
 } from '../types/actions';
 import { testStore } from '../test/testStore';
+import { testLargeStore } from '../test/testLargeStore';
+import { rememberFirstOrganizations } from '../lib/firstOrganizations';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {
@@ -208,16 +210,13 @@ function reduceRemoveLocation(state: IStore): IStore {
     }
 }
 
-const initialStore: IStore = {
-    startTime: '',
-    endTime: '',
-    date: null,
-    tripList: []
-};
+const initialStore = testLargeStore;
+
+rememberFirstOrganizations(initialStore.tripList.map(item => item.organization));
 
 export const store = createStore(
     reducer,
-    testStore,
+    initialStore,
     // @ts-ignore https://github.com/zalmoxisus/redux-devtools-extension#usage
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );

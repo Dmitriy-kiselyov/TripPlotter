@@ -56,6 +56,15 @@ class BalloonPresenter extends React.PureComponent<IBalloonPropsWithConnect, ISt
         time: this.props.time || ''
     };
 
+    componentDidUpdate(prevProps: Readonly<IBalloonPropsWithConnect>) {
+        if (prevProps.id !== this.props.id) {
+            this.setState({
+                time: this.props.time || '',
+                timeValidation: false,
+            })
+        }
+    }
+
     render() {
         if (this.props.organization === null) {
             return null;

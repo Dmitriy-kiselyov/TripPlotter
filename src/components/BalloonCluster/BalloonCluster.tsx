@@ -21,6 +21,7 @@ interface IBalloonClusterProps {
 export const BalloonCluster: React.FC<IBalloonClusterProps> = props => {
     const dispatch = useDispatch();
     const { features } = props.cluster;
+    useSelector((store: IStore) => store.tripList); // перерисовываем при обновлении списка, т.к. cluster не создает ререндер
     const sortedFeatures = getSortedFeatures(features);
     const openedBalloonId = useSelector((store: IStore) => store.openedBalloon);
     const openedBalloon = features.find(feature => feature.id === openedBalloonId);

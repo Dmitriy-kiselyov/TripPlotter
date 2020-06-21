@@ -2,12 +2,13 @@ import { getAsset } from './loadAsset';
 import { IOrganization } from '../types/organization';
 
 import { IAssetName } from '../types/assets';
+import { getFromFirstOrganizations } from './firstOrganizations';
 
 export function findOrganization(category: IAssetName, id: string): IOrganization | null {
-    const organizations = getAsset(category);
+    let organizations = getAsset(category);
 
     if (!organizations) {
-        return null;
+        return getFromFirstOrganizations(id);
     }
 
     for (const organization of organizations) {
