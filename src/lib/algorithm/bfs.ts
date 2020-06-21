@@ -16,6 +16,7 @@ interface IQueueNode {
     prevPath: IQueueNode | null; // экономим память на создание объектов
     cur: IAlgorithmTripItemOutputExtend;
     depth: number;
+    id?: string;
 }
 
 interface IAlgorithmTripItemOutputExtend extends IAlgorithmTripItemOutput {
@@ -48,8 +49,17 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeC
 
     let best = queue.peek();
 
+    const bestByOrgs = new Map<string, IQueueNode>();
+
     while (!queue.isEmpty()) {
         const prev = queue.pop();
+        const nodeId = getNodeId(prev);
+
+        if (bestByOrgs.has(nodeId) && compareNodes(bestByOrgs.get(nodeId), prev) >= 0) {
+            continue;
+        } else {
+            bestByOrgs.set(nodeId, prev);
+        }
 
         if (compareNodes(best, prev) < 0) {
             best = prev;
@@ -77,6 +87,25 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeC
     }
 
     return prepareResult(best, algorithmParams);
+}
+
+function getNodeId(node: IQueueNode) {
+    if (node.id) {
+        return node.id;
+    }
+
+    const ids = [];
+    let curNode = node;
+
+    while (curNode) {
+        ids.push(curNode.cur.id);
+        curNode = curNode.prevPath;
+    }
+
+    ids.sort();
+    node.id = ids.join(',');
+
+    return node.id;
 }
 
 function prepareRouteCalculation(best: IQueueNode): IAlgorithmBestRoute {

@@ -43,7 +43,7 @@ export function getRouteInfo(...coordinates: [number, number][]): Promise<IRoute
 
             for (let i = 1; i < coordinates.length; i++) {
                 const routeInfo = {
-                    time: Math.floor(route.getPaths().get(i - 1).getJamsTime() / 60),
+                    time: getPathTime(route.getPaths().get(i - 1)),
                     distance: route.getPaths().get(0).getLength()
                 };
                 const key = createKey(coordinates[i - 1], coordinates[i]);
@@ -54,6 +54,15 @@ export function getRouteInfo(...coordinates: [number, number][]): Promise<IRoute
 
             return info;
         });
+}
+
+function getPathTime(path: any): number {
+    let time: number = path.getTime() / 60;
+
+    time *= 1.1; // карты слишком оптимистичны
+    time += 5; // 5 минут на разобраться с парковкой
+
+    return Math.floor(time);
 }
 
 function tryGetCacheInfo(coordinates: [number, number][]): IRouteInfo[] | null {
