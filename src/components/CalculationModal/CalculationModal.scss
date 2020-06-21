@@ -54,6 +54,26 @@
         }
     }
 
+    &-Info {
+        font-family: $font-family;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 40px;
+        white-space: nowrap;
+        color: white;
+        animation: CalculationModal-Title-Animation 1s linear infinite;
+
+        transition: color .1s linear;
+    }
+
+    &-InfoBlock {
+        margin-top: 30px;
+    }
+
+    &-InfoBlockPlaceholder {
+        height: 80px;
+    }
+
     &-Button {
         width: fit-content;
         padding: 20px;

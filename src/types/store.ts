@@ -20,7 +20,11 @@ export interface IStore {
     routeCalculation?: IStoreRouteCalculation;
 }
 
-export type IStoreRouteCalculation = Set<string>; // org id
+export type IStoreRouteCalculation = {
+    maxDays: number;
+    curDay: number;
+    organizations: Set<string>; // org id
+};
 
 export type IStoreFilledDate = Date | [Date, Date];
 export type IStoreDate = IStoreFilledDate | null | [null, null];

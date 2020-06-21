@@ -72,7 +72,7 @@ function categoryFilter(name, organization) {
     const categories = organization.Categories;
 
     for (const category of categories) {
-        if (name === category.class) {
+        if (name === category.class || category.name === 'Водопад') {
             return true;
         }
     }

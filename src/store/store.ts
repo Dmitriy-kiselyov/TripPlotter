@@ -21,6 +21,7 @@ import {
 import { testStore } from '../test/testStore';
 import { testLargeStore } from '../test/testLargeStore';
 import { rememberFirstOrganizations } from '../lib/firstOrganizations';
+import { textXLargeStore } from '../test/testXLargeStore';
 
 function reducer(state: IStore, action: IActions): IStore {
     switch (action.type) {
@@ -183,7 +184,11 @@ function reduceSetDateMode(state: IStore, action: IActionSetDateMode): IStore {
 function reduceSetRouteCalculation(state: IStore, action: IActionSetRouteCalculation): IStore {
     return {
         ...state,
-        routeCalculation: action.current || new Set(),
+        routeCalculation: action.current || {
+            maxDays: 0,
+            curDay: 0,
+            organizations: new Set(),
+        },
     }
 }
 
@@ -210,7 +215,7 @@ function reduceRemoveLocation(state: IStore): IStore {
     }
 }
 
-const initialStore = testLargeStore;
+const initialStore = textXLargeStore;
 
 rememberFirstOrganizations(initialStore.tripList.map(item => item.organization));
 

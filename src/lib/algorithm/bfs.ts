@@ -31,10 +31,14 @@ function nodeComparator(a: IQueueNode, b: IQueueNode): boolean {
     return a.cur.day !== b.cur.day ? a.cur.day < b.cur.day : a.cur.to < b.cur.to;
 }
 
-const QUEUE_MAX_SIZE = 20000;
+function getMaxQueueSize(orgCount: number): number {
+    const equalPoint = 20; // x = x_000 queue size
+
+    return Math.floor(1 / orgCount * equalPoint * equalPoint * 1000);
+}
 
 export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeCb?: IAlgorithmRouteCallback, stopper?: AlgorithmStopper): Promise<IAlgorithmOutput> {
-    const queue = new PriorityQueue<IQueueNode>(nodeComparator, QUEUE_MAX_SIZE);
+    const queue = new PriorityQueue<IQueueNode>(nodeComparator, getMaxQueueSize(algorithmParams.organizations.length));
 
     queue.push({
         prevPath: null,
@@ -70,7 +74,7 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeC
         if (compareNodesForBest(best, prev) < 0) {
             best = prev;
 
-            routeCb && routeCb(prepareRouteCalculation(best));
+            routeCb && routeCb(prepareRouteCalculation(best, algorithmParams));
         }
 
         if (stopper && stopper.isStopped()) {
@@ -115,16 +119,21 @@ function getNodeId(node: IQueueNode) {
     return node.id;
 }
 
-function prepareRouteCalculation(best: IQueueNode): IAlgorithmBestRoute {
-    const set: IAlgorithmBestRoute = new Set();
+function prepareRouteCalculation(best: IQueueNode, algorithmParams: IAlgorithmParams): IAlgorithmBestRoute {
+    const orgs = new Set<string>();
 
-    while (best) {
-        set.add(best.cur.id);
+    let cur = best;
+    while (cur.id !== 'start') {
+        orgs.add(cur.cur.id);
 
-        best = best.prevPath;
+        cur = cur.prevPath;
     }
 
-    return set;
+    return {
+        organizations: orgs,
+        maxDays: algorithmParams.days.length,
+        curDay: best.cur.day + 1,
+    };
 }
 
 function getExtraOutput(route: IAlgorithmTripItemOutput[], algorithmParams: IAlgorithmParams): IAlgorithmExtraOutput[] {
