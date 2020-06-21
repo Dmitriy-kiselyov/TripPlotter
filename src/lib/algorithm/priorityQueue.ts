@@ -6,16 +6,18 @@ const right = (i: number) => (i + 1) << 1;
 export type IPriorityQueueComparator<T> = (a: T, b: T) => boolean;
 
 export class PriorityQueue<T> {
-    private _heap: T[];
-    private _comparator: IPriorityQueueComparator<T>;
+    private heap: T[];
+    private comparator: IPriorityQueueComparator<T>;
+    private maxSize?: number;
 
-    constructor(comparator: IPriorityQueueComparator<T>) {
-        this._heap = [];
-        this._comparator = comparator;
+    constructor(comparator: IPriorityQueueComparator<T>, maxSize?: number) {
+        this.heap = [];
+        this.comparator = comparator;
+        this.maxSize = maxSize;
     }
 
     size() {
-        return this._heap.length;
+        return this.heap.length;
     }
 
     isEmpty() {
@@ -23,14 +25,17 @@ export class PriorityQueue<T> {
     }
 
     peek() {
-        return this._heap[top];
+        return this.heap[top];
     }
 
-    push(...values: T[]) {
-        values.forEach(value => {
-            this._heap.push(value);
-            this._siftUp();
-        });
+    push(value: T) {
+        this.heap.push(value);
+        this._siftUp();
+
+        if (this.maxSize && this.size() > this.maxSize) {
+            this.pop();
+        }
+
         return this.size();
     }
 
@@ -40,24 +45,24 @@ export class PriorityQueue<T> {
         if (bottom > top) {
             this._swap(top, bottom);
         }
-        this._heap.pop();
+        this.heap.pop();
         this._siftDown();
         return poppedValue;
     }
 
     replace(value: T) {
         const replacedValue = this.peek();
-        this._heap[top] = value;
+        this.heap[top] = value;
         this._siftDown();
         return replacedValue;
     }
 
     _greater(i: number, j: number) {
-        return this._comparator(this._heap[i], this._heap[j]);
+        return this.comparator(this.heap[i], this.heap[j]);
     }
 
     _swap(i: number, j: number) {
-        [this._heap[i], this._heap[j]] = [this._heap[j], this._heap[i]];
+        [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
     }
 
     _siftUp() {

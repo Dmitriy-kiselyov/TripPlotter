@@ -29,8 +29,10 @@ function nodeComparator(a: IQueueNode, b: IQueueNode): boolean {
     return a.cur.day !== b.cur.day ? a.cur.day < b.cur.day : a.cur.to < b.cur.to;
 }
 
+const QUEUE_MAX_SIZE = 20000;
+
 export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeCb?: IAlgorithmRouteCallback, stopper?: AlgorithmStopper): Promise<IAlgorithmOutput> {
-    const queue = new PriorityQueue<IQueueNode>(nodeComparator);
+    const queue = new PriorityQueue<IQueueNode>(nodeComparator, QUEUE_MAX_SIZE);
 
     queue.push({
         prevPath: null,
@@ -61,7 +63,7 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeC
             bestByOrgs.set(nodeId, prev);
         }
 
-        if (compareNodes(best, prev) < 0) {
+        if (compareNodesForBest(best, prev) < 0) {
             best = prev;
 
             routeCb && routeCb(prepareRouteCalculation(best));
@@ -150,6 +152,14 @@ function compareNodes(a: IQueueNode, b: IQueueNode): number {
     }
 
     return a.cur.finishTime - b.cur.finishTime;
+}
+
+function compareNodesForBest(a: IQueueNode, b: IQueueNode): number {
+    if (a.depth !== b.depth) {
+        return a.depth - b.depth;
+    }
+
+    return a.cur.day - b.cur.day;
 }
 
 function promiseAll<T>(promises: Promise<T>[]): Promise<T[]> {
