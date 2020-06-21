@@ -32,8 +32,15 @@ function getOrganizationParams(item: IStoreTripItem, date: [Date, Date]): IAlgor
         coordinates: item.organization.geometry.coordinates,
         id: item.organization.id,
         timeSpend: parseTime(item.time),
-        available: getDatesBetween(date).map(date => getAvailable(item.organization.Hours, date))
+        available: getDatesBetween(date).map(date => getAvailable(item.organization.Hours, date)),
+        rating: getRating(item),
     }
+}
+
+function getRating(item: IStoreTripItem): number {
+    const { count, rating } = item.organization.extra;
+
+    return rating * Math.sqrt(count);
 }
 
 function getDatesBetween(dates: [Date, Date]): Date[] {

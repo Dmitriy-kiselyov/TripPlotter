@@ -17,12 +17,14 @@ interface IQueueNode {
     cur: IAlgorithmTripItemOutputExtend;
     depth: number;
     id?: string;
+    rating: number; // сумма всех рейтингов
 }
 
 interface IAlgorithmTripItemOutputExtend extends IAlgorithmTripItemOutput {
     day: number; // порядковый номер даты
     finishTime: number; // для выбора лучшей точки
     finishDistance: number; // для формирования ответа алгоиритма
+    rating: number; // оценка текущей организации
 }
 
 function nodeComparator(a: IQueueNode, b: IQueueNode): boolean {
@@ -45,8 +47,10 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeC
             distance: 0,
             finishTime: algorithmParams.days[0].from,
             finishDistance: 0,
+            rating: 0,
         },
-        depth: 0
+        depth: 0,
+        rating: 0,
     });
 
     let best = queue.peek();
@@ -82,7 +86,8 @@ export async function bfsTripAlgorithm(algorithmParams: IAlgorithmParams, routeC
                 queue.push({
                     prevPath: prev,
                     cur: route,
-                    depth: prev.depth + 1
+                    depth: prev.depth + 1,
+                    rating: prev.rating + route.rating,
                 });
             }
         }
@@ -158,8 +163,7 @@ function compareNodesForBest(a: IQueueNode, b: IQueueNode): number {
     if (a.depth !== b.depth) {
         return a.depth - b.depth;
     }
-
-    return a.cur.day - b.cur.day;
+    return a.rating - b.rating;
 }
 
 function promiseAll<T>(promises: Promise<T>[]): Promise<T[]> {
@@ -230,7 +234,8 @@ function getNextTrimItem(
         coordinates: next.coordinates,
         distance: forwardRoute.distance,
         finishTime: nextLeaveTime + backRoute.time,
-        finishDistance: backRoute.distance
+        finishDistance: backRoute.distance,
+        rating: next.rating,
     };
 
     if (nextAvailableFromTime - nextFromTime > 0) {

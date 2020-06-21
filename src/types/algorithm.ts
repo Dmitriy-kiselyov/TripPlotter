@@ -14,6 +14,7 @@ export interface IAlgorithmOrganizationParam {
     id: string;
     timeSpend: number;
     available: IAlgorithmAvailableParam[][];
+    rating: number;
 }
 
 export interface IAlgorithmAvailableParam {
